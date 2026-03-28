@@ -188,10 +188,9 @@ section { padding: 100px 0; position: relative; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
 }
 .nav-logo {
-  margin-right: auto;
 }
 .nav-logo-text {
   font-family: var(--font-heading);
@@ -257,7 +256,6 @@ section { padding: 100px 0; position: relative; }
   font-size: 0.8rem;
   letter-spacing: 0.5px;
   white-space: nowrap;
-  margin-left: 16px;
 }
 
 /* Language Flags (inside nav-social-links) */
@@ -380,17 +378,17 @@ section { padding: 100px 0; position: relative; }
 }
 .hero-hamburg-icons {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: flex-end;
   margin-top: 24px;
-  padding: 0 40px;
+  gap: 130px;
 }
 .hero-icon-elphi {
-  width: 140px;
+  width: 200px;
   height: auto;
 }
 .hero-icon-michel {
-  width: 70px;
+  width: 100px;
   height: auto;
 }
 .hero-buttons {
