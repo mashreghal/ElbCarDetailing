@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElbCar Detailing — Premium Fahrzeugaufbereitung Hamburg</title>
+  <meta name="description" content="ElbCar Detailing — Premium Fahrzeugaufbereitung in Hamburg. Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr.">
+  <meta name="keywords" content="Fahrzeugaufbereitung, Hamburg, Autoaufbereitung, Detailing, Keramikversiegelung, Lackkorrektur, Innenreinigung">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon (use your logo) -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo.png" alt="ElbCar Detailing Logo">
+      </a>
+
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="#services" data-i18n="nav_services">Leistungen</a>
+          <a href="#packages" data-i18n="nav_packages">Pakete</a>
+          <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
+          <a href="#about" data-i18n="nav_about">Über Uns</a>
+          <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+        </div>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="de">DE</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="tr">TR</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-pattern"></div>
+
+    <!-- Hamburg Skyline SVG -->
+    <svg class="hero-skyline" viewBox="0 0 1440 200" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Simplified Hamburg skyline silhouette -->
+      <path d="M0,200 L0,160 L60,160 L60,140 L80,140 L80,120 L100,120 L100,100 L110,100 L110,80 L120,60 L130,80 L130,100 L140,100 L140,120 L160,120 L160,140 L200,140 L200,130 L210,130 L210,110 L220,110 L220,90 L230,70 L240,50 L250,70 L250,90 L260,90 L260,110 L270,110 L270,130 L300,130 L300,140 L340,140 L340,150 L380,150 L380,130 L400,130 L400,110 L410,80 L415,60 L418,40 L420,20 L422,40 L425,60 L430,80 L440,110 L440,130 L460,130 L460,150 L520,150 L520,140 L540,140 L540,120 L550,100 L560,80 L565,50 L568,30 L570,10 L572,30 L575,50 L580,80 L590,100 L600,120 L600,140 L640,140 L640,150 L700,150 L700,140 L720,140 L720,130 L740,130 L740,120 L760,120 L760,130 L780,130 L780,140 L820,140 L820,150 L880,150 L880,140 L900,140 L900,120 L910,100 L915,80 L920,60 L925,80 L930,100 L940,120 L940,140 L980,140 L980,150 L1040,150 L1040,140 L1060,140 L1060,130 L1080,130 L1080,120 L1100,120 L1100,130 L1120,130 L1120,140 L1160,140 L1160,150 L1220,150 L1220,145 L1260,145 L1260,140 L1300,140 L1300,150 L1360,150 L1360,155 L1440,155 L1440,200 Z" fill="currentColor" style="color: var(--gold);"/>
+    </svg>
+
+    <div class="hero-content">
+      <img src="images/logo.png" alt="ElbCar Detailing" class="hero-logo">
+      <p class="tagline" data-i18n="hero_tagline">Premium Fahrzeugaufbereitung in Hamburg</p>
+      <p data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand — mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-gold" data-i18n="hero_btn_services">Unsere Leistungen</a>
+        <a href="#contact" class="btn btn-outline" data-i18n="hero_btn_contact">Termin anfragen</a>
+      </div>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C240,60 480,60 720,30 C960,0 1200,0 1440,30 L1440,60 L0,60 Z" class="shape-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES
+       ============================================ -->
+  <section id="services">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="gold-line"></div>
+        <h2 data-i18n="services_title">Unsere Leistungen</h2>
+        <p data-i18n="services_subtitle">Professionelle Fahrzeugpflege für höchste Ansprüche</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Interior -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <h3 data-i18n="svc1_title">Innenreinigung</h3>
+          <p data-i18n="svc1_text">Tiefenreinigung des gesamten Innenraums — Sitze, Teppiche, Armaturen, Türverkleidungen und mehr.</p>
+        </div>
+
+        <!-- Service 2: Exterior -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3 data-i18n="svc2_title">Außenaufbereitung</h3>
+          <p data-i18n="svc2_text">Professionelle Handwäsche, Dekontamination, Kneten und Versiegelung für strahlenden Glanz.</p>
+        </div>
+
+        <!-- Service 3: Paint Correction -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 data-i18n="svc3_title">Lackkorrektur & Polieren</h3>
+          <p data-i18n="svc3_text">Mehrstufige Politur zum Entfernen von Kratzern, Swirls und Hologrammen.</p>
+        </div>
+
+        <!-- Service 4: Ceramic -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="svc4_title">Keramikversiegelung</h3>
+          <p data-i18n="svc4_text">Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5 Jahre Schutz.</p>
+        </div>
+
+        <!-- Service 5: Engine -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </div>
+          <h3 data-i18n="svc5_title">Motorwäsche</h3>
+          <p data-i18n="svc5_text">Schonende und gründliche Reinigung des Motorraums.</p>
+        </div>
+
+        <!-- Service 6: Headlights -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
+          </div>
+          <h3 data-i18n="svc6_title">Scheinwerfer­aufbereitung</h3>
+          <p data-i18n="svc6_text">Matte und vergilbte Scheinwerfer werden professionell aufbereitet.</p>
+        </div>
+
+        <!-- Service 7: Leather -->
+        <div class="service-card fade-in">
+          <div class="service-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0a0e1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 data-i18n="svc7_title">Lederreinigung & -pflege</h3>
+          <p data-i18n="svc7_text">Professionelle Reinigung und Pflege von Ledersitzen und -oberflächen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       PACKAGES
+       ============================================ -->
+  <section id="packages">
+    <div class="wave-divider-top">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C240,60 480,60 720,30 C960,0 1200,0 1440,30 L1440,60 L0,60 Z" class="shape-fill"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="gold-line"></div>
+        <h2 data-i18n="packages_title">Unsere Pakete</h2>
+        <p data-i18n="packages_subtitle">Wählen Sie das passende Paket für Ihr Fahrzeug</p>
+      </div>
+
+      <div class="packages-grid">
+        <!-- Basic -->
+        <div class="package-card fade-in">
+          <h3 data-i18n="pkg1_name">Basis</h3>
+          <div class="package-price" data-i18n="pkg1_price_text">Auf Anfrage</div>
+          <p class="package-note" data-i18n="pkg1_note">Perfekt für die regelmäßige Pflege</p>
+          <ul class="package-features">
+            <li data-i18n="pkg1_f1">Außenwäsche von Hand</li>
+            <li data-i18n="pkg1_f2">Felgenreinigung</li>
+            <li data-i18n="pkg1_f3">Reifenpflege</li>
+            <li data-i18n="pkg1_f4">Innenraum saugen</li>
+            <li data-i18n="pkg1_f5">Armaturenbrett reinigen</li>
+            <li data-i18n="pkg1_f6">Scheiben innen & außen</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" data-i18n="pkg_btn">Jetzt anfragen</a>
+        </div>
+
+        <!-- Premium (Featured) -->
+        <div class="package-card featured fade-in">
+          <span class="package-badge" data-i18n="pkg2_badge">Beliebteste Wahl</span>
+          <h3 data-i18n="pkg2_name">Premium</h3>
+          <div class="package-price" data-i18n="pkg2_price_text">Auf Anfrage</div>
+          <p class="package-note" data-i18n="pkg2_note">Komplette Aufbereitung innen & außen</p>
+          <ul class="package-features">
+            <li data-i18n="pkg2_f1">Alles aus dem Basis-Paket</li>
+            <li data-i18n="pkg2_f2">Tiefenreinigung Innenraum</li>
+            <li data-i18n="pkg2_f3">Leder-/Polsterreinigung</li>
+            <li data-i18n="pkg2_f4">1-Stufen-Politur</li>
+            <li data-i18n="pkg2_f5">Wachsversiegelung</li>
+            <li data-i18n="pkg2_f6">Motorraum reinigen</li>
+            <li data-i18n="pkg2_f7">Türeinstiege & Kofferraum</li>
+          </ul>
+          <a href="#contact" class="btn btn-gold" data-i18n="pkg_btn">Jetzt anfragen</a>
+        </div>
+
+        <!-- Exclusive -->
+        <div class="package-card fade-in">
+          <h3 data-i18n="pkg3_name">Exklusiv</h3>
+          <div class="package-price" data-i18n="pkg3_price_text">Auf Anfrage</div>
+          <p class="package-note" data-i18n="pkg3_note">Die ultimative Fahrzeugaufbereitung</p>
+          <ul class="package-features">
+            <li data-i18n="pkg3_f1">Alles aus dem Premium-Paket</li>
+            <li data-i18n="pkg3_f2">Mehrstufige Lackkorrektur</li>
+            <li data-i18n="pkg3_f3">Keramikversiegelung</li>
+            <li data-i18n="pkg3_f4">Scheinwerferaufbereitung</li>
+            <li data-i18n="pkg3_f5">Lederpflege & -versiegelung</li>
+            <li data-i18n="pkg3_f6">Detaillierte Endkontrolle</li>
+            <li data-i18n="pkg3_f7">Pflegeanleitung & Nachsorge</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline" data-i18n="pkg_btn">Jetzt anfragen</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C240,0 480,0 720,30 C960,60 1200,60 1440,30 L1440,60 L0,60 Z" class="shape-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================
+       GALLERY - Before & After
+       ============================================ -->
+  <section id="gallery">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="gold-line"></div>
+        <h2 data-i18n="gallery_title">Vorher & Nachher</h2>
+        <p data-i18n="gallery_subtitle">Überzeugen Sie sich selbst von unseren Ergebnissen</p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <!-- Slider 1: Mercedes Engine Bay -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/engine-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/engine-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap1">Mercedes — Motorraum-Reinigung</p>
+        </div>
+
+        <!-- Slider 2: Volvo Front Interior -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/volvo-interior-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/volvo-interior-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap2">Volvo — Interieur-Aufbereitung</p>
+        </div>
+
+        <!-- Slider 3: Volvo Rear Seats -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/volvo-rear-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/volvo-rear-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap3">Volvo — Rücksitze</p>
+        </div>
+
+        <!-- Slider 4: VW Touran Front -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/vw-front-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/vw-front-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap4">VW Touran — Innenraum komplett</p>
+        </div>
+
+        <!-- Slider 5: VW Touran Rear Seats -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/vw-rear-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/vw-rear-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap5">VW Touran — Rücksitze & Fußmatten</p>
+        </div>
+
+        <!-- Slider 6: Trunk -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/trunk-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/trunk-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap6">Kofferraum — Tiefenreinigung</p>
+        </div>
+
+        <!-- Slider 7: Headlight Restoration -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/headlight-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/headlight-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap7">Scheinwerfer — Aufbereitung</p>
+        </div>
+
+        <!-- Slider 8: Mercedes Steering Wheel -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/steering-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/steering-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap8">Mercedes AMG — Lenkrad-Pflege</p>
+        </div>
+
+        <!-- Slider 9: Audi Floor Mat -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/audi-mat-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/audi-mat-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap9">Audi — Fußmatten-Reinigung</p>
+        </div>
+
+        <!-- Slider 10: Fuel Cap Detail -->
+        <div class="fade-in">
+          <div class="ba-slider">
+            <img src="images/gallery/fuelcap-before.jpg" alt="Before" class="ba-before">
+            <img src="images/gallery/fuelcap-after.jpg" alt="After" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption" data-i18n="gallery_cap10">Tankdeckel — Detailreinigung</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT / OWNER
+       ============================================ -->
+  <section id="about">
+    <div class="wave-divider-top">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,0 C240,60 480,60 720,30 C960,0 1200,0 1440,30 L1440,60 L0,60 Z" class="shape-fill"/>
+      </svg>
+    </div>
+
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image fade-in">
+          <div class="placeholder-img" data-i18n="about_placeholder">
+            Foto des Inhabers — kommt bald
+          </div>
+        </div>
+        <div class="about-text fade-in">
+          <div class="gold-line" style="margin:0 0 16px;"></div>
+          <h2 data-i18n="about_title">Über ElbCar Detailing</h2>
+          <p class="subtitle" data-i18n="about_subtitle">Ihr Experte für Fahrzeugaufbereitung in Hamburg</p>
+          <p data-i18n="about_p1">Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.</p>
+          <p data-i18n="about_p2">Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung — wir bieten alles, was Ihr Fahrzeug braucht.</p>
+          <p data-i18n="about_p3">Egal ob Kleinwagen oder Supersportwagen — jedes Fahrzeug verdient die beste Pflege.</p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="number">500+</span>
+              <span class="label" data-i18n="about_stat1">Zufriedene Kunden</span>
+            </div>
+            <div class="stat">
+              <span class="number">5+</span>
+              <span class="label" data-i18n="about_stat2">Jahre Erfahrung</span>
+            </div>
+            <div class="stat">
+              <span class="number">20+</span>
+              <span class="label" data-i18n="about_stat3">Premium-Marken</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C240,0 480,0 720,30 C960,60 1200,60 1440,30 L1440,60 L0,60 Z" class="shape-fill"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============================================
+       INSTAGRAM
+       ============================================ -->
+  <section id="instagram">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="gold-line"></div>
+        <h2 data-i18n="insta_title">Folgen Sie uns auf Instagram</h2>
+        <p data-i18n="insta_subtitle">Aktuelle Projekte, Vorher/Nachher-Bilder und Einblicke in unsere Arbeit</p>
+      </div>
+
+      <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" class="insta-link fade-in">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        @elbcar
+      </a>
+
+      <!-- Instagram preview grid - replace with actual images -->
+      <div class="insta-grid fade-in">
+        <div class="insta-item"><img src="images/insta/insta1.jpg" alt="ElbCar Detailing"></div>
+        <div class="insta-item"><img src="images/insta/insta2.jpg" alt="ElbCar Detailing"></div>
+        <div class="insta-item"><img src="images/insta/insta3.jpg" alt="ElbCar Detailing"></div>
+        <div class="insta-item"><img src="images/insta/insta4.jpg" alt="ElbCar Detailing"></div>
+      </div>
+
+      <div class="insta-cta fade-in">
+        <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="insta_btn">Zu Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOOKING BANNER
+       ============================================ -->
+  <div class="booking-banner">
+    <div class="container">
+      <h2 data-i18n="booking_title">Online-Buchung kommt bald!</h2>
+      <p data-i18n="booking_text">Wir arbeiten an einem Online-Buchungssystem. Bis dahin kontaktieren Sie uns direkt.</p>
+      <a href="#contact" class="btn" data-i18n="booking_btn">Jetzt Kontakt aufnehmen</a>
+    </div>
+  </div>
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-title fade-in">
+        <div class="gold-line"></div>
+        <h2 data-i18n="contact_title">Kontakt</h2>
+        <p data-i18n="contact_subtitle">Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <h3 data-i18n="contact_info_title">So erreichen Sie uns</h3>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="contact_phone_label">Telefon</h4>
+              <p data-i18n="contact_phone">+49 XXX XXXXXXX</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="contact_email_label">E-Mail</h4>
+              <p data-i18n="contact_email">info@elbcar-detailing.de</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="contact_addr_label">Standort</h4>
+              <p data-i18n="contact_addr">Hamburg, Deutschland</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <h4 data-i18n="contact_hours_label">Öffnungszeiten</h4>
+              <p style="white-space: pre-line;" data-i18n="contact_hours">Mo–Fr: 08:00 – 18:00
+Sa: 09:00 – 15:00
+So: Geschlossen</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form fade-in" action="#" method="POST">
+          <div class="form-row">
+            <div class="form-group">
+              <input type="text" name="name" required data-i18n="form_name" placeholder="Ihr Name">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" required data-i18n="form_email" placeholder="Ihre E-Mail">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <input type="tel" name="phone" data-i18n="form_phone" placeholder="Telefonnummer">
+            </div>
+            <div class="form-group">
+              <select name="service">
+                <option value="" data-i18n="form_service_opt0">Bitte wählen...</option>
+                <option value="interior" data-i18n="form_service_opt1">Innenreinigung</option>
+                <option value="exterior" data-i18n="form_service_opt2">Außenaufbereitung</option>
+                <option value="paint" data-i18n="form_service_opt3">Lackkorrektur</option>
+                <option value="ceramic" data-i18n="form_service_opt4">Keramikversiegelung</option>
+                <option value="full" data-i18n="form_service_opt5">Komplettpaket</option>
+                <option value="other" data-i18n="form_service_opt6">Sonstiges</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="message" rows="5" data-i18n="form_message" placeholder="Ihre Nachricht"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold" data-i18n="form_btn">Nachricht senden</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="ElbCar Detailing">
+          <p data-i18n="footer_desc">Premium Fahrzeugaufbereitung in Hamburg. Ihr Fahrzeug verdient das Beste.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer_links">Links</h4>
+          <ul>
+            <li><a href="#services" data-i18n="nav_services">Leistungen</a></li>
+            <li><a href="#packages" data-i18n="nav_packages">Pakete</a></li>
+            <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
+            <li><a href="#about" data-i18n="nav_about">Über Uns</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer_services">Leistungen</h4>
+          <ul>
+            <li><a href="#services" data-i18n="svc1_title">Innenreinigung</a></li>
+            <li><a href="#services" data-i18n="svc2_title">Außenaufbereitung</a></li>
+            <li><a href="#services" data-i18n="svc3_title">Lackkorrektur</a></li>
+            <li><a href="#services" data-i18n="svc4_title">Keramikversiegelung</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-i18n="footer_legal">Rechtliches</h4>
+          <ul>
+            <li><a href="impressum.html" data-i18n="footer_impressum">Impressum</a></li>
+            <li><a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 ElbCar Detailing. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
+        <div class="footer-legal">
+          <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
+          <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Scroll to top">&#8593;</button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
