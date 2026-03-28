@@ -46,6 +46,8 @@ const translations = {
     svc6_text: "Matte und vergilbte Scheinwerfer werden professionell aufbereitet — für bessere Sicht und eine gepflegte Optik.",
     svc7_title: "Lederreinigung & -pflege",
     svc7_text: "Professionelle Reinigung und Pflege von Ledersitzen und -oberflächen. Schutz vor Austrocknung und Rissen.",
+    svc8_title: "Reifenwechsel",
+    svc8_text: "Professioneller Reifenwechsel — Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.",
     svc_price: "ab",
 
     // Packages
@@ -131,6 +133,7 @@ const translations = {
     form_service_opt3: "Lackkorrektur",
     form_service_opt4: "Keramikversiegelung",
     form_service_opt5: "Komplettpaket",
+    form_service_opt7: "Reifenwechsel",
     form_service_opt6: "Sonstiges",
     form_message: "Ihre Nachricht",
     form_btn: "Nachricht senden",
@@ -183,6 +186,8 @@ const translations = {
     svc6_text: "Foggy and yellowed headlights are professionally restored — for better visibility and a polished look.",
     svc7_title: "Leather Care",
     svc7_text: "Professional cleaning and conditioning of leather seats and surfaces. Protection against drying and cracking.",
+    svc8_title: "Tyre Change",
+    svc8_text: "Professional tyre change — summer and winter tyres. Fast, reliable and at a fair price.",
     svc_price: "from",
 
     packages_title: "Our Packages",
@@ -263,6 +268,7 @@ const translations = {
     form_service_opt3: "Paint Correction",
     form_service_opt4: "Ceramic Coating",
     form_service_opt5: "Full Package",
+    form_service_opt7: "Tyre Change",
     form_service_opt6: "Other",
     form_message: "Your Message",
     form_btn: "Send Message",
@@ -314,6 +320,8 @@ const translations = {
     svc6_text: "Matlaşmış ve sararrmış farlar profesyonelce yenilenir — daha iyi görüş ve bakımlı bir görünüm için.",
     svc7_title: "Deri Bakımı",
     svc7_text: "Deri koltukların ve yüzeylerin profesyonel temizliği ve bakımı. Kurumaya ve çatlamaya karşı koruma.",
+    svc8_title: "Lastik Değişimi",
+    svc8_text: "Profesyonel lastik değişimi — yaz ve kış lastikleri. Hızlı, güvenilir ve uygun fiyatlı.",
     svc_price: "başlayan",
 
     packages_title: "Paketlerimiz",
@@ -394,6 +402,7 @@ const translations = {
     form_service_opt3: "Boya Düzeltme",
     form_service_opt4: "Seramik Kaplama",
     form_service_opt5: "Komple Paket",
+    form_service_opt7: "Lastik Değişimi",
     form_service_opt6: "Diğer",
     form_message: "Mesajınız",
     form_btn: "Mesaj Gönder",
