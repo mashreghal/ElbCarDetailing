@@ -120,7 +120,7 @@ const translations = {
     contact_addr_label: "Standort",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Öffnungszeiten",
-    contact_hours: "Mo–Fr: 08:00 – 18:00\nSa: 09:00 – 15:00\nSo: Geschlossen",
+    contact_hours: "Mo–Fr: 10:00 – 17:00\nSa & So: Geschlossen",
     form_name: "Ihr Name",
     form_email: "Ihre E-Mail",
     form_phone: "Telefonnummer",
@@ -252,7 +252,7 @@ const translations = {
     contact_addr_label: "Location",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Opening Hours",
-    contact_hours: "Mon–Fri: 08:00 – 18:00\nSat: 09:00 – 15:00\nSun: Closed",
+    contact_hours: "Mon–Fri: 10:00 – 17:00\nSat & Sun: Closed",
     form_name: "Your Name",
     form_email: "Your Email",
     form_phone: "Phone Number",
@@ -383,7 +383,7 @@ const translations = {
     contact_addr_label: "Konum",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Çalışma Saatleri",
-    contact_hours: "Pzt–Cum: 08:00 – 18:00\nCmt: 09:00 – 15:00\nPaz: Kapalı",
+    contact_hours: "Pzt–Cum: 10:00 – 17:00\nCmt & Paz: Kapalı",
     form_name: "Adınız",
     form_email: "E-Posta Adresiniz",
     form_phone: "Telefon Numarası",
@@ -454,8 +454,9 @@ function setLanguage(lang) {
 
 // Global handler for lang buttons
 document.addEventListener('click', (e) => {
-  if (e.target.classList.contains('lang-btn')) {
-    setLanguage(e.target.dataset.lang);
+  const btn = e.target.closest('.lang-btn');
+  if (btn) {
+    setLanguage(btn.dataset.lang);
   }
 });
 
