@@ -190,15 +190,6 @@ section { padding: 100px 0; position: relative; }
   align-items: center;
   gap: 20px;
 }
-.nav-logo {
-}
-.nav-logo-text {
-  font-family: var(--font-heading);
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--elbe-dark);
-  letter-spacing: 1px;
-}
 .nav-links {
   display: flex;
   align-items: center;
@@ -256,6 +247,10 @@ section { padding: 100px 0; position: relative; }
   font-size: 0.8rem;
   letter-spacing: 0.5px;
   white-space: nowrap;
+  margin-left: auto;
+}
+.nav-cta-mobile {
+  display: none !important;
 }
 
 /* Language Flags (inside nav-social-links) */
@@ -1107,7 +1102,7 @@ section { padding: 100px 0; position: relative; }
   .section-title h2 { font-size: 2rem; }
 
   /* Nav */
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; margin-left: auto; z-index: 999; position: relative; }
   .nav-menu {
     position: fixed;
     top: 0;
@@ -1130,10 +1125,15 @@ section { padding: 100px 0; position: relative; }
   .top-bar { display: none; }
   .navbar { top: 0; }
   .hero { padding-top: 90px; }
-  .nav-cta {
-    margin-left: 0;
+  .nav-logo-img { height: 36px; }
+  .navbar > .container > .nav-cta {
+    display: none;
+  }
+  .nav-cta-mobile {
+    display: flex !important;
     margin-top: 16px;
     width: 100%;
+    text-align: center;
     justify-content: center;
   }
 
