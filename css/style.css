@@ -32,9 +32,9 @@
   --radius: 12px;
   --max-width: 1200px;
   /* Dark theme */
-  --dark-bg: #080e18;
-  --dark-surface: #0c1525;
-  --dark-card: #111e30;
+  --dark-bg: #0d2137;
+  --dark-surface: #102844;
+  --dark-card: #152f4e;
   --dark-border: rgba(255,255,255,0.08);
 }
 
