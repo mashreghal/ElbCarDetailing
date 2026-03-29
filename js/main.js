@@ -17,6 +17,7 @@ const translations = {
     hero_text: "Wir verwandeln Ihr Fahrzeug in einen Neuzustand — mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.",
     hero_btn_services: "Unsere Leistungen",
     hero_btn_contact: "Termin anfragen",
+    hero_cta_call: "Jetzt anrufen",
 
     // About
     about_title: "Über ElbCar Detailing",
@@ -159,6 +160,7 @@ const translations = {
     hero_text: "We transform your vehicle to showroom condition — with attention to detail, professional products and years of experience.",
     hero_btn_services: "Our Services",
     hero_btn_contact: "Request Appointment",
+    hero_cta_call: "Call Now",
 
     about_title: "About ElbCar Detailing",
     about_subtitle: "Your Expert for Car Detailing in Hamburg",
@@ -293,6 +295,7 @@ const translations = {
     hero_text: "Aracınızı sıfır gibi bir duruma getiriyoruz — detaylara özen, profesyonel ürünler ve yıllarca deneyim ile.",
     hero_btn_services: "Hizmetlerimiz",
     hero_btn_contact: "Randevu Al",
+    hero_cta_call: "Hemen Ara",
 
     about_title: "ElbCar Detailing Hakkında",
     about_subtitle: "Hamburg'da Araç Bakım Uzmanınız",

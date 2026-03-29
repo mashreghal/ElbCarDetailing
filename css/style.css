@@ -393,6 +393,47 @@ section { padding: 100px 0; position: relative; }
   flex-wrap: wrap;
 }
 
+/* Hero Mobile CTA Buttons (hidden on desktop) */
+.hero-cta-mobile {
+  display: none;
+}
+
+/* Hamburg Background Watermarks */
+.hamburg-bg-watermark {
+  position: absolute;
+  color: var(--elbe-light);
+  opacity: 0.035;
+  z-index: 0;
+  pointer-events: none;
+}
+.hamburg-bg-fernsehturm {
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 280px;
+  width: auto;
+}
+.hamburg-bg-crane {
+  left: 10px;
+  bottom: 40px;
+  height: 200px;
+  width: auto;
+}
+.hamburg-bg-speicherstadt {
+  right: 0;
+  bottom: 80px;
+  width: 320px;
+  height: auto;
+}
+.hamburg-bg-wappen {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 200px;
+  width: auto;
+  opacity: 0.025;
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
@@ -1138,10 +1179,47 @@ section { padding: 100px 0; position: relative; }
   }
 
   /* Hero */
-  .hero-row { flex-direction: column; text-align: center; gap: 20px; }
+  .hero-row { flex-direction: column; text-align: center; gap: 16px; }
   .hero-text { text-align: center; }
-  .hero .tagline { font-size: 1rem; letter-spacing: 2px; }
-  .hero-logo { width: 160px; min-width: 160px; }
+  .hero .tagline { font-size: 0.85rem; letter-spacing: 2px; }
+  .hero p { font-size: 0.95rem; }
+  .hero-logo { width: 70px; min-width: 70px; }
+  .hero-hamburg-icons { display: none; }
+
+  /* Hero Mobile CTA */
+  .hero-cta-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+    width: 100%;
+  }
+  .hero-cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    transition: all var(--transition);
+  }
+  .hero-cta-phone {
+    background: linear-gradient(135deg, var(--hamburg-red), var(--hamburg-red-light));
+    color: var(--white);
+  }
+  .hero-cta-whatsapp {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: var(--white);
+  }
+  .hero-cta-book {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+  }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
