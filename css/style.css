@@ -1199,7 +1199,7 @@ section { padding: 100px 0; position: relative; }
   .hero-title { font-size: 1.5rem; }
   .hero .tagline { font-size: 0.8rem; white-space: normal; letter-spacing: 2px; }
   .hero p { font-size: 0.95rem; }
-  .hero-logo { width: 260px; min-width: 260px; }
+  .hero-logo { width: 520px; min-width: 520px; }
 
   /* Hero Mobile CTA */
   .hero-cta-mobile {
