@@ -26,9 +26,6 @@ const translations = {
     about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung — wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
     about_p3: "Egal ob Kleinwagen oder Supersportwagen — jedes Fahrzeug verdient die beste Pflege.",
     about_placeholder: "Foto des Inhabers — kommt bald",
-    about_stat1: "Zufriedene Kunden",
-    about_stat2: "Jahre Erfahrung",
-    about_stat3: "Premium-Marken",
 
     // Services
     services_title: "Unsere Leistungen",
@@ -107,11 +104,6 @@ const translations = {
     insta_subtitle: "Aktuelle Projekte, Vorher/Nachher-Bilder und Einblicke in unsere Arbeit",
     insta_btn: "Zu Instagram",
 
-    // Booking
-    booking_title: "Online-Buchung kommt bald!",
-    booking_text: "Wir arbeiten an einem Online-Buchungssystem. Bis dahin kontaktieren Sie uns direkt.",
-    booking_btn: "Jetzt Kontakt aufnehmen",
-
     // Contact
     contact_title: "Kontakt",
     contact_subtitle: "Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage",
@@ -119,7 +111,7 @@ const translations = {
     contact_phone_label: "Telefon",
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Mail",
-    contact_email: "info@elbcar-detailing.de",
+    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Standort",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Öffnungszeiten",
@@ -168,9 +160,6 @@ const translations = {
     about_p2: "From interior cleaning to paint correction and ceramic coating — we offer everything your vehicle needs to look like new and stay protected long-term.",
     about_p3: "Whether it's a compact car or a supercar — every vehicle deserves the best care.",
     about_placeholder: "Owner photo — coming soon",
-    about_stat1: "Happy Customers",
-    about_stat2: "Years Experience",
-    about_stat3: "Premium Brands",
 
     services_title: "Our Services",
     services_subtitle: "Professional vehicle care for the highest standards",
@@ -245,17 +234,13 @@ const translations = {
     insta_subtitle: "Current projects, before/after photos and insights into our work",
     insta_btn: "Visit Instagram",
 
-    booking_title: "Online Booking Coming Soon!",
-    booking_text: "We're building an online booking system. Until then, contact us directly.",
-    booking_btn: "Get in Touch",
-
     contact_title: "Contact",
     contact_subtitle: "Schedule your appointment or send us an inquiry",
     contact_info_title: "How to Reach Us",
     contact_phone_label: "Phone",
     contact_phone: "+49 155 63205346",
     contact_email_label: "Email",
-    contact_email: "info@elbcar-detailing.de",
+    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Location",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Opening Hours",
@@ -303,9 +288,6 @@ const translations = {
     about_p2: "İç temizlikten boya düzeltmeye, seramik kaplamaya kadar — aracınızın yeni görünmesi ve uzun vadeli korunması için her şeyi sunuyoruz.",
     about_p3: "İster küçük bir araba ister bir süper spor araba olsun — her araç en iyi bakımı hak eder.",
     about_placeholder: "Sahibin fotoğrafı — yakında",
-    about_stat1: "Mutlu Müşteri",
-    about_stat2: "Yıl Deneyim",
-    about_stat3: "Premium Marka",
 
     services_title: "Hizmetlerimiz",
     services_subtitle: "En yüksek standartlar için profesyonel araç bakımı",
@@ -380,17 +362,13 @@ const translations = {
     insta_subtitle: "Güncel projeler, önce/sonra fotoğrafları ve çalışmalarımızdan kareler",
     insta_btn: "Instagram'a Git",
 
-    booking_title: "Online Randevu Yakında!",
-    booking_text: "Online randevu sistemi üzerinde çalışıyoruz. O zamana kadar bize doğrudan ulaşın.",
-    booking_btn: "İletişime Geç",
-
     contact_title: "İletişim",
     contact_subtitle: "Randevunuzu planlayın veya bir talep gönderin",
     contact_info_title: "Bize Ulaşın",
     contact_phone_label: "Telefon",
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Posta",
-    contact_email: "info@elbcar-detailing.de",
+    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Konum",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Çalışma Saatleri",
