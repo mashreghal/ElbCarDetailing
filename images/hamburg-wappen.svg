@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <!-- Hamburg Coat of Arms - Hamburger Wappen -->
+  <!-- Shield background -->
+  <path d="M10,10 L190,10 L190,170 Q190,230 100,230 Q10,230 10,170 Z" fill="#cf0a2c" stroke="#8b0000" stroke-width="2"/>
+  <!-- Castle/Gate (Burg) -->
+  <!-- Main gate wall -->
+  <rect x="40" y="100" width="120" height="90" rx="2" fill="#ffffff"/>
+  <!-- Gate arch (entrance) -->
+  <path d="M80,190 L80,145 Q100,120 120,145 L120,190 Z" fill="#cf0a2c"/>
+  <!-- Left tower -->
+  <rect x="35" y="60" width="30" height="130" rx="1" fill="#ffffff"/>
+  <!-- Right tower -->
+  <rect x="135" y="60" width="30" height="130" rx="1" fill="#ffffff"/>
+  <!-- Center tower (taller) -->
+  <rect x="80" y="50" width="40" height="50" rx="1" fill="#ffffff"/>
+  <!-- Left tower roof -->
+  <polygon points="35,60 50,30 65,60" fill="#ffffff"/>
+  <!-- Right tower roof -->
+  <polygon points="135,60 150,30 165,60" fill="#ffffff"/>
+  <!-- Center tower roof -->
+  <polygon points="80,50 100,20 120,50" fill="#ffffff"/>
+  <!-- Tower top crosses / finials -->
+  <line x1="50" y1="18" x2="50" y2="30" stroke="#ffffff" stroke-width="3"/>
+  <line x1="44" y1="23" x2="56" y2="23" stroke="#ffffff" stroke-width="3"/>
+  <line x1="100" y1="8" x2="100" y2="20" stroke="#ffffff" stroke-width="3"/>
+  <line x1="94" y1="13" x2="106" y2="13" stroke="#ffffff" stroke-width="3"/>
+  <line x1="150" y1="18" x2="150" y2="30" stroke="#ffffff" stroke-width="3"/>
+  <line x1="144" y1="23" x2="156" y2="23" stroke="#ffffff" stroke-width="3"/>
+  <!-- Windows on left tower -->
+  <rect x="43" y="72" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <rect x="43" y="96" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <!-- Windows on right tower -->
+  <rect x="143" y="72" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <rect x="143" y="96" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <!-- Windows on main wall -->
+  <rect x="50" y="110" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <rect x="136" y="110" width="14" height="16" rx="7" fill="#cf0a2c"/>
+  <!-- Star above gate -->
+  <polygon points="100,105 103,112 110,112 104,117 106,124 100,120 94,124 96,117 90,112 97,112" fill="#cf0a2c"/>
+  <!-- Battlements on wall -->
+  <rect x="66" y="94" width="8" height="8" fill="#ffffff"/>
+  <rect x="78" y="94" width="8" height="8" fill="#ffffff"/>
+  <rect x="114" y="94" width="8" height="8" fill="#ffffff"/>
+  <rect x="126" y="94" width="8" height="8" fill="#ffffff"/>
+</svg>

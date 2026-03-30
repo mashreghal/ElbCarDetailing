@@ -383,13 +383,11 @@ section { padding: 100px 0; position: relative; }
   margin-top: 24px;
   gap: 130px;
 }
-.hero-icon-elphi {
-  width: 200px;
+.hero-hamburg-img {
+  width: 120px;
   height: auto;
-}
-.hero-icon-michel {
-  width: 100px;
-  height: auto;
+  opacity: 0.85;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
 .hero-buttons {
   display: flex;
