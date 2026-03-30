@@ -5,10 +5,10 @@
 
 /* --- CSS Variables --- */
 :root {
-  --elbe-dark: #0d2137;
-  --elbe: #1a3a5c;
-  --elbe-light: #2a5580;
-  --elbe-lighter: #3a6d9e;
+  --elbe-dark: #00507D;
+  --elbe: #005B99;
+  --elbe-light: #0072BB;
+  --elbe-lighter: #3a8fd4;
   --gold: #c9a84c;
   --gold-light: #e4c76b;
   --gold-dark: #a8882e;
@@ -366,32 +366,28 @@ section { padding: 100px 0; position: relative; }
 .hero-text {
   text-align: left;
 }
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px 0;
+  letter-spacing: 1px;
+}
 .hero .tagline {
-  font-size: 1.1rem;
+  font-size: 1.35rem;
   color: var(--gold);
   margin-bottom: 12px;
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .hero p {
   font-size: 1.05rem;
   color: rgba(255,255,255,0.75);
   margin-bottom: 0;
   max-width: 600px;
-}
-.hero-hamburg-icons {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-top: 24px;
-  gap: 130px;
-}
-.hero-hamburg-img {
-  width: 120px;
-  height: auto;
-  opacity: 0.85;
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));
 }
 .hero-buttons {
   display: flex;
@@ -1200,10 +1196,10 @@ section { padding: 100px 0; position: relative; }
   /* Hero */
   .hero-row { flex-direction: column; text-align: center; gap: 16px; }
   .hero-text { text-align: center; }
-  .hero .tagline { font-size: 0.85rem; letter-spacing: 2px; }
+  .hero-title { font-size: 1.5rem; }
+  .hero .tagline { font-size: 0.8rem; white-space: normal; letter-spacing: 2px; }
   .hero p { font-size: 0.95rem; }
-  .hero-logo { width: 70px; min-width: 70px; }
-  .hero-hamburg-icons { display: none; }
+  .hero-logo { width: 90px; min-width: 90px; }
 
   /* Hero Mobile CTA */
   .hero-cta-mobile {
