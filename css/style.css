@@ -359,9 +359,9 @@ section { padding: 100px 0; position: relative; }
   gap: 40px;
 }
 .hero-logo {
-  width: 180px;
-  min-width: 180px;
-  filter: drop-shadow(0 0 30px rgba(201,168,76,0.2));
+  width: 280px;
+  min-width: 280px;
+  filter: drop-shadow(0 0 30px rgba(0,91,153,0.3));
 }
 .hero-text {
   text-align: left;
@@ -1199,7 +1199,7 @@ section { padding: 100px 0; position: relative; }
   .hero-title { font-size: 1.5rem; }
   .hero .tagline { font-size: 0.8rem; white-space: normal; letter-spacing: 2px; }
   .hero p { font-size: 0.95rem; }
-  .hero-logo { width: 75vw; min-width: unset; max-width: none; }
+  .hero-logo { width: 58vw; min-width: unset; max-width: none; }
 
   /* Hero Mobile CTA */
   .hero-cta-mobile {
