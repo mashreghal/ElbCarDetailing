@@ -1231,9 +1231,8 @@ section { padding: 100px 0; position: relative; }
     color: var(--white);
   }
   .hero-cta-book {
-    background: transparent;
-    border: 2px solid var(--gold);
-    color: var(--gold);
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark, #b8960c));
+    color: var(--white);
   }
 
   /* About */
