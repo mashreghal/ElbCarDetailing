@@ -1180,7 +1180,7 @@ section { padding: 100px 0; position: relative; }
   }
   .top-bar { display: none; }
   .navbar { top: 0; }
-  .hero { padding-top: 90px; }
+  .hero { padding-top: 70px; }
   .nav-logo-img { height: 36px; }
   .navbar > .container > .nav-cta {
     display: none;
@@ -1194,7 +1194,7 @@ section { padding: 100px 0; position: relative; }
   }
 
   /* Hero */
-  .hero-row { flex-direction: column; text-align: center; gap: 6px; }
+  .hero-row { flex-direction: column; text-align: center; gap: 0; }
   .hero-text { text-align: center; }
   .hero-title { font-size: 1.5rem; }
   .hero .tagline { font-size: 0.8rem; white-space: normal; letter-spacing: 2px; }
