@@ -396,6 +396,42 @@ section { padding: 100px 0; position: relative; }
   flex-wrap: wrap;
 }
 
+/* Hero Desktop CTA Buttons */
+.hero-cta-desktop {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 24px;
+}
+.hero-cta-desktop .hero-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.hero-cta-desktop .hero-cta-phone {
+  background: linear-gradient(135deg, var(--hamburg-red), var(--hamburg-red-light));
+  color: var(--white);
+}
+.hero-cta-desktop .hero-cta-whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: var(--white);
+}
+.hero-cta-desktop .hero-cta-book {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  color: var(--white);
+}
+.hero-cta-desktop .hero-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
 /* Hero Mobile CTA Buttons (hidden on desktop) */
 .hero-cta-mobile {
   display: none;
@@ -1181,6 +1217,7 @@ section { padding: 100px 0; position: relative; }
   .top-bar { display: none; }
   .navbar { top: 0; }
   .hero { padding-top: 70px; }
+  .hero-cta-desktop { display: none; }
   .nav-logo-img { height: 36px; }
   .navbar > .container > .nav-cta {
     display: none;
