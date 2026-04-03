@@ -1195,7 +1195,7 @@ section { padding: 100px 0; position: relative; }
 
   /* Hero */
   .hero-row { flex-direction: column; text-align: center; gap: 0; }
-  .hero-text { text-align: center; }
+  .hero-text { text-align: center; margin-top: -10px; }
   .hero-title { font-size: 1.5rem; }
   .hero .tagline { font-size: 0.8rem; white-space: normal; letter-spacing: 2px; }
   .hero p { font-size: 0.95rem; }
