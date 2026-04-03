@@ -648,20 +648,21 @@ Sa & So: Geschlossen</p>
         </div>
 
         <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/mvzvwqrd" method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage von ElbCar Detailing Website">
           <div class="form-row">
             <div class="form-group">
-              <input type="text" name="name" required data-i18n="form_name" placeholder="Ihr Name">
+              <input type="text" name="Name" required data-i18n="form_name" placeholder="Ihr Name">
             </div>
             <div class="form-group">
-              <input type="email" name="email" required data-i18n="form_email" placeholder="Ihre E-Mail">
+              <input type="email" name="E-Mail" required data-i18n="form_email" placeholder="Ihre E-Mail">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <input type="tel" name="phone" data-i18n="form_phone" placeholder="Telefonnummer">
+              <input type="tel" name="Telefon" data-i18n="form_phone" placeholder="Telefonnummer">
             </div>
             <div class="form-group">
-              <select name="service">
+              <select name="Leistung">
                 <option value="" data-i18n="form_service_opt0">Bitte wählen...</option>
                 <option value="interior" data-i18n="form_service_opt1">Innenreinigung</option>
                 <option value="exterior" data-i18n="form_service_opt2">Außenaufbereitung</option>
@@ -674,7 +675,7 @@ Sa & So: Geschlossen</p>
             </div>
           </div>
           <div class="form-group">
-            <textarea name="message" rows="5" data-i18n="form_message" placeholder="Ihre Nachricht"></textarea>
+            <textarea name="Nachricht" rows="5" data-i18n="form_message" placeholder="Ihre Nachricht"></textarea>
           </div>
           <button type="submit" class="btn btn-gold" data-i18n="form_btn">Nachricht senden</button>
         </form>
