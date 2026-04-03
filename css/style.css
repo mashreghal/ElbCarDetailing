@@ -1221,7 +1221,7 @@ section { padding: 100px 0; position: relative; }
   .top-bar { display: none; }
   .navbar { top: 0; }
   .hero { padding-top: 70px; }
-  .hero-cta-desktop { display: none; }
+  .hero-cta-desktop { display: none !important; }
   .nav-logo-img { height: 36px; }
   .navbar > .container > .nav-cta {
     display: none;
