@@ -1,7 +1,7 @@
 # ElbCar Detailing - TODO
 
 ## Pending
-- [ ] **Replace Formspree endpoint with client's** — contact form currently uses ali.zamini87@gmail.com (testing). Client needs to register at formspree.io with elbcar.detailing@gmail.com, create a form, and provide the new endpoint URL. Then swap it in index.html (line with `formspree.io/f/...`)
+- [x] **Replace Formspree endpoint with client's** — switched to client's endpoint (elbcar.detailing@gmail.com)
 - [ ] **Replace logo with client's PNG** — client will provide original .png with transparent background for pixel-perfect result
 - [ ] **Auto-update Instagram section via GitHub Action** — scheduled GitHub Action that fetches latest @elbcar posts and commits updated images/data to the repo. Keeps Instagram section always fresh with no manual work. Fully free, no external dependencies.
 - [ ] **Add Google reviews section** — 5.0 stars, 69 reviews, include great review quote about Keramikversiegelung
