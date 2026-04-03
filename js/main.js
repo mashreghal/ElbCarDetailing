@@ -548,18 +548,27 @@ function initScrollToTop() {
   });
 }
 
-// --- Contact Form (placeholder) ---
+// --- Contact Form (mailto) ---
 function initContactForm() {
-  const form = document.querySelector('.contact-form');
+  const form = document.getElementById('contactForm');
   if (!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const msgs = {
-      de: 'Vielen Dank! Wir melden uns bald bei Ihnen.',
-      en: 'Thank you! We will get back to you soon.',
-      tr: 'Teşekkürler! En kısa sürede size döneceğiz.'
-    };
-    alert(msgs[currentLang] || msgs.de);
-    form.reset();
+    const name = form.querySelector('[name="name"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const phone = form.querySelector('[name="phone"]').value;
+    const service = form.querySelector('[name="service"]').value;
+    const message = form.querySelector('[name="message"]').value;
+
+    const subject = encodeURIComponent('Neue Anfrage von ElbCar Detailing Website');
+    const body = encodeURIComponent(
+      'Name: ' + name + '\n' +
+      'E-Mail: ' + email + '\n' +
+      'Telefon: ' + (phone || '-') + '\n' +
+      'Leistung: ' + (service || '-') + '\n\n' +
+      'Nachricht:\n' + message
+    );
+
+    window.location.href = 'mailto:ali.zamini87@gmail.com?subject=' + subject + '&body=' + body;
   });
 }
