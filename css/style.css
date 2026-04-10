@@ -530,17 +530,11 @@ section { padding: 100px 0; position: relative; }
 .about-image {
   position: relative;
 }
-.about-image .placeholder-img {
+.about-image img {
   width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--dark-card);
   border-radius: var(--radius);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255,255,255,0.4);
-  font-size: 1rem;
-  border: 2px dashed var(--dark-border);
+  display: block;
+  object-fit: cover;
 }
 .about-image::after {
   content: '';

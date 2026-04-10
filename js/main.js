@@ -25,8 +25,6 @@ const translations = {
     about_p1: "Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.",
     about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung — wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
     about_p3: "Egal ob Kleinwagen oder Supersportwagen — jedes Fahrzeug verdient die beste Pflege.",
-    about_placeholder: "Foto des Inhabers — kommt bald",
-
     // Services
     services_title: "Unsere Leistungen",
     services_subtitle: "Professionelle Fahrzeugpflege für höchste Ansprüche",
@@ -159,8 +157,6 @@ const translations = {
     about_p1: "At ElbCar Detailing, quality comes first. With state-of-the-art techniques and premium products, we ensure your vehicle shines in its best condition.",
     about_p2: "From interior cleaning to paint correction and ceramic coating — we offer everything your vehicle needs to look like new and stay protected long-term.",
     about_p3: "Whether it's a compact car or a supercar — every vehicle deserves the best care.",
-    about_placeholder: "Owner photo — coming soon",
-
     services_title: "Our Services",
     services_subtitle: "Professional vehicle care for the highest standards",
     svc1_title: "Interior Cleaning",
@@ -287,8 +283,6 @@ const translations = {
     about_p1: "ElbCar Detailing'de kalite her şeyden önce gelir. En modern teknikler ve premium ürünlerle aracınızın en iyi durumda parlamasını sağlıyoruz.",
     about_p2: "İç temizlikten boya düzeltmeye, seramik kaplamaya kadar — aracınızın yeni görünmesi ve uzun vadeli korunması için her şeyi sunuyoruz.",
     about_p3: "İster küçük bir araba ister bir süper spor araba olsun — her araç en iyi bakımı hak eder.",
-    about_placeholder: "Sahibin fotoğrafı — yakında",
-
     services_title: "Hizmetlerimiz",
     services_subtitle: "En yüksek standartlar için profesyonel araç bakımı",
     svc1_title: "İç Temizlik",
