@@ -535,8 +535,7 @@ section { padding: 100px 0; position: relative; }
   border-radius: var(--radius);
   display: block;
   object-fit: cover;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  border: 3px solid var(--gold);
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.3));
 }
 .about-image::after {
   content: '';
