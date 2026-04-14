@@ -851,6 +851,82 @@ section { padding: 100px 0; position: relative; }
 }
 
 /* ============================================
+   PRICING / ANGEBOT SECTION
+   ============================================ */
+#pricing {
+  background: var(--dark-bg);
+}
+.pricing-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pricing-text {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.pricing-text p {
+  color: rgba(255,255,255,0.7);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.pricing-contact-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+.pricing-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: all var(--transition);
+}
+.pricing-contact-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+.pricing-contact-item h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 2px;
+  font-family: var(--font-body);
+}
+.pricing-contact-item p {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+}
+.pricing-form-wrapper {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius);
+  padding: 40px;
+}
+.pricing-form-wrapper h3 {
+  font-size: 1.4rem;
+  color: var(--white);
+  margin-bottom: 24px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .pricing-contact-options {
+    grid-template-columns: 1fr;
+  }
+  .pricing-form-wrapper {
+    padding: 24px;
+  }
+}
+
+/* ============================================
    INSTAGRAM SECTION
    ============================================ */
 #instagram {
