@@ -104,6 +104,12 @@ const translations = {
     reviews_subtitle: "Was unsere Kunden über uns sagen",
     reviews_count: "69 Bewertungen auf Google",
     reviews_btn: "Alle Bewertungen auf Google ansehen",
+    review_translated: "",
+    review1_text: "Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.",
+    review2_text: "Ich bin sehr zufrieden. Parlack hat mich ehrlich beraten und mir klar gesagt, was wirklich nötig ist – keine teuren Zusatzpakete, kein unnötiger Schnickschnack. Wir haben die preisgünstigste Variante gewählt, und das Ergebnis war absolut top. Durch seine Tipps habe ich am Ende bei meinem Leasingrückläufer richtig Geld gespart und gezaubert hat er auch noch. Ganz schlimme Kratzer sind einfach spurlos verschwunden. Zuverlässig, kompetent und fair. Klare Empfehlung.",
+    review3_text: "Zur Leasing Rückgabe meines Smarts habe ich ihn hier aufbereiten lassen und war super happy mit dem Ergebnis. Innen- und Außenreinigung sowie Polieren. Das Auto glänzte wie neu. Die Kommunikation und der Kundenservice waren toll und unkompliziert. Ich würde mein Auto jederzeit wieder dorthin bringen und weiterempfehlen.",
+    review4_text: "Ich habe unseren Mercedes-Benz Marco Polo bei Parlack in Finkenwerder zur Aufbereitung gegeben – inklusive intensiver Innenreinigung, Außenpolitur und Keramikversiegelung. Das Ergebnis ist einfach unglaublich perfekt! Der Wagen sieht besser aus als neu – jedes Detail glänzt, der Lack ist spiegelglatt und der Innenraum makellos sauber. Der Service war zudem super freundlich, zuverlässig und professionell. Man merkt, dass hier mit echter Leidenschaft und viel Know-how gearbeitet wird. Absolut empfehlenswert – ich komme definitiv wieder!",
+    review5_text: "Ich bin extra einen längeren Weg gefahren, um mein Auto hier aufbereiten zu lassen – und es hat sich absolut gelohnt! Das Ergebnis hat meine Erwartungen übertroffen. Das Auto glänzt wie neu, selbst die kleinen Details wurden nicht übersehen. Der Service war freundlich und professionell. Ich bin wirklich sehr zufrieden und komme gerne wieder. Absolute Empfehlung!",
 
     // Pricing
     pricing_title: "Angebot & Preise",
@@ -249,6 +255,12 @@ const translations = {
     reviews_subtitle: "What our customers say about us",
     reviews_count: "69 reviews on Google",
     reviews_btn: "See all reviews on Google",
+    review_translated: "Translated from German",
+    review1_text: "Perfect ceramic coating. You can't get more shine than this. Professional work, the owner is very friendly and always up for a nice chat. Happy to come back. A clear recommendation for anyone who likes their car well cared for.",
+    review2_text: "I'm very satisfied. Parlack gave me honest advice and clearly told me what was really needed — no expensive add-on packages, no unnecessary extras. We chose the most affordable option, and the result was absolutely top-notch. Thanks to his tips, I ended up saving real money on my lease return, and he worked magic too. Really bad scratches just vanished without a trace. Reliable, competent and fair. Highly recommended.",
+    review3_text: "For the lease return of my Smart, I had it detailed here and was super happy with the result. Interior and exterior cleaning plus polishing. The car looked like new. Communication and customer service were great and uncomplicated. I would bring my car back anytime and recommend them to others.",
+    review4_text: "I had our Mercedes-Benz Marco Polo detailed at Parlack in Finkenwerder — including intensive interior cleaning, exterior polishing and ceramic coating. The result is simply incredibly perfect! The vehicle looks better than new — every detail shines, the paint is mirror-smooth and the interior is spotlessly clean. The service was also super friendly, reliable and professional. You can tell that real passion and expertise go into the work here. Absolutely recommended — I'll definitely be back!",
+    review5_text: "I drove a longer distance specifically to have my car detailed here — and it was absolutely worth it! The result exceeded my expectations. The car shines like new, even the small details weren't overlooked. The service was friendly and professional. I'm really very satisfied and will gladly come back. Absolute recommendation!",
 
     pricing_title: "Quotes & Pricing",
     pricing_subtitle: "Individual quotes for every vehicle",
@@ -390,6 +402,12 @@ const translations = {
     reviews_subtitle: "Müşterilerimiz bizim hakkımızda ne diyor",
     reviews_count: "Google'da 69 yorum",
     reviews_btn: "Tüm yorumları Google'da görün",
+    review_translated: "Almancadan çevrilmiştir",
+    review1_text: "Mükemmel seramik kaplama. Bundan daha fazla parlaklık olamaz. Profesyonel iş, işletme sahibi çok güler yüzlü ve sohbet etmekten keyif alıyor. Tekrar gelmekten memnuniyet duyarım. Arabasına özen gösteren herkese kesinlikle tavsiye ederim.",
+    review2_text: "Çok memnunum. Parlack bana dürüstçe danışmanlık yaptı ve gerçekten neyin gerekli olduğunu açıkça söyledi — pahalı ek paketler yok, gereksiz süslemeler yok. En uygun fiyatlı seçeneği tercih ettik ve sonuç kesinlikle mükemmeldi. Önerileri sayesinde kiralık araç iadende ciddi para biriktirdim, üstelik sihir gibi bir iş çıkardı. Çok kötü çizikler iz bırakmadan kayboldu. Güvenilir, yetkin ve adil. Kesinlikle tavsiye ederim.",
+    review3_text: "Smart'ımın kiralama iadesi için burada bakım yaptırdım ve sonuçtan çok memnun kaldım. İç ve dış temizlik ile cilalama. Araba yeni gibi parlıyordu. İletişim ve müşteri hizmetleri harika ve sorunsuzdu. Arabamı her zaman tekrar buraya getiririm ve herkese tavsiye ederim.",
+    review4_text: "Mercedes-Benz Marco Polo'muzu Finkenwerder'deki Parlack'a bakım için bıraktım — yoğun iç temizlik, dış cilalama ve seramik kaplama dahil. Sonuç inanılmaz derecede mükemmel! Araç yenisinden daha iyi görünüyor — her detay parlıyor, boya ayna gibi pürüzsüz ve iç mekan tertemiz. Hizmet ayrıca çok güler yüzlü, güvenilir ve profesyoneldi. Burada gerçek tutku ve uzmanlıkla çalışıldığı hissediliyor. Kesinlikle tavsiye ederim — mutlaka tekrar geleceğim!",
+    review5_text: "Arabamı burada bakım yaptırmak için özellikle uzun bir yol geldim — ve kesinlikle buna değdi! Sonuç beklentilerimi aştı. Araba yeni gibi parlıyor, küçük detaylar bile gözden kaçırılmamış. Hizmet güler yüzlü ve profesyoneldi. Gerçekten çok memnunum ve memnuniyetle tekrar gelirim. Kesinlikle tavsiye ederim!",
 
     pricing_title: "Teklif & Fiyatlar",
     pricing_subtitle: "Her araç için bireysel teklifler",

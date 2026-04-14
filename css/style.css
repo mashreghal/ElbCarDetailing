@@ -951,6 +951,16 @@ section { padding: 100px 0; position: relative; }
   font-size: 0.95rem;
   line-height: 1.65;
 }
+.review-translated:empty {
+  display: none;
+}
+.review-translated {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.35);
+  font-style: italic;
+}
 .reviews-cta {
   text-align: center;
 }
