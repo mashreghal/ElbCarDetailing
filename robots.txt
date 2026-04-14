@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mashreghal.github.io/ElbCarDetailing/sitemap.xml
+Sitemap: https://elbcar-detailing.de/sitemap.xml
