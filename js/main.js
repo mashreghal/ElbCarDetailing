@@ -10,6 +10,7 @@ const translations = {
     nav_packages: "Pakete",
     nav_gallery: "Galerie",
     nav_about: "Über Uns",
+    nav_reviews: "Bewertungen",
     nav_pricing: "Angebot & Preise",
     nav_contact: "Kontakt",
 
@@ -98,6 +99,12 @@ const translations = {
     gallery_cap9: "Audi — Fußmatten-Reinigung",
     gallery_cap10: "Tankdeckel — Detailreinigung",
 
+    // Reviews
+    reviews_title: "Kundenbewertungen",
+    reviews_subtitle: "Was unsere Kunden über uns sagen",
+    reviews_count: "69 Bewertungen auf Google",
+    reviews_btn: "Alle Bewertungen auf Google ansehen",
+
     // Pricing
     pricing_title: "Angebot & Preise",
     pricing_subtitle: "Individuelle Angebote für jedes Fahrzeug",
@@ -154,6 +161,7 @@ const translations = {
     nav_packages: "Packages",
     nav_gallery: "Gallery",
     nav_about: "About",
+    nav_reviews: "Reviews",
     nav_pricing: "Quotes & Pricing",
     nav_contact: "Contact",
 
@@ -237,6 +245,11 @@ const translations = {
     gallery_cap9: "Audi — Floor Mat Cleaning",
     gallery_cap10: "Fuel Cap — Detail Cleaning",
 
+    reviews_title: "Customer Reviews",
+    reviews_subtitle: "What our customers say about us",
+    reviews_count: "69 reviews on Google",
+    reviews_btn: "See all reviews on Google",
+
     pricing_title: "Quotes & Pricing",
     pricing_subtitle: "Individual quotes for every vehicle",
     pricing_p1: "Our prices depend on the size and condition of your vehicle. Since every car is unique, we're happy to provide a personalized quote — tailored to your needs and the scope of work.",
@@ -289,6 +302,7 @@ const translations = {
     nav_packages: "Paketler",
     nav_gallery: "Galeri",
     nav_about: "Hakkımızda",
+    nav_reviews: "Yorumlar",
     nav_pricing: "Teklif & Fiyatlar",
     nav_contact: "İletişim",
 
@@ -371,6 +385,11 @@ const translations = {
     gallery_cap8: "Mercedes AMG — Direksiyon Bakımı",
     gallery_cap9: "Audi — Paspas Temizliği",
     gallery_cap10: "Yakıt Kapağı — Detay Temizlik",
+
+    reviews_title: "Müşteri Yorumları",
+    reviews_subtitle: "Müşterilerimiz bizim hakkımızda ne diyor",
+    reviews_count: "Google'da 69 yorum",
+    reviews_btn: "Tüm yorumları Google'da görün",
 
     pricing_title: "Teklif & Fiyatlar",
     pricing_subtitle: "Her araç için bireysel teklifler",
