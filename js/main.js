@@ -150,7 +150,9 @@ const translations = {
     form_service_opt7: "Reifenwechsel",
     form_service_opt6: "Sonstiges",
     form_message: "Ihre Nachricht",
+    form_response_promise: "Antwort innerhalb eines Werktages garantiert",
     form_btn: "Nachricht senden",
+    sticky_call_label: "Anrufen",
 
     // Footer
     footer_desc: "Premium Fahrzeugaufbereitung in Hamburg. Ihr Fahrzeug verdient das Beste.",
@@ -298,7 +300,9 @@ const translations = {
     form_service_opt7: "Tyre Change",
     form_service_opt6: "Other",
     form_message: "Your Message",
+    form_response_promise: "Response within one business day guaranteed",
     form_btn: "Send Message",
+    sticky_call_label: "Call",
 
     footer_desc: "Premium car detailing in Hamburg. Your vehicle deserves the best.",
     footer_links: "Links",
@@ -445,7 +449,9 @@ const translations = {
     form_service_opt7: "Lastik Değişimi",
     form_service_opt6: "Diğer",
     form_message: "Mesajınız",
+    form_response_promise: "Bir iş günü içinde yanıt garantilidir",
     form_btn: "Mesaj Gönder",
+    sticky_call_label: "Ara",
 
     footer_desc: "Hamburg'da premium araç bakımı. Aracınız en iyisini hak ediyor.",
     footer_links: "Bağlantılar",

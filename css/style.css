@@ -1349,6 +1349,49 @@ section { padding: 100px 0; position: relative; }
 .legal-page a { color: var(--gold); }
 
 /* ============================================
+   STICKY MOBILE CALL BUTTON
+   ============================================ */
+.sticky-call {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, var(--hamburg-red), var(--hamburg-red-light));
+  color: var(--white);
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(212,32,32,0.45);
+  z-index: 998;
+  transition: transform var(--transition);
+}
+.sticky-call:hover,
+.sticky-call:focus { transform: translateX(-50%) translateY(-2px); }
+@media (max-width: 768px) {
+  .sticky-call { display: inline-flex; }
+}
+
+/* ============================================
+   FORM RESPONSE PROMISE
+   ============================================ */
+.form-response-promise {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--gold);
+  margin: 0 0 16px;
+  text-align: center;
+}
+.form-response-promise svg { flex-shrink: 0; }
+
+/* ============================================
    SCROLL TO TOP
    ============================================ */
 .scroll-top {
