@@ -25,6 +25,45 @@
 - [ ] **Tax ID in Impressum** — placeholder [DE XXXXXXXXX] needs real value
 - [ ] **More languages** — Polish, Arabic, Russian discussed
 
+## Google visibility / SEO
+
+**Context:** On-site SEO is already solid (structured data, sitemap, meta, OG, canonical). The "invisible on Google" problem is local visibility — Google Business Profile is ~70% of the lever, website ~20%, backlinks/directories ~10%.
+
+### This week — biggest local impact
+
+- [ ] **Fully optimize Google Business Profile** — claim at business.google.com if not already. Set primary category "Autoaufbereitung"/"Fahrzeugaufbereitung" + secondaries (Autowaschanlage, Autopolitur). Write 750-char natural German description with Hamburg + neighborhoods. Add every service to the services list. Upload 30+ photos (before/after, team, shop, specific brands).
+- [ ] **Weekly Google Posts on GBP** — like Instagram for Business Profile. A quick before/after or promo each week.
+- [ ] **Review gathering routine** — target 2–4 new reviews/week. Create short review link, print QR code cards for handover, send friendly WhatsApp 24h after pickup asking for review. Ask customers to name the specific service they got.
+- [ ] **Respond to every review within 24h** — good and bad. Google tracks response rate as a ranking signal.
+- [ ] **Submit site to Google Search Console** — verify domain at search.google.com/search-console, submit sitemap, monitor which keywords rank.
+
+### Next 1–3 months — compounds over time
+
+- [ ] **Local citations / directory listings** — consistent Name/Address/Phone on Das Örtliche, Gelbe Seiten, 11880, Bing Places, Apple Maps, Yelp DE, Branchenbuch-Deutschland, Cylex.
+- [ ] **Service-specific landing pages** — Google ranks pages, not sites. Build dedicated pages:
+  - `/keramikversiegelung-hamburg`
+  - `/lackkorrektur-hamburg`
+  - `/autoaufbereitung-hamburg-hafen`
+  - `/innenreinigung-auto-hamburg`
+  Each: 400–600 words genuine content, before/after photos, local context, internal link back to packages + contact.
+- [ ] **Neighborhood / area pages** — catch "near me" searches:
+  - `/fahrzeugaufbereitung-altona`
+  - `/autoaufbereitung-harburg`
+  - (add districts as relevant)
+- [ ] **Blog / "Aktuelles" section** — 1 post/month on topics customers actually Google: "Wie oft Keramikversiegelung erneuern?", "Lohnt sich Lackkorrektur beim Gebrauchtwagen?", "Was kostet professionelle Autoaufbereitung in Hamburg?"
+
+### Ongoing — forever
+
+- [ ] **Quality backlinks** — local Hamburg blogs, car forums, sponsor a local car club event, partner with used-car dealers (they link as detailing partner).
+- [ ] **Social signals** — regular Instagram (already in TODO), consider YouTube shorts for before/after reels.
+- [ ] **Track & adjust** — monthly check of Search Console + GBP insights to see what's actually driving traffic, adjust content accordingly.
+
+### SEO top 3 if time is tight
+
+1. **Fully optimize + post weekly on Google Business Profile**
+2. **Systematic review gathering** (2–4/week, every week)
+3. **Google Search Console + 3 service-specific landing pages**
+
 ## Completed
 
 - [x] Sticky mobile call button — always-visible tap-to-call on mobile (2026-04-18)
