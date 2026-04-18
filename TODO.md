@@ -35,7 +35,8 @@
 - [ ] **Weekly Google Posts on GBP** — like Instagram for Business Profile. A quick before/after or promo each week.
 - [ ] **Review gathering routine** — target 2–4 new reviews/week. Create short review link, print QR code cards for handover, send friendly WhatsApp 24h after pickup asking for review. Ask customers to name the specific service they got.
 - [ ] **Respond to every review within 24h** — good and bad. Google tracks response rate as a ranking signal.
-- [ ] **Submit site to Google Search Console** — verify domain at search.google.com/search-console, submit sitemap, monitor which keywords rank.
+- [ ] **Review Search Console data after 2 weeks** (around 2026-05-02) — first real data available. Look at: which queries show impressions, click-through rate, any crawl errors, mobile usability issues.
+- [ ] **Monthly Search Console review** — check queries, impressions, clicks, average position. Spot keywords where we're on page 2 (positions 11–20) and push them into top 10 by tuning title/meta/content. Fix any crawl/indexing errors flagged.
 
 ### Next 1–3 months — compounds over time
 
@@ -66,6 +67,7 @@
 
 ## Completed
 
+- [x] Google Search Console verified (elbcar-detailing.de, domain property, auto via GoDaddy) + sitemap.xml submitted (2026-04-18) — GSC is a monitoring tool, not a ranking booster. Effect: faster indexing + visibility into which queries drive impressions/clicks so we can tune content. Real data expected in 1–2 weeks.
 - [x] Sticky mobile call button — always-visible tap-to-call on mobile (2026-04-18)
 - [x] Response-time guarantee near contact form — "Antwort innerhalb eines Werktages garantiert" (2026-04-18)
 - [x] Fourth package card "Nichts dabei?" for individual offer (2026-04-18)
