@@ -925,31 +925,70 @@ Sa & So: Geschlossen</p>
               <input type="email" name="E-Mail" required data-i18n="form_email" placeholder="Ihre E-Mail">
             </div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <input type="tel" name="Telefon" data-i18n="form_phone" placeholder="Telefonnummer">
-            </div>
-            <div class="form-group">
-              <select name="Leistung">
-                <option value="" data-i18n="form_service_opt0">Bitte wählen...</option>
-                <option value="interior" data-i18n="form_service_opt1">Innenreinigung</option>
-                <option value="exterior" data-i18n="form_service_opt2">Außenaufbereitung</option>
-                <option value="paint" data-i18n="form_service_opt3">Lackkorrektur</option>
-                <option value="ceramic" data-i18n="form_service_opt4">Keramikversiegelung</option>
-                <option value="full" data-i18n="form_service_opt5">Komplettpaket</option>
-                <option value="tyres" data-i18n="form_service_opt7">Reifenwechsel</option>
-                <option value="other" data-i18n="form_service_opt6">Sonstiges</option>
-              </select>
+          <div class="form-group">
+            <input type="tel" name="Telefon" data-i18n="form_phone" placeholder="Telefonnummer">
+          </div>
+
+          <div class="form-choice">
+            <label class="form-label" data-i18n="form_contact_pref_label">Wie möchten Sie kontaktiert werden?</label>
+            <div class="form-pills">
+              <label class="form-pill"><input type="radio" name="Kontaktart" value="E-Mail" required><span data-i18n="form_contact_pref_email">E-Mail</span></label>
+              <label class="form-pill"><input type="radio" name="Kontaktart" value="Rückruf"><span data-i18n="form_contact_pref_callback">Rückruf</span></label>
+              <label class="form-pill"><input type="radio" name="Kontaktart" value="WhatsApp"><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></label>
             </div>
           </div>
+
+          <div class="form-choice">
+            <label class="form-label" data-i18n="form_customer_type_label">Sind Sie Privat- oder Gewerbekunde?</label>
+            <div class="form-pills">
+              <label class="form-pill"><input type="radio" name="Kundentyp" value="Privat" required><span data-i18n="form_customer_private">Privat</span></label>
+              <label class="form-pill"><input type="radio" name="Kundentyp" value="Gewerbe"><span data-i18n="form_customer_commercial">Gewerbe</span></label>
+            </div>
+          </div>
+
+          <div class="form-choice">
+            <label class="form-label" data-i18n="form_services_label">Welche Leistungen interessieren Sie? (Mehrfachauswahl möglich)</label>
+            <div class="form-pills">
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Innenreinigung"><span data-i18n="form_service_opt1">Innenreinigung</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Außenaufbereitung"><span data-i18n="form_service_opt2">Außenaufbereitung</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lackkorrektur"><span data-i18n="form_service_opt3">Lackkorrektur</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Keramikversiegelung"><span data-i18n="form_service_opt4">Keramikversiegelung</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Komplettpaket"><span data-i18n="form_service_opt5">Komplettpaket</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Motorwäsche"><span data-i18n="svc5_title">Motorwäsche</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Scheinwerferaufbereitung"><span data-i18n="svc6_title">Scheinwerferaufbereitung</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lederpflege"><span data-i18n="svc7_title">Lederreinigung & -pflege</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Reifenwechsel"><span data-i18n="form_service_opt7">Reifenwechsel</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Sonstiges"><span data-i18n="form_service_opt6">Sonstiges</span></label>
+            </div>
+          </div>
+
+          <div class="form-choice">
+            <label class="form-label" data-i18n="form_size_label">Fahrzeuggröße</label>
+            <div class="form-pills">
+              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Klein" required><span data-i18n="form_size_small">Klein (z.B. Polo, Golf)</span></label>
+              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Mittel"><span data-i18n="form_size_medium">Mittel (Limousine)</span></label>
+              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Groß"><span data-i18n="form_size_large">Groß (SUV, Kombi)</span></label>
+              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Transporter"><span data-i18n="form_size_van">Transporter</span></label>
+            </div>
+          </div>
+
+          <div class="form-choice">
+            <label class="form-label" data-i18n="form_condition_label">Wie ist der Zustand des Fahrzeugs?</label>
+            <div class="form-pills">
+              <label class="form-pill"><input type="radio" name="Zustand" value="Leicht verschmutzt" required><span data-i18n="form_condition_light">Leicht verschmutzt</span></label>
+              <label class="form-pill"><input type="radio" name="Zustand" value="Normal verschmutzt"><span data-i18n="form_condition_normal">Normal verschmutzt</span></label>
+              <label class="form-pill"><input type="radio" name="Zustand" value="Stark verschmutzt"><span data-i18n="form_condition_heavy">Stark verschmutzt</span></label>
+            </div>
+          </div>
+
           <div class="form-group">
-            <textarea name="Nachricht" rows="5" data-i18n="form_message" placeholder="Ihre Nachricht"></textarea>
+            <textarea name="Nachricht" rows="4" data-i18n="form_message_optional" placeholder="Zusätzliche Informationen (optional) — z.B. Marke/Modell, besondere Wünsche"></textarea>
           </div>
           <p class="form-response-promise">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span data-i18n="form_response_promise">Antwort innerhalb eines Werktages garantiert</span>
           </p>
-          <button type="submit" class="btn btn-gold" data-i18n="form_btn">Nachricht senden</button>
+          <button type="submit" class="btn btn-gold" data-i18n="form_btn">Anfrage senden</button>
         </form>
       </div>
 

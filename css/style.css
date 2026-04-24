@@ -1242,6 +1242,58 @@ section { padding: 100px 0; position: relative; }
   gap: 16px;
 }
 
+/* Interactive form: pills and chips */
+.form-choice {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-label {
+  color: rgba(255,255,255,0.85);
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+.form-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.form-pill {
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+.form-pill input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+.form-pill span {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 999px;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: all var(--transition);
+}
+.form-pill:hover span {
+  border-color: rgba(201,168,76,0.5);
+  color: var(--white);
+}
+.form-pill input:checked + span {
+  background: rgba(201,168,76,0.15);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.form-pill input:focus-visible + span {
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.25);
+}
+
 /* Contact Map */
 .contact-map {
   margin-top: 60px;
