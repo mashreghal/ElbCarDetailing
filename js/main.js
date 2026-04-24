@@ -116,9 +116,7 @@ const translations = {
     pricing_subtitle: "Individuelle Angebote für jedes Fahrzeug",
     pricing_p1: "Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot — passend zu Ihren Wünschen und dem Aufwand.",
     pricing_p2: "Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!",
-    pricing_form_title: "Angebot anfragen",
-    pricing_form_msg: "Beschreiben Sie Ihr Fahrzeug (Marke, Modell, Zustand) und gewünschte Leistung...",
-    pricing_form_btn: "Angebot anfragen",
+    pricing_form_btn: "Jetzt Angebot anfragen",
 
     // Instagram
     insta_title: "Folgen Sie uns auf Instagram",
@@ -286,9 +284,7 @@ const translations = {
     pricing_subtitle: "Individual quotes for every vehicle",
     pricing_p1: "Our prices depend on the size and condition of your vehicle. Since every car is unique, we're happy to provide a personalized quote — tailored to your needs and the scope of work.",
     pricing_p2: "Simply get in touch for a free, no-obligation quote. We look forward to hearing from you!",
-    pricing_form_title: "Request a Quote",
-    pricing_form_msg: "Describe your vehicle (make, model, condition) and desired service...",
-    pricing_form_btn: "Request Quote",
+    pricing_form_btn: "Request a Quote",
 
     insta_title: "Follow Us on Instagram",
     insta_subtitle: "Current projects, before/after photos and insights into our work",
@@ -453,8 +449,6 @@ const translations = {
     pricing_subtitle: "Her araç için bireysel teklifler",
     pricing_p1: "Fiyatlarımız aracınızın büyüklüğüne ve durumuna göre belirlenir. Her araç farklı olduğundan, size özel bir teklif hazırlamaktan memnuniyet duyarız — ihtiyaçlarınıza ve iş kapsamına uygun olarak.",
     pricing_p2: "Ücretsiz ve bağlayıcı olmayan bir teklif için bizimle iletişime geçin. Sizden haber almayı dört gözle bekliyoruz!",
-    pricing_form_title: "Teklif İste",
-    pricing_form_msg: "Aracınızı tanımlayın (marka, model, durum) ve istenen hizmeti belirtin...",
     pricing_form_btn: "Teklif İste",
 
     insta_title: "Instagram'da Bizi Takip Edin",
