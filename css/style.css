@@ -468,14 +468,6 @@ section { padding: 100px 0; position: relative; }
   width: 320px;
   height: auto;
 }
-.hamburg-bg-wappen {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.05;
-}
 
 /* Buttons */
 .btn {
