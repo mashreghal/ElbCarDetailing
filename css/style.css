@@ -423,10 +423,6 @@ section { padding: 100px 0; position: relative; }
   background: linear-gradient(135deg, #25d366, #128c7e);
   color: var(--white);
 }
-.hero-cta-desktop .hero-cta-telegram {
-  background: linear-gradient(135deg, #2AABEE, #229ED9);
-  color: var(--white);
-}
 .hero-cta-desktop .hero-cta-book {
   background: linear-gradient(135deg, var(--gold-light), var(--gold));
   color: var(--white);
@@ -1563,10 +1559,6 @@ section { padding: 100px 0; position: relative; }
   }
   .hero-cta-whatsapp {
     background: linear-gradient(135deg, #25d366, #128c7e);
-    color: var(--white);
-  }
-  .hero-cta-telegram {
-    background: linear-gradient(135deg, #2AABEE, #229ED9);
     color: var(--white);
   }
   .hero-cta-book {

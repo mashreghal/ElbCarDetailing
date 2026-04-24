@@ -3,7 +3,7 @@
 ## High impact — conversion wins
 
 - [ ] **Add entry prices to packages** — replace "Auf Anfrage" with "Ab 149 €" / "Ab 299 €" / "Ab 599 €" (or similar). Biggest conversion lift. Customers perceive "Auf Anfrage" as hiding a high price.
-- [ ] **Simplify hero CTAs to 1 primary + 1 secondary** — currently 4 buttons (Call/WhatsApp/Telegram/Termin) compete. Make WhatsApp the hero button, phone + Termin as secondary. Consider dropping Telegram from hero.
+- [ ] **Simplify hero CTAs to 1 primary + 1 secondary** — now 3 buttons (Call/WhatsApp/Termin) after dropping Telegram (2026-04-24). Could go further: make WhatsApp the hero button, phone + Termin as secondary.
 - [ ] **Add social proof above the fold** — e.g. "★★★★★ 4.9 aus 47 Google-Bewertungen" near the hero, not buried after the gallery.
 
 ## Medium impact
