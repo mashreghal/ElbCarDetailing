@@ -745,10 +745,14 @@ function initContactForm() {
     setStatus('sending', 'form_sending');
 
     try {
+      const formData = new FormData(form);
+      const emailValue = (form.querySelector('input[type="email"]') || {}).value;
+      if (emailValue) formData.set('_replyto', emailValue);
+
       const response = await fetch(form.action, {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
-        body: new FormData(form)
+        body: formData
       });
 
       if (response.ok) {
