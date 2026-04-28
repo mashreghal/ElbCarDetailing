@@ -169,6 +169,10 @@ const translations = {
     form_condition_heavy: "Stark verschmutzt",
     form_response_promise: "Antwort innerhalb eines Werktages garantiert",
     form_btn: "Anfrage senden",
+    form_sending: "Wird gesendet…",
+    form_success: "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns innerhalb eines Werktages.",
+    form_error_required: "Bitte füllen Sie alle markierten Pflichtfelder aus.",
+    form_error_send: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
     sticky_call_label: "Anrufen",
 
     // Footer
@@ -336,6 +340,10 @@ const translations = {
     form_condition_heavy: "Heavily dirty",
     form_response_promise: "Response within one business day guaranteed",
     form_btn: "Send Request",
+    form_sending: "Sending…",
+    form_success: "Thank you! Your request has been sent. We will reply within one business day.",
+    form_error_required: "Please fill in all highlighted required fields.",
+    form_error_send: "Sending failed. Please try again or give us a call.",
     sticky_call_label: "Call",
 
     footer_desc: "Premium car detailing in Hamburg. Your vehicle deserves the best.",
@@ -502,6 +510,10 @@ const translations = {
     form_condition_heavy: "Çok kirli",
     form_response_promise: "Bir iş günü içinde yanıt garantilidir",
     form_btn: "Talep Gönder",
+    form_sending: "Gönderiliyor…",
+    form_success: "Teşekkür ederiz! Talebiniz gönderildi. Bir iş günü içinde size geri döneceğiz.",
+    form_error_required: "Lütfen işaretlenen tüm zorunlu alanları doldurun.",
+    form_error_send: "Gönderme başarısız oldu. Lütfen tekrar deneyin veya bizi arayın.",
     sticky_call_label: "Ara",
 
     footer_desc: "Hamburg'da premium araç bakımı. Aracınız en iyisini hak ediyor.",
@@ -666,5 +678,106 @@ function initScrollToTop() {
 
 // --- Contact Form ---
 function initContactForm() {
-  // Form uses native mailto: action, no JS needed
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const status = document.createElement('div');
+  status.className = 'form-status';
+  status.setAttribute('role', 'status');
+  status.setAttribute('aria-live', 'polite');
+  form.insertBefore(status, form.querySelector('button[type="submit"]'));
+
+  const requiredRadioGroups = ['Kontaktart', 'Kundentyp', 'Fahrzeuggröße', 'Zustand'];
+
+  function clearErrors() {
+    form.querySelectorAll('.form-choice.has-error, .form-group.has-error').forEach(el => {
+      el.classList.remove('has-error');
+    });
+    status.className = 'form-status';
+    status.textContent = '';
+  }
+
+  function setStatus(type, key) {
+    const t = translations[currentLang] || translations.de;
+    status.className = 'form-status form-status-' + type;
+    status.textContent = t[key] || translations.de[key] || '';
+  }
+
+  function validate() {
+    let firstInvalid = null;
+
+    form.querySelectorAll('input[required], textarea[required]').forEach(el => {
+      if (el.type === 'radio') return;
+      const group = el.closest('.form-group');
+      if (!el.value.trim() || (el.type === 'email' && !el.checkValidity())) {
+        if (group) group.classList.add('has-error');
+        if (!firstInvalid) firstInvalid = el;
+      }
+    });
+
+    requiredRadioGroups.forEach(name => {
+      const checked = form.querySelector(`input[name="${name}"]:checked`);
+      if (!checked) {
+        const anyInput = form.querySelector(`input[name="${name}"]`);
+        const choice = anyInput && anyInput.closest('.form-choice');
+        if (choice) choice.classList.add('has-error');
+        if (!firstInvalid) firstInvalid = choice || anyInput;
+      }
+    });
+
+    return firstInvalid;
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    clearErrors();
+
+    const firstInvalid = validate();
+    if (firstInvalid) {
+      setStatus('error', 'form_error_required');
+      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalLabel = submitBtn.textContent;
+    submitBtn.disabled = true;
+    setStatus('sending', 'form_sending');
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+
+      if (response.ok) {
+        form.reset();
+        setStatus('success', 'form_success');
+        status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        const data = await response.json().catch(() => ({}));
+        if (data && Array.isArray(data.errors) && data.errors.length) {
+          status.className = 'form-status form-status-error';
+          status.textContent = data.errors.map(err => err.message).join(', ');
+        } else {
+          setStatus('error', 'form_error_send');
+        }
+      }
+    } catch (err) {
+      setStatus('error', 'form_error_send');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    }
+  });
+
+  form.addEventListener('change', (e) => {
+    if (e.target.matches('input, textarea')) {
+      const choice = e.target.closest('.form-choice');
+      const group = e.target.closest('.form-group');
+      if (choice) choice.classList.remove('has-error');
+      if (group) group.classList.remove('has-error');
+    }
+  });
 }
