@@ -998,6 +998,58 @@ section { padding: 100px 0; position: relative; }
   text-align: center;
   margin-top: 24px;
 }
+.pricing-reference {
+  margin-bottom: 40px;
+}
+.pricing-reference h3 {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+}
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.pricing-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  padding: 24px 12px;
+  text-align: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.pricing-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.pricing-card-label {
+  color: rgba(255,255,255,0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.pricing-card-price {
+  color: var(--gold);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.pricing-disclaimer {
+  text-align: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+  font-style: italic;
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .pricing-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 /* ============================================
    INSTAGRAM SECTION

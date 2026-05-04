@@ -2,7 +2,7 @@
 
 ## High impact — conversion wins
 
-- [ ] **Add entry prices to packages** — replace "Auf Anfrage" with "Ab 149 €" / "Ab 299 €" / "Ab 599 €" (or similar). Biggest conversion lift. Customers perceive "Auf Anfrage" as hiding a high price.
+- [ ] **Add entry prices to package cards** — the package cards (Premium / Exklusiv / Individuell) still say "Auf Anfrage". Reference prices by vehicle size are now in the Angebot & Preise section (2026-05-04), but the package cards themselves could still use entry prices ("Ab X €") for extra clarity.
 - [ ] **Simplify hero CTAs to 1 primary + 1 secondary** — now 3 buttons (Call/WhatsApp/Termin) after dropping Telegram (2026-04-24). Could go further: make WhatsApp the hero button, phone + Termin as secondary.
 - [ ] **Add social proof above the fold** — e.g. "★★★★★ 4.9 aus 47 Google-Bewertungen" near the hero, not buried after the gallery.
 
@@ -67,6 +67,7 @@
 
 ## Completed
 
+- [x] Reference prices by vehicle size in Angebot & Preise section (2026-05-04) — Kleinwagen ab 150 €, Kompaktwagen ab 200 €, SUV ab 250 €, Transporter ab 300 €. Per Ahmet's request, since many customers have no idea what detailing costs.
 - [x] Google Search Console verified (elbcar-detailing.de, domain property, auto via GoDaddy) + sitemap.xml submitted (2026-04-18) — GSC is a monitoring tool, not a ranking booster. Effect: faster indexing + visibility into which queries drive impressions/clicks so we can tune content. Real data expected in 1–2 weeks.
 - [x] Sticky mobile call button — always-visible tap-to-call on mobile (2026-04-18)
 - [x] Response-time guarantee near contact form — "Antwort innerhalb eines Werktages garantiert" (2026-04-18)
