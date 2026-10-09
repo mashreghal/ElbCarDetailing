@@ -84,3 +84,35 @@
 - [x] Hero CTA buttons (mobile + desktop): Call, WhatsApp, Telegram, Termin
 - [x] Brighter Elbe blue palette
 - [x] Mobile hero spacing optimized
+
+## Roadmap: Google ranking + Google Ads (added 2026-10-09)
+
+Goal: rank higher on Google locally (Hamburg) and later run Google Ads. Order: legal, then organic, then site, then ads.
+
+### 1. Legal basics (before anything else)
+- [ ] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (asked 2026-10-09, reply pending)
+- [ ] Update law references in Impressum (DDG and MStV instead of TMG and RStV)
+- [ ] Update Datenschutz for GitHub hosting, Formspree and Google Maps
+
+### 2. Get found on Google
+- [ ] Fully set up Google Business Profile (categories, services, 30+ photos, hours, WhatsApp link)
+- [ ] Weekly reviews (2-4/week) and reply to every review
+- [ ] Weekly Business Profile posts
+- [ ] Local directory listings with identical name, address, phone
+- [ ] Landing pages: Keramikversiegelung, Lackkorrektur, Innenreinigung (Hamburg context, before/after photos)
+- [ ] District pages (Altona, Harburg, ...)
+- [ ] LocalBusiness structured data, refresh sitemap, use www consistently in sitemap and robots.txt
+- [ ] Monthly Search Console review
+
+### 3. Site improvements
+- [ ] Compress gallery images (WebP, lazy loading), run PageSpeed Insights
+- [ ] FAQ, "ab" prices on package cards, social proof near the top
+- [ ] Optional: Cloudflare in front of GitHub Pages
+
+### 4. Google Ads (later)
+- [ ] Cookie consent banner with Consent Mode v2
+- [ ] Conversion tracking for form, phone, WhatsApp
+- [ ] Ads account, link Business Profile, check Keyword Planner costs
+- [ ] Test: 10-15 EUR/day for 6-8 weeks, compare cost per enquiry with job value
+
+Questions for Ahmet: average job value, service radius, existing Business Profile and reviews?
