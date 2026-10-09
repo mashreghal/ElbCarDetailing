@@ -1,8 +1,6 @@
-﻿# ElbCarDetailing
+# ElbCarDetailing
 
 Website for ElbCar Detailing, a premium car detailing service in Hamburg ([www.elbcar-detailing.de](https://www.elbcar-detailing.de)).
-
-> Mock README, pushed to confirm the repo connection works. Content is a draft.
 
 ## Overview
 A static, German-first site (with EN/TR translations) covering services, packages, before/after gallery, reviews, pricing, Instagram and a contact form (Formspree).
