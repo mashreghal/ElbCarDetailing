@@ -5,6 +5,9 @@
 // --- Translations ---
 const translations = {
   de: {
+    trust_hours: "Mo–Fr · 10–17 Uhr",
+    trust_hours_note: "Sa & So geschlossen",
+    studio_title: "Eindrücke aus der Halle",
     // Nav
     nav_services: "Leistungen",
     nav_packages: "Pakete",
@@ -102,7 +105,7 @@ const translations = {
     // Reviews
     reviews_title: "Kundenbewertungen",
     reviews_subtitle: "Was unsere Kunden über uns sagen",
-    reviews_count: "69 Bewertungen auf Google",
+    reviews_count: "82 Bewertungen auf Google",
     reviews_btn: "Alle Bewertungen auf Google ansehen",
     review_translated: "",
     review1_text: "Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.",
@@ -193,6 +196,9 @@ const translations = {
   },
 
   en: {
+    trust_hours: "Mon–Fri · 10am–5pm",
+    trust_hours_note: "Closed Sat & Sun",
+    studio_title: "Impressions from the studio",
     nav_services: "Services",
     nav_packages: "Packages",
     nav_gallery: "Gallery",
@@ -283,7 +289,7 @@ const translations = {
 
     reviews_title: "Customer Reviews",
     reviews_subtitle: "What our customers say about us",
-    reviews_count: "69 reviews on Google",
+    reviews_count: "82 reviews on Google",
     reviews_btn: "See all reviews on Google",
     review_translated: "Translated from German",
     review1_text: "Perfect ceramic coating. You can't get more shine than this. Professional work, the owner is very friendly and always up for a nice chat. Happy to come back. A clear recommendation for anyone who likes their car well cared for.",
@@ -370,6 +376,9 @@ const translations = {
   },
 
   tr: {
+    trust_hours: "Pzt–Cum · 10:00–17:00",
+    trust_hours_note: "Cmt ve Paz kapalı",
+    studio_title: "Atölyeden görüntüler",
     nav_services: "Hizmetler",
     nav_packages: "Paketler",
     nav_gallery: "Galeri",
@@ -460,7 +469,7 @@ const translations = {
 
     reviews_title: "Müşteri Yorumları",
     reviews_subtitle: "Müşterilerimiz bizim hakkımızda ne diyor",
-    reviews_count: "Google'da 69 yorum",
+    reviews_count: "Google'da 82 yorum",
     reviews_btn: "Tüm yorumları Google'da görün",
     review_translated: "Almancadan çevrilmiştir",
     review1_text: "Mükemmel seramik kaplama. Bundan daha fazla parlaklık olamaz. Profesyonel iş, işletme sahibi çok güler yüzlü ve sohbet etmekten keyif alıyor. Tekrar gelmekten memnuniyet duyarım. Arabasına özen gösteren herkese kesinlikle tavsiye ederim.",
@@ -556,6 +565,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
   initBeforeAfterSliders();
+  initLightbox();
   initScrollAnimations();
   initScrollToTop();
   initContactForm();
@@ -604,7 +614,7 @@ function initNavbar() {
   const navbar = document.querySelector('.navbar');
   if (!navbar) return;
   const onScroll = () => {
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -619,6 +629,7 @@ function initMobileMenu() {
   toggle.addEventListener('click', () => {
     toggle.classList.toggle('active');
     menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
     document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
   });
 
@@ -638,37 +649,71 @@ function initBeforeAfterSliders() {
     const afterImg = slider.querySelector('.ba-after');
     const handle = slider.querySelector('.ba-handle');
     const arrows = slider.querySelector('.ba-handle-arrows');
-    let isDragging = false;
+    let pos = 50;
 
-    function updatePosition(x) {
-      const rect = slider.getBoundingClientRect();
-      let percent = ((x - rect.left) / rect.width) * 100;
-      percent = Math.max(2, Math.min(98, percent));
-      afterImg.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-      handle.style.left = percent + '%';
-      arrows.style.left = percent + '%';
+    function setPercent(percent) {
+      pos = Math.max(2, Math.min(98, percent));
+      afterImg.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
+      handle.style.left = pos + '%';
+      arrows.style.left = pos + '%';
+      slider.setAttribute('aria-valuenow', Math.round(pos));
     }
+    function fromX(x) {
+      const rect = slider.getBoundingClientRect();
+      setPercent(((x - rect.left) / rect.width) * 100);
+    }
+    setPercent(50);
 
-    // Mouse events
-    slider.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      updatePosition(e.clientX);
-      e.preventDefault();
+    slider.addEventListener('pointerdown', (e) => {
+      slider.setPointerCapture(e.pointerId);
+      slider.classList.add('dragging');
+      fromX(e.clientX);
     });
-    document.addEventListener('mousemove', (e) => {
-      if (isDragging) updatePosition(e.clientX);
+    slider.addEventListener('pointermove', (e) => {
+      if (slider.hasPointerCapture(e.pointerId)) fromX(e.clientX);
     });
-    document.addEventListener('mouseup', () => { isDragging = false; });
+    const end = (e) => { slider.classList.remove('dragging'); };
+    slider.addEventListener('pointerup', end);
+    slider.addEventListener('pointercancel', end);
+    slider.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') { setPercent(pos - 5); e.preventDefault(); }
+      if (e.key === 'ArrowRight') { setPercent(pos + 5); e.preventDefault(); }
+    });
+  });
+}
 
-    // Touch events
-    slider.addEventListener('touchstart', (e) => {
-      isDragging = true;
-      updatePosition(e.touches[0].clientX);
-    }, { passive: true });
-    document.addEventListener('touchmove', (e) => {
-      if (isDragging) updatePosition(e.touches[0].clientX);
-    }, { passive: true });
-    document.addEventListener('touchend', () => { isDragging = false; });
+// --- Lightbox ---
+function initLightbox() {
+  const box = document.getElementById('lightbox');
+  if (!box) return;
+  const links = Array.from(document.querySelectorAll('[data-lightbox]'));
+  const img = box.querySelector('img');
+  let idx = 0;
+  const show = (i) => {
+    idx = (i + links.length) % links.length;
+    img.src = links[idx].getAttribute('href');
+    img.alt = links[idx].querySelector('img').alt;
+  };
+  const open = (i) => { show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus(); };
+  const close = () => { box.hidden = true; img.src = ''; document.body.style.overflow = ''; };
+  links.forEach((a, i) => a.addEventListener('click', (e) => { e.preventDefault(); open(i); }));
+  box.querySelector('.lb-close').addEventListener('click', close);
+  box.querySelector('.lb-prev').addEventListener('click', () => show(idx - 1));
+  box.querySelector('.lb-next').addEventListener('click', () => show(idx + 1));
+  box.addEventListener('click', (e) => { if (e.target === box) close(); });
+  document.addEventListener('keydown', (e) => {
+    if (box.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+  let sx = null;
+  box.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
+  box.addEventListener('touchend', (e) => {
+    if (sx === null) return;
+    const dx = e.changedTouches[0].clientX - sx;
+    if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+    sx = null;
   });
 }
 
@@ -690,7 +735,7 @@ function initScrollToTop() {
   const btn = document.querySelector('.scroll-top');
   if (!btn) return;
   window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 500);
+    btn.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
