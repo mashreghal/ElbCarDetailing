@@ -1645,3 +1645,86 @@ section { padding: 100px 0; position: relative; }
   .stat .number { font-size: 1.8rem; }
   .packages-grid { max-width: 100%; }
 }
+
+/* ============================================
+   FRESH-UP POLISH (2026-10)
+   Small, additive refinements - no layout changes
+   ============================================ */
+
+/* Keyboard focus: clear, on-brand ring (mouse clicks unaffected) */
+a:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.lang-btn:focus-visible,
+.nav-toggle:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Anchor jumps should not hide headings behind the fixed header */
+section[id] { scroll-margin-top: 90px; }
+
+/* Nicer text rendering and balanced headings */
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+h1, h2, h3 { text-wrap: balance; letter-spacing: 0.2px; }
+.section-title p { text-wrap: pretty; }
+
+/* Section headings: slightly more air, line grows in with the heading */
+.section-title { margin-bottom: 56px; }
+.section-title .gold-line { transition: width 0.8s ease 0.2s; width: 0; }
+.section-title.visible .gold-line { width: 80px; }
+
+/* Cards: hover lift also works after the fade-in (was overridden before) */
+.service-card,
+.package-card { will-change: auto; }
+.service-card.fade-in.visible,
+.package-card.fade-in.visible {
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, opacity 0.6s ease;
+}
+.service-card.fade-in.visible:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.28), 0 0 0 1px rgba(201,168,76,0.12);
+}
+.package-card.fade-in.visible:hover {
+  transform: translateY(-5px);
+  border-color: rgba(201,168,76,0.4);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.3);
+}
+
+/* Soft staggered entrance for card grids */
+.services-grid .fade-in:nth-child(3n+2) { transition-delay: 0.08s; }
+.services-grid .fade-in:nth-child(3n+3) { transition-delay: 0.16s; }
+.packages-grid .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.packages-grid .fade-in:nth-child(3) { transition-delay: 0.2s; }
+/* hover must react immediately, not after the stagger delay */
+.service-card.fade-in.visible:hover,
+.package-card.fade-in.visible:hover { transition-delay: 0s; }
+
+/* Buttons: gentle press feedback and softer shadow on outline hover */
+.btn:active { transform: translateY(0) scale(0.98); }
+.btn-outline:hover { box-shadow: 0 4px 18px rgba(201,168,76,0.25); }
+
+::selection { background: var(--elbe-light); color: var(--white); }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  section { padding: 72px 0; }
+  .section-title { margin-bottom: 36px; }
+  .section-title h2 { font-size: 2rem; }
+  .container { padding: 0 20px; }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+  .fade-in { opacity: 1; transform: none; }
+  .section-title .gold-line { width: 80px; }
+}
