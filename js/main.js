@@ -5,8 +5,10 @@
 // --- Translations ---
 const translations = {
   de: {
-    trust_hours: "Mo–Fr · 10–17 Uhr",
-    trust_hours_note: "Sa & So geschlossen",
+    trust_hours: "Nur nach Termin",
+    trust_hours_note: "Keine festen Öffnungszeiten",
+    appt_title: "Nur mit Termin",
+    appt_text: "Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.",
     studio_title: "Eindrücke aus der Halle",
     // Nav
     nav_services: "Leistungen",
@@ -142,8 +144,8 @@ const translations = {
     contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Standort",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
-    contact_hours_label: "Öffnungszeiten",
-    contact_hours: "Mo–Fr: 10:00 – 17:00\nSa & So: Geschlossen",
+    contact_hours_label: "Termine",
+    contact_hours: "Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.",
     form_name: "Ihr Name",
     form_email: "Ihre E-Mail",
     form_phone: "Telefonnummer",
@@ -196,8 +198,10 @@ const translations = {
   },
 
   en: {
-    trust_hours: "Mon–Fri · 10am–5pm",
-    trust_hours_note: "Closed Sat & Sun",
+    trust_hours: "By appointment only",
+    trust_hours_note: "No fixed opening hours",
+    appt_title: "By appointment only",
+    appt_text: "We have no fixed opening hours. Please don't drop by unannounced – book an appointment in advance via WhatsApp, phone or the contact form.",
     studio_title: "Impressions from the studio",
     nav_services: "Services",
     nav_packages: "Packages",
@@ -323,8 +327,8 @@ const translations = {
     contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Location",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
-    contact_hours_label: "Opening Hours",
-    contact_hours: "Mon–Fri: 10:00 – 17:00\nSat & Sun: Closed",
+    contact_hours_label: "Appointments",
+    contact_hours: "No fixed opening hours – visits by prior appointment only.",
     form_name: "Your Name",
     form_email: "Your Email",
     form_phone: "Phone Number",
@@ -376,8 +380,10 @@ const translations = {
   },
 
   tr: {
-    trust_hours: "Pzt–Cum · 10:00–17:00",
-    trust_hours_note: "Cmt ve Paz kapalı",
+    trust_hours: "Sadece randevu ile",
+    trust_hours_note: "Sabit çalışma saati yok",
+    appt_title: "Sadece randevu ile",
+    appt_text: "Sabit çalışma saatlerimiz yoktur. Lütfen habersiz gelmeyin – WhatsApp, telefon veya iletişim formu üzerinden önceden randevu alın.",
     studio_title: "Atölyeden görüntüler",
     nav_services: "Hizmetler",
     nav_packages: "Paketler",
@@ -503,8 +509,8 @@ const translations = {
     contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Konum",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
-    contact_hours_label: "Çalışma Saatleri",
-    contact_hours: "Pzt–Cum: 10:00 – 17:00\nCmt & Paz: Kapalı",
+    contact_hours_label: "Randevular",
+    contact_hours: "Sabit çalışma saatimiz yoktur – ziyaretler yalnızca önceden alınan randevu ile.",
     form_name: "Adınız",
     form_email: "E-Posta Adresiniz",
     form_phone: "Telefon Numarası",
@@ -568,6 +574,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initScrollAnimations();
   initScrollToTop();
+  initStickyCall();
   initContactForm();
 });
 
@@ -728,6 +735,15 @@ function initScrollAnimations() {
   }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+}
+
+// --- Sticky call button: only after the hero is out of view ---
+function initStickyCall() {
+  const hero = document.getElementById('hero');
+  if (!hero || !('IntersectionObserver' in window)) { document.body.classList.add('past-hero'); return; }
+  new IntersectionObserver(([entry]) => {
+    document.body.classList.toggle('past-hero', !entry.isIntersecting);
+  }, { threshold: 0 }).observe(hero);
 }
 
 // --- Scroll to Top ---

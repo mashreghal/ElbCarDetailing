@@ -40,14 +40,6 @@
       "latitude": 53.5311,
       "longitude": 9.8984
     },
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "10:00",
-        "closes": "17:00"
-      }
-    ],
     "image": "https://www.elbcar-detailing.de/images/logo-removebg.png",
     "priceRange": "€€",
     "areaServed": {
@@ -130,6 +122,13 @@
     <div class="hero-shade"></div>
     <div class="container hero-inner">
       <div class="hero-copy">
+        <div class="appt-notice" role="note">
+          <span class="appt-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+          <span class="appt-notice-body">
+            <strong data-i18n="appt_title">Nur mit Termin</strong>
+            <span data-i18n="appt_text">Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.</span>
+          </span>
+        </div>
         <h1 data-i18n="hero_tagline">Premium Fahrzeugaufbereitung in Hamburg</h1>
         <p class="hero-lead" data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand — mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
         <div class="hero-cta">
@@ -153,10 +152,10 @@
         <span class="trust-big trust-addr">Köhlfleet-Hauptdeich 3</span>
         <span class="trust-small">21129 Hamburg</span>
       </div>
-      <div class="trust-item">
-        <span class="trust-big" data-i18n="trust_hours">Mo–Fr · 10–17 Uhr</span>
-        <span class="trust-small" data-i18n="trust_hours_note">Sa & So geschlossen</span>
-      </div>
+      <a class="trust-item trust-appt" href="#contact">
+        <span class="trust-big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="trust_hours">Nur nach Termin</span></span>
+        <span class="trust-small" data-i18n="trust_hours_note">Keine festen Öffnungszeiten</span>
+      </a>
       <div class="trust-item">
         <span class="trust-big" data-i18n="pkg4_f2">Kostenlose Beratung</span>
         <span class="trust-small" data-i18n="form_response_promise">Antwort innerhalb eines Werktages garantiert</span>
@@ -782,12 +781,11 @@
 
           <div class="contact-item">
             <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
             </div>
             <div>
-              <h4 data-i18n="contact_hours_label">Öffnungszeiten</h4>
-              <p style="white-space: pre-line;" data-i18n="contact_hours">Mo–Fr: 10:00 – 17:00
-Sa & So: Geschlossen</p>
+              <h4 data-i18n="contact_hours_label">Termine</h4>
+              <p data-i18n="contact_hours">Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.</p>
             </div>
           </div>
         </div>
