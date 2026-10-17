@@ -179,12 +179,20 @@ const translations = {
     form_condition_light: "Leicht verschmutzt",
     form_condition_normal: "Normal verschmutzt",
     form_condition_heavy: "Stark verschmutzt",
-    form_response_promise: "Antwort innerhalb eines Werktages garantiert",
+    form_response_promise: "Antwort in der Regel innerhalb eines Werktages",
     form_btn: "Anfrage senden",
     form_sending: "Wird gesendet…",
-    form_success: "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns innerhalb eines Werktages.",
+    form_success: "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns in der Regel innerhalb eines Werktages.",
     form_error_required: "Bitte füllen Sie alle markierten Pflichtfelder aus.",
     form_error_send: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
+    form_privacy_text: "Mit dem Absenden werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.",
+    form_privacy_link: "Mehr in der Datenschutzerklärung",
+    wa_greeting: "Hallo ElbCar Detailing, ich habe eine Anfrage über Ihre Website.",
+    aria_menu: "Menü",
+    aria_close: "Schließen",
+    aria_prev: "Vorheriges Bild",
+    aria_next: "Nächstes Bild",
+    aria_scroll_top: "Nach oben",
     sticky_call_label: "Anrufen",
 
     // Footer
@@ -362,12 +370,20 @@ const translations = {
     form_condition_light: "Lightly dirty",
     form_condition_normal: "Normally dirty",
     form_condition_heavy: "Heavily dirty",
-    form_response_promise: "Response within one business day guaranteed",
+    form_response_promise: "We usually reply within one business day",
     form_btn: "Send Request",
     form_sending: "Sending…",
-    form_success: "Thank you! Your request has been sent. We will reply within one business day.",
+    form_success: "Thank you! Your request has been sent. We usually reply within one business day.",
     form_error_required: "Please fill in all highlighted required fields.",
     form_error_send: "Sending failed. Please try again or give us a call.",
+    form_privacy_text: "When you submit this form, your details are processed to handle your enquiry.",
+    form_privacy_link: "More in our privacy policy",
+    wa_greeting: "Hello ElbCar Detailing, I have an enquiry via your website.",
+    aria_menu: "Menu",
+    aria_close: "Close",
+    aria_prev: "Previous image",
+    aria_next: "Next image",
+    aria_scroll_top: "Back to top",
     sticky_call_label: "Call",
 
     footer_desc: "Premium car detailing in Hamburg. Your vehicle deserves the best.",
@@ -544,12 +560,20 @@ const translations = {
     form_condition_light: "Az kirli",
     form_condition_normal: "Normal kirli",
     form_condition_heavy: "Çok kirli",
-    form_response_promise: "Bir iş günü içinde yanıt garantilidir",
+    form_response_promise: "Genellikle bir iş günü içinde yanıt veriyoruz",
     form_btn: "Talep Gönder",
     form_sending: "Gönderiliyor…",
-    form_success: "Teşekkür ederiz! Talebiniz gönderildi. Bir iş günü içinde size geri döneceğiz.",
+    form_success: "Teşekkür ederiz! Talebiniz gönderildi. Genellikle bir iş günü içinde size geri dönüyoruz.",
     form_error_required: "Lütfen işaretlenen tüm zorunlu alanları doldurun.",
     form_error_send: "Gönderme başarısız oldu. Lütfen tekrar deneyin veya bizi arayın.",
+    form_privacy_text: "Formu gönderdiğinizde bilgileriniz talebinizin işlenmesi amacıyla kullanılır.",
+    form_privacy_link: "Ayrıntılar Gizlilik Politikamızda",
+    wa_greeting: "Merhaba ElbCar Detailing, web siteniz üzerinden bir talebim var.",
+    aria_menu: "Menü",
+    aria_close: "Kapat",
+    aria_prev: "Önceki resim",
+    aria_next: "Sonraki resim",
+    aria_scroll_top: "Yukarı çık",
     sticky_call_label: "Ara",
 
     footer_desc: "Hamburg'da premium araç bakımı. Aracınız en iyisini hak ediyor.",
@@ -563,7 +587,9 @@ const translations = {
 };
 
 // --- State ---
-let currentLang = localStorage.getItem('elbcar-lang') || 'de';
+let currentLang = 'de';
+try { currentLang = localStorage.getItem('elbcar-lang') || 'de'; } catch (e) { /* storage blocked */ }
+if (!translations[currentLang]) currentLang = 'de';
 
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -581,7 +607,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // --- Language Switching ---
 function setLanguage(lang) {
   currentLang = lang;
-  localStorage.setItem('elbcar-lang', lang);
+  try { localStorage.setItem('elbcar-lang', lang); } catch (e) { /* storage blocked */ }
   const t = translations[lang];
   if (!t) return;
 
@@ -598,6 +624,19 @@ function setLanguage(lang) {
       }
     }
   });
+
+  // Translated accessible names (aria-label)
+  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+    const v = t[el.getAttribute('data-i18n-aria')];
+    if (v !== undefined) el.setAttribute('aria-label', v);
+  });
+
+  // WhatsApp links: prefilled greeting in the current language
+  if (t.wa_greeting) {
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(a => {
+      a.href = a.getAttribute('href').split('?')[0] + '?text=' + encodeURIComponent(t.wa_greeting);
+    });
+  }
 
   // Update active lang button
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -769,19 +808,22 @@ function initContactForm() {
   status.setAttribute('aria-live', 'polite');
   form.insertBefore(status, form.querySelector('button[type="submit"]'));
 
-  const requiredRadioGroups = ['Kontaktart', 'Kundentyp', 'Fahrzeuggröße', 'Zustand'];
+  // The choice groups are labelled "Optional" – only Name and E-Mail are required.
+  const requiredRadioGroups = [];
 
   function clearErrors() {
     form.querySelectorAll('.form-choice.has-error, .form-group.has-error').forEach(el => {
       el.classList.remove('has-error');
     });
     status.className = 'form-status';
+    status.removeAttribute('data-i18n');
     status.textContent = '';
   }
 
   function setStatus(type, key) {
     const t = translations[currentLang] || translations.de;
     status.className = 'form-status form-status-' + type;
+    status.setAttribute('data-i18n', key); // re-translated by setLanguage()
     status.textContent = t[key] || translations.de[key] || '';
   }
 
@@ -822,9 +864,12 @@ function initContactForm() {
     }
 
     const submitBtn = form.querySelector('button[type="submit"]');
-    const originalLabel = submitBtn.textContent;
     submitBtn.disabled = true;
     setStatus('sending', 'form_sending');
+
+    // Abort after 15 s so a bad connection cannot leave the form hanging
+    const controller = ('AbortController' in window) ? new AbortController() : null;
+    const timer = controller ? setTimeout(() => controller.abort(), 15000) : null;
 
     try {
       const formData = new FormData(form);
@@ -834,7 +879,8 @@ function initContactForm() {
       const response = await fetch(form.action, {
         method: 'POST',
         headers: { 'Accept': 'application/json' },
-        body: formData
+        body: formData,
+        signal: controller ? controller.signal : undefined
       });
 
       if (response.ok) {
@@ -842,19 +888,14 @@ function initContactForm() {
         setStatus('success', 'form_success');
         status.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
-        const data = await response.json().catch(() => ({}));
-        if (data && Array.isArray(data.errors) && data.errors.length) {
-          status.className = 'form-status form-status-error';
-          status.textContent = data.errors.map(err => err.message).join(', ');
-        } else {
-          setStatus('error', 'form_error_send');
-        }
+        // Server-side errors (Formspree) are shown as our own translated message
+        setStatus('error', 'form_error_send');
       }
     } catch (err) {
       setStatus('error', 'form_error_send');
     } finally {
+      if (timer) clearTimeout(timer);
       submitBtn.disabled = false;
-      submitBtn.textContent = originalLabel;
     }
   });
 
