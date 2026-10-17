@@ -669,6 +669,7 @@
             </div>
           </div>
           <p class="pricing-disclaimer" data-i18n="pricing_disclaimer">Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.</p>
+          <p class="pricing-disclaimer pricing-vat" data-i18n="pricing_vat_note">Alle Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
         </div>
 
         <div class="pricing-text">
@@ -874,22 +875,23 @@
             <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span data-i18n="form_response_promise">Antwort in der Regel innerhalb eines Werktages</span>
           </p>
-          <p class="form-privacy"><span data-i18n="form_privacy_text">Mit dem Absenden werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.</span> <a href="datenschutz.html" data-i18n="form_privacy_link">Mehr in der Datenschutzerklärung</a>.</p>
+          <p class="form-privacy"><span data-i18n="form_privacy_text">Mit dem Absenden werden Ihre Angaben über den Dienst Formspree an uns übermittelt und zur Bearbeitung Ihrer Anfrage verarbeitet.</span> <a href="datenschutz.html#kontaktformular" data-i18n="form_privacy_link">Mehr in der Datenschutzerklärung</a>.</p>
           <button type="submit" class="btn btn-gold" data-i18n="form_btn">Anfrage senden</button>
         </form>
       </div>
 
-      <!-- Google Maps -->
-      <div class="contact-map fade-in">
-        <iframe title="ElbCar Detailing — Google Maps"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5!2d9.8780789!3d53.5342229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18500606a0e2b%3A0x4894c8ea2e9e51a6!2sElbCar%20Detailing!5e0!3m2!1sde!2sde!4v1"
-          width="100%"
-          height="350"
-          style="border:0; border-radius: 12px;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <!-- Google Maps: privacy-friendly, the iframe is only created after a click (see initMapConsent) -->
+      <div class="contact-map map-consent fade-in" id="mapConsent" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5!2d9.8780789!3d53.5342229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18500606a0e2b%3A0x4894c8ea2e9e51a6!2sElbCar%20Detailing!5e0!3m2!1sde!2sde!4v1">
+        <div class="map-consent-inner">
+          <div class="map-consent-icon">
+            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <p class="map-consent-text"><span data-i18n="map_notice">Zum Schutz Ihrer Daten wird die Karte erst nach Ihrem Klick geladen. Dabei werden Daten wie Ihre IP-Adresse an Google übertragen.</span> <a href="datenschutz.html#google-maps" data-i18n="form_privacy_link">Mehr in der Datenschutzerklärung</a>.</p>
+          <div class="map-consent-actions">
+            <button type="button" class="btn btn-gold map-load-btn" data-i18n="map_load">Karte laden</button>
+            <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" class="map-open-link" data-i18n="map_open">In Google Maps öffnen</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>

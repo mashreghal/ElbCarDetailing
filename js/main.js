@@ -126,6 +126,7 @@ const translations = {
     pricing_suv: "SUV",
     pricing_transporter: "Transporter",
     pricing_disclaimer: "Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.",
+    pricing_vat_note: "Alle Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.",
     pricing_p2: "Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!",
     pricing_form_btn: "Jetzt Angebot anfragen",
 
@@ -185,8 +186,12 @@ const translations = {
     form_success: "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns in der Regel innerhalb eines Werktages.",
     form_error_required: "Bitte füllen Sie alle markierten Pflichtfelder aus.",
     form_error_send: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
-    form_privacy_text: "Mit dem Absenden werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verarbeitet.",
+    form_privacy_text: "Mit dem Absenden werden Ihre Angaben über den Dienst Formspree an uns übermittelt und zur Bearbeitung Ihrer Anfrage verarbeitet.",
     form_privacy_link: "Mehr in der Datenschutzerklärung",
+    map_notice: "Zum Schutz Ihrer Daten wird die Karte erst nach Ihrem Klick geladen. Dabei werden Daten wie Ihre IP-Adresse an Google übertragen.",
+    map_load: "Karte laden",
+    map_open: "In Google Maps öffnen",
+    map_iframe_title: "Standort von ElbCar Detailing auf Google Maps",
     wa_greeting: "Hallo ElbCar Detailing, ich habe eine Anfrage über Ihre Website.",
     aria_menu: "Menü",
     aria_close: "Schließen",
@@ -319,6 +324,7 @@ const translations = {
     pricing_suv: "SUV",
     pricing_transporter: "Van",
     pricing_disclaimer: "Final price depends on condition, scope and chosen package.",
+    pricing_vat_note: "All prices are final prices. In accordance with Section 19 of the German VAT Act (UStG), no VAT is charged.",
     pricing_p2: "Simply get in touch for a free, no-obligation quote. We look forward to hearing from you!",
     pricing_form_btn: "Request a Quote",
 
@@ -376,8 +382,12 @@ const translations = {
     form_success: "Thank you! Your request has been sent. We usually reply within one business day.",
     form_error_required: "Please fill in all highlighted required fields.",
     form_error_send: "Sending failed. Please try again or give us a call.",
-    form_privacy_text: "When you submit this form, your details are processed to handle your enquiry.",
+    form_privacy_text: "When you submit this form, your details are sent to us via the Formspree service and processed to handle your enquiry.",
     form_privacy_link: "More in our privacy policy",
+    map_notice: "To protect your privacy, the map only loads after you click. Loading it sends data such as your IP address to Google.",
+    map_load: "Load map",
+    map_open: "Open in Google Maps",
+    map_iframe_title: "ElbCar Detailing location on Google Maps",
     wa_greeting: "Hello ElbCar Detailing, I have an enquiry via your website.",
     aria_menu: "Menu",
     aria_close: "Close",
@@ -509,6 +519,7 @@ const translations = {
     pricing_suv: "SUV",
     pricing_transporter: "Minibüs / Kamyonet",
     pricing_disclaimer: "Nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre değişir.",
+    pricing_vat_note: "Tüm fiyatlar nihai fiyatlardır. Alman Katma Değer Vergisi Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz.",
     pricing_p2: "Ücretsiz ve bağlayıcı olmayan bir teklif için bizimle iletişime geçin. Sizden haber almayı dört gözle bekliyoruz!",
     pricing_form_btn: "Teklif İste",
 
@@ -566,8 +577,12 @@ const translations = {
     form_success: "Teşekkür ederiz! Talebiniz gönderildi. Genellikle bir iş günü içinde size geri dönüyoruz.",
     form_error_required: "Lütfen işaretlenen tüm zorunlu alanları doldurun.",
     form_error_send: "Gönderme başarısız oldu. Lütfen tekrar deneyin veya bizi arayın.",
-    form_privacy_text: "Formu gönderdiğinizde bilgileriniz talebinizin işlenmesi amacıyla kullanılır.",
+    form_privacy_text: "Formu gönderdiğinizde bilgileriniz Formspree hizmeti aracılığıyla bize iletilir ve talebinizin işlenmesi amacıyla kullanılır.",
     form_privacy_link: "Ayrıntılar Gizlilik Politikamızda",
+    map_notice: "Gizliliğinizi korumak için harita yalnızca tıklamanızdan sonra yüklenir. Bu sırada IP adresiniz gibi veriler Google'a iletilir.",
+    map_load: "Haritayı yükle",
+    map_open: "Google Haritalar'da aç",
+    map_iframe_title: "ElbCar Detailing'in Google Haritalar'daki konumu",
     wa_greeting: "Merhaba ElbCar Detailing, web siteniz üzerinden bir talebim var.",
     aria_menu: "Menü",
     aria_close: "Kapat",
@@ -602,10 +617,13 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollToTop();
   initStickyCall();
   initContactForm();
+  initMapConsent();
 });
 
 // --- Language Switching ---
 function setLanguage(lang) {
+  // German-only pages (Impressum, Datenschutz, 404): never relabel them as EN/TR
+  if (document.documentElement.hasAttribute('data-lang-lock') || !document.querySelector('[data-i18n]')) return;
   currentLang = lang;
   try { localStorage.setItem('elbcar-lang', lang); } catch (e) { /* storage blocked */ }
   const t = translations[lang];
@@ -794,6 +812,25 @@ function initScrollToTop() {
   }, { passive: true });
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+// --- Google Maps: load the iframe only after the visitor clicks "Karte laden" ---
+function initMapConsent() {
+  const box = document.getElementById('mapConsent');
+  if (!box) return;
+  const btn = box.querySelector('.map-load-btn');
+  if (!btn) return;
+  btn.addEventListener('click', () => {
+    const t = translations[currentLang] || translations.de;
+    const iframe = document.createElement('iframe');
+    iframe.title = t.map_iframe_title || translations.de.map_iframe_title;
+    iframe.src = box.dataset.mapSrc;
+    iframe.height = '350';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'no-referrer-when-downgrade';
+    box.replaceChildren(iframe);
+    box.classList.add('is-loaded');
   });
 }
 
