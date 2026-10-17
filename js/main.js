@@ -106,8 +106,8 @@ const translations = {
     gallery_cap10: "Tankdeckel — Detailreinigung",
 
     // Reviews
-    reviews_title: "Kundenbewertungen",
-    reviews_subtitle: "Was unsere Kunden über uns sagen",
+    reviews_title: "Bewertungen",
+    reviews_subtitle: "Was auf Google über uns geschrieben wird",
     reviews_count: "83 Bewertungen auf Google",
     reviews_btn: "Alle Bewertungen auf Google ansehen",
     reviews_note: "Auszug aus unseren Google-Bewertungen. Wir prüfen nicht, ob die Bewertungen von Kunden stammen, die unsere Leistung tatsächlich in Anspruch genommen haben.",
@@ -132,7 +132,7 @@ const translations = {
     pricing_suv_price: "ab 250 €",
     pricing_transporter_price: "ab 300 €",
     pricing_disclaimer: "Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.",
-    pricing_vat_note: "Alle Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.",
+    pricing_vat_note: "Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.",
     pricing_p2: "Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!",
     pricing_form_btn: "Jetzt Angebot anfragen",
 
@@ -310,8 +310,8 @@ const translations = {
     gallery_cap9: "Audi — Floor Mat Cleaning",
     gallery_cap10: "Fuel Cap — Detail Cleaning",
 
-    reviews_title: "Customer Reviews",
-    reviews_subtitle: "What our customers say about us",
+    reviews_title: "Reviews",
+    reviews_subtitle: "What people write about us on Google",
     reviews_count: "83 reviews on Google",
     reviews_btn: "See all reviews on Google",
     reviews_note: "A selection of our Google reviews. We do not check whether the reviews come from customers who have actually used our services.",
@@ -335,7 +335,7 @@ const translations = {
     pricing_suv_price: "from €250",
     pricing_transporter_price: "from €300",
     pricing_disclaimer: "Final price depends on condition, scope and chosen package.",
-    pricing_vat_note: "All prices are final prices. In accordance with Section 19 of the German VAT Act (UStG), no VAT is charged.",
+    pricing_vat_note: "In accordance with Section 19 of the German VAT Act (UStG), no VAT is charged and none is added to the prices shown.",
     pricing_p2: "Simply get in touch for a free, no-obligation quote. We look forward to hearing from you!",
     pricing_form_btn: "Request a Quote",
 
@@ -510,8 +510,8 @@ const translations = {
     gallery_cap9: "Audi — Paspas Temizliği",
     gallery_cap10: "Yakıt Kapağı — Detaylı Temizlik",
 
-    reviews_title: "Müşteri Yorumları",
-    reviews_subtitle: "Müşterilerimiz bizim hakkımızda ne diyor",
+    reviews_title: "Yorumlar",
+    reviews_subtitle: "Google'da hakkımızda yazılanlar",
     reviews_count: "Google'da 83 yorum",
     reviews_btn: "Tüm yorumları Google'da görün",
     reviews_note: "Google yorumlarımızdan bir seçki. Yorumların, hizmetlerimizden gerçekten yararlanmış müşterilerden gelip gelmediğini kontrol etmiyoruz.",
@@ -535,7 +535,7 @@ const translations = {
     pricing_suv_price: "250\u00a0€'dan itibaren",
     pricing_transporter_price: "300\u00a0€'dan itibaren",
     pricing_disclaimer: "Nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre değişir.",
-    pricing_vat_note: "Tüm fiyatlar nihai fiyatlardır. Alman Katma Değer Vergisi Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz.",
+    pricing_vat_note: "Alman Katma Değer Vergisi Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz; belirtilen fiyatlara KDV eklenmez.",
     pricing_p2: "Ücretsiz ve bağlayıcı olmayan bir teklif için bizimle iletişime geçin. Sizden haber almayı dört gözle bekliyoruz!",
     pricing_form_btn: "Teklif İste",
 
@@ -622,28 +622,27 @@ const isLang = (l) => Object.prototype.hasOwnProperty.call(translations, l);
 function detectLanguage() {
   try {
     const q = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
-    if (isLang(q)) return { lang: q, chosen: true };
+    if (isLang(q)) return q;
   } catch (e) { /* old browser */ }
   try {
     const saved = localStorage.getItem('elbcar-lang');
-    if (isLang(saved)) return { lang: saved, chosen: true };
+    if (isLang(saved)) return saved;
   } catch (e) { /* storage blocked */ }
   // Search engines and audit tools (Googlebot, Lighthouse, headless browsers) keep the German default
   if (!/bot|crawl|spider|slurp|lighthouse|headless|inspectiontool/i.test(navigator.userAgent || '')) {
     const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
     for (const pref of prefs) {
       const base = String(pref).toLowerCase().split('-')[0];
-      if (isLang(base)) return { lang: base, chosen: false };
+      if (isLang(base)) return base;
     }
   }
-  return { lang: 'de', chosen: false };
+  return 'de';
 }
-const initialLang = detectLanguage();
-let currentLang = initialLang.lang;
+let currentLang = detectLanguage();
 
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
-  setLanguage(currentLang, initialLang.chosen);
+  setLanguage(currentLang, false);
   initNavbar();
   initMobileMenu();
   initBeforeAfterSliders();
@@ -656,7 +655,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- Language Switching ---
-// persist=false for the automatic browser-language default, so only a real choice is stored
+// persist=false on page load (link, saved choice or browser language): only a click on a language button stores the choice
 function setLanguage(lang, persist = true) {
   // German-only pages (Impressum, Datenschutz, 404): never relabel them as EN/TR
   if (document.documentElement.hasAttribute('data-lang-lock') || !document.querySelector('[data-i18n]')) return;
@@ -681,8 +680,8 @@ function setLanguage(lang, persist = true) {
     }
   });
 
-  // Translated attributes: accessible names (aria-label) and the meta description
-  [['data-i18n-aria', 'aria-label'], ['data-i18n-content', 'content']].forEach(([data, attr]) => {
+  // Translated attributes: accessible names (aria-label, title) and the meta description
+  [['data-i18n-aria', 'aria-label'], ['data-i18n-title', 'title'], ['data-i18n-content', 'content']].forEach(([data, attr]) => {
     document.querySelectorAll('[' + data + ']').forEach(el => {
       const v = t[el.getAttribute(data)];
       if (v !== undefined) el.setAttribute(attr, v);
@@ -794,11 +793,13 @@ function initBeforeAfterSliders() {
     let pos = 50;
 
     function setPercent(percent) {
-      pos = Math.max(2, Math.min(98, percent));
+      pos = Math.max(0, Math.min(100, percent));
+      // Value 0-100 as declared in aria-valuemin/max; the handle stops 2% short of the edges
+      const shown = Math.max(2, Math.min(98, pos));
       // Before photo on the left, after photo (stacked on top) shown right of the handle
-      afterImg.style.clipPath = `inset(0 0 0 ${pos}%)`;
-      handle.style.left = pos + '%';
-      arrows.style.left = pos + '%';
+      afterImg.style.clipPath = `inset(0 0 0 ${shown}%)`;
+      handle.style.left = shown + '%';
+      arrows.style.left = shown + '%';
       slider.setAttribute('aria-valuenow', Math.round(pos));
     }
     function fromX(x) {
@@ -819,8 +820,11 @@ function initBeforeAfterSliders() {
     slider.addEventListener('pointerup', end);
     slider.addEventListener('pointercancel', end);
     slider.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') { setPercent(pos - 5); e.preventDefault(); }
-      if (e.key === 'ArrowRight') { setPercent(pos + 5); e.preventDefault(); }
+      // ARIA slider keys: Left/Down and Right/Up step 5, Page Down/Up step 10, Home/End jump to 0/100
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') { setPercent(pos - 5); e.preventDefault(); }
+      if (e.key === 'ArrowRight' || e.key === 'ArrowUp') { setPercent(pos + 5); e.preventDefault(); }
+      if (e.key === 'PageDown') { setPercent(pos - 10); e.preventDefault(); }
+      if (e.key === 'PageUp') { setPercent(pos + 10); e.preventDefault(); }
       if (e.key === 'Home') { setPercent(0); e.preventDefault(); }
       if (e.key === 'End') { setPercent(100); e.preventDefault(); }
     });
@@ -907,16 +911,21 @@ function initMapConsent() {
   if (!box) return;
   const btn = box.querySelector('.map-load-btn');
   if (!btn) return;
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', (e) => {
     const t = translations[currentLang] || translations.de;
     const iframe = document.createElement('iframe');
     iframe.title = t.map_iframe_title || translations.de.map_iframe_title;
+    iframe.setAttribute('data-i18n-title', 'map_iframe_title'); // re-translated by setLanguage()
     iframe.src = box.dataset.mapSrc;
     iframe.height = '350';
     iframe.allowFullscreen = true;
     iframe.referrerPolicy = 'no-referrer-when-downgrade';
     box.replaceChildren(iframe);
     box.classList.add('is-loaded');
+    // Opened with the keyboard (click detail 0): the map shows a focus ring while it has focus
+    box.classList.toggle('kbd-focus', e.detail === 0);
+    // The button is gone: move focus to the map so keyboard and screen-reader users stay here
+    iframe.focus();
   });
 }
 

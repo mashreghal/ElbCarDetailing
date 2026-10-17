@@ -92,7 +92,8 @@ Goal: rank higher on Google locally (Hamburg) and later run Google Ads. Order: l
 ### 1. Legal basics (before anything else)
 - [ ] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (asked 2026-10-09, reply pending)
 - [ ] Update law references in Impressum (DDG and MStV instead of TMG and RStV)
-- [ ] Update Datenschutz for GitHub hosting, Formspree and Google Maps
+- [x] Update Datenschutz for GitHub hosting, Formspree and Google Maps
+  - [ ] Formspree: confirm its EU-US Data Privacy Framework certification or sign its DPA with standard contractual clauses, then name that basis in datenschutz.html
 
 ### 2. Get found on Google
 - [ ] Fully set up Google Business Profile (categories, services, 30+ photos, hours, WhatsApp link)
