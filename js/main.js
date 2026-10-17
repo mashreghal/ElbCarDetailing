@@ -5,6 +5,8 @@
 // --- Translations ---
 const translations = {
   de: {
+    meta_title: "ElbCar Detailing — Premium Fahrzeugaufbereitung Hamburg",
+    meta_description: "ElbCar Detailing — Premium Fahrzeugaufbereitung in Hamburg. Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr.",
     trust_hours: "Nur nach Termin",
     trust_hours_note: "Keine festen Öffnungszeiten",
     appt_title: "Nur mit Termin",
@@ -22,7 +24,6 @@ const translations = {
     // Hero
     hero_tagline: "Premium Fahrzeugaufbereitung in Hamburg",
     hero_text: "Wir verwandeln Ihr Fahrzeug in einen Neuzustand — mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.",
-    hero_btn_services: "Unsere Leistungen",
     hero_btn_contact: "Termin anfragen",
     hero_cta_call: "Jetzt anrufen",
 
@@ -51,7 +52,6 @@ const translations = {
     svc7_text: "Professionelle Reinigung und Pflege von Ledersitzen und -oberflächen. Schutz vor Austrocknung und Rissen.",
     svc8_title: "Reifenwechsel",
     svc8_text: "Professioneller Reifenwechsel — Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.",
-    svc_price: "ab",
 
     // Packages
     packages_title: "Unsere Pakete",
@@ -107,8 +107,9 @@ const translations = {
     // Reviews
     reviews_title: "Kundenbewertungen",
     reviews_subtitle: "Was unsere Kunden über uns sagen",
-    reviews_count: "82 Bewertungen auf Google",
+    reviews_count: "83 Bewertungen auf Google",
     reviews_btn: "Alle Bewertungen auf Google ansehen",
+    reviews_note: "Auszug aus unseren Google-Bewertungen. Wir prüfen nicht, ob die Bewertungen von Kunden stammen, die unsere Leistung tatsächlich in Anspruch genommen haben.",
     review_translated: "",
     review1_text: "Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.",
     review2_text: "Ich bin sehr zufrieden. Parlack hat mich ehrlich beraten und mir klar gesagt, was wirklich nötig ist – keine teuren Zusatzpakete, kein unnötiger Schnickschnack. Wir haben die preisgünstigste Variante gewählt, und das Ergebnis war absolut top. Durch seine Tipps habe ich am Ende bei meinem Leasingrückläufer richtig Geld gespart und gezaubert hat er auch noch. Ganz schlimme Kratzer sind einfach spurlos verschwunden. Zuverlässig, kompetent und fair. Klare Empfehlung.",
@@ -125,6 +126,10 @@ const translations = {
     pricing_kompaktwagen: "Kompaktwagen",
     pricing_suv: "SUV",
     pricing_transporter: "Transporter",
+    pricing_kleinwagen_price: "ab 150 €",
+    pricing_kompaktwagen_price: "ab 200 €",
+    pricing_suv_price: "ab 250 €",
+    pricing_transporter_price: "ab 300 €",
     pricing_disclaimer: "Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.",
     pricing_vat_note: "Alle Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.",
     pricing_p2: "Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!",
@@ -142,7 +147,6 @@ const translations = {
     contact_phone_label: "Telefon",
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Mail",
-    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Standort",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Termine",
@@ -150,8 +154,6 @@ const translations = {
     form_name: "Ihr Name",
     form_email: "Ihre E-Mail",
     form_phone: "Telefonnummer",
-    form_service: "Gewünschte Leistung",
-    form_service_opt0: "Bitte wählen...",
     form_service_opt1: "Innenreinigung",
     form_service_opt2: "Außenaufbereitung",
     form_service_opt3: "Lackkorrektur",
@@ -211,6 +213,8 @@ const translations = {
   },
 
   en: {
+    meta_title: "ElbCar Detailing — Premium Car Detailing Hamburg",
+    meta_description: "ElbCar Detailing — premium car detailing in Hamburg. Interior cleaning, paint correction, ceramic coating and more.",
     trust_hours: "By appointment only",
     trust_hours_note: "No fixed opening hours",
     appt_title: "By appointment only",
@@ -226,7 +230,6 @@ const translations = {
 
     hero_tagline: "Premium Car Detailing in Hamburg",
     hero_text: "We transform your vehicle to showroom condition — with attention to detail, professional products and years of experience.",
-    hero_btn_services: "Our Services",
     hero_btn_contact: "Request Appointment",
     hero_cta_call: "Call Now",
 
@@ -253,7 +256,6 @@ const translations = {
     svc7_text: "Professional cleaning and conditioning of leather seats and surfaces. Protection against drying and cracking.",
     svc8_title: "Tyre Change",
     svc8_text: "Professional tyre change — summer and winter tyres. Fast, reliable and at a fair price.",
-    svc_price: "from",
 
     packages_title: "Our Packages",
     packages_subtitle: "Choose the right package for your vehicle",
@@ -267,7 +269,7 @@ const translations = {
     pkg2_f4: "Single-stage polish",
     pkg2_f5: "Wax sealant",
     pkg2_f6: "Engine bay cleaning",
-    pkg2_f7: "Door sills & trunk",
+    pkg2_f7: "Door sills & boot",
     pkg3_name: "Exclusive",
     pkg3_price_text: "On Request",
     pkg3_note: "The ultimate detailing experience",
@@ -278,15 +280,15 @@ const translations = {
     pkg3_f5: "Leather care & sealing",
     pkg3_f6: "Detailed final inspection",
     pkg3_f7: "Care guide & aftercare",
-    pkg4_name: "Nothing for you?",
-    pkg4_price_text: "Individual",
-    pkg4_note: "Didn't find the right package? We'll gladly create an individual offer for you.",
+    pkg4_name: "Nothing suitable?",
+    pkg4_price_text: "Custom quote",
+    pkg4_note: "Didn't find the right package? We'll be happy to put together a custom quote for you.",
     pkg4_f1: "Tailored services",
     pkg4_f2: "Free consultation",
     pkg4_f3: "Flexible scope",
     pkg4_f4: "Personal support",
     pkg4_f5: "Help with any request",
-    pkg4_btn: "Request individual offer",
+    pkg4_btn: "Request a custom quote",
     pkg_btn: "Request Now",
 
     gallery_title: "Before & After",
@@ -298,7 +300,7 @@ const translations = {
     gallery_cap3: "Volvo — Rear Seats",
     gallery_cap4: "VW Touran — Full Interior",
     gallery_cap5: "VW Touran — Rear Seats & Floor Mats",
-    gallery_cap6: "Trunk — Deep Cleaning",
+    gallery_cap6: "Boot — Deep Cleaning",
     gallery_cap7: "Headlight — Restoration",
     gallery_cap8: "Mercedes AMG — Steering Wheel Care",
     gallery_cap9: "Audi — Floor Mat Cleaning",
@@ -306,8 +308,9 @@ const translations = {
 
     reviews_title: "Customer Reviews",
     reviews_subtitle: "What our customers say about us",
-    reviews_count: "82 reviews on Google",
+    reviews_count: "83 reviews on Google",
     reviews_btn: "See all reviews on Google",
+    reviews_note: "A selection of our Google reviews. We do not check whether the reviews come from customers who have actually used our services.",
     review_translated: "Translated from German",
     review1_text: "Perfect ceramic coating. You can't get more shine than this. Professional work, the owner is very friendly and always up for a nice chat. Happy to come back. A clear recommendation for anyone who likes their car well cared for.",
     review2_text: "I'm very satisfied. Parlack gave me honest advice and clearly told me what was really needed — no expensive add-on packages, no unnecessary extras. We chose the most affordable option, and the result was absolutely top-notch. Thanks to his tips, I ended up saving real money on my lease return, and he worked magic too. Really bad scratches just vanished without a trace. Reliable, competent and fair. Highly recommended.",
@@ -316,13 +319,17 @@ const translations = {
     review5_text: "I drove a longer distance specifically to have my car detailed here — and it was absolutely worth it! The result exceeded my expectations. The car shines like new, even the small details weren't overlooked. The service was friendly and professional. I'm really very satisfied and will gladly come back. Absolute recommendation!",
 
     pricing_title: "Quotes & Pricing",
-    pricing_subtitle: "Individual quotes for every vehicle",
-    pricing_p1: "Our prices depend on the size and condition of your vehicle. Since every car is unique, we're happy to provide a personalized quote — tailored to your needs and the scope of work.",
+    pricing_subtitle: "Tailored quotes for every vehicle",
+    pricing_p1: "Our prices depend on the size and condition of your vehicle. Since every car is unique, we're happy to provide a personalised quote — tailored to your needs and the scope of work.",
     pricing_ref_title: "Reference prices for guidance",
     pricing_kleinwagen: "Small Car",
     pricing_kompaktwagen: "Compact Car",
     pricing_suv: "SUV",
     pricing_transporter: "Van",
+    pricing_kleinwagen_price: "from €150",
+    pricing_kompaktwagen_price: "from €200",
+    pricing_suv_price: "from €250",
+    pricing_transporter_price: "from €300",
     pricing_disclaimer: "Final price depends on condition, scope and chosen package.",
     pricing_vat_note: "All prices are final prices. In accordance with Section 19 of the German VAT Act (UStG), no VAT is charged.",
     pricing_p2: "Simply get in touch for a free, no-obligation quote. We look forward to hearing from you!",
@@ -333,12 +340,11 @@ const translations = {
     insta_btn: "Visit Instagram",
 
     contact_title: "Contact",
-    contact_subtitle: "Schedule your appointment or send us an inquiry",
+    contact_subtitle: "Book your appointment or send us an enquiry",
     contact_info_title: "How to Reach Us",
     contact_phone_label: "Phone",
     contact_phone: "+49 155 63205346",
     contact_email_label: "Email",
-    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Location",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Appointments",
@@ -346,8 +352,6 @@ const translations = {
     form_name: "Your Name",
     form_email: "Your Email",
     form_phone: "Phone Number",
-    form_service: "Desired Service",
-    form_service_opt0: "Please select...",
     form_service_opt1: "Interior Cleaning",
     form_service_opt2: "Exterior Detailing",
     form_service_opt3: "Paint Correction",
@@ -369,17 +373,17 @@ const translations = {
     form_services_label: "Which services are you interested in? (multiple choices possible)",
     form_size_label: "Vehicle size",
     form_size_small: "Small (e.g. Polo, Golf)",
-    form_size_medium: "Medium (sedan)",
+    form_size_medium: "Medium (saloon)",
     form_size_large: "Large (SUV, estate)",
     form_size_van: "Van",
     form_condition_label: "What is the condition of the vehicle?",
-    form_condition_light: "Lightly dirty",
-    form_condition_normal: "Normally dirty",
-    form_condition_heavy: "Heavily dirty",
-    form_response_promise: "We usually reply within one business day",
+    form_condition_light: "Light soiling",
+    form_condition_normal: "Moderate soiling",
+    form_condition_heavy: "Heavy soiling",
+    form_response_promise: "We usually reply within one working day",
     form_btn: "Send Request",
     form_sending: "Sending…",
-    form_success: "Thank you! Your request has been sent. We usually reply within one business day.",
+    form_success: "Thank you! Your request has been sent. We usually reply within one working day.",
     form_error_required: "Please fill in all highlighted required fields.",
     form_error_send: "Sending failed. Please try again or give us a call.",
     form_privacy_text: "When you submit this form, your details are sent to us via the Formspree service and processed to handle your enquiry.",
@@ -406,6 +410,8 @@ const translations = {
   },
 
   tr: {
+    meta_title: "ElbCar Detailing — Hamburg'da Premium Araç Bakımı",
+    meta_description: "ElbCar Detailing — Hamburg'da premium araç bakımı. İç temizlik, boya düzeltme, seramik kaplama ve daha fazlası.",
     trust_hours: "Sadece randevu ile",
     trust_hours_note: "Sabit çalışma saati yok",
     appt_title: "Sadece randevu ile",
@@ -420,8 +426,7 @@ const translations = {
     nav_contact: "İletişim",
 
     hero_tagline: "Hamburg'da Premium Araç Bakımı",
-    hero_text: "Aracınızı sıfır gibi bir duruma getiriyoruz — detaylara özen, profesyonel ürünler ve yıllarca deneyim ile.",
-    hero_btn_services: "Hizmetlerimiz",
+    hero_text: "Aracınızı sıfır gibi bir duruma getiriyoruz — detaylara özen, profesyonel ürünler ve yılların deneyimiyle.",
     hero_btn_contact: "Randevu Al",
     hero_cta_call: "Hemen Ara",
 
@@ -433,22 +438,21 @@ const translations = {
     services_title: "Hizmetlerimiz",
     services_subtitle: "En yüksek standartlar için profesyonel araç bakımı",
     svc1_title: "İç Temizlik",
-    svc1_text: "Tüm iç mekanın derin temizliği — koltuklar, halılar, gösterge paneli, kapı döşemeleri ve daha fazlası.",
+    svc1_text: "Tüm iç mekanın derin temizliği — koltuklar, halılar, gösterge paneli, kapı döşemeleri ve daha fazlası. Kusursuz bir iç mekan için.",
     svc2_title: "Dış Detaylandırma",
-    svc2_text: "Profesyonel el yıkama, dekontaminasyon, kil bar işlemi ve parlak bir görünüm için mühür.",
+    svc2_text: "Profesyonel el yıkama, dekontaminasyon, kil bar işlemi ve koruyucu kaplama — parlak bir görünüm ve uzun süreli koruma için.",
     svc3_title: "Boya Düzeltme & Cilalama",
-    svc3_text: "Çizikleri, girdap izlerini ve hologramları gidermek için çok aşamalı cilalama.",
+    svc3_text: "Çizikleri, girdap izlerini ve hologramları gidermek için çok aşamalı cilalama. Boyanız yeniden ışıl ışıl parlar.",
     svc4_title: "Seramik Kaplama",
     svc4_text: "Profesyonel seramik kaplama ile uzun vadeli koruma. UV ışınlarına, kire ve kimyasal etkilere karşı 5 yıla kadar koruma.",
     svc5_title: "Motor Yıkama",
     svc5_text: "Motor bölümünün nazik ama kapsamlı temizliği. Aracınız için görsel ve teknik bir yükseltme.",
     svc6_title: "Far Yenileme",
-    svc6_text: "Matlaşmış ve sararrmış farlar profesyonelce yenilenir — daha iyi görüş ve bakımlı bir görünüm için.",
+    svc6_text: "Matlaşmış ve sararmış farlar profesyonelce yenilenir — daha iyi görüş ve bakımlı bir görünüm için.",
     svc7_title: "Deri Bakımı",
     svc7_text: "Deri koltukların ve yüzeylerin profesyonel temizliği ve bakımı. Kurumaya ve çatlamaya karşı koruma.",
     svc8_title: "Lastik Değişimi",
     svc8_text: "Profesyonel lastik değişimi — yaz ve kış lastikleri. Hızlı, güvenilir ve uygun fiyatlı.",
-    svc_price: "başlayan",
 
     packages_title: "Paketlerimiz",
     packages_subtitle: "Aracınız için doğru paketi seçin",
@@ -460,28 +464,28 @@ const translations = {
     pkg2_f2: "Derin iç temizlik",
     pkg2_f3: "Deri/döşeme temizliği",
     pkg2_f4: "Tek aşamalı cilalama",
-    pkg2_f5: "Wax mühürleme",
+    pkg2_f5: "Wax ile koruyucu kaplama",
     pkg2_f6: "Motor bölümü temizliği",
     pkg2_f7: "Kapı eşikleri & bagaj",
-    pkg3_name: "Özel",
+    pkg3_name: "Exclusive",
     pkg3_price_text: "Talep Üzerine",
     pkg3_note: "En üst düzey detaylandırma deneyimi",
     pkg3_f1: "Premium paketteki her şey",
     pkg3_f2: "Çok aşamalı boya düzeltme",
     pkg3_f3: "Seramik kaplama",
     pkg3_f4: "Far yenileme",
-    pkg3_f5: "Deri bakımı & mühürleme",
+    pkg3_f5: "Deri bakımı & koruyucu kaplama",
     pkg3_f6: "Detaylı son kontrol",
     pkg3_f7: "Bakım kılavuzu & takip",
     pkg4_name: "Size uygun değil mi?",
-    pkg4_price_text: "Bireysel",
+    pkg4_price_text: "Kişiye Özel",
     pkg4_note: "Uygun bir paket bulamadınız mı? Size özel bir teklif hazırlamaktan memnuniyet duyarız.",
     pkg4_f1: "Kişiye özel hizmetler",
     pkg4_f2: "Ücretsiz danışmanlık",
     pkg4_f3: "Esnek hizmet kapsamı",
     pkg4_f4: "Kişisel destek",
     pkg4_f5: "Her talebinizde yardım",
-    pkg4_btn: "Özel teklif isteyin",
+    pkg4_btn: "Size özel teklif isteyin",
     pkg_btn: "Şimdi Talep Et",
 
     gallery_title: "Önce & Sonra",
@@ -497,12 +501,13 @@ const translations = {
     gallery_cap7: "Far — Yenileme",
     gallery_cap8: "Mercedes AMG — Direksiyon Bakımı",
     gallery_cap9: "Audi — Paspas Temizliği",
-    gallery_cap10: "Yakıt Kapağı — Detay Temizlik",
+    gallery_cap10: "Yakıt Kapağı — Detaylı Temizlik",
 
     reviews_title: "Müşteri Yorumları",
     reviews_subtitle: "Müşterilerimiz bizim hakkımızda ne diyor",
-    reviews_count: "Google'da 82 yorum",
+    reviews_count: "Google'da 83 yorum",
     reviews_btn: "Tüm yorumları Google'da görün",
+    reviews_note: "Google yorumlarımızdan bir seçki. Yorumların, hizmetlerimizden gerçekten yararlanmış müşterilerden gelip gelmediğini kontrol etmiyoruz.",
     review_translated: "Almancadan çevrilmiştir",
     review1_text: "Mükemmel seramik kaplama. Bundan daha fazla parlaklık olamaz. Profesyonel iş, işletme sahibi çok güler yüzlü ve sohbet etmekten keyif alıyor. Tekrar gelmekten memnuniyet duyarım. Arabasına özen gösteren herkese kesinlikle tavsiye ederim.",
     review2_text: "Çok memnunum. Parlack bana dürüstçe danışmanlık yaptı ve gerçekten neyin gerekli olduğunu açıkça söyledi — pahalı ek paketler yok, gereksiz süslemeler yok. En uygun fiyatlı seçeneği tercih ettik ve sonuç kesinlikle mükemmeldi. Önerileri sayesinde kiralık araç iadende ciddi para biriktirdim, üstelik sihir gibi bir iş çıkardı. Çok kötü çizikler iz bırakmadan kayboldu. Güvenilir, yetkin ve adil. Kesinlikle tavsiye ederim.",
@@ -511,13 +516,17 @@ const translations = {
     review5_text: "Arabamı burada bakım yaptırmak için özellikle uzun bir yol geldim — ve kesinlikle buna değdi! Sonuç beklentilerimi aştı. Araba yeni gibi parlıyor, küçük detaylar bile gözden kaçırılmamış. Hizmet güler yüzlü ve profesyoneldi. Gerçekten çok memnunum ve memnuniyetle tekrar gelirim. Kesinlikle tavsiye ederim!",
 
     pricing_title: "Teklif & Fiyatlar",
-    pricing_subtitle: "Her araç için bireysel teklifler",
+    pricing_subtitle: "Her araca özel teklifler",
     pricing_p1: "Fiyatlarımız aracınızın büyüklüğüne ve durumuna göre belirlenir. Her araç farklı olduğundan, size özel bir teklif hazırlamaktan memnuniyet duyarız — ihtiyaçlarınıza ve iş kapsamına uygun olarak.",
-    pricing_ref_title: "Yönlendirme için referans fiyatlar",
+    pricing_ref_title: "Fikir vermesi için yaklaşık fiyatlar",
     pricing_kleinwagen: "Küçük Araç",
     pricing_kompaktwagen: "Kompakt Araç",
     pricing_suv: "SUV",
     pricing_transporter: "Minibüs / Kamyonet",
+    pricing_kleinwagen_price: "150\u00a0€'dan itibaren",
+    pricing_kompaktwagen_price: "200\u00a0€'dan itibaren",
+    pricing_suv_price: "250\u00a0€'dan itibaren",
+    pricing_transporter_price: "300\u00a0€'dan itibaren",
     pricing_disclaimer: "Nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre değişir.",
     pricing_vat_note: "Tüm fiyatlar nihai fiyatlardır. Alman Katma Değer Vergisi Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz.",
     pricing_p2: "Ücretsiz ve bağlayıcı olmayan bir teklif için bizimle iletişime geçin. Sizden haber almayı dört gözle bekliyoruz!",
@@ -533,7 +542,6 @@ const translations = {
     contact_phone_label: "Telefon",
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Posta",
-    contact_email: "elbcar.detailing@gmail.com",
     contact_addr_label: "Konum",
     contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
     contact_hours_label: "Randevular",
@@ -541,8 +549,6 @@ const translations = {
     form_name: "Adınız",
     form_email: "E-Posta Adresiniz",
     form_phone: "Telefon Numarası",
-    form_service: "İstenen Hizmet",
-    form_service_opt0: "Lütfen seçin...",
     form_service_opt1: "İç Temizlik",
     form_service_opt2: "Dış Detaylandırma",
     form_service_opt3: "Boya Düzeltme",
@@ -558,9 +564,9 @@ const translations = {
     form_contact_pref_callback: "Geri arama",
     form_contact_pref_whatsapp: "WhatsApp",
     form_contact_pref_telegram: "Telegram",
-    form_customer_type_label: "Özel mi ticari müşteri misiniz?",
-    form_customer_private: "Özel",
-    form_customer_commercial: "Ticari",
+    form_customer_type_label: "Bireysel mi yoksa kurumsal müşteri misiniz?",
+    form_customer_private: "Bireysel",
+    form_customer_commercial: "Kurumsal",
     form_services_label: "Hangi hizmetlerle ilgileniyorsunuz? (birden fazla seçilebilir)",
     form_size_label: "Araç boyutu",
     form_size_small: "Küçük (örn. Polo, Golf)",
@@ -569,7 +575,7 @@ const translations = {
     form_size_van: "Minibüs/Transporter",
     form_condition_label: "Aracın durumu nasıl?",
     form_condition_light: "Az kirli",
-    form_condition_normal: "Normal kirli",
+    form_condition_normal: "Orta derecede kirli",
     form_condition_heavy: "Çok kirli",
     form_response_promise: "Genellikle bir iş günü içinde yanıt veriyoruz",
     form_btn: "Talep Gönder",
@@ -602,13 +608,33 @@ const translations = {
 };
 
 // --- State ---
-let currentLang = 'de';
-try { currentLang = localStorage.getItem('elbcar-lang') || 'de'; } catch (e) { /* storage blocked */ }
-if (!translations[currentLang]) currentLang = 'de';
+// Language order: a ?lang=de|en|tr link, then the visitor's saved choice, then the browser language, else German.
+const isLang = (l) => Object.prototype.hasOwnProperty.call(translations, l);
+function detectLanguage() {
+  try {
+    const q = (new URLSearchParams(window.location.search).get('lang') || '').toLowerCase();
+    if (isLang(q)) return { lang: q, chosen: true };
+  } catch (e) { /* old browser */ }
+  try {
+    const saved = localStorage.getItem('elbcar-lang');
+    if (isLang(saved)) return { lang: saved, chosen: true };
+  } catch (e) { /* storage blocked */ }
+  // Search engines and audit tools (Googlebot, Lighthouse, headless browsers) keep the German default
+  if (!/bot|crawl|spider|slurp|lighthouse|headless|inspectiontool/i.test(navigator.userAgent || '')) {
+    const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
+    for (const pref of prefs) {
+      const base = String(pref).toLowerCase().split('-')[0];
+      if (isLang(base)) return { lang: base, chosen: false };
+    }
+  }
+  return { lang: 'de', chosen: false };
+}
+const initialLang = detectLanguage();
+let currentLang = initialLang.lang;
 
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
-  setLanguage(currentLang);
+  setLanguage(currentLang, initialLang.chosen);
   initNavbar();
   initMobileMenu();
   initBeforeAfterSliders();
@@ -621,15 +647,18 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // --- Language Switching ---
-function setLanguage(lang) {
+// persist=false for the automatic browser-language default, so only a real choice is stored
+function setLanguage(lang, persist = true) {
   // German-only pages (Impressum, Datenschutz, 404): never relabel them as EN/TR
   if (document.documentElement.hasAttribute('data-lang-lock') || !document.querySelector('[data-i18n]')) return;
-  currentLang = lang;
-  try { localStorage.setItem('elbcar-lang', lang); } catch (e) { /* storage blocked */ }
+  if (!isLang(lang)) return;
   const t = translations[lang];
-  if (!t) return;
+  currentLang = lang;
+  if (persist) {
+    try { localStorage.setItem('elbcar-lang', lang); } catch (e) { /* storage blocked */ }
+  }
 
-  // Update all elements with data-i18n
+  // Update all elements with data-i18n (including <title>, i.e. the browser tab)
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (t[key] !== undefined) {
@@ -643,10 +672,12 @@ function setLanguage(lang) {
     }
   });
 
-  // Translated accessible names (aria-label)
-  document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-    const v = t[el.getAttribute('data-i18n-aria')];
-    if (v !== undefined) el.setAttribute('aria-label', v);
+  // Translated attributes: accessible names (aria-label) and the meta description
+  [['data-i18n-aria', 'aria-label'], ['data-i18n-content', 'content']].forEach(([data, attr]) => {
+    document.querySelectorAll('[' + data + ']').forEach(el => {
+      const v = t[el.getAttribute(data)];
+      if (v !== undefined) el.setAttribute(attr, v);
+    });
   });
 
   // WhatsApp links: prefilled greeting in the current language
@@ -670,6 +701,14 @@ document.addEventListener('click', (e) => {
   const btn = e.target.closest('.lang-btn');
   if (btn) {
     setLanguage(btn.dataset.lang);
+    // A ?lang= link in the address bar would win on reload, so keep it in step with the choice
+    try {
+      const url = new URL(window.location.href);
+      if (url.searchParams.has('lang')) {
+        url.searchParams.set('lang', btn.dataset.lang);
+        history.replaceState(null, '', url);
+      }
+    } catch (err) { /* old browser or file:// page */ }
   }
 });
 
@@ -717,7 +756,8 @@ function initBeforeAfterSliders() {
 
     function setPercent(percent) {
       pos = Math.max(2, Math.min(98, percent));
-      afterImg.style.clipPath = `inset(0 ${100 - pos}% 0 0)`;
+      // Before photo on the left, after photo (stacked on top) shown right of the handle
+      afterImg.style.clipPath = `inset(0 0 0 ${pos}%)`;
       handle.style.left = pos + '%';
       arrows.style.left = pos + '%';
       slider.setAttribute('aria-valuenow', Math.round(pos));
@@ -742,6 +782,8 @@ function initBeforeAfterSliders() {
     slider.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowLeft') { setPercent(pos - 5); e.preventDefault(); }
       if (e.key === 'ArrowRight') { setPercent(pos + 5); e.preventDefault(); }
+      if (e.key === 'Home') { setPercent(0); e.preventDefault(); }
+      if (e.key === 'End') { setPercent(100); e.preventDefault(); }
     });
   });
 }
