@@ -708,7 +708,7 @@ function initContactForm() {
   status.setAttribute('aria-live', 'polite');
   form.insertBefore(status, form.querySelector('button[type="submit"]'));
 
-  const requiredRadioGroups = ['Kontaktart', 'Kundentyp', 'Fahrzeuggröße', 'Zustand'];
+  const requiredRadioGroups = []; // the four choice groups are optional (labelled "Optional" in the form)
 
   function clearErrors() {
     form.querySelectorAll('.form-choice.has-error, .form-group.has-error').forEach(el => {
