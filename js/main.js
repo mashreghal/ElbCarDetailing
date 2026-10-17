@@ -5,8 +5,8 @@
 // --- Translations ---
 const translations = {
   de: {
-    meta_title: "ElbCar Detailing — Premium Fahrzeugaufbereitung Hamburg",
-    meta_description: "ElbCar Detailing — Premium Fahrzeugaufbereitung in Hamburg. Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr.",
+    meta_title: "Autoaufbereitung Hamburg-Finkenwerder | ElbCar Detailing",
+    meta_description: "Autoaufbereitung und Autopflege in Hamburg-Finkenwerder: Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Nur mit Termin – jetzt anfragen.",
     trust_hours: "Nur nach Termin",
     trust_hours_note: "Keine festen Öffnungszeiten",
     appt_title: "Nur mit Termin",
@@ -33,6 +33,7 @@ const translations = {
     about_p1: "Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.",
     about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung — wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
     about_p3: "Egal ob Kleinwagen oder Supersportwagen — jedes Fahrzeug verdient die beste Pflege.",
+    about_p4: "Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.",
     // Services
     services_title: "Unsere Leistungen",
     services_subtitle: "Professionelle Fahrzeugpflege für höchste Ansprüche",
@@ -200,6 +201,8 @@ const translations = {
     aria_prev: "Vorheriges Bild",
     aria_next: "Nächstes Bild",
     aria_scroll_top: "Nach oben",
+    aria_stars: "5 von 5 Sternen",
+    skip_link: "Zum Inhalt springen",
     sticky_call_label: "Anrufen",
 
     // Footer
@@ -213,8 +216,8 @@ const translations = {
   },
 
   en: {
-    meta_title: "ElbCar Detailing — Premium Car Detailing Hamburg",
-    meta_description: "ElbCar Detailing — premium car detailing in Hamburg. Interior cleaning, paint correction, ceramic coating and more.",
+    meta_title: "Car Detailing Hamburg-Finkenwerder | ElbCar Detailing",
+    meta_description: "Car detailing and car care in Hamburg-Finkenwerder: interior cleaning, paint correction, ceramic coating and more. By appointment only – enquire now.",
     trust_hours: "By appointment only",
     trust_hours_note: "No fixed opening hours",
     appt_title: "By appointment only",
@@ -238,6 +241,7 @@ const translations = {
     about_p1: "At ElbCar Detailing, quality comes first. With state-of-the-art techniques and premium products, we ensure your vehicle shines in its best condition.",
     about_p2: "From interior cleaning to paint correction and ceramic coating — we offer everything your vehicle needs to look like new and stay protected long-term.",
     about_p3: "Whether it's a compact car or a supercar — every vehicle deserves the best care.",
+    about_p4: "Our studio is in Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich 3. We offer car detailing and car care there for customers from all over Hamburg and the surrounding area – by appointment only.",
     services_title: "Our Services",
     services_subtitle: "Professional vehicle care for the highest standards",
     svc1_title: "Interior Cleaning",
@@ -398,6 +402,8 @@ const translations = {
     aria_prev: "Previous image",
     aria_next: "Next image",
     aria_scroll_top: "Back to top",
+    aria_stars: "5 out of 5 stars",
+    skip_link: "Skip to content",
     sticky_call_label: "Call",
 
     footer_desc: "Premium car detailing in Hamburg. Your vehicle deserves the best.",
@@ -410,8 +416,8 @@ const translations = {
   },
 
   tr: {
-    meta_title: "ElbCar Detailing — Hamburg'da Premium Araç Bakımı",
-    meta_description: "ElbCar Detailing — Hamburg'da premium araç bakımı. İç temizlik, boya düzeltme, seramik kaplama ve daha fazlası.",
+    meta_title: "Hamburg-Finkenwerder'de Araç Bakımı | ElbCar Detailing",
+    meta_description: "Hamburg-Finkenwerder'de araç bakımı ve detaylı temizlik: iç temizlik, boya düzeltme, seramik kaplama ve daha fazlası. Sadece randevu ile – hemen bize ulaşın.",
     trust_hours: "Sadece randevu ile",
     trust_hours_note: "Sabit çalışma saati yok",
     appt_title: "Sadece randevu ile",
@@ -435,6 +441,7 @@ const translations = {
     about_p1: "ElbCar Detailing'de kalite her şeyden önce gelir. En modern teknikler ve premium ürünlerle aracınızın en iyi durumda parlamasını sağlıyoruz.",
     about_p2: "İç temizlikten boya düzeltmeye, seramik kaplamaya kadar — aracınızın yeni görünmesi ve uzun vadeli korunması için her şeyi sunuyoruz.",
     about_p3: "İster küçük bir araba ister bir süper spor araba olsun — her araç en iyi bakımı hak eder.",
+    about_p4: "Atölyemiz Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich 3 adresinde bulunuyor. Burada tüm Hamburg ve çevresinden gelen müşterilerimize araç bakımı ve detaylı temizlik hizmeti sunuyoruz – sadece randevu ile.",
     services_title: "Hizmetlerimiz",
     services_subtitle: "En yüksek standartlar için profesyonel araç bakımı",
     svc1_title: "İç Temizlik",
@@ -595,6 +602,8 @@ const translations = {
     aria_prev: "Önceki resim",
     aria_next: "Sonraki resim",
     aria_scroll_top: "Yukarı çık",
+    aria_stars: "5 üzerinden 5 yıldız",
+    skip_link: "İçeriğe geç",
     sticky_call_label: "Ara",
 
     footer_desc: "Hamburg'da premium araç bakımı. Aracınız en iyisini hak ediyor.",
@@ -687,9 +696,10 @@ function setLanguage(lang, persist = true) {
     });
   }
 
-  // Update active lang button
+  // Update active lang button (aria-pressed tells screen readers which one is active)
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
+    btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
   });
 
   // Update HTML lang attribute
@@ -724,26 +734,55 @@ function initNavbar() {
 }
 
 // --- Mobile Menu ---
+// The closed menu is visibility:hidden (CSS), so its links are not reachable by keyboard or screen readers.
 function initMobileMenu() {
   const toggle = document.querySelector('.nav-toggle');
   const menu = document.querySelector('.nav-menu');
   if (!toggle || !menu) return;
+  const navbar = toggle.closest('.navbar') || document.body;
+  const isOpen = () => menu.classList.contains('open');
+  // What the keyboard can reach while the open menu covers the page (logo, menu items, WhatsApp, menu button)
+  const focusables = () => Array.from(navbar.querySelectorAll('a[href], button:not([disabled])'))
+    .filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
 
-  toggle.addEventListener('click', () => {
-    toggle.classList.toggle('active');
-    menu.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
-    document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : '';
-  });
+  function setOpen(open, returnFocus) {
+    toggle.classList.toggle('active', open);
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+    if (open) {
+      const first = menu.querySelector('a[href], button');
+      if (first) first.focus({ preventScroll: true });
+    } else if (returnFocus) {
+      toggle.focus();
+    }
+  }
+
+  toggle.addEventListener('click', () => setOpen(!isOpen()));
 
   // Close menu on link click
   menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      toggle.classList.remove('active');
-      menu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+    link.addEventListener('click', () => setOpen(false));
   });
+
+  // Escape closes the menu and returns focus to the menu button; Tab cycles inside the open menu
+  document.addEventListener('keydown', (e) => {
+    if (!isOpen()) return;
+    if (e.key === 'Escape') { setOpen(false, true); return; }
+    if (e.key !== 'Tab') return;
+    const items = focusables();
+    if (!items.length) return;
+    const first = items[0], last = items[items.length - 1];
+    const outside = !navbar.contains(document.activeElement);
+    if (e.shiftKey && (outside || document.activeElement === first)) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && (outside || document.activeElement === last)) { e.preventDefault(); first.focus(); }
+  });
+
+  // Turning a tablet to the desktop layout while the menu is open must not leave the page unscrollable
+  const wide = window.matchMedia ? window.matchMedia('(min-width: 1100px)') : null;
+  const onWide = (e) => { if (e.matches && isOpen()) setOpen(false); };
+  if (wide && wide.addEventListener) wide.addEventListener('change', onWide);
+  else if (wide && wide.addListener) wide.addListener(onWide);
 }
 
 // --- Before/After Sliders ---
@@ -845,6 +884,11 @@ function initStickyCall() {
   }, { threshold: 0 }).observe(hero);
 }
 
+// Smooth scrolling only when the visitor has not asked the system for reduced motion
+function scrollBehavior() {
+  return (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) ? 'auto' : 'smooth';
+}
+
 // --- Scroll to Top ---
 function initScrollToTop() {
   const btn = document.querySelector('.scroll-top');
@@ -853,7 +897,7 @@ function initScrollToTop() {
     btn.classList.toggle('visible', window.scrollY > 400);
   }, { passive: true });
   btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: scrollBehavior() });
   });
 }
 
@@ -938,7 +982,7 @@ function initContactForm() {
     const firstInvalid = validate();
     if (firstInvalid) {
       setStatus('error', 'form_error_required');
-      firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      firstInvalid.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
       return;
     }
 
@@ -965,7 +1009,7 @@ function initContactForm() {
       if (response.ok) {
         form.reset();
         setStatus('success', 'form_success');
-        status.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        status.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
       } else {
         // Server-side errors (Formspree) are shown as our own translated message
         setStatus('error', 'form_error_send');

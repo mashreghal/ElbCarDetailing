@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elbcar-detailing.de/sitemap.xml
+Sitemap: https://www.elbcar-detailing.de/sitemap.xml

@@ -7,20 +7,24 @@
   <meta name="description" content="Datenschutzerklärung von ElbCar Detailing: welche Daten beim Besuch der Website, beim Kontaktformular und beim Laden der Google-Karte verarbeitet werden.">
   <link rel="canonical" href="https://www.elbcar-detailing.de/datenschutz.html">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" type="image/webp" href="images/logo-removebg.webp">
+  <meta name="theme-color" content="#06121f">
+  <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body>
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
 
   <!-- Navigation -->
   <nav class="navbar scrolled">
     <div class="container">
       <a href="index.html" class="nav-logo">
-        <img src="images/logo-removebg.webp" alt="ElbCar Detailing Logo" class="nav-logo-img" width="640" height="640">
+        <img src="images/logo-removebg.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w, images/logo-removebg.webp 640w" sizes="80px" alt="ElbCar Detailing Logo" class="nav-logo-img" width="640" height="640">
       </a>
-      <button class="nav-toggle" aria-label="Menü">
+      <button type="button" class="nav-toggle" aria-label="Menü" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
-      <div class="nav-menu">
+      <div class="nav-menu" id="navMenu">
         <div class="nav-links">
           <a href="index.html#services">Leistungen</a>
           <a href="index.html#packages">Pakete</a>
@@ -32,7 +36,7 @@
     </div>
   </nav>
 
-  <div class="legal-page">
+  <main class="legal-page" id="main">
     <div class="container">
       <h1>Datenschutz&shy;erklärung</h1>
 
@@ -187,7 +191,7 @@
 
       <p class="legal-back"><a href="index.html">&larr; Zurück zur Startseite</a></p>
     </div>
-  </div>
+  </main>
 
   <footer class="footer footer-compact">
     <div class="container">
