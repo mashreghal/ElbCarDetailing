@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>document.documentElement.classList.add('js')</script>
   <title data-i18n="meta_title">Autoaufbereitung Hamburg-Finkenwerder | ElbCar Detailing</title>
   <meta name="description" data-i18n-content="meta_description" content="Autoaufbereitung und Autopflege in Hamburg-Finkenwerder: Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Nur mit Termin – jetzt anfragen.">
   <meta name="keywords" content="Fahrzeugaufbereitung, Hamburg, Autoaufbereitung, Detailing, Keramikversiegelung, Lackkorrektur, Innenreinigung, Autopflege, Fahrzeugpflege, Lackaufbereitung, Polieren, Auto Reinigung Hamburg, Fahrzeugaufbereitung Hamburg Hafen">
@@ -63,11 +64,10 @@
   }
   </script>
 
-  <!-- Fonts -->
 
   <meta name="theme-color" content="#06121f">
-  <link rel="preload" as="image" media="(min-aspect-ratio: 1/1)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="100vw" fetchpriority="high">
-  <link rel="preload" as="image" media="(max-aspect-ratio: 1/1)" href="images/v2/hero-m-920.webp" imagesrcset="images/v2/hero-m-560.webp 560w, images/v2/hero-m-920.webp 920w" imagesizes="100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(min-aspect-ratio: 1/1) and (min-height: 521px)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="(min-width: 1000px) 50vw, 100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(max-aspect-ratio: 1/1), (max-height: 520px)" href="images/v3/hero-m-960.webp" imagesrcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" imagesizes="100vw" fetchpriority="high">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -82,46 +82,31 @@
   <!-- ============================================
        NAVIGATION
        ============================================ -->
-  <!-- ============================================
-       NAVIGATION
-       ============================================ -->
   <nav class="navbar" aria-label="Main">
     <div class="container nav-inner">
-      <a href="#hero" class="nav-brand" aria-label="ElbCar Detailing"><img src="images/logo-removebg.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w, images/logo-removebg.webp 640w" sizes="80px" width="640" height="640" alt="ElbCar Detailing"></a>
+      <a href="#hero" class="nav-brand" aria-label="ElbCar Detailing"><img src="images/logo-removebg.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w, images/logo-removebg.webp 640w" sizes="84px" width="640" height="640" alt="ElbCar Detailing"></a>
       <div class="nav-menu" id="navMenu">
         <div class="nav-links">
-          <a href="#services" data-i18n="nav_services">Leistungen</a>
-          <a href="#packages" data-i18n="nav_packages">Pakete</a>
-          <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
-          <a href="#about" data-i18n="nav_about">Über Uns</a>
-          <a href="#reviews" data-i18n="nav_reviews">Bewertungen</a>
-          <a href="#pricing" data-i18n="nav_pricing">Angebot & Preise</a>
-          <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+          <a href="#services"><span class="nav-num" aria-hidden="true">01</span><span data-i18n="nav_services">Leistungen</span></a>
+          <a href="#packages"><span class="nav-num" aria-hidden="true">02</span><span data-i18n="nav_packages">Pakete &amp; Preise</span></a>
+          <a href="#gallery"><span class="nav-num" aria-hidden="true">03</span><span data-i18n="nav_gallery">Galerie</span></a>
+          <a href="#reviews"><span class="nav-num" aria-hidden="true">04</span><span data-i18n="nav_reviews">Bewertungen</span></a>
+          <a href="#about"><span class="nav-num" aria-hidden="true">05</span><span data-i18n="nav_about">Über uns</span></a>
+          <a href="#faq"><span class="nav-num" aria-hidden="true">06</span><span data-i18n="nav_faq">FAQ</span></a>
+          <a href="#contact"><span class="nav-num" aria-hidden="true">07</span><span data-i18n="nav_contact">Kontakt</span></a>
         </div>
-        <div class="nav-social-links">
-          <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" class="nav-social-btn" aria-label="Instagram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-          </a>
-          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Anfrage%20%C3%BCber%20Ihre%20Website." target="_blank" rel="noopener" class="nav-social-btn" aria-label="WhatsApp">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          </a>
-          <a href="https://t.me/+4915563205346" target="_blank" rel="noopener" class="nav-social-btn" aria-label="Telegram">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          </a>
-          <span class="nav-social-divider"></span>
-          <button type="button" class="lang-btn active" data-lang="de" lang="de" title="Deutsch" aria-label="Deutsch">
-            <svg width="24" height="16" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="13.3" fill="#000"/><rect y="13.3" width="60" height="13.4" fill="#D00"/><rect y="26.7" width="60" height="13.3" fill="#FFCE00"/></svg>
-          </button>
-          <button type="button" class="lang-btn" data-lang="en" lang="en" title="English" aria-label="English">
-            <svg width="24" height="16" viewBox="0 0 60 40" aria-hidden="true"><clipPath id="gb"><rect width="60" height="40"/></clipPath><g clip-path="url(#gb)"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5" clip-path="url(#gb)"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="7"/></g></svg>
-          </button>
-          <button type="button" class="lang-btn" data-lang="tr" lang="tr" title="Türkçe" aria-label="Türkçe">
-            <svg width="24" height="16" viewBox="0 0 60 40" aria-hidden="true"><rect width="60" height="40" fill="#E30A17"/><circle cx="23" cy="20" r="10" fill="#fff"/><circle cx="26" cy="20" r="8" fill="#E30A17"/><polygon points="33,20 29.5,21.8 30.2,17.9 27.4,15.2 31.3,14.6 33,11 34.7,14.6 38.6,15.2 35.8,17.9 36.5,21.8" fill="#fff"/></svg>
-          </button>
-          <a href="tel:+4915563205346" class="nav-phone tel-num">+49 155 63205346</a>
+        <div class="nav-extra">
+          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_wa">Termin per WhatsApp</span></a>
+          <a href="tel:+4915563205346" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="tel-num">+49 155 63205346</span></a>
+          <p class="nav-appt" data-i18n="contact_hours">Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.</p>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Sprache wählen" data-i18n-aria="aria_lang">
+          <button type="button" class="lang-btn active" data-lang="de" lang="de" title="Deutsch" aria-label="DE – Deutsch">DE</button>
+          <button type="button" class="lang-btn" data-lang="en" lang="en" title="English" aria-label="EN – English">EN</button>
+          <button type="button" class="lang-btn" data-lang="tr" lang="tr" title="Türkçe" aria-label="TR – Türkçe">TR</button>
         </div>
       </div>
-      <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Anfrage%20%C3%BCber%20Ihre%20Website." target="_blank" rel="noopener" class="nav-wa" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>WhatsApp</span></a>
+      <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="nav-cta"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_contact">Termin anfragen</span></a>
       <button type="button" class="nav-toggle" aria-label="Menü" data-i18n-aria="aria_menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
@@ -131,224 +116,244 @@
   <main id="main">
 
   <!-- ============================================
-       HERO
+       HERO (split: copy on ink, photo right; stacked on phones)
        ============================================ -->
-  <section class="hero" id="hero">
-    <picture class="hero-media">
-      <source media="(max-aspect-ratio: 1/1)" type="image/webp" srcset="images/v2/hero-m-560.webp 560w, images/v2/hero-m-920.webp 920w" sizes="100vw" width="920" height="810">
-      <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="100vw" width="1600" height="900" alt="Ferrari 488 Spider in der ElbCar-Detailing-Halle" fetchpriority="high" decoding="async">
-    </picture>
-    <div class="hero-shade"></div>
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="hero-media">
+      <picture>
+        <source media="(max-aspect-ratio: 1/1), (max-height: 520px)" type="image/webp" srcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" sizes="100vw" width="960" height="720">
+        <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="(min-width: 1000px) and (min-aspect-ratio: 1/1) 50vw, 100vw" width="1600" height="900" alt="Ferrari 488 Spider in der ElbCar-Detailing-Halle" fetchpriority="high" decoding="async">
+      </picture>
+      <p class="hero-caption" data-i18n="hero_caption">In unserer Halle in Hamburg-Finkenwerder</p>
+    </div>
     <div class="container hero-inner">
       <div class="hero-copy">
-        <div class="appt-notice" role="note">
-          <span class="appt-notice-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-          <span class="appt-notice-body">
-            <strong data-i18n="appt_title">Nur mit Termin</strong>
-            <span data-i18n="appt_text">Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.</span>
-          </span>
-        </div>
-        <h1 data-i18n="hero_tagline">Premium Fahrzeugaufbereitung in Hamburg</h1>
-        <p class="hero-lead" data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand — mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
+        <p class="eyebrow hero-eyebrow" role="note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="appt_title">Nur mit Termin</span><span class="eyebrow-dot" aria-hidden="true">·</span><span lang="de" data-i18n="hero_location">Hamburg-Finkenwerder</span></p>
+        <h1 id="hero-title" data-i18n="hero_tagline">Premium Fahrzeug­aufbereitung in Hamburg</h1>
+        <p class="hero-lead" data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand&nbsp;— mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
         <div class="hero-cta">
-          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Anfrage%20%C3%BCber%20Ihre%20Website." target="_blank" rel="noopener" class="btn btn-wa"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span>WhatsApp</span></a>
-          <a href="tel:+4915563205346" class="btn btn-glass"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="hero_cta_call">Jetzt anrufen</span></a>
-          <a href="#contact" class="btn btn-ghost"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="hero_btn_contact">Termin anfragen</span></a>
+          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_wa">Termin per WhatsApp</span></a>
+          <a href="tel:+4915563205346" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="cta-label" data-i18n="hero_cta_call">Jetzt anrufen</span><span class="cta-num tel-num">+49 155 63205346</span></a>
+          <a href="#contactForm" class="btn-text"><span data-i18n="hero_btn_form">Anfrageformular</span><span aria-hidden="true">&nbsp;→</span></a>
         </div>
+        <p class="hero-appt" data-i18n="contact_hours">Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.</p>
       </div>
     </div>
-    <a href="#services" class="hero-scroll" aria-hidden="true" tabindex="-1"><span></span></a>
   </section>
 
   <!-- TRUST STRIP -->
-  <section class="trust" aria-label="ElbCar Detailing">
+  <section class="trust" aria-label="Auf einen Blick" data-i18n-aria="trust_label">
     <div class="container trust-grid">
       <a class="trust-item" href="#reviews">
-        <span class="trust-big"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0</span>
+        <span class="trust-big"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0</span>
         <span class="trust-small" data-i18n="reviews_count">83 Bewertungen auf Google</span>
       </a>
-      <div class="trust-item">
-        <span class="trust-big trust-addr">Köhlfleet-Hauptdeich 3</span>
-        <span class="trust-small">21129 Hamburg</span>
-      </div>
-      <a class="trust-item trust-appt" href="#contact">
-        <span class="trust-big"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="trust_hours">Nur nach Termin</span></span>
+      <a class="trust-item" href="#pricing">
+        <span class="trust-big trust-price"><span data-i18n="pricing_kleinwagen">Kleinwagen</span> <span data-i18n="pricing_kleinwagen_price">ab&nbsp;150&nbsp;€</span></span>
+        <span class="trust-small" data-i18n="trust_price_note">Richtpreise nach Fahrzeuggröße</span>
+      </a>
+      <a class="trust-item trust-appt" href="#ablauf">
+        <span class="trust-big" data-i18n="trust_hours">Nur nach Termin</span>
         <span class="trust-small" data-i18n="trust_hours_note">Keine festen Öffnungszeiten</span>
       </a>
-      <div class="trust-item">
-        <span class="trust-big" data-i18n="pkg4_f2">Kostenlose Beratung</span>
-        <span class="trust-small" data-i18n="form_response_promise">Antwort in der Regel innerhalb eines Werktages</span>
+      <a class="trust-item" href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener">
+        <span class="trust-big">Köhlfleet-Hauptdeich&nbsp;3</span>
+        <span class="trust-small">21129 Hamburg</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       01 SERVICES (image-led index, no icon tiles)
+       ============================================ -->
+  <section id="services" class="sec sec-stone" aria-labelledby="services-h">
+    <div class="container">
+      <header class="sec-head fade-in">
+        <h2 id="services-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">01</span><span data-i18n="nav_services">Leistungen</span></span> <span class="h2-line" data-i18n="services_subtitle">Professionelle Fahrzeugpflege für höchste Ansprüche</span></h2>
+      </header>
+
+      <div class="services-layout">
+        <figure class="services-photo fade-in">
+          <picture>
+            <source media="(max-width:999px)" type="image/webp" srcset="images/v3/foam-wide-480.webp 480w, images/v3/foam-wide-720.webp 720w" sizes="calc(100vw - 40px)" width="720" height="540">
+            <img src="images/v3/foam-720.webp" srcset="images/v3/foam-480.webp 480w, images/v3/foam-720.webp 720w" sizes="380px" width="720" height="1278" loading="lazy" decoding="async" alt="Weißer Sportwagen, mit Schaum bedeckt, bei der Außenwäsche">
+          </picture>
+          <figcaption data-i18n="svc2_title">Außenaufbereitung</figcaption>
+        </figure>
+
+        <ol class="services-list">
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">01</span>
+            <h3 id="svc1-h" data-i18n="svc1_title">Innenreinigung</h3>
+            <p data-i18n="svc1_text">Tiefenreinigung des gesamten Innenraums&nbsp;— Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Innenreinigung" aria-labelledby="svc1-a svc1-h"><span id="svc1-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">02</span>
+            <h3 id="svc2-h" data-i18n="svc2_title">Außenaufbereitung</h3>
+            <p data-i18n="svc2_text">Professionelle Handwäsche, Dekontamination, Kneten und Versiegelung für einen strahlenden Glanz und langanhaltenden Schutz.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Außenaufbereitung" aria-labelledby="svc2-a svc2-h"><span id="svc2-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">03</span>
+            <h3 id="svc3-h" data-i18n="svc3_title">Lackkorrektur &amp; Polieren</h3>
+            <p data-i18n="svc3_text">Mehrstufige Politur zum Entfernen von Kratzern, Swirls und Hologrammen. Ihr Lack erstrahlt in neuem Glanz.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Lackkorrektur" aria-labelledby="svc3-a svc3-h"><span id="svc3-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">04</span>
+            <h3 id="svc4-h" data-i18n="svc4_title">Keramikversiegelung</h3>
+            <p data-i18n="svc4_text">Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5 Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Keramikversiegelung" aria-labelledby="svc4-a svc4-h"><span id="svc4-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">05</span>
+            <h3 id="svc5-h" data-i18n="svc5_title">Motorwäsche</h3>
+            <p data-i18n="svc5_text">Schonende und gründliche Reinigung des Motorraums. Optisch wie technisch ein Gewinn für Ihr Fahrzeug.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Motorwäsche" aria-labelledby="svc5-a svc5-h"><span id="svc5-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">06</span>
+            <h3 id="svc6-h" data-i18n="svc6_title">Scheinwerfer­aufbereitung</h3>
+            <p data-i18n="svc6_text">Matte und vergilbte Scheinwerfer werden professionell aufbereitet&nbsp;— für bessere Sicht und eine gepflegte Optik.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Scheinwerferaufbereitung" aria-labelledby="svc6-a svc6-h"><span id="svc6-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">07</span>
+            <h3 id="svc7-h" data-i18n="svc7_title">Lederreinigung &amp; ‑pflege</h3>
+            <p data-i18n="svc7_text">Professionelle Reinigung und Pflege von Ledersitzen und ‑oberflächen. Schutz vor Austrocknung und Rissen.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Lederpflege" aria-labelledby="svc7-a svc7-h"><span id="svc7-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+          <li class="svc fade-in">
+            <span class="svc-num" aria-hidden="true">08</span>
+            <h3 id="svc8-h" data-i18n="svc8_title">Reifenwechsel</h3>
+            <p data-i18n="svc8_text">Professioneller Reifenwechsel&nbsp;— Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.</p>
+            <a class="svc-link" href="#contactForm" data-svc="Reifenwechsel" aria-labelledby="svc8-a svc8-h"><span id="svc8-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       SERVICES
+       STUDIO BAND (real photography, full bleed)
        ============================================ -->
-  <section id="services">
-    <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="services_title">Unsere Leistungen</h2>
-        <p data-i18n="services_subtitle">Professionelle Fahrzeugpflege für höchste Ansprüche</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- Service 1: Interior -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-          </div>
-          <h3 data-i18n="svc1_title">Innenreinigung</h3>
-          <p data-i18n="svc1_text">Tiefenreinigung des gesamten Innenraums — Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.</p>
-        </div>
-
-        <!-- Service 2: Exterior -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-          </div>
-          <h3 data-i18n="svc2_title">Außenaufbereitung</h3>
-          <p data-i18n="svc2_text">Professionelle Handwäsche, Dekontamination, Kneten und Versiegelung für einen strahlenden Glanz und langanhaltenden Schutz.</p>
-        </div>
-
-        <!-- Service 3: Paint Correction -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          </div>
-          <h3 data-i18n="svc3_title">Lackkorrektur & Polieren</h3>
-          <p data-i18n="svc3_text">Mehrstufige Politur zum Entfernen von Kratzern, Swirls und Hologrammen. Ihr Lack erstrahlt in neuem Glanz.</p>
-        </div>
-
-        <!-- Service 4: Ceramic -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 data-i18n="svc4_title">Keramikversiegelung</h3>
-          <p data-i18n="svc4_text">Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5 Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
-        </div>
-
-        <!-- Service 5: Engine -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-          </div>
-          <h3 data-i18n="svc5_title">Motorwäsche</h3>
-          <p data-i18n="svc5_text">Schonende und gründliche Reinigung des Motorraums. Optisch wie technisch ein Gewinn für Ihr Fahrzeug.</p>
-        </div>
-
-        <!-- Service 6: Headlights -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7V17h8v-2.3A7 7 0 0 0 12 2z"/></svg>
-          </div>
-          <h3 data-i18n="svc6_title">Scheinwerfer­aufbereitung</h3>
-          <p data-i18n="svc6_text">Matte und vergilbte Scheinwerfer werden professionell aufbereitet — für bessere Sicht und eine gepflegte Optik.</p>
-        </div>
-
-        <!-- Service 7: Leather -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3 data-i18n="svc7_title">Lederreinigung & -pflege</h3>
-          <p data-i18n="svc7_text">Professionelle Reinigung und Pflege von Ledersitzen und -oberflächen. Schutz vor Austrocknung und Rissen.</p>
-        </div>
-
-        <!-- Service 8: Tyre Change -->
-        <div class="service-card fade-in">
-          <div class="service-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
-          </div>
-          <h3 data-i18n="svc8_title">Reifenwechsel</h3>
-          <p data-i18n="svc8_text">Professioneller Reifenwechsel — Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.</p>
-        </div>
-      </div>
+  <section class="studio-band" id="studio" aria-labelledby="studio-h">
+    <div class="container studio-head">
+      <h2 id="studio-h" class="studio-title" data-i18n="studio_title">Eindrücke aus der Halle</h2>
+      <a class="studio-insta" id="instagram" href="https://www.instagram.com/elbcar" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg><span>@elbcar</span><span class="studio-insta-sep" aria-hidden="true">·</span><span data-i18n="insta_btn">Zu Instagram</span></a>
+    </div>
+    <div class="studio-grid" data-snap data-snap-label="studio-h">
+      <a class="studio-item studio-feature" href="images/v3/studio-black-960.webp" data-lightbox><img src="images/v3/studio-black-600.webp" srcset="images/v3/studio-black-600.webp 600w, images/v3/studio-black-960.webp 960w" sizes="(min-width:700px) 50vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Schwarzes Fahrzeug in der Halle, im Lack spiegelt sich die Wabenbeleuchtung"></a>
+      <a class="studio-item" href="images/v2/lambo-headlight-800.webp" data-lightbox><img src="images/v2/lambo-headlight-480.webp" srcset="images/v2/lambo-headlight-480.webp 480w, images/v2/lambo-headlight-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Schwarzer Sportwagen, Scheinwerfer und Front glänzend aufbereitet"></a>
+      <a class="studio-item" href="images/v2/ferrari-light-800.webp" data-lightbox><img src="images/v2/ferrari-light-480.webp" srcset="images/v2/ferrari-light-480.webp 480w, images/v2/ferrari-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Roter Sportwagen, Frontscheinwerfer"></a>
+      <a class="studio-item" href="images/v2/lambo-interior-800.webp" data-lightbox><img src="images/v2/lambo-interior-480.webp" srcset="images/v2/lambo-interior-480.webp 480w, images/v2/lambo-interior-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Gepflegter Innenraum eines Sportwagens"></a>
+      <a class="studio-item" href="images/v2/porsche-light-800.webp" data-lightbox><img src="images/v2/porsche-light-480.webp" srcset="images/v2/porsche-light-480.webp 480w, images/v2/porsche-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Scheinwerfer"></a>
+      <!-- more photos, reachable in the lightbox (prev/next) -->
+      <a class="studio-item" href="images/v2/lambo-tail-800.webp" data-lightbox hidden><img src="images/v2/lambo-tail-480.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Rücklicht mit Hochglanz-Lack"></a>
+      <a class="studio-item" href="images/v2/seat-800.webp" data-lightbox hidden><img src="images/v2/seat-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Helle Sportsitze mit Wabensteppung, gereinigt"></a>
+      <a class="studio-item" href="images/v2/porsche-rear-800.webp" data-lightbox hidden><img src="images/v2/porsche-rear-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Heck nach der Aufbereitung"></a>
+      <a class="studio-item" href="images/v2/lambo-seats-800.webp" data-lightbox hidden><img src="images/v2/lambo-seats-480.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Rücksitzbank, gründlich gereinigt"></a>
     </div>
   </section>
 
   <!-- ============================================
-       PACKAGES
+       02 PACKAGES & PRICES (guide prices first, then packages)
        ============================================ -->
-  <section id="packages">
-
+  <section id="packages" class="sec sec-paper" aria-labelledby="packages-h">
     <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="packages_title">Unsere Pakete</h2>
-        <p data-i18n="packages_subtitle">Wählen Sie das passende Paket für Ihr Fahrzeug</p>
+      <header class="sec-head sec-head-split fade-in">
+        <div>
+          <h2 id="packages-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">02</span><span data-i18n="nav_packages">Pakete &amp; Preise</span></span> <span class="h2-line" data-i18n="packages_subtitle">Wählen Sie das passende Paket für Ihr Fahrzeug</span></h2>
+        </div>
+        <p class="sec-note" data-i18n="pricing_p1">Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot&nbsp;— passend zu Ihren Wünschen und dem Aufwand.</p>
+      </header>
+
+      <div class="ledger" id="pricing">
+        <h3 class="ledger-title" data-i18n="pricing_ref_title">Richtpreise zur Orientierung</h3>
+        <dl class="ledger-rows">
+          <div class="ledger-row"><dt data-i18n="pricing_kleinwagen">Kleinwagen</dt><dd data-i18n="pricing_kleinwagen_price">ab&nbsp;150&nbsp;€</dd></div>
+          <div class="ledger-row"><dt data-i18n="pricing_kompaktwagen">Kompaktwagen</dt><dd data-i18n="pricing_kompaktwagen_price">ab&nbsp;200&nbsp;€</dd></div>
+          <div class="ledger-row"><dt data-i18n="pricing_suv">SUV</dt><dd data-i18n="pricing_suv_price">ab&nbsp;250&nbsp;€</dd></div>
+          <div class="ledger-row"><dt data-i18n="pricing_transporter">Transporter</dt><dd data-i18n="pricing_transporter_price">ab&nbsp;300&nbsp;€</dd></div>
+        </dl>
+        <p class="ledger-note"><span data-i18n="pricing_disclaimer">Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.</span> <span data-i18n="pricing_vat_note">Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.</span></p>
       </div>
 
       <div class="packages-grid">
         <!-- Premium (Featured) -->
-        <div class="package-card featured fade-in">
-          <span class="package-badge" data-i18n="pkg2_badge">Beliebteste Wahl</span>
-          <h3 data-i18n="pkg2_name">Premium</h3>
-          <div class="package-price" data-i18n="pkg2_price_text">Auf Anfrage</div>
-          <p class="package-note" data-i18n="pkg2_note">Komplette Aufbereitung innen & außen</p>
+        <article class="package-card featured fade-in" aria-labelledby="pkg-premium-h">
+          <p class="package-badge" data-i18n="pkg2_badge">Beliebteste Wahl</p>
+          <h3 id="pkg-premium-h" data-i18n="pkg2_name">Premium</h3>
+          <p class="package-note" data-i18n="pkg2_note">Komplette Aufbereitung innen &amp; außen</p>
+          <p class="package-price" data-i18n="pkg_price_note">Preis je nach Fahrzeuggröße und Zustand</p>
           <ul class="package-features">
-            <li data-i18n="pkg2_f1">Hand-Außenwäsche & Innenreinigung</li>
+            <li data-i18n="pkg2_f1">Hand-Außenwäsche &amp; Innenreinigung</li>
             <li data-i18n="pkg2_f2">Tiefenreinigung Innenraum</li>
             <li data-i18n="pkg2_f3">Leder-/Polsterreinigung</li>
             <li data-i18n="pkg2_f4">1-Stufen-Politur</li>
             <li data-i18n="pkg2_f5">Wachsversiegelung</li>
             <li data-i18n="pkg2_f6">Motorraum reinigen</li>
-            <li data-i18n="pkg2_f7">Türeinstiege & Kofferraum</li>
+            <li data-i18n="pkg2_f7">Türeinstiege &amp; Kofferraum</li>
           </ul>
-          <a href="#contact" class="btn btn-gold" data-i18n="pkg_btn">Jetzt anfragen</a>
-        </div>
+          <div class="package-actions">
+            <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Premium-Paket.%20Mein%20Fahrzeug%3A%20" data-wa-key="wa_pkg_premium" target="_blank" rel="noopener" class="btn btn-primary" aria-describedby="pkg-premium-h"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="pkg_btn_wa">Per WhatsApp anfragen</span></a>
+            <a href="#contactForm" class="package-form-link" data-pkg="Premium" data-pkg-key="form_pkg_premium" aria-describedby="pkg-premium-h"><span data-i18n="pkg_or_form">oder per Formular</span></a>
+          </div>
+        </article>
 
         <!-- Exclusive -->
-        <div class="package-card fade-in">
-          <h3 data-i18n="pkg3_name">Exklusiv</h3>
-          <div class="package-price" data-i18n="pkg3_price_text">Auf Anfrage</div>
+        <article class="package-card fade-in" aria-labelledby="pkg-exklusiv-h">
+          <h3 id="pkg-exklusiv-h" data-i18n="pkg3_name">Exklusiv</h3>
           <p class="package-note" data-i18n="pkg3_note">Die ultimative Fahrzeugaufbereitung</p>
+          <p class="package-price" data-i18n="pkg_price_note">Preis je nach Fahrzeuggröße und Zustand</p>
           <ul class="package-features">
             <li data-i18n="pkg3_f1">Alles aus dem Premium-Paket</li>
             <li data-i18n="pkg3_f2">Mehrstufige Lackkorrektur</li>
             <li data-i18n="pkg3_f3">Keramikversiegelung</li>
             <li data-i18n="pkg3_f4">Scheinwerferaufbereitung</li>
-            <li data-i18n="pkg3_f5">Lederpflege & -versiegelung</li>
+            <li data-i18n="pkg3_f5">Lederpflege &amp; -versiegelung</li>
             <li data-i18n="pkg3_f6">Detaillierte Endkontrolle</li>
-            <li data-i18n="pkg3_f7">Pflegeanleitung & Nachsorge</li>
+            <li data-i18n="pkg3_f7">Pflegeanleitung &amp; Nachsorge</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" data-i18n="pkg_btn">Jetzt anfragen</a>
-        </div>
+          <div class="package-actions">
+            <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20interessiere%20mich%20f%C3%BCr%20das%20Exklusiv-Paket.%20Mein%20Fahrzeug%3A%20" data-wa-key="wa_pkg_exklusiv" target="_blank" rel="noopener" class="btn btn-ink" aria-describedby="pkg-exklusiv-h"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="pkg_btn_wa">Per WhatsApp anfragen</span></a>
+            <a href="#contactForm" class="package-form-link" data-pkg="Exklusiv" data-pkg-key="form_pkg_exklusiv" aria-describedby="pkg-exklusiv-h"><span data-i18n="pkg_or_form">oder per Formular</span></a>
+          </div>
+        </article>
+      </div>
 
-        <!-- Individual Offer -->
-        <div class="package-card fade-in">
+      <!-- Individual offer: a slim row instead of a third card -->
+      <div class="package-custom fade-in">
+        <div>
           <h3 data-i18n="pkg4_name">Nichts dabei?</h3>
-          <div class="package-price" data-i18n="pkg4_price_text">Individuell</div>
-          <p class="package-note" data-i18n="pkg4_note">Kein passendes Paket gefunden? Wir erstellen Ihnen gerne ein individuelles Angebot.</p>
-          <ul class="package-features">
+          <p data-i18n="pkg4_note">Kein passendes Paket gefunden? Wir erstellen Ihnen gerne ein individuelles Angebot.</p>
+          <ul class="package-custom-list">
             <li data-i18n="pkg4_f1">Maßgeschneiderte Leistungen</li>
             <li data-i18n="pkg4_f2">Kostenlose Beratung</li>
             <li data-i18n="pkg4_f3">Flexibler Leistungsumfang</li>
             <li data-i18n="pkg4_f4">Persönliche Betreuung</li>
             <li data-i18n="pkg4_f5">Unterstützung bei jedem Anliegen</li>
           </ul>
-          <a href="#contact" class="btn btn-outline" data-i18n="pkg4_btn">Individuelles Angebot anfragen</a>
         </div>
+        <a href="#contactForm" class="btn btn-line-ink" data-pkg="Individuelles Angebot" data-pkg-key="form_pkg_custom" data-i18n="pkg4_btn">Individuelles Angebot anfragen</a>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       GALLERY - Before & After
+       03 GALLERY - Before & After (4 shown, 6 more on request)
        ============================================ -->
-  <section id="gallery">
+  <section id="gallery" class="sec sec-ink" aria-labelledby="gallery-h">
     <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 id="gallery-title" data-i18n="gallery_title">Vorher & Nachher</h2>
-        <p data-i18n="gallery_subtitle">Überzeugen Sie sich selbst von unseren Ergebnissen</p>
-      </div>
+      <header class="sec-head sec-head-split fade-in">
+        <div>
+          <h2 id="gallery-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">03</span><span id="gallery-title" data-i18n="gallery_title">Vorher &amp; Nachher</span></span> <span class="h2-line" data-i18n="gallery_subtitle">Überzeugen Sie sich selbst von unseren Ergebnissen</span></h2>
+        </div>
+        <p class="sec-note" data-i18n="gallery_hint">Ziehen Sie den Regler, um Vorher und Nachher zu vergleichen.</p>
+      </header>
 
-      <div class="gallery-grid">
-
-        <!-- Slider 1: Mercedes Engine Bay -->
+      <div class="gallery-grid" id="baGrid">
         <div class="fade-in ba-wide">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap1 gallery-title">
             <img src="images/gallery/engine-before-800.webp" srcset="images/gallery/engine-before-480.webp 480w, images/gallery/engine-before-800.webp 800w, images/gallery/engine-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Verstaubter Motorraum eines Mercedes vor der Reinigung" class="ba-before">
@@ -358,10 +363,9 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap1" data-i18n="gallery_cap1">Mercedes — Motorraum-Reinigung</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap1" data-i18n="gallery_cap1">Mercedes&nbsp;— Motorraum-Reinigung</span></p>
         </div>
 
-        <!-- Slider 2: Volvo Front Interior -->
         <div class="fade-in">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap2 gallery-title">
             <img src="images/gallery/volvo-interior-before-720.webp" srcset="images/gallery/volvo-interior-before-480.webp 480w, images/gallery/volvo-interior-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Innenraum mit Fahrersitz und verschmutztem Fußraum vor der Aufbereitung" class="ba-before">
@@ -371,24 +375,10 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap2" data-i18n="gallery_cap2">Volvo — Interieur-Aufbereitung</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap2" data-i18n="gallery_cap2">Volvo&nbsp;— Interieur-Aufbereitung</span></p>
         </div>
 
-        <!-- Slider 3: Volvo Rear Seats -->
-        <div class="fade-in">
-          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap3 gallery-title">
-            <img src="images/gallery/volvo-rear-before-720.webp" srcset="images/gallery/volvo-rear-before-480.webp 480w, images/gallery/volvo-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Rücksitze mit Krümeln und Schmutz vor der Reinigung" class="ba-before">
-            <img src="images/gallery/volvo-rear-after-720.webp" srcset="images/gallery/volvo-rear-after-480.webp 480w, images/gallery/volvo-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Volvo-Rücksitze nach der Reinigung" class="ba-after">
-            <div class="ba-handle"></div>
-            <div class="ba-handle-arrows">&lrarr;</div>
-            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
-            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
-          </div>
-          <p class="ba-caption" id="ba-cap3" data-i18n="gallery_cap3">Volvo — Rücksitze</p>
-        </div>
-
-        <!-- Slider 4: VW Touran Front -->
-        <div class="fade-in">
+        <div class="fade-in ba-extra-m">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap4 gallery-title">
             <img src="images/gallery/vw-front-before-720.webp" srcset="images/gallery/vw-front-before-480.webp 480w, images/gallery/vw-front-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran mit verschmutzten Fußmatten vor der Innenraumreinigung" class="ba-before">
             <img src="images/gallery/vw-front-after-720.webp" srcset="images/gallery/vw-front-after-480.webp 480w, images/gallery/vw-front-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran nach der Innenraumreinigung" class="ba-after">
@@ -397,36 +387,9 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap4" data-i18n="gallery_cap4">VW Touran — Innenraum komplett</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap4" data-i18n="gallery_cap4">VW Touran&nbsp;— Innenraum komplett</span></p>
         </div>
 
-        <!-- Slider 5: VW Touran Rear Seats -->
-        <div class="fade-in">
-          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap5 gallery-title">
-            <img src="images/gallery/vw-rear-before-720.webp" srcset="images/gallery/vw-rear-before-480.webp 480w, images/gallery/vw-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Rücksitze und Fußmatten eines VW Touran mit Krümeln vor der Reinigung" class="ba-before">
-            <img src="images/gallery/vw-rear-after-720.webp" srcset="images/gallery/vw-rear-after-480.webp 480w, images/gallery/vw-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Rücksitze und Fußmatten eines VW Touran nach der Reinigung" class="ba-after">
-            <div class="ba-handle"></div>
-            <div class="ba-handle-arrows">&lrarr;</div>
-            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
-            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
-          </div>
-          <p class="ba-caption" id="ba-cap5" data-i18n="gallery_cap5">VW Touran — Rücksitze & Fußmatten</p>
-        </div>
-
-        <!-- Slider 6: Trunk -->
-        <div class="fade-in">
-          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap6 gallery-title">
-            <img src="images/gallery/trunk-before-720.webp" srcset="images/gallery/trunk-before-480.webp 480w, images/gallery/trunk-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Verschmutzter Kofferraum vor der Tiefenreinigung" class="ba-before">
-            <img src="images/gallery/trunk-after-720.webp" srcset="images/gallery/trunk-after-480.webp 480w, images/gallery/trunk-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Sauberer Kofferraum nach der Tiefenreinigung" class="ba-after">
-            <div class="ba-handle"></div>
-            <div class="ba-handle-arrows">&lrarr;</div>
-            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
-            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
-          </div>
-          <p class="ba-caption" id="ba-cap6" data-i18n="gallery_cap6">Kofferraum — Tiefenreinigung</p>
-        </div>
-
-        <!-- Slider 7: Headlight Restoration -->
         <div class="fade-in ba-wide">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap7 gallery-title">
             <img src="images/gallery/headlight-before-800.webp" srcset="images/gallery/headlight-before-480.webp 480w, images/gallery/headlight-before-800.webp 800w, images/gallery/headlight-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Matter, vergilbter Scheinwerfer vor der Aufbereitung" class="ba-before">
@@ -436,11 +399,46 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap7" data-i18n="gallery_cap7">Scheinwerfer — Aufbereitung</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap7" data-i18n="gallery_cap7">Scheinwerfer&nbsp;— Aufbereitung</span></p>
         </div>
 
-        <!-- Slider 8: Mercedes Steering Wheel -->
-        <div class="fade-in">
+        <div class="fade-in ba-extra">
+          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap3 gallery-title">
+            <img src="images/gallery/volvo-rear-before-720.webp" srcset="images/gallery/volvo-rear-before-480.webp 480w, images/gallery/volvo-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Rücksitze mit Krümeln und Schmutz vor der Reinigung" class="ba-before">
+            <img src="images/gallery/volvo-rear-after-720.webp" srcset="images/gallery/volvo-rear-after-480.webp 480w, images/gallery/volvo-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Volvo-Rücksitze nach der Reinigung" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap3" data-i18n="gallery_cap3">Volvo&nbsp;— Rücksitze</span></p>
+        </div>
+
+        <div class="fade-in ba-extra">
+          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap5 gallery-title">
+            <img src="images/gallery/vw-rear-before-720.webp" srcset="images/gallery/vw-rear-before-480.webp 480w, images/gallery/vw-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Rücksitze und Fußmatten eines VW Touran mit Krümeln vor der Reinigung" class="ba-before">
+            <img src="images/gallery/vw-rear-after-720.webp" srcset="images/gallery/vw-rear-after-480.webp 480w, images/gallery/vw-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Rücksitze und Fußmatten eines VW Touran nach der Reinigung" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap5" data-i18n="gallery_cap5">VW Touran&nbsp;— Rücksitze & Fußmatten</span></p>
+        </div>
+
+        <div class="fade-in ba-extra">
+          <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap6 gallery-title">
+            <img src="images/gallery/trunk-before-720.webp" srcset="images/gallery/trunk-before-480.webp 480w, images/gallery/trunk-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Verschmutzter Kofferraum vor der Tiefenreinigung" class="ba-before">
+            <img src="images/gallery/trunk-after-720.webp" srcset="images/gallery/trunk-after-480.webp 480w, images/gallery/trunk-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Sauberer Kofferraum nach der Tiefenreinigung" class="ba-after">
+            <div class="ba-handle"></div>
+            <div class="ba-handle-arrows">&lrarr;</div>
+            <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
+            <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
+          </div>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap6" data-i18n="gallery_cap6">Kofferraum&nbsp;— Tiefenreinigung</span></p>
+        </div>
+
+        <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap8 gallery-title">
             <img src="images/gallery/steering-before-720.webp" srcset="images/gallery/steering-before-480.webp 480w, images/gallery/steering-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG vor der Pflege" class="ba-before">
             <img src="images/gallery/steering-after-720.webp" srcset="images/gallery/steering-after-480.webp 480w, images/gallery/steering-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG nach der Pflege" class="ba-after">
@@ -449,11 +447,10 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap8" data-i18n="gallery_cap8">Mercedes AMG — Lenkrad-Pflege</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap8" data-i18n="gallery_cap8">Mercedes AMG&nbsp;— Lenkrad-Pflege</span></p>
         </div>
 
-        <!-- Slider 9: Audi Floor Mat -->
-        <div class="fade-in">
+        <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap9 gallery-title">
             <img src="images/gallery/audi-mat-before-720.webp" srcset="images/gallery/audi-mat-before-480.webp 480w, images/gallery/audi-mat-before-720.webp 720w, images/gallery/audi-mat-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzte Audi-Fußmatte vor der Reinigung" class="ba-before">
             <img src="images/gallery/audi-mat-after-720.webp" srcset="images/gallery/audi-mat-after-480.webp 480w, images/gallery/audi-mat-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Audi-Fußmatte nach der Reinigung" class="ba-after">
@@ -462,11 +459,10 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap9" data-i18n="gallery_cap9">Audi — Fußmatten-Reinigung</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap9" data-i18n="gallery_cap9">Audi&nbsp;— Fußmatten-Reinigung</span></p>
         </div>
 
-        <!-- Slider 10: Fuel Cap Detail -->
-        <div class="fade-in">
+        <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap10 gallery-title">
             <img src="images/gallery/fuelcap-before-720.webp" srcset="images/gallery/fuelcap-before-480.webp 480w, images/gallery/fuelcap-before-720.webp 720w, images/gallery/fuelcap-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzter Tankdeckel eines roten Autos vor der Detailreinigung" class="ba-before">
             <img src="images/gallery/fuelcap-after-720.webp" srcset="images/gallery/fuelcap-after-480.webp 480w, images/gallery/fuelcap-after-720.webp 720w, images/gallery/fuelcap-after-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Sauberer Tankdeckel nach der Detailreinigung" class="ba-after">
@@ -475,385 +471,245 @@
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption" id="ba-cap10" data-i18n="gallery_cap10">Tankdeckel — Detailreinigung</p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap10" data-i18n="gallery_cap10">Tankdeckel&nbsp;— Detailreinigung</span></p>
         </div>
-
       </div>
 
-      <div class="studio">
-        <h3 class="studio-title fade-in" data-i18n="studio_title">Eindrücke aus der Halle</h3>
-        <div class="studio-grid">
-        <a class="studio-item fade-in" href="images/v2/lambo-headlight-800.webp" data-lightbox><img src="images/v2/lambo-headlight-480.webp" srcset="images/v2/lambo-headlight-480.webp 480w, images/v2/lambo-headlight-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="960" height="1280" loading="lazy" alt="Schwarzer Sportwagen, Scheinwerfer und Front glänzend aufbereitet"></a>
-        <a class="studio-item fade-in" href="images/v2/seat-800.webp" data-lightbox><img src="images/v2/seat-480.webp" srcset="images/v2/seat-480.webp 480w, images/v2/seat-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="721" height="1280" loading="lazy" alt="Helle Sportsitze mit Wabensteppung, gereinigt"></a>
-        <a class="studio-item fade-in" href="images/v2/porsche-rear-800.webp" data-lightbox><img src="images/v2/porsche-rear-480.webp" srcset="images/v2/porsche-rear-480.webp 480w, images/v2/porsche-rear-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="721" height="1280" loading="lazy" alt="Weißer Sportwagen, Heck nach der Aufbereitung"></a>
-        <a class="studio-item fade-in" href="images/v2/lambo-interior-800.webp" data-lightbox><img src="images/v2/lambo-interior-480.webp" srcset="images/v2/lambo-interior-480.webp 480w, images/v2/lambo-interior-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="960" height="1280" loading="lazy" alt="Gepflegter Innenraum eines Sportwagens"></a>
-        <a class="studio-item fade-in" href="images/v2/ferrari-light-800.webp" data-lightbox><img src="images/v2/ferrari-light-480.webp" srcset="images/v2/ferrari-light-480.webp 480w, images/v2/ferrari-light-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="721" height="1280" loading="lazy" alt="Roter Sportwagen, Frontscheinwerfer"></a>
-        <a class="studio-item fade-in" href="images/v2/lambo-tail-800.webp" data-lightbox><img src="images/v2/lambo-tail-480.webp" srcset="images/v2/lambo-tail-480.webp 480w, images/v2/lambo-tail-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="960" height="1280" loading="lazy" alt="Rücklicht mit Hochglanz-Lack"></a>
-        <a class="studio-item fade-in" href="images/v2/porsche-light-800.webp" data-lightbox><img src="images/v2/porsche-light-480.webp" srcset="images/v2/porsche-light-480.webp 480w, images/v2/porsche-light-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="721" height="1280" loading="lazy" alt="Weißer Sportwagen, Scheinwerfer"></a>
-        <a class="studio-item fade-in" href="images/v2/lambo-seats-800.webp" data-lightbox><img src="images/v2/lambo-seats-480.webp" srcset="images/v2/lambo-seats-480.webp 480w, images/v2/lambo-seats-800.webp 800w" sizes="(max-width:600px) 50vw, (max-width:1000px) 33vw, 25vw" width="960" height="1280" loading="lazy" alt="Rücksitzbank, gründlich gereinigt"></a>
-        </div>
+      <div class="gallery-more-wrap" hidden>
+        <button type="button" class="gallery-more" aria-controls="baGrid" aria-expanded="false"><span data-i18n="gallery_more">Weitere Vorher/Nachher ansehen</span><span class="gallery-more-count" aria-hidden="true"></span></button>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       GOOGLE REVIEWS
+       04 GOOGLE REVIEWS (score, pull quote, three cards)
        ============================================ -->
-  <section id="reviews">
+  <section id="reviews" class="sec sec-stone" aria-labelledby="reviews-h">
     <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="reviews_title">Bewertungen</h2>
-        <p data-i18n="reviews_subtitle">Was auf Google über uns geschrieben wird</p>
-      </div>
-
-      <div class="reviews-summary fade-in">
-        <div class="reviews-stars">
-          <span class="reviews-rating">5.0</span>
-          <div class="stars" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      <div class="reviews-top">
+        <div class="reviews-score fade-in">
+          <h2 id="reviews-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">04</span><span data-i18n="nav_reviews">Bewertungen</span></span> <span class="h2-line" data-i18n="reviews_subtitle">Was auf Google über uns geschrieben wird</span></h2>
+          <div class="score">
+            <span class="score-num">5.0</span>
+            <div class="stars" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <span class="score-count" data-i18n="reviews_count">83 Bewertungen auf Google</span>
           </div>
-          <span class="reviews-count" data-i18n="reviews_count">83 Bewertungen auf Google</span>
+          <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" class="btn btn-line-ink reviews-google-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg><span data-i18n="reviews_btn">Alle Bewertungen auf Google ansehen</span></a>
         </div>
+
+        <figure class="pullquote fade-in">
+          <blockquote>
+            <p data-i18n="review1_text">Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.</p>
+          </blockquote>
+          <figcaption><span class="pq-name">G.</span><span class="pq-sep" aria-hidden="true">·</span><span>Local Guide</span><span class="pq-sep" aria-hidden="true">·</span><span>Google</span><span class="review-translated" data-i18n="review_translated"></span></figcaption>
+        </figure>
       </div>
 
       <div class="reviews-grid">
-        <div class="review-card fade-in">
-          <div class="review-header">
-            <div class="review-avatar">G</div>
+        <article class="review-card fade-in">
+          <header class="review-header">
+            <span class="review-avatar" aria-hidden="true">H</span>
             <div>
-              <h3>G.</h3>
+              <h3 id="review3-name">Hannah Trützschler</h3>
+              <span class="review-meta"></span>
+            </div>
+            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          </header>
+          <p class="review-text" id="review3-text" data-i18n="review3_text">Zur Leasing Rückgabe meines Smarts habe ich ihn hier aufbereiten lassen und war super happy mit dem Ergebnis. Innen- und Außenreinigung sowie Polieren. Das Auto glänzte wie neu. Die Kommunikation und der Kundenservice waren toll und unkompliziert. Ich würde mein Auto jederzeit wieder dorthin bringen und weiterempfehlen.</p>
+          <button type="button" class="review-more" aria-expanded="false" aria-controls="review3-text" aria-describedby="review3-name" hidden><span class="more" data-i18n="review_more">Weiterlesen</span><span class="less" data-i18n="review_less">Weniger anzeigen</span></button>
+          <span class="review-translated" data-i18n="review_translated"></span>
+        </article>
+
+        <article class="review-card fade-in">
+          <header class="review-header">
+            <span class="review-avatar" aria-hidden="true">T</span>
+            <div>
+              <h3 id="review5-name">Tomas Simcsak</h3>
+              <span class="review-meta"></span>
+            </div>
+            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          </header>
+          <p class="review-text" id="review5-text" data-i18n="review5_text">Sehr gute Beratung vorab, total gute Arbeit. Wir haben bei unserem VW T6 eine Außenreinigung machen lassen. Das Ergebnis ist perfekt. Erste Reaktion von meiner Frau: Der sieht ja aus wie neu! Ich kann die Firma mit dem freundlichen Mitarbeiter/Chef nur jedem empfehlen.</p>
+          <button type="button" class="review-more" aria-expanded="false" aria-controls="review5-text" aria-describedby="review5-name" hidden><span class="more" data-i18n="review_more">Weiterlesen</span><span class="less" data-i18n="review_less">Weniger anzeigen</span></button>
+          <span class="review-translated" data-i18n="review_translated"></span>
+        </article>
+
+        <article class="review-card fade-in">
+          <header class="review-header">
+            <span class="review-avatar" aria-hidden="true">E</span>
+            <div>
+              <h3 id="review2-name">erbu360</h3>
               <span class="review-meta">Local Guide</span>
             </div>
-            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-          </div>
-          <p class="review-text" data-i18n="review1_text">Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.</p>
+            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          </header>
+          <p class="review-text" id="review2-text" data-i18n="review2_text">Ich bin sehr zufrieden. Parlack hat mich ehrlich beraten und mir klar gesagt, was wirklich nötig ist – keine teuren Zusatzpakete, kein unnötiger Schnickschnack. Wir haben die preisgünstigste Variante gewählt, und das Ergebnis war absolut top. Durch seine Tipps habe ich am Ende bei meinem Leasingrückläufer richtig Geld gespart und gezaubert hat er auch noch. Ganz schlimme Kratzer sind einfach spurlos verschwunden. Zuverlässig, kompetent und fair. Klare Empfehlung.</p>
+          <button type="button" class="review-more" aria-expanded="false" aria-controls="review2-text" aria-describedby="review2-name" hidden><span class="more" data-i18n="review_more">Weiterlesen</span><span class="less" data-i18n="review_less">Weniger anzeigen</span></button>
           <span class="review-translated" data-i18n="review_translated"></span>
-        </div>
+        </article>
 
-        <div class="review-card fade-in">
-          <div class="review-header">
-            <div class="review-avatar">E</div>
+        <article class="review-card fade-in">
+          <header class="review-header">
+            <span class="review-avatar" aria-hidden="true">P</span>
             <div>
-              <h3>erbu360</h3>
-              <span class="review-meta">Local Guide</span>
-            </div>
-            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-          </div>
-          <p class="review-text" data-i18n="review2_text">Ich bin sehr zufrieden. Parlack hat mich ehrlich beraten und mir klar gesagt, was wirklich nötig ist – keine teuren Zusatzpakete, kein unnötiger Schnickschnack. Wir haben die preisgünstigste Variante gewählt, und das Ergebnis war absolut top. Durch seine Tipps habe ich am Ende bei meinem Leasingrückläufer richtig Geld gespart und gezaubert hat er auch noch. Ganz schlimme Kratzer sind einfach spurlos verschwunden. Zuverlässig, kompetent und fair. Klare Empfehlung.</p>
-          <span class="review-translated" data-i18n="review_translated"></span>
-        </div>
-
-        <div class="review-card fade-in">
-          <div class="review-header">
-            <div class="review-avatar">H</div>
-            <div>
-              <h3>Hannah Trützschler</h3>
+              <h3 id="review4-name">Phillip Laudien</h3>
               <span class="review-meta"></span>
             </div>
-            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-          </div>
-          <p class="review-text" data-i18n="review3_text">Zur Leasing Rückgabe meines Smarts habe ich ihn hier aufbereiten lassen und war super happy mit dem Ergebnis. Innen- und Außenreinigung sowie Polieren. Das Auto glänzte wie neu. Die Kommunikation und der Kundenservice waren toll und unkompliziert. Ich würde mein Auto jederzeit wieder dorthin bringen und weiterempfehlen.</p>
+            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          </header>
+          <p class="review-text" id="review4-text" data-i18n="review4_text">Ich habe unseren Mercedes-Benz Marco Polo bei Parlack in Finkenwerder zur Aufbereitung gegeben – inklusive intensiver Innenreinigung, Außenpolitur und Keramikversiegelung. Das Ergebnis ist einfach unglaublich perfekt! Der Wagen sieht besser aus als neu – jedes Detail glänzt, der Lack ist spiegelglatt und der Innenraum makellos sauber. Der Service war zudem super freundlich, zuverlässig und professionell. Man merkt, dass hier mit echter Leidenschaft und viel Know-how gearbeitet wird. Absolut empfehlenswert – ich komme definitiv wieder!</p>
+          <button type="button" class="review-more" aria-expanded="false" aria-controls="review4-text" aria-describedby="review4-name" hidden><span class="more" data-i18n="review_more">Weiterlesen</span><span class="less" data-i18n="review_less">Weniger anzeigen</span></button>
           <span class="review-translated" data-i18n="review_translated"></span>
-        </div>
-
-        <div class="review-card fade-in">
-          <div class="review-header">
-            <div class="review-avatar">P</div>
-            <div>
-              <h3>Phillip Laudien</h3>
-              <span class="review-meta"></span>
-            </div>
-            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-          </div>
-          <p class="review-text" data-i18n="review4_text">Ich habe unseren Mercedes-Benz Marco Polo bei Parlack in Finkenwerder zur Aufbereitung gegeben – inklusive intensiver Innenreinigung, Außenpolitur und Keramikversiegelung. Das Ergebnis ist einfach unglaublich perfekt! Der Wagen sieht besser aus als neu – jedes Detail glänzt, der Lack ist spiegelglatt und der Innenraum makellos sauber. Der Service war zudem super freundlich, zuverlässig und professionell. Man merkt, dass hier mit echter Leidenschaft und viel Know-how gearbeitet wird. Absolut empfehlenswert – ich komme definitiv wieder!</p>
-          <span class="review-translated" data-i18n="review_translated"></span>
-        </div>
-
-        <div class="review-card fade-in">
-          <div class="review-header">
-            <div class="review-avatar">T</div>
-            <div>
-              <h3>Tomas Simcsak</h3>
-              <span class="review-meta"></span>
-            </div>
-            <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            </div>
-          </div>
-          <p class="review-text" data-i18n="review5_text">Sehr gute Beratung vorab, total gute Arbeit. Wir haben bei unserem VW T6 eine Außenreinigung machen lassen. Das Ergebnis ist perfekt. Erste Reaktion von meiner Frau: Der sieht ja aus wie neu! Ich kann die Firma mit dem freundlichen Mitarbeiter/Chef nur jedem empfehlen.</p>
-          <span class="review-translated" data-i18n="review_translated"></span>
-        </div>
+        </article>
       </div>
 
       <p class="reviews-note" data-i18n="reviews_note">Auszug aus unseren Google-Bewertungen. Wir prüfen nicht, ob die Bewertungen von Kunden stammen, die unsere Leistung tatsächlich in Anspruch genommen haben.</p>
-
-      <div class="reviews-cta fade-in">
-        <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" class="btn btn-outline reviews-google-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-          <span data-i18n="reviews_btn">Alle Bewertungen auf Google ansehen</span>
-        </a>
-      </div>
     </div>
   </section>
 
   <!-- ============================================
-       ABOUT / OWNER
+       05 ABOUT / OWNER
        ============================================ -->
-  <section id="about">
-
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image fade-in">
-          <img src="images/ahmet-owner-removebg.webp" width="853" height="1280" alt="Ahmet Özdemir — Inhaber von ElbCar Detailing" loading="lazy">
-        </div>
-        <div class="about-text fade-in">
-          <div class="gold-line" aria-hidden="true"></div>
-          <h2 data-i18n="about_title">Über ElbCar Detailing</h2>
-          <p class="subtitle" data-i18n="about_subtitle">Ihr Experte für Fahrzeugaufbereitung in Hamburg</p>
-          <p data-i18n="about_p1">Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.</p>
-          <p data-i18n="about_p2">Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung — wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.</p>
-          <p data-i18n="about_p3">Egal ob Kleinwagen oder Supersportwagen — jedes Fahrzeug verdient die beste Pflege.</p>
-          <p data-i18n="about_p4">Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.</p>
-
-
-        </div>
+  <section id="about" class="sec sec-ink about" aria-labelledby="about-h">
+    <div class="container about-grid">
+      <div class="about-text fade-in">
+        <h2 id="about-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">05</span><span data-i18n="nav_about">Über uns</span></span> <span class="h2-line" data-i18n="about_p3">Egal ob Kleinwagen oder Supersportwagen&nbsp;— jedes Fahrzeug verdient die beste Pflege.</span></h2>
+        <p class="about-sub" data-i18n="about_subtitle">Ihr Experte für Fahrzeugaufbereitung in Hamburg</p>
+        <p data-i18n="about_p1">Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.</p>
+        <p data-i18n="about_p2">Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung&nbsp;— wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.</p>
+        <p data-i18n="about_p4">Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.</p>
       </div>
+      <figure class="about-figure">
+        <img src="images/ahmet-owner-removebg.webp" width="853" height="1280" alt="Ahmet Özdemir — Inhaber von ElbCar Detailing" loading="lazy" decoding="async">
+        <figcaption data-i18n="about_caption">Ahmet Özdemir · Inhaber</figcaption>
+      </figure>
     </div>
   </section>
 
   <!-- ============================================
-       PRICING / ANGEBOT
+       06 FAQ (answers only restate facts from this page)
        ============================================ -->
-  <section id="pricing">
-    <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="pricing_title">Angebot & Preise</h2>
-        <p data-i18n="pricing_subtitle">Individuelle Angebote für jedes Fahrzeug</p>
-      </div>
-
-      <div class="pricing-content fade-in">
-        <div class="pricing-text">
-          <p data-i18n="pricing_p1">Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot — passend zu Ihren Wünschen und dem Aufwand.</p>
-        </div>
-
-        <div class="pricing-reference fade-in">
-          <h3 data-i18n="pricing_ref_title">Richtpreise zur Orientierung</h3>
-          <div class="pricing-cards">
-            <div class="pricing-card">
-              <div class="pricing-card-label" data-i18n="pricing_kleinwagen">Kleinwagen</div>
-              <div class="pricing-card-price" data-i18n="pricing_kleinwagen_price">ab 150 €</div>
-            </div>
-            <div class="pricing-card">
-              <div class="pricing-card-label" data-i18n="pricing_kompaktwagen">Kompaktwagen</div>
-              <div class="pricing-card-price" data-i18n="pricing_kompaktwagen_price">ab 200 €</div>
-            </div>
-            <div class="pricing-card">
-              <div class="pricing-card-label" data-i18n="pricing_suv">SUV</div>
-              <div class="pricing-card-price" data-i18n="pricing_suv_price">ab 250 €</div>
-            </div>
-            <div class="pricing-card">
-              <div class="pricing-card-label" data-i18n="pricing_transporter">Transporter</div>
-              <div class="pricing-card-price" data-i18n="pricing_transporter_price">ab 300 €</div>
-            </div>
-          </div>
-          <p class="pricing-disclaimer" data-i18n="pricing_disclaimer">Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.</p>
-          <p class="pricing-disclaimer pricing-vat" data-i18n="pricing_vat_note">Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.</p>
-        </div>
-
-        <div class="pricing-text">
-          <p data-i18n="pricing_p2">Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!</p>
-        </div>
-
-        <div class="pricing-cta fade-in">
-          <a href="#contact" class="btn btn-gold" data-i18n="pricing_form_btn">Jetzt Angebot anfragen</a>
+  <section id="faq" class="sec sec-paper" aria-labelledby="faq-h">
+    <div class="container faq-grid">
+      <header class="sec-head fade-in">
+        <h2 id="faq-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">06</span><span data-i18n="faq_label">Häufige Fragen</span></span> <span class="h2-line" data-i18n="faq_title">Gut zu wissen vor Ihrem Termin</span></h2>
+      </header>
+      <div class="faq-list fade-in">
+        <details class="faq-item" open>
+          <summary data-i18n="faq1_q">Kann ich spontan vorbeikommen?</summary>
+          <p data-i18n="appt_text">Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2_q">Wo finde ich Ihre Halle?</summary>
+          <p data-i18n="faq2_a">In Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3, 21129 Hamburg. Wir sind für Kunden aus ganz Hamburg und Umgebung da – Besuche nur nach vorheriger Terminvereinbarung.</p>
+          <p class="faq-link"><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="map_open">In Google Maps öffnen</a></p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3_q">Was kostet eine Aufbereitung?</summary>
+          <p data-i18n="faq3_a">Das hängt von Größe und Zustand Ihres Fahrzeugs ab. Richtpreise nach Fahrzeuggröße finden Sie in unserer Preisliste; der Endpreis richtet sich nach Zustand, Aufwand und gewähltem Paket. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+          <p class="faq-link"><a href="#pricing" data-i18n="faq_price_link">Zur Preisliste</a></p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4_q">Wie schnell bekomme ich eine Antwort?</summary>
+          <p data-i18n="faq4_a">In der Regel innerhalb eines Werktages.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5_q">Ist die Beratung kostenlos?</summary>
+          <p data-i18n="faq5_a">Ja. Die Beratung ist kostenlos und unser Angebot unverbindlich.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq6_q">Wie lange schützt eine Keramikversiegelung?</summary>
+          <p data-i18n="faq6_a">Bis zu 5 Jahre – vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq7_q">Welche Fahrzeuge bereiten Sie auf?</summary>
+          <p data-i18n="faq7_a">Vom Kleinwagen bis zum Supersportwagen – auch SUVs und Transporter.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq8_q">Wechseln Sie auch Reifen?</summary>
+          <p data-i18n="faq8_a">Ja, wir wechseln Sommer- und Winterreifen – ebenfalls nur nach Terminvereinbarung.</p>
+        </details>
+        <div class="faq-ask">
+          <p data-i18n="faq_more">Ihre Frage ist nicht dabei?</p>
+          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Frage%3A%20" data-wa-key="wa_question" target="_blank" rel="noopener" class="btn btn-ink"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="faq_ask_btn">Per WhatsApp fragen</span></a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ============================================
-       INSTAGRAM
+       07 CONTACT
        ============================================ -->
-  <section id="instagram">
+  <section id="contact" class="sec sec-ink" aria-labelledby="contact-h">
     <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="insta_title">Folgen Sie uns auf Instagram</h2>
-        <p data-i18n="insta_subtitle">Aktuelle Projekte, Vorher/Nachher-Bilder und Einblicke in unsere Arbeit</p>
-      </div>
+      <header class="sec-head fade-in">
+        <h2 id="contact-h" class="h-xl"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">07</span><span data-i18n="nav_contact">Kontakt</span></span> <span class="h2-line" data-i18n="contact_subtitle">Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage</span></h2>
+      </header>
 
-      <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" class="insta-link fade-in">
-        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        @elbcar
-      </a>
-
-      <!-- Instagram preview grid - replace with actual images -->
-      <div class="insta-grid fade-in">
-        <div class="insta-item"><img src="images/insta/insta1-640.webp" srcset="images/insta/insta1-400.webp 400w, images/insta/insta1-640.webp 640w" sizes="(min-width:1200px) 280px, (min-width:700px) calc(25vw - 21px), calc(50vw - 25px)" width="640" height="640" loading="lazy" decoding="async" alt="ElbCar Detailing"></div>
-        <div class="insta-item"><img src="images/insta/insta2-640.webp" srcset="images/insta/insta2-400.webp 400w, images/insta/insta2-640.webp 640w" sizes="(min-width:1200px) 280px, (min-width:700px) calc(25vw - 21px), calc(50vw - 25px)" width="640" height="640" loading="lazy" decoding="async" alt="ElbCar Detailing"></div>
-        <div class="insta-item"><img src="images/insta/insta3-640.webp" srcset="images/insta/insta3-400.webp 400w, images/insta/insta3-640.webp 640w" sizes="(min-width:1200px) 280px, (min-width:700px) calc(25vw - 21px), calc(50vw - 25px)" width="640" height="640" loading="lazy" decoding="async" alt="ElbCar Detailing"></div>
-        <div class="insta-item"><img src="images/insta/insta4-640.webp" srcset="images/insta/insta4-400.webp 400w, images/insta/insta4-640.webp 640w" sizes="(min-width:1200px) 280px, (min-width:700px) calc(25vw - 21px), calc(50vw - 25px)" width="640" height="640" loading="lazy" decoding="async" alt="ElbCar Detailing"></div>
-      </div>
-
-      <div class="insta-cta fade-in">
-        <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="insta_btn">Zu Instagram</a>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- ============================================
-       CONTACT
-       ============================================ -->
-  <section id="contact">
-    <div class="container">
-      <div class="section-title fade-in">
-        <div class="gold-line" aria-hidden="true"></div>
-        <h2 data-i18n="contact_title">Kontakt</h2>
-        <p data-i18n="contact_subtitle">Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage</p>
+      <div class="steps-wrap" id="ablauf">
+        <h3 class="steps-title" data-i18n="steps_title">So läuft's ab</h3>
+        <ol class="steps">
+          <li><span class="step-num" aria-hidden="true">1</span><p class="step-t" data-i18n="step1_t">Anfrage senden</p><p class="step-d" data-i18n="step1_d">Per WhatsApp, Telefon oder Kontaktformular.</p></li>
+          <li><span class="step-num" aria-hidden="true">2</span><p class="step-t" data-i18n="step2_t">Persönliches Angebot</p><p class="step-d" data-i18n="step2_d">Kostenlose Beratung – Antwort in der Regel innerhalb eines Werktages.</p></li>
+          <li><span class="step-num" aria-hidden="true">3</span><p class="step-t" data-i18n="step3_t">Termin in unserer Halle</p><p class="step-d" data-i18n="step3_d">Köhlfleet-Hauptdeich 3, Hamburg-Finkenwerder.</p></li>
+        </ol>
       </div>
 
       <div class="contact-grid">
         <div class="contact-info fade-in">
-          <h3 data-i18n="contact_info_title">So erreichen Sie uns</h3>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <h3 class="contact-info-title" data-i18n="contact_info_title">So erreichen Sie uns</h3>
+          <p class="contact-number"><a href="tel:+4915563205346" class="tel-num" data-i18n="contact_phone">+49 155 63205346</a></p>
+          <div class="contact-channels">
+            <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></a>
+            <a href="tel:+4915563205346" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="sticky_call_label">Anrufen</span></a>
+            <a href="https://t.me/+4915563205346" target="_blank" rel="noopener" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg><span data-i18n="form_contact_pref_telegram">Telegram</span></a>
+          </div>
+          <dl class="contact-list">
+            <div>
+              <dt data-i18n="contact_email_label">E-Mail</dt>
+              <dd><a href="mailto:elbcar.detailing@gmail.com">elbcar.detailing@gmail.com</a></dd>
             </div>
             <div>
-              <h4 data-i18n="contact_phone_label">Telefon</h4>
-              <p><a href="tel:+4915563205346" class="tel-num" data-i18n="contact_phone">+49 155 63205346</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon" style="color: #25D366;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <dt data-i18n="contact_addr_label">Standort</dt>
+              <dd><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="contact_addr">Köhlfleet-Hauptdeich 3, 21129 Hamburg</a></dd>
             </div>
             <div>
-              <h4>WhatsApp</h4>
-              <p><a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Anfrage%20%C3%BCber%20Ihre%20Website." target="_blank" rel="noopener" class="tel-num">+49 155 63205346</a></p>
+              <dt data-i18n="contact_hours_label">Termine</dt>
+              <dd data-i18n="appt_text">Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.</dd>
             </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon" style="color: #0088cc;">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            </div>
-            <div>
-              <h4>Telegram</h4>
-              <p><a href="https://t.me/+4915563205346" target="_blank" rel="noopener" class="tel-num">+49 155 63205346</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <h4 data-i18n="contact_email_label">E-Mail</h4>
-              <p><a href="mailto:elbcar.detailing@gmail.com">elbcar.detailing@gmail.com</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <h4 data-i18n="contact_addr_label">Standort</h4>
-              <p><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="contact_addr">Köhlfleet-Hauptdeich 3, 21129 Hamburg</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-            </div>
-            <div>
-              <h4 data-i18n="contact_hours_label">Termine</h4>
-              <p data-i18n="contact_hours">Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.</p>
-            </div>
-          </div>
+          </dl>
         </div>
 
-        <form class="contact-form fade-in" id="contactForm" action="https://formspree.io/f/mvzvwqrd" method="POST">
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvzvwqrd" method="POST" aria-labelledby="form-title">
           <input type="hidden" name="_subject" value="Neue Anfrage von ElbCar Detailing Website">
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <h3 class="form-title" id="form-title" tabindex="-1" data-i18n="hero_btn_form">Anfrageformular</h3>
+          <!-- Shown when a package link sent the visitor here; the hidden field is only sent while a choice is set -->
+          <div class="form-pkg" id="formPkg" hidden>
+            <span data-i18n="form_pkg_label">Ihre Auswahl:</span>
+            <strong class="form-pkg-name"></strong>
+            <button type="button" class="form-pkg-x" aria-label="Auswahl entfernen" data-i18n-aria="form_pkg_remove"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <input type="hidden" name="Paket" id="cf-pkg" value="" disabled>
           <div class="form-row">
             <div class="form-group">
-              <label class="sr-only" for="cf-name" data-i18n="form_name">Ihr Name</label>
-              <input type="text" id="cf-name" name="Name" required autocomplete="name" data-i18n="form_name" placeholder="Ihr Name">
+              <label class="req" for="cf-name" data-i18n="form_name">Ihr Name</label>
+              <input type="text" id="cf-name" name="Name" required autocomplete="name">
             </div>
             <div class="form-group">
-              <label class="sr-only" for="cf-email" data-i18n="form_email">Ihre E-Mail</label>
-              <input type="email" id="cf-email" name="E-Mail" required autocomplete="email" data-i18n="form_email" placeholder="Ihre E-Mail">
+              <label class="req" for="cf-email" data-i18n="form_email">Ihre E-Mail</label>
+              <input type="email" id="cf-email" name="E-Mail" required autocomplete="email">
             </div>
           </div>
           <div class="form-group">
-            <label class="sr-only" for="cf-phone" data-i18n="form_phone">Telefonnummer</label>
-            <input type="tel" id="cf-phone" name="Telefon" autocomplete="tel" data-i18n="form_phone" placeholder="Telefonnummer">
+            <label for="cf-phone" data-i18n="form_phone">Telefonnummer</label>
+            <input type="tel" id="cf-phone" name="Telefon" autocomplete="tel">
           </div>
 
-          <fieldset class="form-choice">
-            <legend class="form-label" data-i18n="form_contact_pref_label">Wie möchten Sie kontaktiert werden?</legend>
-            <span class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</span>
-            <div class="form-pills">
-              <label class="form-pill"><input type="radio" name="Kontaktart" value="E-Mail"><span data-i18n="form_contact_pref_email">E-Mail</span></label>
-              <label class="form-pill"><input type="radio" name="Kontaktart" value="Rückruf"><span data-i18n="form_contact_pref_callback">Rückruf</span></label>
-              <label class="form-pill"><input type="radio" name="Kontaktart" value="WhatsApp"><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></label>
-              <label class="form-pill"><input type="radio" name="Kontaktart" value="Telegram"><span data-i18n="form_contact_pref_telegram">Telegram</span></label>
-            </div>
-          </fieldset>
-
-          <fieldset class="form-choice">
-            <legend class="form-label" data-i18n="form_customer_type_label">Sind Sie Privat- oder Gewerbekunde?</legend>
-            <span class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</span>
-            <div class="form-pills">
-              <label class="form-pill"><input type="radio" name="Kundentyp" value="Privat"><span data-i18n="form_customer_private">Privat</span></label>
-              <label class="form-pill"><input type="radio" name="Kundentyp" value="Gewerbe"><span data-i18n="form_customer_commercial">Gewerbe</span></label>
-            </div>
-          </fieldset>
+          <p class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</p>
 
           <fieldset class="form-choice">
             <legend class="form-label" data-i18n="form_services_label">Welche Leistungen interessieren Sie? (Mehrfachauswahl möglich)</legend>
-            <span class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</span>
             <div class="form-pills">
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Innenreinigung"><span data-i18n="form_service_opt1">Innenreinigung</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Außenaufbereitung"><span data-i18n="form_service_opt2">Außenaufbereitung</span></label>
@@ -862,7 +718,7 @@
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Komplettpaket"><span data-i18n="form_service_opt5">Komplettpaket</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Motorwäsche"><span data-i18n="svc5_title">Motorwäsche</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Scheinwerferaufbereitung"><span data-i18n="svc6_title">Scheinwerfer­aufbereitung</span></label>
-              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lederpflege"><span data-i18n="svc7_title">Lederreinigung & -pflege</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lederpflege"><span data-i18n="svc7_title">Lederreinigung &amp; ‑pflege</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Reifenwechsel"><span data-i18n="form_service_opt7">Reifenwechsel</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Sonstiges"><span data-i18n="form_service_opt6">Sonstiges</span></label>
             </div>
@@ -870,7 +726,6 @@
 
           <fieldset class="form-choice">
             <legend class="form-label" data-i18n="form_size_label">Fahrzeuggröße</legend>
-            <span class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</span>
             <div class="form-pills">
               <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Klein"><span data-i18n="form_size_small">Klein (z.B. Polo, Golf)</span></label>
               <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Mittel"><span data-i18n="form_size_medium">Mittel (Limousine)</span></label>
@@ -879,26 +734,47 @@
             </div>
           </fieldset>
 
-          <fieldset class="form-choice">
-            <legend class="form-label" data-i18n="form_condition_label">Wie ist der Zustand des Fahrzeugs?</legend>
-            <span class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</span>
-            <div class="form-pills">
-              <label class="form-pill"><input type="radio" name="Zustand" value="Leicht verschmutzt"><span data-i18n="form_condition_light">Leicht verschmutzt</span></label>
-              <label class="form-pill"><input type="radio" name="Zustand" value="Normal verschmutzt"><span data-i18n="form_condition_normal">Normal verschmutzt</span></label>
-              <label class="form-pill"><input type="radio" name="Zustand" value="Stark verschmutzt"><span data-i18n="form_condition_heavy">Stark verschmutzt</span></label>
-            </div>
-          </fieldset>
+          <details class="form-more">
+            <summary data-i18n="form_more">Weitere Angaben (optional)</summary>
+            <fieldset class="form-choice">
+              <legend class="form-label" data-i18n="form_contact_pref_label">Wie möchten Sie kontaktiert werden?</legend>
+              <div class="form-pills">
+                <label class="form-pill"><input type="radio" name="Kontaktart" value="E-Mail"><span data-i18n="form_contact_pref_email">E-Mail</span></label>
+                <label class="form-pill"><input type="radio" name="Kontaktart" value="Rückruf"><span data-i18n="form_contact_pref_callback">Rückruf</span></label>
+                <label class="form-pill"><input type="radio" name="Kontaktart" value="WhatsApp"><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></label>
+                <label class="form-pill"><input type="radio" name="Kontaktart" value="Telegram"><span data-i18n="form_contact_pref_telegram">Telegram</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-choice">
+              <legend class="form-label" data-i18n="form_customer_type_label">Sind Sie Privat- oder Gewerbekunde?</legend>
+              <div class="form-pills">
+                <label class="form-pill"><input type="radio" name="Kundentyp" value="Privat"><span data-i18n="form_customer_private">Privat</span></label>
+                <label class="form-pill"><input type="radio" name="Kundentyp" value="Gewerbe"><span data-i18n="form_customer_commercial">Gewerbe</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-choice">
+              <legend class="form-label" data-i18n="form_condition_label">Wie ist der Zustand des Fahrzeugs?</legend>
+              <div class="form-pills">
+                <label class="form-pill"><input type="radio" name="Zustand" value="Leicht verschmutzt"><span data-i18n="form_condition_light">Leicht verschmutzt</span></label>
+                <label class="form-pill"><input type="radio" name="Zustand" value="Normal verschmutzt"><span data-i18n="form_condition_normal">Normal verschmutzt</span></label>
+                <label class="form-pill"><input type="radio" name="Zustand" value="Stark verschmutzt"><span data-i18n="form_condition_heavy">Stark verschmutzt</span></label>
+              </div>
+            </fieldset>
+          </details>
 
           <div class="form-group">
-            <label class="sr-only" for="cf-message" data-i18n="form_message">Ihre Nachricht</label>
+            <label for="cf-message" data-i18n="form_message">Ihre Nachricht</label>
             <textarea id="cf-message" name="Nachricht" rows="4" data-i18n="form_message_optional" placeholder="Zusätzliche Informationen (optional) — z.B. Marke/Modell, besondere Wünsche"></textarea>
           </div>
+          <p class="form-required-note" data-i18n="form_required_note">* Pflichtfelder</p>
           <p class="form-response-promise">
-            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span data-i18n="form_response_promise">Antwort in der Regel innerhalb eines Werktages</span>
           </p>
           <p class="form-privacy"><span data-i18n="form_privacy_text">Mit dem Absenden werden Ihre Angaben über den Dienst Formspree an uns übermittelt und zur Bearbeitung Ihrer Anfrage verarbeitet.</span> <a href="datenschutz.html#kontaktformular" data-i18n="form_privacy_link">Mehr in der Datenschutzerklärung</a>.</p>
-          <button type="submit" class="btn btn-gold" data-i18n="form_btn">Anfrage senden</button>
+          <button type="submit" class="btn btn-primary" data-i18n="form_btn">Anfrage senden</button>
         </form>
       </div>
 
@@ -906,12 +782,12 @@
       <div class="contact-map map-consent fade-in" id="mapConsent" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2372.5!2d9.8780789!3d53.5342229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b18500606a0e2b%3A0x4894c8ea2e9e51a6!2sElbCar%20Detailing!5e0!3m2!1sde!2sde!4v1">
         <div class="map-consent-inner">
           <div class="map-consent-icon">
-            <svg aria-hidden="true" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
           <p class="map-consent-text"><span data-i18n="map_notice">Zum Schutz Ihrer Daten wird die Karte erst nach Ihrem Klick geladen. Dabei werden Daten wie Ihre IP-Adresse an Google übertragen.</span> <a href="datenschutz.html#google-maps" data-i18n="form_privacy_link">Mehr in der Datenschutzerklärung</a>.</p>
           <div class="map-consent-actions">
-            <button type="button" class="btn btn-gold map-load-btn" data-i18n="map_load">Karte laden</button>
-            <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" class="map-open-link" data-i18n="map_open">In Google Maps öffnen</a>
+            <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" class="btn btn-primary map-open-link" data-i18n="map_open">In Google Maps öffnen</a>
+            <button type="button" class="btn btn-line map-load-btn" data-i18n="map_load">Karte laden</button>
           </div>
         </div>
       </div>
@@ -925,20 +801,31 @@
        ============================================ -->
   <footer class="footer">
     <div class="container">
+      <div class="footer-top">
+        <p class="footer-statement" data-i18n="footer_desc">Premium Fahrzeugaufbereitung in Hamburg. Ihr Fahrzeug verdient das Beste.</p>
+        <div class="footer-cta">
+          <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_wa">Termin per WhatsApp</span></a>
+          <a href="tel:+4915563205346" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="cta-label" data-i18n="hero_cta_call">Jetzt anrufen</span><span class="cta-num tel-num">+49 155 63205346</span></a>
+        </div>
+      </div>
+
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo-removebg.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w, images/logo-removebg.webp 640w" sizes="130px" width="640" height="640" alt="ElbCar Detailing" loading="lazy">
-          <p data-i18n="footer_desc">Premium Fahrzeugaufbereitung in Hamburg. Ihr Fahrzeug verdient das Beste.</p>
+          <img src="images/logo-320.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w" sizes="136px" width="320" height="320" alt="ElbCar Detailing" loading="lazy" decoding="async">
+        </div>
+
+        <div>
+          <h2 data-i18n="nav_contact">Kontakt</h2>
+          <address class="footer-address">
+            <a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener">Köhlfleet-Hauptdeich&nbsp;3<br>21129 Hamburg</a>
+            <a href="tel:+4915563205346" class="tel-num">+49 155 63205346</a>
+            <a href="mailto:elbcar.detailing@gmail.com">elbcar.detailing@gmail.com</a>
+          </address>
+          <p class="footer-appt"><strong data-i18n="appt_title">Nur mit Termin</strong> <span data-i18n="trust_hours_note">Keine festen Öffnungszeiten</span></p>
           <div class="footer-social">
-            <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-            <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20habe%20eine%20Anfrage%20%C3%BCber%20Ihre%20Website." target="_blank" rel="noopener" aria-label="WhatsApp">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            </a>
-            <a href="https://t.me/+4915563205346" target="_blank" rel="noopener" aria-label="Telegram">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-            </a>
+            <a href="https://www.instagram.com/elbcar" target="_blank" rel="noopener" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+            <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            <a href="https://t.me/+4915563205346" target="_blank" rel="noopener" aria-label="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
           </div>
         </div>
 
@@ -946,21 +833,11 @@
           <h2 data-i18n="footer_links">Links</h2>
           <ul>
             <li><a href="#services" data-i18n="nav_services">Leistungen</a></li>
-            <li><a href="#packages" data-i18n="nav_packages">Pakete</a></li>
+            <li><a href="#packages" data-i18n="nav_packages">Pakete &amp; Preise</a></li>
             <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
-            <li><a href="#about" data-i18n="nav_about">Über Uns</a></li>
             <li><a href="#reviews" data-i18n="nav_reviews">Bewertungen</a></li>
-            <li><a href="#pricing" data-i18n="nav_pricing">Angebot & Preise</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h2 data-i18n="footer_services">Leistungen</h2>
-          <ul>
-            <li><a href="#services" data-i18n="svc1_title">Innenreinigung</a></li>
-            <li><a href="#services" data-i18n="svc2_title">Außenaufbereitung</a></li>
-            <li><a href="#services" data-i18n="svc3_title">Lackkorrektur & Polieren</a></li>
-            <li><a href="#services" data-i18n="svc4_title">Keramikversiegelung</a></li>
+            <li><a href="#about" data-i18n="nav_about">Über uns</a></li>
+            <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
           </ul>
         </div>
 
@@ -975,19 +852,20 @@
 
       <div class="footer-bottom">
         <p>&copy; 2026 ElbCar Detailing. <span data-i18n="footer_rights">Alle Rechte vorbehalten.</span></p>
-        <div class="footer-legal">
-          <a href="impressum.html" data-i18n="footer_impressum">Impressum</a>
-          <a href="datenschutz.html" data-i18n="footer_datenschutz">Datenschutz</a>
+        <div class="lang-switch lang-switch-footer" role="group" aria-label="Sprache wählen" data-i18n-aria="aria_lang">
+          <button type="button" class="lang-btn active" data-lang="de" lang="de" title="Deutsch" aria-label="DE – Deutsch">DE</button>
+          <button type="button" class="lang-btn" data-lang="en" lang="en" title="English" aria-label="EN – English">EN</button>
+          <button type="button" class="lang-btn" data-lang="tr" lang="tr" title="Türkçe" aria-label="TR – Türkçe">TR</button>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile Sticky Call Button -->
-  <a href="tel:+4915563205346" class="sticky-call">
-    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-    <span data-i18n="sticky_call_label">Anrufen</span>
-  </a>
+  <!-- Phones: one bottom bar (WhatsApp first, call second) once the hero buttons are out of view -->
+  <div class="mbar">
+    <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="mbar-wa"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="mbar-txt"><span data-i18n="hero_btn_contact">Termin anfragen</span><small data-i18n="appt_title">Nur mit Termin</small></span></a>
+    <a href="tel:+4915563205346" class="mbar-call"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="sticky_call_label">Anrufen</span></a>
+  </div>
 
   <!-- Lightbox -->
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true">
@@ -997,7 +875,7 @@
     <button type="button" class="lb-nav lb-next" aria-label="Nächstes Bild" data-i18n-aria="aria_next">&#8250;</button>
   </div>
 
-  <!-- Scroll to Top -->
+  <!-- Scroll to Top (desktop only) -->
   <button type="button" class="scroll-top" aria-label="Nach oben" data-i18n-aria="aria_scroll_top">&#8593;</button>
 
   <!-- Scripts -->
