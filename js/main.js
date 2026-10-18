@@ -7,14 +7,15 @@ const translations = {
   de: {
     meta_title: "Autoaufbereitung Hamburg-Finkenwerder | ElbCar Detailing",
     meta_description: "Autoaufbereitung und Autopflege in Hamburg-Finkenwerder: Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Nur mit Termin – jetzt anfragen.",
-    trust_hours: "Nur nach Termin",
+    trust_hours: "Nur mit Termin",
     trust_hours_note: "Keine festen Öffnungszeiten",
     appt_title: "Nur mit Termin",
     appt_text: "Wir haben keine festen Öffnungszeiten. Bitte kommen Sie nicht spontan vorbei, sondern vereinbaren Sie vorab einen Termin – per WhatsApp, Telefon oder Kontaktformular.",
     studio_title: "Eindrücke aus der Halle",
     // v3 premium editorial
     hero_location: "Hamburg-Finkenwerder",
-    hero_caption: "In unserer Halle in Hamburg-Finkenwerder",
+    hero_caption_pre: "In unserer Halle in",
+    hero_caption_post: "",
     hero_btn_wa: "Termin per WhatsApp",
     hero_btn_form: "Anfrageformular",
     trust_label: "Auf einen Blick",
@@ -35,15 +36,15 @@ const translations = {
     faq_title: "Gut zu wissen vor Ihrem Termin",
     faq1_q: "Kann ich spontan vorbeikommen?",
     faq2_q: "Wo finde ich Ihre Halle?",
-    faq2_a: "In Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3, 21129 Hamburg. Wir sind für Kunden aus ganz Hamburg und Umgebung da – Besuche nur nach vorheriger Terminvereinbarung.",
+    faq2_a: "In Hamburg-Finkenwerder, Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg. Wir sind für Kunden aus ganz Hamburg und Umgebung da – Besuche nur nach vorheriger Terminvereinbarung.",
     faq3_q: "Was kostet eine Aufbereitung?",
-    faq3_a: "Das hängt von Größe und Zustand Ihres Fahrzeugs ab. Richtpreise nach Fahrzeuggröße finden Sie in unserer Preisliste; der Endpreis richtet sich nach Zustand, Aufwand und gewähltem Paket. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.",
+    faq3_a: "Das hängt von Größe und Zustand Ihres Fahrzeugs ab. Richtpreise nach Fahrzeuggröße finden Sie in unserer Preisliste; der Endpreis richtet sich nach Zustand, Aufwand und gewähltem Paket. Gemäß §\u00a019\u00a0UStG wird keine Umsatzsteuer berechnet.",
     faq4_q: "Wie schnell bekomme ich eine Antwort?",
     faq4_a: "In der Regel innerhalb eines Werktages.",
     faq5_q: "Ist die Beratung kostenlos?",
     faq5_a: "Ja. Die Beratung ist kostenlos und unser Angebot unverbindlich.",
     faq6_q: "Wie lange schützt eine Keramikversiegelung?",
-    faq6_a: "Bis zu 5 Jahre – vor UV-Strahlen, Schmutz und chemischen Einflüssen.",
+    faq6_a: "Bis zu 5\u00a0Jahre – vor UV-Strahlen, Schmutz und chemischen Einflüssen.",
     faq7_q: "Welche Fahrzeuge bereiten Sie auf?",
     faq7_a: "Vom Kleinwagen bis zum Supersportwagen – auch SUVs und Transporter.",
     steps_title: "So läuft’s ab",
@@ -52,7 +53,7 @@ const translations = {
     step2_t: "Persönliches Angebot",
     step2_d: "Kostenlose Beratung – Antwort in der Regel innerhalb eines Werktages.",
     step3_t: "Termin in unserer Halle",
-    step3_d: "Köhlfleet-Hauptdeich 3, Hamburg-Finkenwerder.",
+    step3_d: "Köhlfleet-Hauptdeich\u00a03, Hamburg-Finkenwerder.",
     form_more: "Weitere Angaben (optional)",
     form_required_note: "* Pflichtfelder",
     // lead spec: trust price, package choice in the form, FAQ additions
@@ -68,6 +69,42 @@ const translations = {
     faq_more: "Ihre Frage ist nicht dabei?",
     faq_ask_btn: "Per WhatsApp fragen",
     wa_question: "Hallo ElbCar Detailing, ich habe eine Frage: ",
+    // review fixes: rating, landmark and viewer names, translated image descriptions
+    reviews_score: "5,0",
+    aria_nav: "Hauptnavigation",
+    aria_quick_contact: "Schnellkontakt",
+    aria_viewer: "Bildansicht",
+    studio_row_label: "Fotos aus der Halle",
+    alt_hero: "Ferrari 488 Spider in der ElbCar-Detailing-Halle",
+    alt_porsche_rear: "Weißer Sportwagen, Heck nach der Aufbereitung",
+    alt_studio_front: "Schwarzer Sportwagen, Scheinwerfer und Front glänzend aufbereitet",
+    alt_studio_ferrari: "Roter Sportwagen, Frontscheinwerfer",
+    alt_studio_interior: "Gepflegter Innenraum eines Sportwagens",
+    alt_studio_porsche: "Weißer Sportwagen, Scheinwerfer",
+    alt_studio_tail: "Rücklicht mit Hochglanz-Lack",
+    alt_studio_seats: "Helle Sportsitze mit Wabensteppung, gereinigt",
+    alt_studio_bench: "Rücksitzbank, gründlich gereinigt",
+    alt_ba1_before: "Verstaubter Motorraum eines Mercedes vor der Reinigung",
+    alt_ba1_after: "Sauberer Motorraum eines Mercedes nach der Reinigung",
+    alt_ba2_before: "Volvo-Innenraum mit Fahrersitz und verschmutztem Fußraum vor der Aufbereitung",
+    alt_ba2_after: "Volvo-Innenraum mit Fahrersitz nach der Aufbereitung",
+    alt_ba3_before: "Volvo-Rücksitze mit Krümeln und Schmutz vor der Reinigung",
+    alt_ba3_after: "Saubere Volvo-Rücksitze nach der Reinigung",
+    alt_ba4_before: "Fahrerbereich eines VW Touran mit verschmutzten Fußmatten vor der Innenraumreinigung",
+    alt_ba4_after: "Fahrerbereich eines VW Touran nach der Innenraumreinigung",
+    alt_ba5_before: "Rücksitze und Fußmatten eines VW Touran mit Krümeln vor der Reinigung",
+    alt_ba5_after: "Saubere Rücksitze und Fußmatten eines VW Touran nach der Reinigung",
+    alt_ba6_before: "Verschmutzter Kofferraum vor der Tiefenreinigung",
+    alt_ba6_after: "Sauberer Kofferraum nach der Tiefenreinigung",
+    alt_ba7_before: "Matter, vergilbter Scheinwerfer vor der Aufbereitung",
+    alt_ba7_after: "Klarer Scheinwerfer nach der Aufbereitung",
+    alt_ba8_before: "Lenkrad eines Mercedes-AMG vor der Pflege",
+    alt_ba8_after: "Lenkrad eines Mercedes-AMG nach der Pflege",
+    alt_ba9_before: "Verschmutzte Audi-Fußmatte vor der Reinigung",
+    alt_ba9_after: "Saubere Audi-Fußmatte nach der Reinigung",
+    alt_ba10_before: "Verschmutzter Tankdeckel eines roten Autos vor der Detailreinigung",
+    alt_ba10_after: "Sauberer Tankdeckel nach der Detailreinigung",
+    alt_owner: "Ahmet Özdemir – Inhaber von ElbCar Detailing",
     // Nav
     nav_services: "Leistungen",
     nav_packages: "Pakete & Preise",
@@ -79,7 +116,7 @@ const translations = {
 
     // Hero
     hero_tagline: "Premium Fahrzeug­aufbereitung in Hamburg",
-    hero_text: "Wir verwandeln Ihr Fahrzeug in einen Neuzustand\u00a0— mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.",
+    hero_text: "Wir verwandeln Ihr Fahrzeug in einen Neuzustand\u00a0– mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.",
     hero_btn_contact: "Termin anfragen",
     hero_cta_call: "Jetzt anrufen",
 
@@ -87,34 +124,34 @@ const translations = {
     about_title: "Über ElbCar Detailing",
     about_subtitle: "Ihr Experte für Fahrzeugaufbereitung in Hamburg",
     about_p1: "Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.",
-    about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung\u00a0— wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
-    about_p3: "Egal ob Kleinwagen oder Supersportwagen\u00a0— jedes Fahrzeug verdient die beste Pflege.",
-    about_p4: "Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.",
+    about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung\u00a0– wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
+    about_p3: "Egal ob Kleinwagen oder Supersportwagen\u00a0– jedes Fahrzeug verdient die beste Pflege.",
+    about_p4: "Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich\u00a03. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.",
     // Services
     services_title: "Unsere Leistungen",
     services_subtitle: "Professionelle Fahrzeugpflege für höchste Ansprüche",
     svc1_title: "Innenreinigung",
-    svc1_text: "Tiefenreinigung des gesamten Innenraums\u00a0— Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.",
+    svc1_text: "Tiefenreinigung des gesamten Innenraums\u00a0– Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.",
     svc2_title: "Außenaufbereitung",
     svc2_text: "Professionelle Handwäsche, Dekontamination, Kneten und Versiegelung für einen strahlenden Glanz und langanhaltenden Schutz.",
     svc3_title: "Lackkorrektur & Polieren",
     svc3_text: "Mehrstufige Politur zum Entfernen von Kratzern, Swirls und Hologrammen. Ihr Lack erstrahlt in neuem Glanz.",
     svc4_title: "Keramikversiegelung",
-    svc4_text: "Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5 Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.",
+    svc4_text: "Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5\u00a0Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.",
     svc5_title: "Motorwäsche",
     svc5_text: "Schonende und gründliche Reinigung des Motorraums. Optisch wie technisch ein Gewinn für Ihr Fahrzeug.",
     svc6_title: "Scheinwerfer­aufbereitung",
-    svc6_text: "Matte und vergilbte Scheinwerfer werden professionell aufbereitet\u00a0— für bessere Sicht und eine gepflegte Optik.",
-    svc7_title: "Lederreinigung & ‑pflege",
-    svc7_text: "Professionelle Reinigung und Pflege von Ledersitzen und ‑oberflächen. Schutz vor Austrocknung und Rissen.",
+    svc6_text: "Matte und vergilbte Scheinwerfer werden professionell aufbereitet\u00a0– für bessere Sicht und eine gepflegte Optik.",
+    svc7_title: "Lederreinigung & -\u2060pflege",
+    svc7_text: "Professionelle Reinigung und Pflege von Ledersitzen und -\u2060oberflächen. Schutz vor Austrocknung und Rissen.",
     svc8_title: "Reifenwechsel",
-    svc8_text: "Professioneller Reifenwechsel\u00a0— Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.",
+    svc8_text: "Professioneller Reifenwechsel\u00a0– Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.",
 
     // Packages
     packages_title: "Unsere Pakete",
     packages_subtitle: "Wählen Sie das passende Paket für Ihr Fahrzeug",
     pkg2_name: "Premium",
-    pkg2_badge: "Beliebteste Wahl",
+    pkg2_badge: "Unsere Empfehlung",
     pkg2_price_text: "Auf Anfrage",
     pkg2_note: "Komplette Aufbereitung innen & außen",
     pkg2_f1: "Hand-Außenwäsche & Innenreinigung",
@@ -131,7 +168,7 @@ const translations = {
     pkg3_f2: "Mehrstufige Lackkorrektur",
     pkg3_f3: "Keramikversiegelung",
     pkg3_f4: "Scheinwerferaufbereitung",
-    pkg3_f5: "Lederpflege & ‑versiegelung",
+    pkg3_f5: "Lederpflege & -\u2060versiegelung",
     pkg3_f6: "Detaillierte Endkontrolle",
     pkg3_f7: "Pflegeanleitung & Nachsorge",
     pkg4_name: "Nichts dabei?",
@@ -150,16 +187,16 @@ const translations = {
     gallery_subtitle: "Überzeugen Sie sich selbst von unseren Ergebnissen",
     gallery_before: "Vorher",
     gallery_after: "Nachher",
-    gallery_cap1: "Mercedes\u00a0— Motorraum-Reinigung",
-    gallery_cap2: "Volvo\u00a0— Interieur-Aufbereitung",
-    gallery_cap3: "Volvo\u00a0— Rücksitze",
-    gallery_cap4: "VW Touran\u00a0— Innenraum komplett",
-    gallery_cap5: "VW Touran\u00a0— Rücksitze & Fußmatten",
-    gallery_cap6: "Kofferraum\u00a0— Tiefenreinigung",
-    gallery_cap7: "Scheinwerfer\u00a0— Aufbereitung",
-    gallery_cap8: "Mercedes AMG\u00a0— Lenkrad-Pflege",
-    gallery_cap9: "Audi\u00a0— Fußmatten-Reinigung",
-    gallery_cap10: "Tankdeckel\u00a0— Detailreinigung",
+    gallery_cap1: "Mercedes\u00a0– Motorraum-Reinigung",
+    gallery_cap2: "Volvo\u00a0– Interieur-Aufbereitung",
+    gallery_cap3: "Volvo\u00a0– Rücksitze",
+    gallery_cap4: "VW Touran\u00a0– Innenraum komplett",
+    gallery_cap5: "VW Touran\u00a0– Rücksitze & Fußmatten",
+    gallery_cap6: "Kofferraum\u00a0– Tiefenreinigung",
+    gallery_cap7: "Scheinwerfer\u00a0– Aufbereitung",
+    gallery_cap8: "Mercedes AMG\u00a0– Lenkrad-Pflege",
+    gallery_cap9: "Audi\u00a0– Fußmatten-Reinigung",
+    gallery_cap10: "Tankdeckel\u00a0– Detailreinigung",
 
     // Reviews
     reviews_title: "Bewertungen",
@@ -177,7 +214,7 @@ const translations = {
     // Pricing
     pricing_title: "Angebot & Preise",
     pricing_subtitle: "Individuelle Angebote für jedes Fahrzeug",
-    pricing_p1: "Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot\u00a0— passend zu Ihren Wünschen und dem Aufwand.",
+    pricing_p1: "Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot\u00a0– passend zu Ihren Wünschen und dem Aufwand.",
     pricing_ref_title: "Richtpreise zur Orientierung",
     pricing_kleinwagen: "Kleinwagen",
     pricing_kompaktwagen: "Kompaktwagen",
@@ -188,7 +225,7 @@ const translations = {
     pricing_suv_price: "ab\u00a0250\u00a0€",
     pricing_transporter_price: "ab\u00a0300\u00a0€",
     pricing_disclaimer: "Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.",
-    pricing_vat_note: "Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.",
+    pricing_vat_note: "Gemäß §\u00a019\u00a0UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.",
     pricing_p2: "Kontaktieren Sie uns einfach für ein unverbindliches Angebot. Wir beraten Sie gerne!",
     pricing_form_btn: "Jetzt Angebot anfragen",
 
@@ -205,7 +242,7 @@ const translations = {
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Mail",
     contact_addr_label: "Standort",
-    contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
+    contact_addr: "Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg",
     contact_hours_label: "Termine",
     contact_hours: "Keine festen Öffnungszeiten – Besuche nur nach vorheriger Terminvereinbarung.",
     form_name: "Ihr Name",
@@ -219,7 +256,7 @@ const translations = {
     form_service_opt7: "Reifenwechsel",
     form_service_opt6: "Sonstiges",
     form_message: "Ihre Nachricht",
-    form_message_optional: "Zusätzliche Informationen (optional)\u00a0— z.B. Marke/Modell, besondere Wünsche",
+    form_message_optional: "Zusätzliche Informationen (optional)\u00a0– z.\u00a0B. Marke/Modell, besondere Wünsche",
     form_optional_hint: "Optional – hilft uns, schneller ein Angebot zu erstellen",
     form_contact_pref_label: "Wie möchten Sie kontaktiert werden?",
     form_contact_pref_email: "E-Mail",
@@ -231,7 +268,7 @@ const translations = {
     form_customer_commercial: "Gewerbe",
     form_services_label: "Welche Leistungen interessieren Sie? (Mehrfachauswahl möglich)",
     form_size_label: "Fahrzeuggröße",
-    form_size_small: "Klein (z.B. Polo, Golf)",
+    form_size_small: "Klein (z.\u00a0B. Polo, Golf)",
     form_size_medium: "Mittel (Limousine)",
     form_size_large: "Groß (SUV, Kombi)",
     form_size_van: "Transporter",
@@ -281,7 +318,8 @@ const translations = {
     studio_title: "Impressions from the studio",
     // v3 premium editorial
     hero_location: "Hamburg-Finkenwerder",
-    hero_caption: "In our studio in Hamburg-Finkenwerder",
+    hero_caption_pre: "In our studio in",
+    hero_caption_post: "",
     hero_btn_wa: "Book via WhatsApp",
     hero_btn_form: "Enquiry form",
     trust_label: "At a glance",
@@ -302,15 +340,15 @@ const translations = {
     faq_title: "Good to know before your appointment",
     faq1_q: "Can I just drop by?",
     faq2_q: "Where is your studio?",
-    faq2_a: "In Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich 3, 21129 Hamburg. We serve customers from all over Hamburg and the surrounding area – visits by prior appointment only.",
+    faq2_a: "In Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg. We serve customers from all over Hamburg and the surrounding area – visits by prior appointment only.",
     faq3_q: "How much does detailing cost?",
-    faq3_a: "It depends on the size and condition of your vehicle. You'll find guide prices by vehicle size in our price list; the final price depends on condition, scope and the chosen package. Under Section 19 of the German VAT Act (UStG), no VAT is charged.",
+    faq3_a: "It depends on the size and condition of your vehicle. You'll find guide prices by vehicle size in our price list; the final price depends on condition, scope and the chosen package. Under Section\u00a019 of the German VAT Act (UStG), no VAT is charged.",
     faq4_q: "How quickly will I get a reply?",
     faq4_a: "Usually within one working day.",
     faq5_q: "Is the consultation free?",
     faq5_a: "Yes. The consultation is free and our quote is non-binding.",
     faq6_q: "How long does a ceramic coating protect?",
-    faq6_a: "Up to 5 years – against UV rays, dirt and chemical influences.",
+    faq6_a: "Up to 5\u00a0years – against UV rays, dirt and chemical influences.",
     faq7_q: "Which vehicles do you work on?",
     faq7_a: "Everything from small cars to supercars – including SUVs and vans.",
     steps_title: "How it works",
@@ -319,7 +357,7 @@ const translations = {
     step2_t: "Your personal quote",
     step2_d: "Free consultation – we usually reply within one working day.",
     step3_t: "Appointment at our studio",
-    step3_d: "Köhlfleet-Hauptdeich 3, Hamburg-Finkenwerder.",
+    step3_d: "Köhlfleet-Hauptdeich\u00a03, Hamburg-Finkenwerder.",
     form_more: "More details (optional)",
     form_required_note: "* Required fields",
     // lead spec: trust price, package choice in the form, FAQ additions
@@ -335,6 +373,42 @@ const translations = {
     faq_more: "Can't find your question?",
     faq_ask_btn: "Ask via WhatsApp",
     wa_question: "Hello ElbCar Detailing, I have a question: ",
+    // review fixes: rating, landmark and viewer names, translated image descriptions
+    reviews_score: "5.0",
+    aria_nav: "Main navigation",
+    aria_quick_contact: "Quick contact",
+    aria_viewer: "Photo viewer",
+    studio_row_label: "Photos from the studio",
+    alt_hero: "Ferrari 488 Spider in the ElbCar Detailing studio",
+    alt_porsche_rear: "White sports car, rear view after detailing",
+    alt_studio_front: "Black sports car, headlight and front detailed to a high gloss",
+    alt_studio_ferrari: "Red sports car, front headlight",
+    alt_studio_interior: "Well-kept interior of a sports car",
+    alt_studio_porsche: "White sports car, headlight",
+    alt_studio_tail: "Tail light and high-gloss paintwork",
+    alt_studio_seats: "Light-coloured sports seats with honeycomb quilting, cleaned",
+    alt_studio_bench: "Rear bench seat, thoroughly cleaned",
+    alt_ba1_before: "Dusty engine bay of a Mercedes before cleaning",
+    alt_ba1_after: "Clean engine bay of a Mercedes after cleaning",
+    alt_ba2_before: "Volvo interior with the driver's seat and a dirty footwell before detailing",
+    alt_ba2_after: "Volvo interior with the driver's seat after detailing",
+    alt_ba3_before: "Volvo rear seats with crumbs and dirt before cleaning",
+    alt_ba3_after: "Clean Volvo rear seats after cleaning",
+    alt_ba4_before: "Driver's area of a VW Touran with dirty floor mats before interior cleaning",
+    alt_ba4_after: "Driver's area of a VW Touran after interior cleaning",
+    alt_ba5_before: "Rear seats and floor mats of a VW Touran with crumbs before cleaning",
+    alt_ba5_after: "Clean rear seats and floor mats of a VW Touran after cleaning",
+    alt_ba6_before: "Dirty boot before deep cleaning",
+    alt_ba6_after: "Clean boot after deep cleaning",
+    alt_ba7_before: "Dull, yellowed headlight before restoration",
+    alt_ba7_after: "Clear headlight after restoration",
+    alt_ba8_before: "Steering wheel of a Mercedes-AMG before care",
+    alt_ba8_after: "Steering wheel of a Mercedes-AMG after care",
+    alt_ba9_before: "Dirty Audi floor mat before cleaning",
+    alt_ba9_after: "Clean Audi floor mat after cleaning",
+    alt_ba10_before: "Dirty fuel cap of a red car before detail cleaning",
+    alt_ba10_after: "Clean fuel cap after detail cleaning",
+    alt_owner: "Ahmet Özdemir, owner of ElbCar Detailing",
     nav_services: "Services",
     nav_packages: "Packages & Prices",
     nav_gallery: "Gallery",
@@ -352,8 +426,8 @@ const translations = {
     about_subtitle: "Your Expert for Car Detailing in Hamburg",
     about_p1: "At ElbCar Detailing, quality comes first. With state-of-the-art techniques and premium products, we ensure your vehicle shines in its best condition.",
     about_p2: "From interior cleaning to paint correction and ceramic coating\u00a0— we offer everything your vehicle needs to look like new and stay protected long-term.",
-    about_p3: "Whether it's a compact car or a supercar\u00a0— every vehicle deserves the best care.",
-    about_p4: "Our studio is in Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich 3. We offer car detailing and car care there for customers from all over Hamburg and the surrounding area – by appointment only.",
+    about_p3: "Whether it's a small car or a supercar\u00a0— every vehicle deserves the best care.",
+    about_p4: "Our studio is in Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich\u00a03. We offer car detailing and car care there for customers from all over Hamburg and the surrounding area – by appointment only.",
     services_title: "Our Services",
     services_subtitle: "Professional vehicle care for the highest standards",
     svc1_title: "Interior Cleaning",
@@ -363,7 +437,7 @@ const translations = {
     svc3_title: "Paint Correction & Polishing",
     svc3_text: "Multi-stage polishing to remove scratches, swirl marks and holograms. Your paint will shine like new.",
     svc4_title: "Ceramic Coating",
-    svc4_text: "Long-term protection with professional ceramic coating. Up to 5 years of protection against UV rays, dirt and chemical influences.",
+    svc4_text: "Long-term protection with professional ceramic coating. Up to 5\u00a0years of protection against UV rays, dirt and chemical influences.",
     svc5_title: "Engine Bay Cleaning",
     svc5_text: "Gentle yet thorough cleaning of the engine bay. A visual and technical upgrade for your vehicle.",
     svc6_title: "Headlight Restoration",
@@ -376,7 +450,7 @@ const translations = {
     packages_title: "Our Packages",
     packages_subtitle: "Choose the right package for your vehicle",
     pkg2_name: "Premium",
-    pkg2_badge: "Most Popular",
+    pkg2_badge: "Our recommendation",
     pkg2_price_text: "On Request",
     pkg2_note: "Complete detailing inside & out",
     pkg2_f1: "Hand exterior wash & interior cleaning",
@@ -428,7 +502,7 @@ const translations = {
     reviews_btn: "See all reviews on Google",
     reviews_note: "A selection of our Google reviews. We do not check whether the reviews come from customers who have actually used our services.",
     review_translated: "Translated from German",
-    review1_text: "Perfect ceramic coating. You can't get more shine than this. Professional work, the owner is very friendly and always up for a nice chat. Happy to come back. A clear recommendation for anyone who likes their car well cared for.",
+    review1_text: "Perfect ceramic coating. You can't get more shine than this. Professional work, the owner is very friendly and also up for a nice chat. Happy to come back. A clear recommendation for anyone who likes their car well cared for.",
     review2_text: "I'm very satisfied. Parlack gave me honest advice and clearly told me what was really needed — no expensive add-on packages, no unnecessary extras. We chose the most affordable option, and the result was absolutely top-notch. Thanks to his tips, I ended up saving real money on my lease return, and he worked magic too. Really bad scratches just vanished without a trace. Reliable, competent and fair. Highly recommended.",
     review3_text: "For the lease return of my Smart, I had it detailed here and was super happy with the result. Interior and exterior cleaning plus polishing. The car looked like new. Communication and customer service were great and uncomplicated. I would bring my car back anytime and recommend them to others.",
     review4_text: "I had our Mercedes-Benz Marco Polo detailed at Parlack in Finkenwerder — including intensive interior cleaning, exterior polishing and ceramic coating. The result is simply incredibly perfect! The vehicle looks better than new — every detail shines, the paint is mirror-smooth and the interior is spotlessly clean. The service was also super friendly, reliable and professional. You can tell that real passion and expertise go into the work here. Absolutely recommended — I'll definitely be back!",
@@ -437,7 +511,7 @@ const translations = {
     pricing_title: "Quotes & Pricing",
     pricing_subtitle: "Tailored quotes for every vehicle",
     pricing_p1: "Our prices depend on the size and condition of your vehicle. Since every car is unique, we're happy to provide a personalised quote\u00a0— tailored to your needs and the scope of work.",
-    pricing_ref_title: "Reference prices for guidance",
+    pricing_ref_title: "Guide prices",
     pricing_kleinwagen: "Small Car",
     pricing_kompaktwagen: "Compact Car",
     pricing_suv: "SUV",
@@ -447,7 +521,7 @@ const translations = {
     pricing_suv_price: "from\u00a0€250",
     pricing_transporter_price: "from\u00a0€300",
     pricing_disclaimer: "Final price depends on condition, scope and chosen package.",
-    pricing_vat_note: "In accordance with Section 19 of the German VAT Act (UStG), no VAT is charged and none is added to the prices shown.",
+    pricing_vat_note: "In accordance with Section\u00a019 of the German VAT Act (UStG), no VAT is charged and none is added to the prices shown.",
     pricing_p2: "Simply get in touch for a free, no-obligation quote. We look forward to hearing from you!",
     pricing_form_btn: "Request a Quote",
 
@@ -462,7 +536,7 @@ const translations = {
     contact_phone: "+49 155 63205346",
     contact_email_label: "Email",
     contact_addr_label: "Location",
-    contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
+    contact_addr: "Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg",
     contact_hours_label: "Appointments",
     contact_hours: "No fixed opening hours – visits by prior appointment only.",
     form_name: "Your Name",
@@ -537,7 +611,8 @@ const translations = {
     studio_title: "Atölyeden görüntüler",
     // v3 premium editorial
     hero_location: "Hamburg-Finkenwerder",
-    hero_caption: "Hamburg-Finkenwerder'deki atölyemizde",
+    hero_caption_pre: "",
+    hero_caption_post: "'deki atölyemizde",
     hero_btn_wa: "WhatsApp ile randevu al",
     hero_btn_form: "Talep formu",
     trust_label: "Bir bakışta",
@@ -558,15 +633,15 @@ const translations = {
     faq_title: "Randevunuzdan önce bilmeniz gerekenler",
     faq1_q: "Randevusuz uğrayabilir miyim?",
     faq2_q: "Atölyeniz nerede?",
-    faq2_a: "Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich 3, 21129 Hamburg adresinde. Tüm Hamburg ve çevresinden müşterilerimize hizmet veriyoruz – ziyaretler yalnızca önceden alınan randevu ile.",
+    faq2_a: "Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg adresinde. Tüm Hamburg ve çevresinden müşterilerimize hizmet veriyoruz – ziyaretler yalnızca önceden alınan randevu ile.",
     faq3_q: "Araç bakımı ne kadar tutar?",
-    faq3_a: "Aracınızın büyüklüğüne ve durumuna bağlıdır. Araç boyutuna göre yaklaşık fiyatları fiyat listemizde bulabilirsiniz; nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre belirlenir. Alman KDV Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz.",
+    faq3_a: "Aracınızın büyüklüğüne ve durumuna bağlıdır. Araç boyutuna göre yaklaşık fiyatları fiyat listemizde bulabilirsiniz; nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre belirlenir. Alman KDV Kanunu'nun (UStG) 19.\u00a0maddesi uyarınca KDV alınmaz.",
     faq4_q: "Ne kadar hızlı yanıt alırım?",
     faq4_a: "Genellikle bir iş günü içinde.",
     faq5_q: "Danışmanlık ücretsiz mi?",
     faq5_a: "Evet. Danışmanlık ücretsizdir ve teklifimiz bağlayıcı değildir.",
     faq6_q: "Seramik kaplama ne kadar süre korur?",
-    faq6_a: "5 yıla kadar – UV ışınlarına, kire ve kimyasal etkilere karşı.",
+    faq6_a: "5\u00a0yıla kadar – UV ışınlarına, kire ve kimyasal etkilere karşı.",
     faq7_q: "Hangi araçlarla çalışıyorsunuz?",
     faq7_a: "Küçük araçlardan süper spor arabalara kadar – SUV'ler ve minibüs/kamyonetler dahil.",
     steps_title: "Nasıl işliyor?",
@@ -575,7 +650,7 @@ const translations = {
     step2_t: "Size özel teklif",
     step2_d: "Ücretsiz danışmanlık – genellikle bir iş günü içinde yanıt veriyoruz.",
     step3_t: "Atölyemizde randevu",
-    step3_d: "Köhlfleet-Hauptdeich 3, Hamburg-Finkenwerder.",
+    step3_d: "Köhlfleet-Hauptdeich\u00a03, Hamburg-Finkenwerder.",
     form_more: "Diğer bilgiler (isteğe bağlı)",
     form_required_note: "* Zorunlu alanlar",
     // lead spec: trust price, package choice in the form, FAQ additions
@@ -591,6 +666,42 @@ const translations = {
     faq_more: "Sorunuz burada yok mu?",
     faq_ask_btn: "WhatsApp ile sorun",
     wa_question: "Merhaba ElbCar Detailing, bir sorum var: ",
+    // review fixes: rating, landmark and viewer names, translated image descriptions
+    reviews_score: "5,0",
+    aria_nav: "Ana menü",
+    aria_quick_contact: "Hızlı iletişim",
+    aria_viewer: "Fotoğraf görüntüleyici",
+    studio_row_label: "Atölyeden fotoğraflar",
+    alt_hero: "ElbCar Detailing atölyesinde bir Ferrari 488 Spider",
+    alt_porsche_rear: "Beyaz spor araba, bakım sonrası arkadan görünüm",
+    alt_studio_front: "Siyah spor araba, far ve ön kısım parlatılmış",
+    alt_studio_ferrari: "Kırmızı spor araba, ön far",
+    alt_studio_interior: "Bir spor arabanın bakımlı iç mekanı",
+    alt_studio_porsche: "Beyaz spor araba, far",
+    alt_studio_tail: "Arka stop lambası ve yüksek parlaklıkta boya",
+    alt_studio_seats: "Petek desenli dikişli açık renk spor koltuklar, temizlenmiş",
+    alt_studio_bench: "Arka koltuk, iyice temizlenmiş",
+    alt_ba1_before: "Temizlik öncesi bir Mercedes'in tozlu motor bölümü",
+    alt_ba1_after: "Temizlik sonrası bir Mercedes'in temiz motor bölümü",
+    alt_ba2_before: "Bakım öncesi Volvo iç mekanı: sürücü koltuğu ve kirli ayak boşluğu",
+    alt_ba2_after: "Bakım sonrası Volvo iç mekanı ve sürücü koltuğu",
+    alt_ba3_before: "Temizlik öncesi kırıntılı ve kirli Volvo arka koltukları",
+    alt_ba3_after: "Temizlik sonrası temiz Volvo arka koltukları",
+    alt_ba4_before: "İç temizlik öncesi bir VW Touran'ın sürücü bölümü ve kirli paspasları",
+    alt_ba4_after: "İç temizlik sonrası bir VW Touran'ın sürücü bölümü",
+    alt_ba5_before: "Temizlik öncesi bir VW Touran'ın kırıntılı arka koltukları ve paspasları",
+    alt_ba5_after: "Temizlik sonrası bir VW Touran'ın temiz arka koltukları ve paspasları",
+    alt_ba6_before: "Derin temizlik öncesi kirli bagaj",
+    alt_ba6_after: "Derin temizlik sonrası temiz bagaj",
+    alt_ba7_before: "Yenileme öncesi matlaşmış, sararmış far",
+    alt_ba7_after: "Yenileme sonrası berrak far",
+    alt_ba8_before: "Bakım öncesi bir Mercedes-AMG direksiyonu",
+    alt_ba8_after: "Bakım sonrası bir Mercedes-AMG direksiyonu",
+    alt_ba9_before: "Temizlik öncesi kirli Audi paspası",
+    alt_ba9_after: "Temizlik sonrası temiz Audi paspası",
+    alt_ba10_before: "Detaylı temizlik öncesi kırmızı bir arabanın kirli yakıt kapağı",
+    alt_ba10_after: "Detaylı temizlik sonrası temiz yakıt kapağı",
+    alt_owner: "ElbCar Detailing'in sahibi Ahmet Özdemir",
     nav_services: "Hizmetler",
     nav_packages: "Paketler & Fiyatlar",
     nav_gallery: "Galeri",
@@ -609,7 +720,7 @@ const translations = {
     about_p1: "ElbCar Detailing'de kalite her şeyden önce gelir. En modern teknikler ve premium ürünlerle aracınızın en iyi durumda parlamasını sağlıyoruz.",
     about_p2: "İç temizlikten boya düzeltmeye, seramik kaplamaya kadar\u00a0— aracınızın yeni görünmesi ve uzun vadeli korunması için her şeyi sunuyoruz.",
     about_p3: "İster küçük bir araba ister bir süper spor araba olsun\u00a0— her araç en iyi bakımı hak eder.",
-    about_p4: "Atölyemiz Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich 3 adresinde bulunuyor. Burada tüm Hamburg ve çevresinden gelen müşterilerimize araç bakımı ve detaylı temizlik hizmeti sunuyoruz – sadece randevu ile.",
+    about_p4: "Atölyemiz Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich\u00a03 adresinde bulunuyor. Burada tüm Hamburg ve çevresinden gelen müşterilerimize araç bakımı ve detaylı temizlik hizmeti sunuyoruz – sadece randevu ile.",
     services_title: "Hizmetlerimiz",
     services_subtitle: "En yüksek standartlar için profesyonel araç bakımı",
     svc1_title: "İç Temizlik",
@@ -619,7 +730,7 @@ const translations = {
     svc3_title: "Boya Düzeltme & Cilalama",
     svc3_text: "Çizikleri, girdap izlerini ve hologramları gidermek için çok aşamalı cilalama. Boyanız yeniden ışıl ışıl parlar.",
     svc4_title: "Seramik Kaplama",
-    svc4_text: "Profesyonel seramik kaplama ile uzun vadeli koruma. UV ışınlarına, kire ve kimyasal etkilere karşı 5 yıla kadar koruma.",
+    svc4_text: "Profesyonel seramik kaplama ile uzun vadeli koruma. UV ışınlarına, kire ve kimyasal etkilere karşı 5\u00a0yıla kadar koruma.",
     svc5_title: "Motor Yıkama",
     svc5_text: "Motor bölümünün nazik ama kapsamlı temizliği. Aracınız için görsel ve teknik bir yükseltme.",
     svc6_title: "Far Yenileme",
@@ -632,7 +743,7 @@ const translations = {
     packages_title: "Paketlerimiz",
     packages_subtitle: "Aracınız için doğru paketi seçin",
     pkg2_name: "Premium",
-    pkg2_badge: "En Popüler",
+    pkg2_badge: "Önerimiz",
     pkg2_price_text: "Talep Üzerine",
     pkg2_note: "İç ve dış komple detaylandırma",
     pkg2_f1: "Elle dış yıkama & iç temizlik",
@@ -652,7 +763,7 @@ const translations = {
     pkg3_f5: "Deri bakımı & koruyucu kaplama",
     pkg3_f6: "Detaylı son kontrol",
     pkg3_f7: "Bakım kılavuzu & takip",
-    pkg4_name: "Size uygun değil mi?",
+    pkg4_name: "Aradığınız paket yok mu?",
     pkg4_price_text: "Kişiye Özel",
     pkg4_note: "Uygun bir paket bulamadınız mı? Size özel bir teklif hazırlamaktan memnuniyet duyarız.",
     pkg4_f1: "Kişiye özel hizmetler",
@@ -703,7 +814,7 @@ const translations = {
     pricing_suv_price: "250\u00a0€'dan itibaren",
     pricing_transporter_price: "300\u00a0€'dan itibaren",
     pricing_disclaimer: "Nihai fiyat aracın durumuna, iş kapsamına ve seçilen pakete göre değişir.",
-    pricing_vat_note: "Alman Katma Değer Vergisi Kanunu'nun (UStG) 19. maddesi uyarınca KDV alınmaz; belirtilen fiyatlara KDV eklenmez.",
+    pricing_vat_note: "Alman Katma Değer Vergisi Kanunu'nun (UStG) 19.\u00a0maddesi uyarınca KDV alınmaz; belirtilen fiyatlara KDV eklenmez.",
     pricing_p2: "Ücretsiz ve bağlayıcı olmayan bir teklif için bizimle iletişime geçin. Sizden haber almayı dört gözle bekliyoruz!",
     pricing_form_btn: "Teklif İste",
 
@@ -718,7 +829,7 @@ const translations = {
     contact_phone: "+49 155 63205346",
     contact_email_label: "E-Posta",
     contact_addr_label: "Konum",
-    contact_addr: "Köhlfleet-Hauptdeich 3, 21129 Hamburg",
+    contact_addr: "Köhlfleet-Hauptdeich\u00a03, 21129 Hamburg",
     contact_hours_label: "Randevular",
     contact_hours: "Sabit çalışma saatimiz yoktur – ziyaretler yalnızca önceden alınan randevu ile.",
     form_name: "Adınız",
@@ -747,7 +858,7 @@ const translations = {
     form_size_small: "Küçük (örn. Polo, Golf)",
     form_size_medium: "Orta (sedan)",
     form_size_large: "Büyük (SUV, station wagon)",
-    form_size_van: "Minibüs/Transporter",
+    form_size_van: "Minibüs / Kamyonet",
     form_condition_label: "Aracın durumu nasıl?",
     form_condition_light: "Az kirli",
     form_condition_normal: "Orta derecede kirli",
@@ -808,6 +919,19 @@ function detectLanguage() {
 }
 let currentLang = detectLanguage();
 
+// Smooth in-page scrolling (CSS html.smooth) only once the visitor has tapped, clicked or pressed a key:
+// the browser's own jump to a /#fragment on arrival stays instant and lands on its target
+const smoothOn = () => document.documentElement.classList.add('smooth');
+document.addEventListener('pointerdown', smoothOn, { capture: true, once: true });
+document.addEventListener('keydown', smoothOn, { capture: true, once: true });
+
+// Was the last input a key press (not a tap or click)? Focus that the script moves shows its ring only then
+// (Safari would also show it after a tap or click; Firefox reports keyboard-activated link clicks with detail 1)
+let lastInputPointer = false;
+document.addEventListener('pointerdown', () => { lastInputPointer = true; }, true);
+document.addEventListener('keydown', () => { lastInputPointer = false; }, true);
+const viaKeyboard = () => !lastInputPointer;
+
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
   setLanguage(currentLang, false);
@@ -852,8 +976,8 @@ function setLanguage(lang, persist = true) {
     }
   });
 
-  // Translated attributes: accessible names (aria-label, title) and the meta description
-  [['data-i18n-aria', 'aria-label'], ['data-i18n-title', 'title'], ['data-i18n-content', 'content']].forEach(([data, attr]) => {
+  // Translated attributes: accessible names (aria-label, title), image descriptions (alt) and the meta description
+  [['data-i18n-aria', 'aria-label'], ['data-i18n-title', 'title'], ['data-i18n-alt', 'alt'], ['data-i18n-content', 'content']].forEach(([data, attr]) => {
     document.querySelectorAll('[' + data + ']').forEach(el => {
       const v = t[el.getAttribute(data)];
       if (v !== undefined) el.setAttribute(attr, v);
@@ -921,11 +1045,12 @@ function initMobileMenu() {
   function setOpen(open, returnFocus) {
     toggle.classList.toggle('active', open);
     menu.classList.toggle('open', open);
+    navbar.classList.toggle('menu-open', open); // the bar stays opaque above the open menu
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     document.body.style.overflow = open ? 'hidden' : '';
     if (open) {
       const first = menu.querySelector('a[href], button');
-      if (first) first.focus({ preventScroll: true });
+      if (first) first.focus({ preventScroll: true, focusVisible: viaKeyboard() }); // ring only when opened with the keyboard
     } else if (returnFocus) {
       toggle.focus();
     }
@@ -933,8 +1058,8 @@ function initMobileMenu() {
 
   toggle.addEventListener('click', () => setOpen(!isOpen()));
 
-  // Close menu on link click
-  menu.querySelectorAll('a').forEach(link => {
+  // Any link in the bar closes the menu: the menu items, the logo (back to the top) and the WhatsApp buttons
+  navbar.querySelectorAll('a[href]').forEach(link => {
     link.addEventListener('click', () => setOpen(false));
   });
 
@@ -1027,16 +1152,21 @@ function initLightbox() {
   if (!box) return;
   const links = Array.from(document.querySelectorAll('[data-lightbox]'));
   const img = box.querySelector('img');
+  const buttons = Array.from(box.querySelectorAll('button'));
   let idx = 0, opener = null;
   const show = (i) => {
     idx = (i + links.length) % links.length;
     img.src = links[idx].getAttribute('href');
     img.alt = links[idx].querySelector('img').alt;
   };
-  const open = (i) => { opener = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus(); };
+  // The close button shows its focus ring only when the viewer was opened with the keyboard
+  const open = (i) => { opener = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus({ focusVisible: viaKeyboard() }); };
   const close = () => {
     box.hidden = true; img.src = ''; document.body.style.overflow = '';
-    if (opener && opener.focus) opener.focus({ preventScroll: true }); // keyboard users continue where they were
+    if (!opener || !opener.focus) return;
+    // Keyboard users continue at the photo they opened; it is scrolled into view only if it is no longer on screen
+    const r = opener.getBoundingClientRect();
+    opener.focus({ preventScroll: r.bottom > 0 && r.top < window.innerHeight });
   };
   links.forEach((a, i) => a.addEventListener('click', (e) => { e.preventDefault(); open(i); }));
   box.querySelector('.lb-close').addEventListener('click', close);
@@ -1048,6 +1178,12 @@ function initLightbox() {
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowLeft') show(idx - 1);
     if (e.key === 'ArrowRight') show(idx + 1);
+    // aria-modal: Tab and Shift+Tab cycle through the viewer's buttons, nothing behind the overlay gets focus
+    if (e.key === 'Tab' && buttons.length) {
+      e.preventDefault();
+      const i = buttons.indexOf(document.activeElement);
+      buttons[(i + (e.shiftKey ? -1 : 1) + buttons.length) % buttons.length].focus();
+    }
   });
   let sx = null;
   box.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; }, { passive: true });
@@ -1124,8 +1260,14 @@ function initBookingLinks() {
       form.querySelectorAll('input[name="Leistungen"]').forEach(box => { if (box.value === link.dataset.svc) box.checked = true; });
     }
     if (link.dataset.pkg) setPackage(link.dataset.pkg, link.dataset.pkgKey);
-    // The link scrolls to the form; keyboard and screen-reader users continue at its heading
-    if (title) setTimeout(() => title.focus({ preventScroll: true }), 0);
+    if (e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return; // new tab or window: left to the browser
+    // Scroll in script instead of following the #contactForm link: Firefox would take the focus back from the heading
+    // during the link's own jump. Keyboard and screen-reader users continue at the form heading; its focus ring shows
+    // only after keyboard activation, not after a tap or a mouse click.
+    e.preventDefault();
+    try { if (location.hash !== '#contactForm') history.pushState(null, '', '#contactForm'); } catch (err) { /* file:// page */ }
+    form.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+    if (title) title.focus({ preventScroll: true, focusVisible: viaKeyboard() });
   });
   const remove = tag && tag.querySelector('.form-pkg-x');
   if (remove) remove.addEventListener('click', () => { setPackage(''); const n = document.getElementById('cf-name'); if (n) n.focus(); });
@@ -1147,25 +1289,37 @@ function initGalleryMore() {
   };
   btn.addEventListener('click', () => {
     const first = hiddenItems()[0];
+    const root = document.documentElement;
+    // The new pairs open in place, without scroll anchoring: on phones the first of them sits above the last pair shown
+    // (it fills the two-column rows from 640px), and anchoring would keep the view below it, out of sight
+    root.style.overflowAnchor = 'none';
     grid.classList.add('show-all');
     btn.setAttribute('aria-expanded', 'true');
     wrap.hidden = true;
-    const slider = first && first.querySelector('.ba-slider');
-    if (slider) slider.focus({ preventScroll: true }); // the button is gone: continue at the first new slider
+    if (first) {
+      first.classList.add('visible'); // shown at once, without the fade-in offset: it is measured and scrolled to right away
+      const top = first.getBoundingClientRect().top;
+      if (top < (parseFloat(getComputedStyle(root).scrollPaddingTop) || 0) || top > window.innerHeight - 160) first.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+      // the button is gone: continue at the first new slider (focus ring only after keyboard activation)
+      const slider = first.querySelector('.ba-slider');
+      if (slider) slider.focus({ preventScroll: true, focusVisible: viaKeyboard() });
+    }
+    requestAnimationFrame(() => { root.style.overflowAnchor = ''; });
   });
   refresh();
   window.addEventListener('resize', refresh);
 }
 
 // --- Swipe rows (studio photos on phones): counter, progress line and previous/next buttons ---
-// Only while the row really scrolls does it become a focusable, labelled region; arrow keys, Home and End move by photo.
+// Only while the row really scrolls does it become a focusable, labelled group (not a second region named like the
+// section around it); arrow keys, Home and End move by photo.
 function initSnapRows() {
   const tr = () => translations[currentLang] || translations.de;
   const chevron = (back) => '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="' + (back ? '15 18 9 12 15 6' : '9 18 15 12 9 6') + '"/></svg>';
   document.querySelectorAll('[data-snap]').forEach(row => {
     const items = Array.from(row.children).filter(el => !el.hidden); // lightbox-only photos are not in the row
     if (items.length < 2) return;
-    const labelId = row.getAttribute('data-snap-label');
+    const labelKey = row.getAttribute('data-snap-label-key');
     const ui = document.createElement('div');
     ui.className = 'snap-ui container';
     ui.innerHTML = '<span class="snap-progress" aria-hidden="true"><i></i></span><span class="snap-count" aria-live="polite"></span>'
@@ -1187,8 +1341,10 @@ function initSnapRows() {
     function update() {
       const scrollable = row.scrollWidth > row.clientWidth + 4;
       row.classList.toggle('is-scrollable', scrollable);
-      if (scrollable) { row.setAttribute('tabindex', '0'); row.setAttribute('role', 'region'); if (labelId) row.setAttribute('aria-labelledby', labelId); }
-      else ['tabindex', 'role', 'aria-labelledby'].forEach(a => row.removeAttribute(a));
+      if (scrollable) {
+        row.setAttribute('tabindex', '0'); row.setAttribute('role', 'group');
+        if (labelKey) { row.setAttribute('data-i18n-aria', labelKey); row.setAttribute('aria-label', tr()[labelKey] || ''); } // re-translated by setLanguage()
+      } else ['tabindex', 'role', 'aria-label', 'data-i18n-aria'].forEach(a => row.removeAttribute(a));
       ui.hidden = !scrollable;
       if (!scrollable) return;
       const txt = (current() + 1) + ' / ' + items.length;
