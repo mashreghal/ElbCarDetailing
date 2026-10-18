@@ -121,7 +121,7 @@ const translations = {
     // About
     about_title: "Über ElbCar Detailing",
     about_subtitle: "Ihr Experte für Fahrzeugaufbereitung in Hamburg",
-    about_p1: "Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.",
+    about_p1: "Bei ElbCar Detailing\u00a0– früher Fahrzeugaufbereitung Parlack\u00a0– steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.",
     about_p2: "Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung\u00a0– wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.",
     about_p3: "Egal ob Kleinwagen oder Supersportwagen\u00a0– jedes Fahrzeug verdient die beste Pflege.",
     about_p4: "Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich\u00a03. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.",
@@ -418,7 +418,7 @@ const translations = {
 
     about_title: "About ElbCar Detailing",
     about_subtitle: "Your Expert for Car Detailing in Hamburg",
-    about_p1: "At ElbCar Detailing, quality comes first. With state-of-the-art techniques and premium products, we ensure your vehicle shines in its best condition.",
+    about_p1: "At ElbCar Detailing, formerly Fahrzeugaufbereitung Parlack, quality comes first. With state-of-the-art techniques and premium products, we ensure your vehicle shines in its best condition.",
     about_p2: "From interior cleaning to paint correction and ceramic coating\u00a0— we offer everything your vehicle needs to look like new and stay protected long-term.",
     about_p3: "Whether it's a small car or a supercar\u00a0— every vehicle deserves the best care.",
     about_p4: "Our studio is in Hamburg-Finkenwerder, at Köhlfleet-Hauptdeich\u00a03. We offer car detailing and car care there for customers from all over Hamburg and the surrounding area – by appointment only.",
@@ -707,7 +707,7 @@ const translations = {
 
     about_title: "ElbCar Detailing Hakkında",
     about_subtitle: "Hamburg'da Araç Bakım Uzmanınız",
-    about_p1: "ElbCar Detailing'de kalite her şeyden önce gelir. En modern teknikler ve premium ürünlerle aracınızın en iyi durumda parlamasını sağlıyoruz.",
+    about_p1: "Eski adıyla Fahrzeugaufbereitung Parlack olan ElbCar Detailing'de kalite her şeyden önce gelir. En modern teknikler ve premium ürünlerle aracınızın en iyi durumda parlamasını sağlıyoruz.",
     about_p2: "İç temizlikten boya düzeltmeye, seramik kaplamaya kadar\u00a0— aracınızın yeni görünmesi ve uzun vadeli korunması için her şeyi sunuyoruz.",
     about_p3: "İster küçük bir araba ister bir süper spor araba olsun\u00a0— her araç en iyi bakımı hak eder.",
     about_p4: "Atölyemiz Hamburg-Finkenwerder'de, Köhlfleet-Hauptdeich\u00a03 adresinde bulunuyor. Burada tüm Hamburg ve çevresinden gelen müşterilerimize araç bakımı ve detaylı temizlik hizmeti sunuyoruz – sadece randevu ile.",
