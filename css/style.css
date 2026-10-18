@@ -467,7 +467,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .ba-caption{display:flex;align-items:baseline;gap:12px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line-ink);font-size:.92rem;color:rgba(255,255,255,.8)}
 .ba-num{font-size:.68rem;font-weight:600;letter-spacing:.14em;color:var(--gold-light);font-variant-numeric:tabular-nums}
 @media (min-width:640px){.gallery-grid{grid-template-columns:1fr 1fr}.ba-wide{grid-column:1/-1}.ba-wide .ba-slider{aspect-ratio:16/9}}
-@media (min-width:1000px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:40px 28px}.ba-wide{grid-column:span 2;display:flex;flex-direction:column}.ba-wide .ba-slider{aspect-ratio:auto;flex:1;min-height:0}}
+@media (min-width:1000px){.gallery-grid{grid-template-columns:repeat(3,1fr);gap:40px 28px}.ba-wide,.ba-wide-d{grid-column:span 2;display:flex;flex-direction:column}.ba-wide .ba-slider,.ba-wide-d .ba-slider{aspect-ratio:auto;flex:1;min-height:0}}
 .gallery-grid{counter-reset:ba}
 .gallery-grid>div{counter-increment:ba}
 .ba-num::before{content:counter(ba,decimal-leading-zero)}
