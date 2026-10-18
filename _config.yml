@@ -1,0 +1,7 @@
+# GitHub Pages (Jekyll) settings.
+# Internal notes are not published on the website.
+exclude:
+  - TODO.md
+  - README.md
+  - images/README.md
+  - fonts/README.md

@@ -22,7 +22,7 @@
 
 - [ ] **Replace logo with client's PNG** — client to provide original with transparent background
 - [ ] **Auto-update Instagram section via GitHub Action** — scheduled action fetches latest @elbcar posts and commits to repo
-- [ ] **Tax ID in Impressum** — placeholder [DE XXXXXXXXX] needs real value
+- [x] **Tax ID in Impressum** — not needed: Ahmet is a Kleinunternehmer (§ 19 UStG, confirmed by email 2026-10-09); the Impressum carries the Kleinunternehmer note
 - [ ] **More languages** — Polish, Arabic, Russian discussed
 
 ## Google visibility / SEO
@@ -90,12 +90,13 @@
 Goal: rank higher on Google locally (Hamburg) and later run Google Ads. Order: legal, then organic, then site, then ads.
 
 ### 1. Legal basics (before anything else)
-- [ ] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (asked 2026-10-09, reply pending)
-- [ ] Update law references in Impressum (DDG and MStV instead of TMG and RStV)
-- [ ] Update Datenschutz for GitHub hosting, Formspree and Google Maps
+- [x] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (Ahmet replied 2026-10-09: "Ich bin Kleinunternehmer und habe keine Umsatzsteuer")
+- [x] Update law references in Impressum (DDG and MStV instead of TMG and RStV)
+- [x] Update Datenschutz for GitHub hosting, Formspree and Google Maps
+  - [ ] Formspree data transfer to the USA (future to-do, noted 2026-10-18): Formspree is NOT on the official EU-US Data Privacy Framework list (searched https://www.dataprivacyframework.gov/list on 2026-10-18), and its privacy policy names no transfer safeguard. Options: (a) ask team@formspree.io for a data processing agreement with EU standard contractual clauses on the current plan (a third-party blog claims DPAs exist only on the Business plan; unverified), or (b) switch to an EU-hosted form service. Afterwards name the chosen basis in datenschutz.html, section 'Datenübermittlung in die USA'.
 
 ### 2. Get found on Google
-- [ ] Fully set up Google Business Profile (categories, services, 30+ photos, hours, WhatsApp link)
+- [ ] Fully set up Google Business Profile (categories, services, 30+ photos, appointment only instead of opening hours since 2026-10-17, WhatsApp link)
 - [ ] Weekly reviews (2-4/week) and reply to every review
 - [ ] Weekly Business Profile posts
 - [ ] Local directory listings with identical name, address, phone
