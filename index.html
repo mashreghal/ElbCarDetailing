@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "AutomotiveBusiness",
     "name": "ElbCar Detailing",
-    "description": "Premium Autoaufbereitung und Autopflege in Hamburg-Finkenwerder — Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Besuche nur nach Terminvereinbarung.",
+    "description": "Premium Autoaufbereitung und Autopflege in Hamburg-Finkenwerder – Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Besuche nur nach Terminvereinbarung.",
     "url": "https://www.elbcar-detailing.de/",
     "telephone": "+4915563205346",
     "email": "elbcar.detailing@gmail.com",
@@ -56,7 +56,7 @@
     "sameAs": [
       "https://www.instagram.com/elbcar"
     ],
-    "priceRange": "€€",
+    "priceRange": "ab 150 €",
     "areaServed": {
       "@type": "City",
       "name": "Hamburg"
@@ -66,7 +66,8 @@
 
 
   <meta name="theme-color" content="#06121f">
-  <link rel="preload" as="image" media="(min-aspect-ratio: 1/1) and (min-height: 521px)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="(min-width: 1000px) 50vw, 100vw" fetchpriority="high">
+  <!-- Hero photo: from 1000px it covers a box 50vw wide and (100vh - 169px) high, so with object-fit:cover it is drawn up to 1.78 x that height wide -->
+  <link rel="preload" as="image" media="(min-aspect-ratio: 1/1) and (min-height: 521px)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="(min-width: 1000px) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" fetchpriority="high">
   <link rel="preload" as="image" media="(max-aspect-ratio: 1/1), (max-height: 520px)" href="images/v3/hero-m-960.webp" imagesrcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" imagesizes="100vw" fetchpriority="high">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -82,18 +83,18 @@
   <!-- ============================================
        NAVIGATION
        ============================================ -->
-  <nav class="navbar" aria-label="Main">
+  <nav class="navbar" aria-label="Hauptnavigation" data-i18n-aria="aria_nav">
     <div class="container nav-inner">
       <a href="#hero" class="nav-brand" aria-label="ElbCar Detailing"><img src="images/logo-removebg.webp" srcset="images/logo-160.webp 160w, images/logo-320.webp 320w, images/logo-removebg.webp 640w" sizes="84px" width="640" height="640" alt="ElbCar Detailing"></a>
       <div class="nav-menu" id="navMenu">
         <div class="nav-links">
-          <a href="#services"><span class="nav-num" aria-hidden="true">01</span><span data-i18n="nav_services">Leistungen</span></a>
-          <a href="#packages"><span class="nav-num" aria-hidden="true">02</span><span data-i18n="nav_packages">Pakete &amp; Preise</span></a>
-          <a href="#gallery"><span class="nav-num" aria-hidden="true">03</span><span data-i18n="nav_gallery">Galerie</span></a>
-          <a href="#reviews"><span class="nav-num" aria-hidden="true">04</span><span data-i18n="nav_reviews">Bewertungen</span></a>
-          <a href="#about"><span class="nav-num" aria-hidden="true">05</span><span data-i18n="nav_about">Über uns</span></a>
-          <a href="#faq"><span class="nav-num" aria-hidden="true">06</span><span data-i18n="nav_faq">FAQ</span></a>
-          <a href="#contact"><span class="nav-num" aria-hidden="true">07</span><span data-i18n="nav_contact">Kontakt</span></a>
+          <a href="#services"><span class="nav-num" aria-hidden="true">01</span> <span data-i18n="nav_services">Leistungen</span></a>
+          <a href="#packages"><span class="nav-num" aria-hidden="true">02</span> <span data-i18n="nav_packages">Pakete &amp; Preise</span></a>
+          <a href="#gallery"><span class="nav-num" aria-hidden="true">03</span> <span data-i18n="nav_gallery">Galerie</span></a>
+          <a href="#reviews"><span class="nav-num" aria-hidden="true">04</span> <span data-i18n="nav_reviews">Bewertungen</span></a>
+          <a href="#about"><span class="nav-num" aria-hidden="true">05</span> <span data-i18n="nav_about">Über uns</span></a>
+          <a href="#faq"><span class="nav-num" aria-hidden="true">06</span> <span data-i18n="nav_faq">FAQ</span></a>
+          <a href="#contact"><span class="nav-num" aria-hidden="true">07</span> <span data-i18n="nav_contact">Kontakt</span></a>
         </div>
         <div class="nav-extra">
           <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_wa">Termin per WhatsApp</span></a>
@@ -122,15 +123,15 @@
     <div class="hero-media">
       <picture>
         <source media="(max-aspect-ratio: 1/1), (max-height: 520px)" type="image/webp" srcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" sizes="100vw" width="960" height="720">
-        <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="(min-width: 1000px) and (min-aspect-ratio: 1/1) 50vw, 100vw" width="1600" height="900" alt="Ferrari 488 Spider in der ElbCar-Detailing-Halle" fetchpriority="high" decoding="async">
+        <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="(min-width: 1000px) and (min-aspect-ratio: 1/1) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" width="1600" height="900" alt="Ferrari 488 Spider in der ElbCar-Detailing-Halle" data-i18n-alt="alt_hero" fetchpriority="high" decoding="async">
       </picture>
-      <p class="hero-caption" data-i18n="hero_caption">In unserer Halle in Hamburg-Finkenwerder</p>
+      <p class="hero-caption"><span data-i18n="hero_caption_pre">In unserer Halle in</span> <span lang="de" data-i18n="hero_location">Hamburg-Finkenwerder</span><span data-i18n="hero_caption_post"></span></p>
     </div>
     <div class="container hero-inner">
       <div class="hero-copy">
         <p class="eyebrow hero-eyebrow" role="note"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span data-i18n="appt_title">Nur mit Termin</span><span class="eyebrow-dot" aria-hidden="true">·</span><span lang="de" data-i18n="hero_location">Hamburg-Finkenwerder</span></p>
         <h1 id="hero-title" data-i18n="hero_tagline">Premium Fahrzeug­aufbereitung in Hamburg</h1>
-        <p class="hero-lead" data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand&nbsp;— mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
+        <p class="hero-lead" data-i18n="hero_text">Wir verwandeln Ihr Fahrzeug in einen Neuzustand&nbsp;– mit Liebe zum Detail, professionellen Produkten und jahrelanger Erfahrung.</p>
         <div class="hero-cta">
           <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="btn btn-primary"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_wa">Termin per WhatsApp</span></a>
           <a href="tel:+4915563205346" class="btn btn-line"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span class="cta-label" data-i18n="hero_cta_call">Jetzt anrufen</span><span class="cta-num tel-num">+49 155 63205346</span></a>
@@ -145,7 +146,7 @@
   <section class="trust" aria-label="Auf einen Blick" data-i18n-aria="trust_label">
     <div class="container trust-grid">
       <a class="trust-item" href="#reviews">
-        <span class="trust-big"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>5.0</span>
+        <span class="trust-big"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><span data-i18n="reviews_score">5,0</span></span>
         <span class="trust-small" data-i18n="reviews_count">83 Bewertungen auf Google</span>
       </a>
       <a class="trust-item" href="#pricing">
@@ -153,7 +154,7 @@
         <span class="trust-small" data-i18n="trust_price_note">Richtpreise nach Fahrzeuggröße</span>
       </a>
       <a class="trust-item trust-appt" href="#ablauf">
-        <span class="trust-big" data-i18n="trust_hours">Nur nach Termin</span>
+        <span class="trust-big" data-i18n="trust_hours">Nur mit Termin</span>
         <span class="trust-small" data-i18n="trust_hours_note">Keine festen Öffnungszeiten</span>
       </a>
       <a class="trust-item" href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener">
@@ -169,14 +170,14 @@
   <section id="services" class="sec sec-stone" aria-labelledby="services-h">
     <div class="container">
       <header class="sec-head fade-in">
-        <h2 id="services-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">01</span><span data-i18n="nav_services">Leistungen</span></span> <span class="h2-line" data-i18n="services_subtitle">Professionelle Fahrzeugpflege für höchste Ansprüche</span></h2>
+        <h2 id="services-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">01</span> <span data-i18n="nav_services">Leistungen</span></span> <span class="h2-line" data-i18n="services_subtitle">Professionelle Fahrzeugpflege für höchste Ansprüche</span></h2>
       </header>
 
       <div class="services-layout">
         <figure class="services-photo fade-in">
           <picture>
             <source media="(max-width:999px)" type="image/webp" srcset="images/v3/porsche-rear-wide-480.webp 480w, images/v3/porsche-rear-wide-720.webp 720w" sizes="calc(100vw - 40px)" width="720" height="540">
-            <img src="images/v2/porsche-rear-800.webp" srcset="images/v2/porsche-rear-480.webp 480w, images/v2/porsche-rear-800.webp 800w" sizes="380px" width="800" height="1420" loading="lazy" decoding="async" alt="Weißer Sportwagen, Heck nach der Aufbereitung">
+            <img src="images/v2/porsche-rear-800.webp" srcset="images/v2/porsche-rear-480.webp 480w, images/v2/porsche-rear-800.webp 800w" sizes="380px" width="800" height="1420" loading="lazy" decoding="async" alt="Weißer Sportwagen, Heck nach der Aufbereitung" data-i18n-alt="alt_porsche_rear">
           </picture>
           <figcaption data-i18n="svc2_title">Außenaufbereitung</figcaption>
         </figure>
@@ -185,7 +186,7 @@
           <li class="svc fade-in">
             <span class="svc-num" aria-hidden="true">01</span>
             <h3 id="svc1-h" data-i18n="svc1_title">Innenreinigung</h3>
-            <p data-i18n="svc1_text">Tiefenreinigung des gesamten Innenraums&nbsp;— Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.</p>
+            <p data-i18n="svc1_text">Tiefenreinigung des gesamten Innenraums&nbsp;– Sitze, Teppiche, Armaturen, Türverkleidungen und mehr. Für ein makelloses Interieur.</p>
             <a class="svc-link" href="#contactForm" data-svc="Innenreinigung" aria-labelledby="svc1-a svc1-h"><span id="svc1-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
           </li>
           <li class="svc fade-in">
@@ -203,7 +204,7 @@
           <li class="svc fade-in">
             <span class="svc-num" aria-hidden="true">04</span>
             <h3 id="svc4-h" data-i18n="svc4_title">Keramikversiegelung</h3>
-            <p data-i18n="svc4_text">Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5 Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
+            <p data-i18n="svc4_text">Langzeitschutz mit professioneller Keramikbeschichtung. Bis zu 5&nbsp;Jahre Schutz vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
             <a class="svc-link" href="#contactForm" data-svc="Keramikversiegelung" aria-labelledby="svc4-a svc4-h"><span id="svc4-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
           </li>
           <li class="svc fade-in">
@@ -215,19 +216,19 @@
           <li class="svc fade-in">
             <span class="svc-num" aria-hidden="true">06</span>
             <h3 id="svc6-h" data-i18n="svc6_title">Scheinwerfer­aufbereitung</h3>
-            <p data-i18n="svc6_text">Matte und vergilbte Scheinwerfer werden professionell aufbereitet&nbsp;— für bessere Sicht und eine gepflegte Optik.</p>
+            <p data-i18n="svc6_text">Matte und vergilbte Scheinwerfer werden professionell aufbereitet&nbsp;– für bessere Sicht und eine gepflegte Optik.</p>
             <a class="svc-link" href="#contactForm" data-svc="Scheinwerferaufbereitung" aria-labelledby="svc6-a svc6-h"><span id="svc6-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
           </li>
           <li class="svc fade-in">
             <span class="svc-num" aria-hidden="true">07</span>
-            <h3 id="svc7-h" data-i18n="svc7_title">Lederreinigung &amp; ‑pflege</h3>
-            <p data-i18n="svc7_text">Professionelle Reinigung und Pflege von Ledersitzen und ‑oberflächen. Schutz vor Austrocknung und Rissen.</p>
+            <h3 id="svc7-h" data-i18n="svc7_title">Lederreinigung &amp; -&#8288;pflege</h3>
+            <p data-i18n="svc7_text">Professionelle Reinigung und Pflege von Ledersitzen und -&#8288;oberflächen. Schutz vor Austrocknung und Rissen.</p>
             <a class="svc-link" href="#contactForm" data-svc="Lederpflege" aria-labelledby="svc7-a svc7-h"><span id="svc7-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
           </li>
           <li class="svc fade-in">
             <span class="svc-num" aria-hidden="true">08</span>
             <h3 id="svc8-h" data-i18n="svc8_title">Reifenwechsel</h3>
-            <p data-i18n="svc8_text">Professioneller Reifenwechsel&nbsp;— Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.</p>
+            <p data-i18n="svc8_text">Professioneller Reifenwechsel&nbsp;– Sommer- und Winterreifen. Schnell, zuverlässig und zum fairen Preis.</p>
             <a class="svc-link" href="#contactForm" data-svc="Reifenwechsel" aria-labelledby="svc8-a svc8-h"><span id="svc8-a" data-i18n="svc_ask">Anfragen</span><span aria-hidden="true">→</span></a>
           </li>
         </ol>
@@ -243,16 +244,16 @@
       <h2 id="studio-h" class="studio-title" data-i18n="studio_title">Eindrücke aus der Halle</h2>
       <a class="studio-insta" id="instagram" href="https://www.instagram.com/elbcar" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg><span>@elbcar</span><span class="studio-insta-sep" aria-hidden="true">·</span><span data-i18n="insta_btn">Zu Instagram</span></a>
     </div>
-    <div class="studio-grid" data-snap data-snap-label="studio-h">
-      <a class="studio-item studio-feature" href="images/v2/lambo-headlight-800.webp" data-lightbox><img src="images/v2/lambo-headlight-480.webp" srcset="images/v2/lambo-headlight-480.webp 480w, images/v2/lambo-headlight-800.webp 800w" sizes="(min-width:700px) 50vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Schwarzer Sportwagen, Scheinwerfer und Front glänzend aufbereitet"></a>
-      <a class="studio-item" href="images/v2/ferrari-light-800.webp" data-lightbox><img src="images/v2/ferrari-light-480.webp" srcset="images/v2/ferrari-light-480.webp 480w, images/v2/ferrari-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Roter Sportwagen, Frontscheinwerfer"></a>
-      <a class="studio-item" href="images/v2/lambo-interior-800.webp" data-lightbox><img src="images/v2/lambo-interior-480.webp" srcset="images/v2/lambo-interior-480.webp 480w, images/v2/lambo-interior-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Gepflegter Innenraum eines Sportwagens"></a>
-      <a class="studio-item" href="images/v2/porsche-light-800.webp" data-lightbox><img src="images/v2/porsche-light-480.webp" srcset="images/v2/porsche-light-480.webp 480w, images/v2/porsche-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Scheinwerfer"></a>
-      <a class="studio-item" href="images/v2/lambo-tail-800.webp" data-lightbox><img src="images/v2/lambo-tail-480.webp" srcset="images/v2/lambo-tail-480.webp 480w, images/v2/lambo-tail-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Rücklicht mit Hochglanz-Lack"></a>
+    <div class="studio-grid" data-snap data-snap-label-key="studio_row_label">
+      <a class="studio-item studio-feature" href="images/v2/lambo-headlight-800.webp" data-lightbox><img src="images/v2/lambo-headlight-480.webp" srcset="images/v2/lambo-headlight-480.webp 480w, images/v2/lambo-headlight-800.webp 800w" sizes="(min-width:700px) 50vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Schwarzer Sportwagen, Scheinwerfer und Front glänzend aufbereitet" data-i18n-alt="alt_studio_front"></a>
+      <a class="studio-item" href="images/v2/ferrari-light-800.webp" data-lightbox><img src="images/v2/ferrari-light-480.webp" srcset="images/v2/ferrari-light-480.webp 480w, images/v2/ferrari-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Roter Sportwagen, Frontscheinwerfer" data-i18n-alt="alt_studio_ferrari"></a>
+      <a class="studio-item" href="images/v2/lambo-interior-800.webp" data-lightbox><img src="images/v2/lambo-interior-480.webp" srcset="images/v2/lambo-interior-480.webp 480w, images/v2/lambo-interior-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Gepflegter Innenraum eines Sportwagens" data-i18n-alt="alt_studio_interior"></a>
+      <a class="studio-item" href="images/v2/porsche-light-800.webp" data-lightbox><img src="images/v2/porsche-light-480.webp" srcset="images/v2/porsche-light-480.webp 480w, images/v2/porsche-light-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Scheinwerfer" data-i18n-alt="alt_studio_porsche"></a>
+      <a class="studio-item" href="images/v2/lambo-tail-800.webp" data-lightbox><img src="images/v2/lambo-tail-480.webp" srcset="images/v2/lambo-tail-480.webp 480w, images/v2/lambo-tail-800.webp 800w" sizes="(min-width:700px) 25vw, 72vw" width="960" height="1280" loading="lazy" decoding="async" alt="Rücklicht mit Hochglanz-Lack" data-i18n-alt="alt_studio_tail"></a>
       <!-- more photos, reachable in the lightbox (prev/next) -->
-      <a class="studio-item" href="images/v2/seat-800.webp" data-lightbox hidden><img src="images/v2/seat-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Helle Sportsitze mit Wabensteppung, gereinigt"></a>
-      <a class="studio-item" href="images/v2/porsche-rear-800.webp" data-lightbox hidden><img src="images/v2/porsche-rear-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Heck nach der Aufbereitung"></a>
-      <a class="studio-item" href="images/v2/lambo-seats-800.webp" data-lightbox hidden><img src="images/v2/lambo-seats-480.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Rücksitzbank, gründlich gereinigt"></a>
+      <a class="studio-item" href="images/v2/seat-800.webp" data-lightbox hidden><img src="images/v2/seat-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Helle Sportsitze mit Wabensteppung, gereinigt" data-i18n-alt="alt_studio_seats"></a>
+      <a class="studio-item" href="images/v2/porsche-rear-800.webp" data-lightbox hidden><img src="images/v2/porsche-rear-480.webp" width="721" height="1280" loading="lazy" decoding="async" alt="Weißer Sportwagen, Heck nach der Aufbereitung" data-i18n-alt="alt_porsche_rear"></a>
+      <a class="studio-item" href="images/v2/lambo-seats-800.webp" data-lightbox hidden><img src="images/v2/lambo-seats-480.webp" width="960" height="1280" loading="lazy" decoding="async" alt="Rücksitzbank, gründlich gereinigt" data-i18n-alt="alt_studio_bench"></a>
     </div>
   </section>
 
@@ -263,9 +264,9 @@
     <div class="container">
       <header class="sec-head sec-head-split fade-in">
         <div>
-          <h2 id="packages-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">02</span><span data-i18n="nav_packages">Pakete &amp; Preise</span></span> <span class="h2-line" data-i18n="packages_subtitle">Wählen Sie das passende Paket für Ihr Fahrzeug</span></h2>
+          <h2 id="packages-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">02</span> <span data-i18n="nav_packages">Pakete &amp; Preise</span></span> <span class="h2-line" data-i18n="packages_subtitle">Wählen Sie das passende Paket für Ihr Fahrzeug</span></h2>
         </div>
-        <p class="sec-note" data-i18n="pricing_p1">Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot&nbsp;— passend zu Ihren Wünschen und dem Aufwand.</p>
+        <p class="sec-note" data-i18n="pricing_p1">Unsere Preise richten sich nach Größe und Zustand Ihres Fahrzeugs. Da jedes Fahrzeug individuell ist, erstellen wir Ihnen gerne ein persönliches Angebot&nbsp;– passend zu Ihren Wünschen und dem Aufwand.</p>
       </header>
 
       <div class="ledger" id="pricing">
@@ -276,13 +277,13 @@
           <div class="ledger-row"><dt data-i18n="pricing_suv">SUV</dt><dd data-i18n="pricing_suv_price">ab&nbsp;250&nbsp;€</dd></div>
           <div class="ledger-row"><dt data-i18n="pricing_transporter">Transporter</dt><dd data-i18n="pricing_transporter_price">ab&nbsp;300&nbsp;€</dd></div>
         </dl>
-        <p class="ledger-note"><span data-i18n="pricing_disclaimer">Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.</span> <span data-i18n="pricing_vat_note">Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.</span></p>
+        <p class="ledger-note"><span data-i18n="pricing_disclaimer">Endpreis abhängig von Zustand, Aufwand und gewähltem Paket.</span> <span data-i18n="pricing_vat_note">Gemäß §&nbsp;19&nbsp;UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet – auf die genannten Preise kommt keine MwSt. hinzu.</span></p>
       </div>
 
       <div class="packages-grid">
         <!-- Premium (Featured) -->
         <article class="package-card featured fade-in" aria-labelledby="pkg-premium-h">
-          <p class="package-badge" data-i18n="pkg2_badge">Beliebteste Wahl</p>
+          <p class="package-badge" data-i18n="pkg2_badge">Unsere Empfehlung</p>
           <h3 id="pkg-premium-h" data-i18n="pkg2_name">Premium</h3>
           <p class="package-note" data-i18n="pkg2_note">Komplette Aufbereitung innen &amp; außen</p>
           <p class="package-price" data-i18n="pkg_price_note">Preis je nach Fahrzeuggröße und Zustand</p>
@@ -311,7 +312,7 @@
             <li data-i18n="pkg3_f2">Mehrstufige Lackkorrektur</li>
             <li data-i18n="pkg3_f3">Keramikversiegelung</li>
             <li data-i18n="pkg3_f4">Scheinwerferaufbereitung</li>
-            <li data-i18n="pkg3_f5">Lederpflege &amp; -versiegelung</li>
+            <li data-i18n="pkg3_f5">Lederpflege &amp; -&#8288;versiegelung</li>
             <li data-i18n="pkg3_f6">Detaillierte Endkontrolle</li>
             <li data-i18n="pkg3_f7">Pflegeanleitung &amp; Nachsorge</li>
           </ul>
@@ -347,7 +348,7 @@
     <div class="container">
       <header class="sec-head sec-head-split fade-in">
         <div>
-          <h2 id="gallery-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">03</span><span id="gallery-title" data-i18n="gallery_title">Vorher &amp; Nachher</span></span> <span class="h2-line" data-i18n="gallery_subtitle">Überzeugen Sie sich selbst von unseren Ergebnissen</span></h2>
+          <h2 id="gallery-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">03</span> <span id="gallery-title" data-i18n="gallery_title">Vorher &amp; Nachher</span></span> <span class="h2-line" data-i18n="gallery_subtitle">Überzeugen Sie sich selbst von unseren Ergebnissen</span></h2>
         </div>
         <p class="sec-note" data-i18n="gallery_hint">Ziehen Sie den Regler, um Vorher und Nachher zu vergleichen.</p>
       </header>
@@ -355,122 +356,122 @@
       <div class="gallery-grid" id="baGrid">
         <div class="fade-in ba-wide">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap1 gallery-title">
-            <img src="images/gallery/engine-before-800.webp" srcset="images/gallery/engine-before-480.webp 480w, images/gallery/engine-before-800.webp 800w, images/gallery/engine-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Verstaubter Motorraum eines Mercedes vor der Reinigung" class="ba-before">
-            <img src="images/gallery/engine-after-800.webp" srcset="images/gallery/engine-after-480.webp 480w, images/gallery/engine-after-800.webp 800w, images/gallery/engine-after.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Sauberer Motorraum eines Mercedes nach der Reinigung" class="ba-after">
+            <img src="images/gallery/engine-before-800.webp" srcset="images/gallery/engine-before-480.webp 480w, images/gallery/engine-before-800.webp 800w, images/gallery/engine-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Verstaubter Motorraum eines Mercedes vor der Reinigung" data-i18n-alt="alt_ba1_before" class="ba-before">
+            <img src="images/gallery/engine-after-800.webp" srcset="images/gallery/engine-after-480.webp 480w, images/gallery/engine-after-800.webp 800w, images/gallery/engine-after.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Sauberer Motorraum eines Mercedes nach der Reinigung" data-i18n-alt="alt_ba1_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap1" data-i18n="gallery_cap1">Mercedes&nbsp;— Motorraum-Reinigung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap1" data-i18n="gallery_cap1">Mercedes&nbsp;– Motorraum-Reinigung</span></p>
         </div>
 
         <div class="fade-in">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap2 gallery-title">
-            <img src="images/gallery/volvo-interior-before-720.webp" srcset="images/gallery/volvo-interior-before-480.webp 480w, images/gallery/volvo-interior-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Innenraum mit Fahrersitz und verschmutztem Fußraum vor der Aufbereitung" class="ba-before">
-            <img src="images/gallery/volvo-interior-after-720.webp" srcset="images/gallery/volvo-interior-after-480.webp 480w, images/gallery/volvo-interior-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Innenraum mit Fahrersitz nach der Aufbereitung" class="ba-after">
+            <img src="images/gallery/volvo-interior-before-720.webp" srcset="images/gallery/volvo-interior-before-480.webp 480w, images/gallery/volvo-interior-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Innenraum mit Fahrersitz und verschmutztem Fußraum vor der Aufbereitung" data-i18n-alt="alt_ba2_before" class="ba-before">
+            <img src="images/gallery/volvo-interior-after-720.webp" srcset="images/gallery/volvo-interior-after-480.webp 480w, images/gallery/volvo-interior-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Innenraum mit Fahrersitz nach der Aufbereitung" data-i18n-alt="alt_ba2_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap2" data-i18n="gallery_cap2">Volvo&nbsp;— Interieur-Aufbereitung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap2" data-i18n="gallery_cap2">Volvo&nbsp;– Interieur-Aufbereitung</span></p>
         </div>
 
         <div class="fade-in ba-extra-m">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap4 gallery-title">
-            <img src="images/gallery/vw-front-before-720.webp" srcset="images/gallery/vw-front-before-480.webp 480w, images/gallery/vw-front-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran mit verschmutzten Fußmatten vor der Innenraumreinigung" class="ba-before">
-            <img src="images/gallery/vw-front-after-720.webp" srcset="images/gallery/vw-front-after-480.webp 480w, images/gallery/vw-front-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran nach der Innenraumreinigung" class="ba-after">
+            <img src="images/gallery/vw-front-before-720.webp" srcset="images/gallery/vw-front-before-480.webp 480w, images/gallery/vw-front-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran mit verschmutzten Fußmatten vor der Innenraumreinigung" data-i18n-alt="alt_ba4_before" class="ba-before">
+            <img src="images/gallery/vw-front-after-720.webp" srcset="images/gallery/vw-front-after-480.webp 480w, images/gallery/vw-front-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Fahrerbereich eines VW Touran nach der Innenraumreinigung" data-i18n-alt="alt_ba4_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap4" data-i18n="gallery_cap4">VW Touran&nbsp;— Innenraum komplett</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap4" data-i18n="gallery_cap4">VW Touran&nbsp;– Innenraum komplett</span></p>
         </div>
 
         <div class="fade-in ba-wide">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap7 gallery-title">
-            <img src="images/gallery/headlight-before-800.webp" srcset="images/gallery/headlight-before-480.webp 480w, images/gallery/headlight-before-800.webp 800w, images/gallery/headlight-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Matter, vergilbter Scheinwerfer vor der Aufbereitung" class="ba-before">
-            <img src="images/gallery/headlight-after-800.webp" srcset="images/gallery/headlight-after-480.webp 480w, images/gallery/headlight-after-800.webp 800w, images/gallery/headlight-after.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Klarer Scheinwerfer nach der Aufbereitung" class="ba-after">
+            <img src="images/gallery/headlight-before-800.webp" srcset="images/gallery/headlight-before-480.webp 480w, images/gallery/headlight-before-800.webp 800w, images/gallery/headlight-before.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Matter, vergilbter Scheinwerfer vor der Aufbereitung" data-i18n-alt="alt_ba7_before" class="ba-before">
+            <img src="images/gallery/headlight-after-800.webp" srcset="images/gallery/headlight-after-480.webp 480w, images/gallery/headlight-after-800.webp 800w, images/gallery/headlight-after.webp 1280w" sizes="(min-width:1200px) 763px, (min-width:1000px) calc(66.7vw - 37px), calc(100vw - 40px)" width="1280" height="720" loading="lazy" decoding="async" alt="Klarer Scheinwerfer nach der Aufbereitung" data-i18n-alt="alt_ba7_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap7" data-i18n="gallery_cap7">Scheinwerfer&nbsp;— Aufbereitung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap7" data-i18n="gallery_cap7">Scheinwerfer&nbsp;– Aufbereitung</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap3 gallery-title">
-            <img src="images/gallery/volvo-rear-before-720.webp" srcset="images/gallery/volvo-rear-before-480.webp 480w, images/gallery/volvo-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Rücksitze mit Krümeln und Schmutz vor der Reinigung" class="ba-before">
-            <img src="images/gallery/volvo-rear-after-720.webp" srcset="images/gallery/volvo-rear-after-480.webp 480w, images/gallery/volvo-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Volvo-Rücksitze nach der Reinigung" class="ba-after">
+            <img src="images/gallery/volvo-rear-before-720.webp" srcset="images/gallery/volvo-rear-before-480.webp 480w, images/gallery/volvo-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Volvo-Rücksitze mit Krümeln und Schmutz vor der Reinigung" data-i18n-alt="alt_ba3_before" class="ba-before">
+            <img src="images/gallery/volvo-rear-after-720.webp" srcset="images/gallery/volvo-rear-after-480.webp 480w, images/gallery/volvo-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Volvo-Rücksitze nach der Reinigung" data-i18n-alt="alt_ba3_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap3" data-i18n="gallery_cap3">Volvo&nbsp;— Rücksitze</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap3" data-i18n="gallery_cap3">Volvo&nbsp;– Rücksitze</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap5 gallery-title">
-            <img src="images/gallery/vw-rear-before-720.webp" srcset="images/gallery/vw-rear-before-480.webp 480w, images/gallery/vw-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Rücksitze und Fußmatten eines VW Touran mit Krümeln vor der Reinigung" class="ba-before">
-            <img src="images/gallery/vw-rear-after-720.webp" srcset="images/gallery/vw-rear-after-480.webp 480w, images/gallery/vw-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Rücksitze und Fußmatten eines VW Touran nach der Reinigung" class="ba-after">
+            <img src="images/gallery/vw-rear-before-720.webp" srcset="images/gallery/vw-rear-before-480.webp 480w, images/gallery/vw-rear-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Rücksitze und Fußmatten eines VW Touran mit Krümeln vor der Reinigung" data-i18n-alt="alt_ba5_before" class="ba-before">
+            <img src="images/gallery/vw-rear-after-720.webp" srcset="images/gallery/vw-rear-after-480.webp 480w, images/gallery/vw-rear-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Rücksitze und Fußmatten eines VW Touran nach der Reinigung" data-i18n-alt="alt_ba5_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap5" data-i18n="gallery_cap5">VW Touran&nbsp;— Rücksitze & Fußmatten</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap5" data-i18n="gallery_cap5">VW Touran&nbsp;– Rücksitze & Fußmatten</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap6 gallery-title">
-            <img src="images/gallery/trunk-before-720.webp" srcset="images/gallery/trunk-before-480.webp 480w, images/gallery/trunk-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Verschmutzter Kofferraum vor der Tiefenreinigung" class="ba-before">
-            <img src="images/gallery/trunk-after-720.webp" srcset="images/gallery/trunk-after-480.webp 480w, images/gallery/trunk-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Sauberer Kofferraum nach der Tiefenreinigung" class="ba-after">
+            <img src="images/gallery/trunk-before-720.webp" srcset="images/gallery/trunk-before-480.webp 480w, images/gallery/trunk-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Verschmutzter Kofferraum vor der Tiefenreinigung" data-i18n-alt="alt_ba6_before" class="ba-before">
+            <img src="images/gallery/trunk-after-720.webp" srcset="images/gallery/trunk-after-480.webp 480w, images/gallery/trunk-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Sauberer Kofferraum nach der Tiefenreinigung" data-i18n-alt="alt_ba6_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap6" data-i18n="gallery_cap6">Kofferraum&nbsp;— Tiefenreinigung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap6" data-i18n="gallery_cap6">Kofferraum&nbsp;– Tiefenreinigung</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap8 gallery-title">
-            <img src="images/gallery/steering-before-720.webp" srcset="images/gallery/steering-before-480.webp 480w, images/gallery/steering-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG vor der Pflege" class="ba-before">
-            <img src="images/gallery/steering-after-720.webp" srcset="images/gallery/steering-after-480.webp 480w, images/gallery/steering-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG nach der Pflege" class="ba-after">
+            <img src="images/gallery/steering-before-720.webp" srcset="images/gallery/steering-before-480.webp 480w, images/gallery/steering-before-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG vor der Pflege" data-i18n-alt="alt_ba8_before" class="ba-before">
+            <img src="images/gallery/steering-after-720.webp" srcset="images/gallery/steering-after-480.webp 480w, images/gallery/steering-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Lenkrad eines Mercedes-AMG nach der Pflege" data-i18n-alt="alt_ba8_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap8" data-i18n="gallery_cap8">Mercedes AMG&nbsp;— Lenkrad-Pflege</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap8" data-i18n="gallery_cap8">Mercedes AMG&nbsp;– Lenkrad-Pflege</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap9 gallery-title">
-            <img src="images/gallery/audi-mat-before-720.webp" srcset="images/gallery/audi-mat-before-480.webp 480w, images/gallery/audi-mat-before-720.webp 720w, images/gallery/audi-mat-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzte Audi-Fußmatte vor der Reinigung" class="ba-before">
-            <img src="images/gallery/audi-mat-after-720.webp" srcset="images/gallery/audi-mat-after-480.webp 480w, images/gallery/audi-mat-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Audi-Fußmatte nach der Reinigung" class="ba-after">
+            <img src="images/gallery/audi-mat-before-720.webp" srcset="images/gallery/audi-mat-before-480.webp 480w, images/gallery/audi-mat-before-720.webp 720w, images/gallery/audi-mat-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzte Audi-Fußmatte vor der Reinigung" data-i18n-alt="alt_ba9_before" class="ba-before">
+            <img src="images/gallery/audi-mat-after-720.webp" srcset="images/gallery/audi-mat-after-480.webp 480w, images/gallery/audi-mat-after-720.webp 720w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="720" height="900" loading="lazy" decoding="async" alt="Saubere Audi-Fußmatte nach der Reinigung" data-i18n-alt="alt_ba9_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap9" data-i18n="gallery_cap9">Audi&nbsp;— Fußmatten-Reinigung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap9" data-i18n="gallery_cap9">Audi&nbsp;– Fußmatten-Reinigung</span></p>
         </div>
 
         <div class="fade-in ba-extra">
           <div class="ba-slider" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-labelledby="ba-cap10 gallery-title">
-            <img src="images/gallery/fuelcap-before-720.webp" srcset="images/gallery/fuelcap-before-480.webp 480w, images/gallery/fuelcap-before-720.webp 720w, images/gallery/fuelcap-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzter Tankdeckel eines roten Autos vor der Detailreinigung" class="ba-before">
-            <img src="images/gallery/fuelcap-after-720.webp" srcset="images/gallery/fuelcap-after-480.webp 480w, images/gallery/fuelcap-after-720.webp 720w, images/gallery/fuelcap-after-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Sauberer Tankdeckel nach der Detailreinigung" class="ba-after">
+            <img src="images/gallery/fuelcap-before-720.webp" srcset="images/gallery/fuelcap-before-480.webp 480w, images/gallery/fuelcap-before-720.webp 720w, images/gallery/fuelcap-before-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Verschmutzter Tankdeckel eines roten Autos vor der Detailreinigung" data-i18n-alt="alt_ba10_before" class="ba-before">
+            <img src="images/gallery/fuelcap-after-720.webp" srcset="images/gallery/fuelcap-after-480.webp 480w, images/gallery/fuelcap-after-720.webp 720w, images/gallery/fuelcap-after-960.webp 960w" sizes="(min-width:1200px) 366px, (min-width:1000px) calc(33.3vw - 35px), (min-width:640px) calc(50vw - 34px), calc(100vw - 40px)" width="960" height="1200" loading="lazy" decoding="async" alt="Sauberer Tankdeckel nach der Detailreinigung" data-i18n-alt="alt_ba10_after" class="ba-after">
             <div class="ba-handle"></div>
             <div class="ba-handle-arrows">&lrarr;</div>
             <span class="ba-label ba-label-before" data-i18n="gallery_before">Vorher</span>
             <span class="ba-label ba-label-after" data-i18n="gallery_after">Nachher</span>
           </div>
-          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap10" data-i18n="gallery_cap10">Tankdeckel&nbsp;— Detailreinigung</span></p>
+          <p class="ba-caption"><span class="ba-num" aria-hidden="true"></span><span id="ba-cap10" data-i18n="gallery_cap10">Tankdeckel&nbsp;– Detailreinigung</span></p>
         </div>
       </div>
 
@@ -487,9 +488,9 @@
     <div class="container">
       <div class="reviews-top">
         <div class="reviews-score fade-in">
-          <h2 id="reviews-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">04</span><span data-i18n="nav_reviews">Bewertungen</span></span> <span class="h2-line" data-i18n="reviews_subtitle">Was auf Google über uns geschrieben wird</span></h2>
+          <h2 id="reviews-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">04</span> <span data-i18n="nav_reviews">Bewertungen</span></span> <span class="h2-line" data-i18n="reviews_subtitle">Was auf Google über uns geschrieben wird</span></h2>
           <div class="score">
-            <span class="score-num">5.0</span>
+            <span class="score-num" data-i18n="reviews_score">5,0</span>
             <div class="stars" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
             <span class="score-count" data-i18n="reviews_count">83 Bewertungen auf Google</span>
           </div>
@@ -500,7 +501,7 @@
           <blockquote>
             <p data-i18n="review1_text">Perfekte Keramikversiegelung. Mehr Glanz geht nicht. Professionelle Arbeit, der Inhaber ist sehr freundlich und auch für einen netten Plausch zu haben. Gerne wieder. Eine klare Empfehlung an alle, die ihr Auto gerne gepflegt haben.</p>
           </blockquote>
-          <figcaption><span class="pq-name">G.</span><span class="pq-sep" aria-hidden="true">·</span><span>Local Guide</span><span class="pq-sep" aria-hidden="true">·</span><span>Google</span><span class="review-translated" data-i18n="review_translated"></span></figcaption>
+          <figcaption><span class="pq-name">G.</span><span class="pq-sep" aria-hidden="true">·</span><span lang="en">Local Guide</span><span class="pq-sep" aria-hidden="true">·</span><span>Google</span><span class="review-translated" data-i18n="review_translated"></span></figcaption>
         </figure>
       </div>
 
@@ -538,7 +539,7 @@
             <span class="review-avatar" aria-hidden="true">E</span>
             <div>
               <h3 id="review2-name">erbu360</h3>
-              <span class="review-meta">Local Guide</span>
+              <span class="review-meta" lang="en">Local Guide</span>
             </div>
             <div class="review-stars-small" role="img" aria-label="5 von 5 Sternen" data-i18n-aria="aria_stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           </header>
@@ -572,14 +573,14 @@
   <section id="about" class="sec sec-ink about" aria-labelledby="about-h">
     <div class="container about-grid">
       <div class="about-text fade-in">
-        <h2 id="about-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">05</span><span data-i18n="nav_about">Über uns</span></span> <span class="h2-line" data-i18n="about_p3">Egal ob Kleinwagen oder Supersportwagen&nbsp;— jedes Fahrzeug verdient die beste Pflege.</span></h2>
+        <h2 id="about-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">05</span> <span data-i18n="nav_about">Über uns</span></span> <span class="h2-line" data-i18n="about_p3">Egal ob Kleinwagen oder Supersportwagen&nbsp;– jedes Fahrzeug verdient die beste Pflege.</span></h2>
         <p class="about-sub" data-i18n="about_subtitle">Ihr Experte für Fahrzeugaufbereitung in Hamburg</p>
         <p data-i18n="about_p1">Bei ElbCar Detailing steht Qualität an erster Stelle. Mit modernsten Techniken und Premium-Produkten sorgen wir dafür, dass Ihr Fahrzeug in bestem Zustand erstrahlt.</p>
-        <p data-i18n="about_p2">Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung&nbsp;— wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.</p>
-        <p data-i18n="about_p4">Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.</p>
+        <p data-i18n="about_p2">Von der Innenreinigung über Lackaufbereitung bis hin zur Keramikversiegelung&nbsp;– wir bieten alles, was Ihr Fahrzeug braucht, um wie neu auszusehen und langfristig geschützt zu sein.</p>
+        <p data-i18n="about_p4">Unsere Halle befindet sich in Hamburg-Finkenwerder, Köhlfleet-Hauptdeich&nbsp;3. Hier bieten wir Autoaufbereitung und Autopflege für Kunden aus ganz Hamburg und Umgebung an – nur nach vorheriger Terminvereinbarung.</p>
       </div>
       <figure class="about-figure">
-        <img src="images/ahmet-owner-removebg.webp" width="853" height="1280" alt="Ahmet Özdemir — Inhaber von ElbCar Detailing" loading="lazy" decoding="async">
+        <img src="images/ahmet-owner-removebg.webp" srcset="images/ahmet-owner-removebg-480.webp 480w, images/ahmet-owner-removebg.webp 853w" sizes="(min-width:900px) 440px, 320px" width="853" height="1280" alt="Ahmet Özdemir – Inhaber von ElbCar Detailing" data-i18n-alt="alt_owner" loading="lazy" decoding="async">
         <figcaption data-i18n="about_caption">Ahmet Özdemir · Inhaber</figcaption>
       </figure>
     </div>
@@ -591,7 +592,7 @@
   <section id="faq" class="sec sec-paper" aria-labelledby="faq-h">
     <div class="container faq-grid">
       <header class="sec-head fade-in">
-        <h2 id="faq-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">06</span><span data-i18n="faq_label">Häufige Fragen</span></span> <span class="h2-line" data-i18n="faq_title">Gut zu wissen vor Ihrem Termin</span></h2>
+        <h2 id="faq-h"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">06</span> <span data-i18n="faq_label">Häufige Fragen</span></span> <span class="h2-line" data-i18n="faq_title">Gut zu wissen vor Ihrem Termin</span></h2>
       </header>
       <div class="faq-list fade-in">
         <details class="faq-item" open>
@@ -600,12 +601,12 @@
         </details>
         <details class="faq-item">
           <summary data-i18n="faq2_q">Wo finde ich Ihre Halle?</summary>
-          <p data-i18n="faq2_a">In Hamburg-Finkenwerder, Köhlfleet-Hauptdeich 3, 21129 Hamburg. Wir sind für Kunden aus ganz Hamburg und Umgebung da – Besuche nur nach vorheriger Terminvereinbarung.</p>
+          <p data-i18n="faq2_a">In Hamburg-Finkenwerder, Köhlfleet-Hauptdeich&nbsp;3, 21129 Hamburg. Wir sind für Kunden aus ganz Hamburg und Umgebung da – Besuche nur nach vorheriger Terminvereinbarung.</p>
           <p class="faq-link"><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="map_open">In Google Maps öffnen</a></p>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq3_q">Was kostet eine Aufbereitung?</summary>
-          <p data-i18n="faq3_a">Das hängt von Größe und Zustand Ihres Fahrzeugs ab. Richtpreise nach Fahrzeuggröße finden Sie in unserer Preisliste; der Endpreis richtet sich nach Zustand, Aufwand und gewähltem Paket. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.</p>
+          <p data-i18n="faq3_a">Das hängt von Größe und Zustand Ihres Fahrzeugs ab. Richtpreise nach Fahrzeuggröße finden Sie in unserer Preisliste; der Endpreis richtet sich nach Zustand, Aufwand und gewähltem Paket. Gemäß §&nbsp;19&nbsp;UStG wird keine Umsatzsteuer berechnet.</p>
           <p class="faq-link"><a href="#pricing" data-i18n="faq_price_link">Zur Preisliste</a></p>
         </details>
         <details class="faq-item">
@@ -618,7 +619,7 @@
         </details>
         <details class="faq-item">
           <summary data-i18n="faq6_q">Wie lange schützt eine Keramikversiegelung?</summary>
-          <p data-i18n="faq6_a">Bis zu 5 Jahre – vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
+          <p data-i18n="faq6_a">Bis zu 5&nbsp;Jahre – vor UV-Strahlen, Schmutz und chemischen Einflüssen.</p>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq7_q">Welche Fahrzeuge bereiten Sie auf?</summary>
@@ -642,7 +643,7 @@
   <section id="contact" class="sec sec-ink" aria-labelledby="contact-h">
     <div class="container">
       <header class="sec-head fade-in">
-        <h2 id="contact-h" class="h-xl"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">07</span><span data-i18n="nav_contact">Kontakt</span></span> <span class="h2-line" data-i18n="contact_subtitle">Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage</span></h2>
+        <h2 id="contact-h" class="h-xl"><span class="eyebrow"><span class="eyebrow-num" aria-hidden="true">07</span> <span data-i18n="nav_contact">Kontakt</span></span> <span class="h2-line" data-i18n="contact_subtitle">Vereinbaren Sie Ihren Termin oder stellen Sie eine Anfrage</span></h2>
       </header>
 
       <div class="steps-wrap" id="ablauf">
@@ -650,7 +651,7 @@
         <ol class="steps">
           <li><span class="step-num" aria-hidden="true">1</span><p class="step-t" data-i18n="step1_t">Anfrage senden</p><p class="step-d" data-i18n="step1_d">Per WhatsApp, Telefon oder Kontaktformular.</p></li>
           <li><span class="step-num" aria-hidden="true">2</span><p class="step-t" data-i18n="step2_t">Persönliches Angebot</p><p class="step-d" data-i18n="step2_d">Kostenlose Beratung – Antwort in der Regel innerhalb eines Werktages.</p></li>
-          <li><span class="step-num" aria-hidden="true">3</span><p class="step-t" data-i18n="step3_t">Termin in unserer Halle</p><p class="step-d" data-i18n="step3_d">Köhlfleet-Hauptdeich 3, Hamburg-Finkenwerder.</p></li>
+          <li><span class="step-num" aria-hidden="true">3</span><p class="step-t" data-i18n="step3_t">Termin in unserer Halle</p><p class="step-d" data-i18n="step3_d">Köhlfleet-Hauptdeich&nbsp;3, Hamburg-Finkenwerder.</p></li>
         </ol>
       </div>
 
@@ -670,7 +671,7 @@
             </div>
             <div>
               <dt data-i18n="contact_addr_label">Standort</dt>
-              <dd><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="contact_addr">Köhlfleet-Hauptdeich 3, 21129 Hamburg</a></dd>
+              <dd><a href="https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700" target="_blank" rel="noopener" data-i18n="contact_addr">Köhlfleet-Hauptdeich&nbsp;3, 21129 Hamburg</a></dd>
             </div>
             <div>
               <dt data-i18n="contact_hours_label">Termine</dt>
@@ -717,7 +718,7 @@
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Komplettpaket"><span data-i18n="form_service_opt5">Komplettpaket</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Motorwäsche"><span data-i18n="svc5_title">Motorwäsche</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Scheinwerferaufbereitung"><span data-i18n="svc6_title">Scheinwerfer­aufbereitung</span></label>
-              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lederpflege"><span data-i18n="svc7_title">Lederreinigung &amp; ‑pflege</span></label>
+              <label class="form-pill"><input type="checkbox" name="Leistungen" value="Lederpflege"><span data-i18n="svc7_title">Lederreinigung &amp; -&#8288;pflege</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Reifenwechsel"><span data-i18n="form_service_opt7">Reifenwechsel</span></label>
               <label class="form-pill"><input type="checkbox" name="Leistungen" value="Sonstiges"><span data-i18n="form_service_opt6">Sonstiges</span></label>
             </div>
@@ -726,7 +727,7 @@
           <fieldset class="form-choice">
             <legend class="form-label" data-i18n="form_size_label">Fahrzeuggröße</legend>
             <div class="form-pills">
-              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Klein"><span data-i18n="form_size_small">Klein (z.B. Polo, Golf)</span></label>
+              <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Klein"><span data-i18n="form_size_small">Klein (z.&nbsp;B. Polo, Golf)</span></label>
               <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Mittel"><span data-i18n="form_size_medium">Mittel (Limousine)</span></label>
               <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Groß"><span data-i18n="form_size_large">Groß (SUV, Kombi)</span></label>
               <label class="form-pill"><input type="radio" name="Fahrzeuggröße" value="Transporter"><span data-i18n="form_size_van">Transporter</span></label>
@@ -765,7 +766,7 @@
 
           <div class="form-group">
             <label for="cf-message" data-i18n="form_message">Ihre Nachricht</label>
-            <textarea id="cf-message" name="Nachricht" rows="4" data-i18n="form_message_optional" placeholder="Zusätzliche Informationen (optional) — z.B. Marke/Modell, besondere Wünsche"></textarea>
+            <textarea id="cf-message" name="Nachricht" rows="4" data-i18n="form_message_optional" placeholder="Zusätzliche Informationen (optional)&nbsp;– z.&nbsp;B. Marke/Modell, besondere Wünsche"></textarea>
           </div>
           <p class="form-required-note" data-i18n="form_required_note">* Pflichtfelder</p>
           <p class="form-response-promise">
@@ -861,13 +862,13 @@
   </footer>
 
   <!-- Phones: one bottom bar (WhatsApp first, call second) once the hero buttons are out of view -->
-  <div class="mbar">
+  <nav class="mbar" aria-label="Schnellkontakt" data-i18n-aria="aria_quick_contact">
     <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="mbar-wa"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="mbar-txt"><span data-i18n="hero_btn_contact">Termin anfragen</span><small data-i18n="appt_title">Nur mit Termin</small></span></a>
     <a href="tel:+4915563205346" class="mbar-call"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span data-i18n="sticky_call_label">Anrufen</span></a>
-  </div>
+  </nav>
 
   <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true">
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Bildansicht" data-i18n-aria="aria_viewer">
     <button type="button" class="lb-close" aria-label="Schließen" data-i18n-aria="aria_close">&times;</button>
     <button type="button" class="lb-nav lb-prev" aria-label="Vorheriges Bild" data-i18n-aria="aria_prev">&#8249;</button>
     <img src="" alt="">

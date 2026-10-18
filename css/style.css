@@ -162,7 +162,11 @@
 .skip-link{position:fixed;top:10px;left:10px;z-index:400;padding:12px 20px;border-radius:var(--radius);background:var(--ivory);color:var(--ink);font-weight:600;box-shadow:var(--shadow-md);transform:translateY(-200%);transition:transform .2s}
 .skip-link:focus{transform:none}
 .tel-num{white-space:nowrap}
-html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
+html{scroll-padding-top:calc(var(--nav-h) + 12px);-webkit-text-size-adjust:100%}
+/* Smooth in-page scrolling only after the visitor's first tap, click or key press (main.js adds .smooth): arriving on /#contact jumps straight to its target */
+html.smooth{scroll-behavior:smooth}
+/* Below 1000px the fixed action bar covers the bottom 73px: keyboard focus scrolls far enough to stay above it */
+@media (max-width:999px){html{scroll-padding-bottom:calc(84px + env(safe-area-inset-bottom,0px))}}
 body{font-family:var(--font-body);color:var(--text);background:var(--paper);line-height:1.65;font-size:1rem;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img,svg{max-width:100%;display:block}
 img{height:auto}
@@ -215,11 +219,12 @@ h2>.eyebrow{margin-bottom:16px}
 .navbar>.container{height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 /* Bar background drawn on ::before: backdrop-filter on .navbar itself would trap the fixed phone menu inside the bar */
 .navbar::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(6,18,31,.94);border-bottom:1px solid var(--line-ink);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);opacity:0;transition:opacity .3s}
-.navbar.scrolled::before{opacity:1}
+.navbar.scrolled::before,.navbar.menu-open::before{opacity:1}
 .navbar:not(.scrolled){background:linear-gradient(to bottom,rgba(6,18,31,.62),rgba(6,18,31,0))}
 .nav-brand,.nav-logo{display:flex;align-items:center;min-height:44px;flex-shrink:0}
 .nav-brand img,.nav-logo-img{height:52px;width:84px;object-fit:cover;object-position:50% 36%;max-width:none}
-.nav-menu{position:fixed;inset:0;z-index:-1;display:flex;flex-direction:column;gap:28px;padding:calc(var(--nav-h) + 20px) 24px calc(28px + env(safe-area-inset-bottom,0px));background:var(--ink);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s var(--ease),visibility .3s;overflow-y:auto}
+/* Phone menu: a panel below the bar, so its links never scroll under the logo and the close button */
+.nav-menu{position:fixed;inset:var(--nav-h) 0 0;z-index:-1;display:flex;flex-direction:column;gap:28px;padding:20px 24px calc(28px + env(safe-area-inset-bottom,0px));background:var(--ink);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .3s,transform .3s var(--ease),visibility .3s;overflow-y:auto}
 .nav-menu.open{opacity:1;visibility:visible;transform:none;transition:opacity .3s,transform .3s var(--ease)}
 .nav-links{display:flex;flex-direction:column;width:100%;border-top:1px solid var(--line-ink)}
 .nav-links a{display:flex;align-items:baseline;gap:16px;min-height:54px;padding:12px 0;border-bottom:1px solid var(--line-ink);color:#fff;font-family:var(--font-heading);font-size:1.55rem;line-height:1.2}
@@ -268,12 +273,15 @@ h2>.eyebrow{margin-bottom:16px}
 .hero-eyebrow{gap:0 8px}
 .hero-eyebrow svg{margin-right:2px}
 .eyebrow-dot{opacity:.7}
-.hero h1{margin-top:14px;font-size:clamp(2rem,.9rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.02em;text-wrap:balance}
+/* hyphens:manual: the title breaks only at its authored soft hyphen (Firefox would pick "Fahr-zeug…" itself) */
+.hero h1{margin-top:14px;font-size:clamp(2rem,.9rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.02em;text-wrap:balance;hyphens:manual}
 .hero-lead{margin-top:16px;max-width:34em;font-size:clamp(1rem,.94rem + .3vw,1.15rem);line-height:1.6;color:rgba(255,255,255,.8)}
 .hero-cta{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;margin-top:26px}
 .hero-cta .btn-line{padding:0 16px;white-space:nowrap}
 .hero-cta .btn-primary{grid-column:1/-1}
 .hero-cta .btn-text{justify-content:center}
+/* below 360px "Anfrageformular →" no longer fits beside the call button: the text link gets its own row */
+@media (max-width:359px){.hero-cta{grid-template-columns:1fr}}
 .hero-appt{margin-top:16px;max-width:36em;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.62)}
 @media (max-width:639px){.hero-eyebrow .eyebrow-dot,.hero-eyebrow [data-i18n="hero_location"]{display:none}}
 @media (max-width:639px){.hero-copy{display:flex;flex-direction:column}.hero-cta{margin-top:22px}.hero-lead{order:1;margin-top:20px}}
@@ -306,7 +314,9 @@ h2>.eyebrow{margin-bottom:16px}
 .trust-item:nth-last-child(-n+2){border-bottom:0}
 .trust-big{display:flex;align-items:center;gap:7px;font-family:var(--font-heading);font-size:1.16rem;line-height:1.2;color:#fff;font-variant-numeric:lining-nums;overflow-wrap:anywhere}
 .trust-big svg{width:15px;height:15px;color:var(--gold);flex-shrink:0}
-.trust-price{display:block}
+.trust-price{display:block;text-wrap:balance}
+/* phones: "150 €'dan itibaren" just misses the half-width cell, so the Turkish price is capped at 4.6vw to stay on one line */
+@media (max-width:899px){:lang(tr) .trust-price{font-size:min(1.16rem,4.6vw)}}
 .trust-small{font-size:.76rem;line-height:1.35;color:rgba(255,255,255,.62)}
 a.trust-item:hover .trust-big{color:var(--gold-light)}
 .trust-appt .trust-big{color:var(--gold-light)}
@@ -377,7 +387,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .studio-item:hover img{transform:scale(1.03)}
 .studio-item:focus-visible{outline-offset:-3px}
 .studio-grid.is-scrollable:focus-visible{outline:2px solid var(--gold-light);outline-offset:-2px}
-.snap-ui{display:flex;align-items:center;gap:10px;margin-top:14px}
+.snap-ui{display:flex;align-items:center;gap:10px;margin-top:14px;padding-bottom:20px}
 .snap-progress{position:relative;flex:1;height:2px;background:var(--line-ink);overflow:hidden}
 .snap-progress i{position:absolute;top:0;bottom:0;left:0;background:var(--gold-light)}
 .snap-count{min-width:3.4em;text-align:right;font-size:.78rem;font-weight:600;letter-spacing:.08em;color:var(--muted-ink);font-variant-numeric:tabular-nums}
@@ -399,6 +409,8 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .ledger-row:nth-child(even){padding-left:16px;border-left:1px solid var(--line)}
 .ledger-row dt{font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .ledger-row dd{margin-top:6px;font-family:var(--font-heading);font-size:clamp(1.4rem,1.05rem + 1.1vw,1.95rem);line-height:1.1;color:var(--ink);font-variant-numeric:lining-nums}
+/* "150 €'dan itibaren" fits one line in some cells but not in others: Turkish prices always break before "itibaren" */
+:lang(tr) .ledger-row dd{max-width:6em}
 .ledger-note{margin-top:14px;max-width:62em;font-size:.84rem;line-height:1.55;color:var(--muted)}
 @media (min-width:800px){
   .ledger-rows{grid-template-columns:repeat(4,1fr)}
@@ -408,8 +420,9 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 }
 .packages-grid{display:grid;gap:28px}
 .package-card{position:relative;display:flex;flex-direction:column;padding:34px 24px 22px;background:#fff;border:1px solid var(--line)}
-.package-card.featured{background:var(--ink);color:#fff;border-color:var(--ink)}
-.package-badge{position:absolute;top:0;right:24px;transform:translateY(-50%);padding:6px 12px;background:var(--gold);color:#1a1405;font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+/* the ink card sits in a light section: its focus ring is gold, not ink */
+.package-card.featured{background:var(--ink);color:#fff;border-color:var(--ink);--focus:var(--gold-light)}
+.package-badge{position:absolute;top:0;right:24px;transform:translateY(-50%);padding:6px 12px;background:var(--gold);color:#1a1405;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
 .package-card h3{font-size:clamp(2.1rem,1.6rem + 1.6vw,2.8rem);line-height:1;color:var(--ink)}
 .package-card.featured h3{color:#fff}
 .package-note{margin-top:10px;color:var(--muted)}
@@ -482,7 +495,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .stars{display:flex;gap:3px;color:var(--gold-dark)}
 .stars svg{width:17px;height:17px}
 .score-count{font-size:.88rem;line-height:1.35;color:var(--muted)}
-.reviews-google-btn{margin-top:28px;padding:0 18px}
+.reviews-google-btn{margin-top:28px;padding:0 18px;text-wrap:balance}
 @media (max-width:639px){.reviews-google-btn{width:100%;padding:0 12px;font-size:.9rem}}
 .reviews-google-btn svg{width:18px;height:18px}
 .pullquote{margin:0}
@@ -533,7 +546,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .faq-grid{display:grid;gap:8px}
 .faq-list{border-top:1px solid var(--ink)}
 .faq-item{border-bottom:1px solid var(--line)}
-.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding:16px 0;list-style:none;cursor:pointer;font-family:var(--font-heading);font-size:clamp(1.12rem,1rem + .45vw,1.38rem);line-height:1.3;color:var(--ink)}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:64px;padding:16px 0;list-style:none;cursor:pointer;font-family:var(--font-heading);font-size:clamp(1.12rem,1rem + .45vw,1.38rem);line-height:1.3;color:var(--ink);text-wrap:balance}
 .faq-item summary::-webkit-details-marker{display:none}
 .faq-item summary::after{content:"";flex-shrink:0;width:14px;height:14px;background:linear-gradient(currentColor,currentColor) center/14px 1.5px no-repeat,linear-gradient(currentColor,currentColor) center/1.5px 14px no-repeat;transition:transform .25s var(--ease)}
 .faq-item[open] summary::after{background:linear-gradient(currentColor,currentColor) center/14px 1.5px no-repeat}
@@ -591,7 +604,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .form-group{margin-bottom:18px}
 .form-group label{display:block;margin-bottom:8px;font-size:.92rem;font-weight:600;line-height:1.35;color:rgba(255,255,255,.9)}
 .form-group label.req::after{content:" *";color:var(--gold-light)}
-.contact-form input[type=text],.contact-form input[type=email],.contact-form input[type=tel],.contact-form textarea{width:100%;min-height:52px;padding:14px 16px;border:1px solid rgba(255,255,255,.24);border-radius:var(--radius);background:rgba(255,255,255,.04);color:#fff;font:inherit;font-size:1rem;transition:border-color .2s,background .2s}
+.contact-form input[type=text],.contact-form input[type=email],.contact-form input[type=tel],.contact-form textarea{width:100%;min-height:52px;padding:14px 16px;border:1px solid rgba(255,255,255,.42);border-radius:var(--radius);background:rgba(255,255,255,.04);color:#fff;font:inherit;font-size:1rem;transition:border-color .2s,background .2s}
 .contact-form textarea{resize:vertical;min-height:120px}
 .contact-form ::placeholder{color:rgba(255,255,255,.55)}
 .contact-form input:focus,.contact-form textarea:focus{outline:0;border-color:var(--gold-light);background:rgba(255,255,255,.07)}
@@ -643,7 +656,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
 .map-consent-actions{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px}
 
 /* ---------- Footer ---------- */
-.footer{background:#030a12;color:rgba(255,255,255,.7);padding:clamp(56px,7vw,96px) 0 calc(96px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line-ink)}
+.footer{background:#030a12;color:rgba(255,255,255,.7);padding:clamp(56px,7vw,96px) 0 calc(40px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line-ink)}
 .footer-top{display:grid;gap:28px;padding-bottom:clamp(40px,5vw,64px);border-bottom:1px solid var(--line-ink)}
 .footer-statement{max-width:16em;font-family:var(--font-heading);font-size:clamp(1.8rem,1.2rem + 2.4vw,3.2rem);line-height:1.12;letter-spacing:-.015em;color:#fff;text-wrap:balance}
 .footer-cta{display:flex;flex-wrap:wrap;gap:10px}
@@ -673,7 +686,7 @@ a.trust-item:hover .trust-big{color:var(--gold-light)}
   .footer-bottom{flex-direction:row;justify-content:space-between;align-items:center}
 }
 @media (min-width:1000px){
-  .footer{padding-bottom:40px}
+  .footer{padding-bottom:96px} /* the fixed "back to top" button rests below the language switch, not on it */
   .footer-top{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:64px}
 }
 
@@ -719,7 +732,7 @@ body:has(.legal-page){background:var(--ink)}
 
 /* ---------- Motion ---------- */
 @media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
+  html,html.smooth{scroll-behavior:auto}
   *,*::before,*::after{animation:none!important;transition:none!important}
   .js .fade-in{opacity:1;transform:none}
 }
