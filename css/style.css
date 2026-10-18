@@ -282,7 +282,7 @@ h2>.eyebrow{margin-bottom:16px}
 .hero-cta .btn-text{justify-content:center}
 /* below 360px "Anfrageformular →" no longer fits beside the call button: the text link gets its own row */
 @media (max-width:359px){.hero-cta{grid-template-columns:1fr}}
-.hero-appt{margin-top:16px;max-width:36em;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.62)}
+.hero-appt{margin-top:16px;max-width:36em;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.62);text-wrap:pretty}
 @media (max-width:639px){.hero-eyebrow .eyebrow-dot,.hero-eyebrow [data-i18n="hero_location"]{display:none}}
 @media (max-width:639px){.hero-copy{display:flex;flex-direction:column}.hero-cta{margin-top:22px}.hero-lead{order:1;margin-top:20px}}
 @media (max-width:999px) and (max-height:520px) and (min-aspect-ratio:1/1){.hero-media{height:34svh}.hero-inner{padding-bottom:28px}.hero h1{font-size:clamp(1.5rem,1rem + 2.4vw,2.2rem)}.hero-lead{display:none}.hero-cta{margin-top:16px}}
