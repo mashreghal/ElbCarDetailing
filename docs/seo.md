@@ -1,6 +1,6 @@
 # SEO notes
 
-*As of 2026-10-18. What Google and Bing see of www.elbcar-detailing.de, what was changed on the website and why, and what Ahmet still has to do. This file is not published on the website (`docs` is in the `exclude` list of `_config.yml`); the README links here.*
+*As of 2026-10-18. What Google and Bing see of www.elbcar-detailing.de, what was changed on the website and why, and what Ahmet still has to do. This file is not published on the website (`docs` is in the `exclude` list of `_config.yml`), but like the whole repository it is public on GitHub; the README links here.*
 
 *Sources: four audits on 2026-10-18 (technical; text and search terms; local listings and brand; languages and search-result appearance), a tested prototype of the changes, and a final check of the branch `seo/optimize` on a local copy. Search Console data, Business Profile insights and real-user speed data cannot be seen from outside; they are in Ahmet's accounts (section 5).*
 
@@ -51,7 +51,7 @@ The live site was at commit `47afdf6`, then at `ebbeb60`. That second commit cha
 
 - **Scores.** SEO, Accessibility and Best Practices were 100 in all 13 runs.
 - **Slow test CPU.** Lighthouse itself warned that the test CPU was slower than its baseline, so the phone TBT values are probably too high.
-- **Layout work.** Of 3.0–4.4 s main-thread time on the phone, 2.3–3.2 s went to style and layout. Part of that came from the German texts being rewritten on every load (changed in SEO-09).
+- **Layout work.** Of 3.0–4.4 s main-thread time on the phone, 2.3–3.2 s went to style and layout. Only a small part of that came from the German texts being rewritten on every load (about 15–55 ms with a 4× slower CPU; changed in SEO-09).
 - **First load on a phone.** 15 requests and 467 KiB: HTML 19.7 KB, CSS 12.7 KB, JS 27 KB, fonts about 71 KB, studio photos about 285 KB.
 - **Host limit.** Short cache lifetimes (13 files, about 405 KiB that returning visitors download again) come from GitHub Pages and cannot be fixed there.
 - **Run Lighthouse in German.** The Lighthouse command line uses an English browser by default, and the site then shows English. Always audit with `--lang=de-DE` (section 7).
@@ -124,16 +124,18 @@ Branch `seo/optimize`. Pull request: *(fill in after the merge)*.
 
 Commits on the branch:
 
-- `4d97add`: SEO-01 to SEO-05;
-- `d34abf9`: SEO-06;
-- `7e9066f`: SEO-07 and SEO-08;
-- `337aaa5`: SEO-09;
-- `8ce6b6a`: the former name;
-- the commit that adds this file.
+- `845babd`: hosting decision record, gallery guide and photo alignment tool (not SEO);
+- `28a3d98`: SEO-01 to SEO-05;
+- `d669ad5`: SEO-06;
+- `f6ec2f9`: SEO-07 and SEO-08;
+- `23a4f8d`: SEO-09;
+- `77f6127`: the former name;
+- the commit that adds this file;
+- "SEO: fix review findings": corrections to this file and the homepage date in `sitemap.xml`.
 
-A squash merge creates one new commit on `main`; note its hash here.
+The pull request is merged with a merge commit, like #9 to #11, so the commits above keep their hashes on `main`; note the merge commit's hash here.
 
-**Before merging:** if the merge happens after 2026-10-18, set the homepage `<lastmod>` in `sitemap.xml` to the day it goes live.
+**Before merging:** if the merge happens after 2026-10-19, set the homepage `<lastmod>` in `sitemap.xml` to the day it goes live and update the SEO-08 row.
 
 | ID | Change | Before → after | Files |
 |---|---|---|---|
@@ -144,7 +146,7 @@ A squash merge creates one new commit on `main`; note its hash here.
 | SEO-05 | Image descriptions (alt texts) name the place and the service | Hero photo "…in der Halle von ElbCar Detailing in Hamburg-Finkenwerder"; engine pair "…Motorwäsche"; Volvo pair "…Innenreinigung" | `index.html`, `js/main.js` |
 | SEO-06 | Structured data as a `@graph` | The business gets the `@id` `…/#business`, the Google listing (CID) as `hasMap` and `sameAs`, and the 8 services as an `OfferCatalog`; new `WebSite` node. Still no hours, ratings or reviews | `index.html` |
 | SEO-07 | The legal pages link to the preferred homepage address | 16 links `index.html…` → `./…` | `impressum.html`, `datenschutz.html`, `README.md` |
-| SEO-08 | Sitemap date of the homepage | `lastmod` 2026-10-17 → 2026-10-18; legal pages unchanged | `sitemap.xml` |
+| SEO-08 | Sitemap date of the homepage | `lastmod` 2026-10-17 → 2026-10-19, the go-live day (see "Before merging"); legal pages unchanged | `sitemap.xml` |
 | SEO-09 | German page loads keep the HTML as it is instead of rewriting all 274 texts with the same words | Less work for phones on every German page view; the language buttons carry their state in the HTML | `js/main.js`, `index.html` |
 | Name | The former name is mentioned once (DE/EN/TR) | About: "Bei ElbCar Detailing – früher Fahrzeugaufbereitung Parlack – …"; structured data `alternateName` "Fahrzeugaufbereitung Parlack". Review texts unchanged | `index.html`, `js/main.js` |
 
@@ -153,11 +155,11 @@ A squash merge creates one new commit on `main`; note its hash here.
 - **Text and translations**
   - The German HTML matches `translations.de` exactly (274 translated elements), and every key exists in German, English and Turkish (274 each).
   - Switching DE → TR → DE gives exactly the first page again.
-  - An English browser gets English, `?lang=tr` gives Turkish, and Googlebot always gets German.
+  - An English browser gets English, `?lang=tr` gives Turkish, and Googlebot gets German at `/`.
 - **Search snippet**
   - The title is 529 px.
   - Description: German 130 characters / 842 px, English 135 / 836 px. Both are under the limit of about 920 px.
-  - The Turkish description is 155 characters / 975 px, too long for a search result. JavaScript sets it only after a switch to Turkish, so it is never indexed. Shorten it during the Turkish wording review (section 5).
+  - The Turkish description is 155 characters / 975 px, too long for a search result. Only JavaScript sets it (Turkish browsers, `?lang=tr` or the TR button). Google indexes the German page at `/`, and `?lang=tr` names `/` as its canonical address, so the Turkish description is not expected in search results. Shorten it during the Turkish wording review (section 5).
 - **Search terms in the text** (all body text, closed FAQ answers included):
 
   | Term | Before | After |
@@ -171,7 +173,7 @@ A squash merge creates one new commit on `main`; note its hash here.
 
 - **Layout**
   - No horizontal scrolling and no word cut in the middle at 27 widths from 320 to 1920 px, in all three languages.
-  - The new H1 takes 3 lines on phones from 320 to 414 px (before: 2 to 4), 2 lines at 430–540 px, 1 line at 600–999 px, and 3 lines in the desktop layout, as before.
+  - The new H1 takes 3 lines on phones from 320 to 414 px (before: 2 to 4), 2 lines at 430–540 px, 1 line at 600–999 px, and 3 lines in the desktop layout. Before, the desktop H1 also took 3 lines, except on laptop screens up to 820 px high and about 1100–1240 px wide: there it took 2, with "Fahrzeug-" broken at the hidden hyphen. On those screens the WhatsApp button now sits 22–24 px lower, still well above the fold.
   - On most phones the WhatsApp button moves down by up to 34 px and stays well above the fold. On a 320×568 phone it moves up by 33 px, because the H1 there now takes 3 lines instead of 4.
 
   | Phone screen | Button bottom before | After |
@@ -199,13 +201,14 @@ A squash merge creates one new commit on `main`; note its hash here.
   - Test setup: an emulated phone with a 4× slower CPU, 9 runs each.
   - The start-up code that runs when the page is ready took a median of 158 ms instead of 181 ms.
   - The time the page could not react to taps fell from 144 to 122 ms.
-  - An earlier prototype measured a larger gain (207 → 73 ms). In this final check the browser had usually drawn the page before the start-up code ran, so one full layout was needed either way.
+  - Re-check on 2026-10-19 (three series of 15–20 runs each): the start-up code does about 15–55 ms less work. Runs fall into a slow group (about 160–220 ms) and a fast group (about 25–100 ms) whose mix changes from series to series, so the median of a whole series can swing far in either direction; compare runs within one group.
 - **Lighthouse 12.8.2 on the local copy** (German; 3 phone runs and 2 desktop runs each for `main` and the branch)
   - Phone performance 88 → 88; desktop 100 → 100.
   - SEO, Accessibility and Best Practices 100 in every run.
   - TBT 0 ms for both versions, because the test computer is fast. CLS at most 0.016.
   - Impressum scored 97 and Datenschutz 96 on the phone.
   - The local server sends files uncompressed, so LCP (3.7 s on the phone) is higher than on the live site. Compare only runs made the same way.
+- **Re-check after the review fixes (2026-10-19, final branch):** all of the checks above passed again: pages in DE/EN/TR at 320, 390 and 1440 px, the form in DE/EN/TR, images, no requests to other hosts, the German sync check, the language flow, the legal-page links, the structured data and Lighthouse (SEO, Accessibility and Best Practices 100; phone performance 88, desktop 100).
 
 ### Deliberately not changed
 
@@ -526,7 +529,7 @@ i) **Lightbox image.** The empty lightbox `<img src="">` is the only W3C error. 
 
 ### Every time text changes
 
-1. **Change German text in both places.** Since 2026-10-18 the German page shows `index.html` exactly as it is. The German dictionary (`translations.de` in `js/main.js`) is used only when someone switches back to German from another language. So:
+1. **Change German text in both places.** Since 2026-10-18 the German page shows the static text of `index.html` exactly as it is. The German dictionary (`translations.de` in `js/main.js`) is used when someone switches back to German from another language, and it also supplies the German texts that the script creates on German pages: form messages, the package tag in the form, the labels of the studio photo row on phones and the map title. So:
    - change both files together;
    - in the HTML, write `&nbsp;` wherever the dictionary has `\u00a0`.
 2. **Run the sync check.**
@@ -580,7 +583,7 @@ i) **Lightbox image.** The empty lightbox `<img src="">` is the only W3C error. 
 
   After the deploy, Ahmet can paste the address into Google's Rich Results Test (search.google.com/test/rich-results) in his browser. Expected: "Local business", 0 errors.
 - **Sitemap parses:** `python -X utf8 -c "import xml.dom.minidom as m; m.parse('sitemap.xml'); print('sitemap OK')"`. Change `<lastmod>` only when a page's main content changes, and use the date it goes live.
-- **Links:** `grep -n 'href="index.html' *.html` prints nothing. Internal links use `./` or `./#section`.
+- **Links:** `grep -n 'href="index.html' *.html` prints nothing. Internal links use `./` or `./#section`, except in `404.html`, which keeps root-absolute links (`/`, `/impressum.html`) because GitHub Pages shows it at any address depth.
 - **No requests to other hosts before a click.** In DevTools → Network, reload and scroll: only requests to the site itself. Google Maps loads only after a click on the map.
 - **Headings fit** at 320, 390 and 1280 px (DevTools device toolbar): no horizontal scrolling and no word cut in the middle.
 
@@ -605,3 +608,4 @@ i) **Lightbox image.** The empty lightbox `<img src="">` is the only W3C error. 
 | Date | What | Numbers |
 |---|---|---|
 | 2026-10-18 | Four audits; SEO changes on branch `seo/optimize`; local verification | Sections 1 and 2 |
+| 2026-10-19 | Review fixes on the branch (this file, the sitemap date, two commit messages); all checks repeated | Section 2 |
