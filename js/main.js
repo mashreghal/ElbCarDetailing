@@ -895,7 +895,8 @@ function detectLanguage() {
     const saved = localStorage.getItem('elbcar-lang');
     if (isLang(saved)) return saved;
   } catch (e) { /* storage blocked */ }
-  // Search engines and audit tools (Googlebot, Lighthouse, headless browsers) keep the German default
+  // Crawlers whose user agent contains one of these words (e.g. Googlebot, Google-InspectionTool, Bingbot) keep the German default.
+  // The Lighthouse CLI's emulated phone does not: audit the German page with --chrome-flags="--lang=de-DE" or /?lang=de.
   if (!/bot|crawl|spider|slurp|lighthouse|headless|inspectiontool/i.test(navigator.userAgent || '')) {
     const prefs = (navigator.languages && navigator.languages.length) ? navigator.languages : [navigator.language || ''];
     for (const pref of prefs) {
@@ -922,7 +923,9 @@ const viaKeyboard = () => !lastInputPointer;
 
 // --- DOM Ready ---
 document.addEventListener('DOMContentLoaded', () => {
-  setLanguage(currentLang, false);
+  // The HTML is already German (it must match translations.de): rewriting all texts with the same words would only
+  // force a second full layout on every German page view. Other languages are applied as before.
+  if (currentLang !== 'de') setLanguage(currentLang, false);
   initNavbar();
   initMobileMenu();
   initBeforeAfterSliders();
