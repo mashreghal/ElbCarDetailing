@@ -28,38 +28,66 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "AutomotiveBusiness",
-    "name": "ElbCar Detailing",
-    "description": "Premium Autoaufbereitung und Autopflege in Hamburg-Finkenwerder – Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Besuche nur nach Terminvereinbarung.",
-    "url": "https://www.elbcar-detailing.de/",
-    "telephone": "+4915563205346",
-    "email": "elbcar.detailing@gmail.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Köhlfleet-Hauptdeich 3",
-      "addressLocality": "Hamburg",
-      "postalCode": "21129",
-      "addressCountry": "DE"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 53.5342197,
-      "longitude": 9.8806538
-    },
-    "hasMap": "https://www.google.com/maps/place/ElbCar+Detailing/@53.5342229,9.8780789,17z/data=!3m2!4b1!5s0x47b1851b58650805:0xb570381c6082a0c!4m6!3m5!1s0x47b18500606a0e2b:0x4894c8ea2e9e51a6!8m2!3d53.5342197!4d9.8806538!16s%2Fg%2F11l_8z_700",
-    "logo": "https://www.elbcar-detailing.de/images/logo-removebg.png",
-    "image": [
-      "https://www.elbcar-detailing.de/images/og-cover.jpg",
-      "https://www.elbcar-detailing.de/images/v2/hero-1600.webp"
-    ],
-    "sameAs": [
-      "https://www.instagram.com/elbcar"
-    ],
-    "priceRange": "ab 150 €",
-    "areaServed": {
-      "@type": "City",
-      "name": "Hamburg"
-    }
+    "@graph": [
+      {
+        "@type": "AutomotiveBusiness",
+        "@id": "https://www.elbcar-detailing.de/#business",
+        "name": "ElbCar Detailing",
+        "description": "Premium Autoaufbereitung und Autopflege in Hamburg-Finkenwerder – Innenreinigung, Lackkorrektur, Keramikversiegelung und mehr. Besuche nur nach Terminvereinbarung.",
+        "url": "https://www.elbcar-detailing.de/",
+        "telephone": "+4915563205346",
+        "email": "elbcar.detailing@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Köhlfleet-Hauptdeich 3",
+          "addressLocality": "Hamburg",
+          "postalCode": "21129",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.5342197,
+          "longitude": 9.8806538
+        },
+        "hasMap": "https://maps.google.com/?cid=5230025975414018470",
+        "logo": "https://www.elbcar-detailing.de/images/logo-removebg.png",
+        "image": [
+          "https://www.elbcar-detailing.de/images/og-cover.jpg",
+          "https://www.elbcar-detailing.de/images/v2/hero-1600.webp"
+        ],
+        "sameAs": [
+          "https://www.instagram.com/elbcar",
+          "https://maps.google.com/?cid=5230025975414018470"
+        ],
+        "priceRange": "ab 150 €",
+        "areaServed": {
+          "@type": "City",
+          "name": "Hamburg"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Leistungen",
+          "itemListElement": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Innenreinigung" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Außenaufbereitung" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lackkorrektur & Polieren" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Keramikversiegelung" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Motorwäsche" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Scheinwerferaufbereitung" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lederreinigung & -pflege" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reifenwechsel" } }
+          ]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.elbcar-detailing.de/#website",
+        "name": "ElbCar Detailing",
+        "url": "https://www.elbcar-detailing.de/",
+        "inLanguage": "de",
+        "publisher": { "@id": "https://www.elbcar-detailing.de/#business" }
+      }
+    ]
   }
   </script>
 
