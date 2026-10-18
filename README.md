@@ -12,6 +12,8 @@ A static, German-first site (with EN/TR translations) covering services, package
 - `datenschutz.html`, `impressum.html`: legal pages
 - `CNAME`, `robots.txt`, `sitemap.xml`: hosting and SEO
 - `TODO.md`: open ideas and tasks
+- `docs/`: project documentation (hosting decision record, gallery guide; not published on the website)
+- `tools/`: helper scripts, e.g. `tools/align_pairs.py` for before/after photo pairs (not published)
 
 ## Local preview
 Open `index.html` in a browser, or run `python -m http.server` in this folder.
