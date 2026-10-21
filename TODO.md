@@ -1,119 +1,103 @@
 # ElbCar Detailing - TODO
 
-## High impact — conversion wins
+*Note: For current SEO strategy, keyword mapping, and owner action items, see [`docs/seo.md`](docs/seo.md). For the 2026-10-21 usability, resilience, and validation pass and review follow-ups, see [`docs/gemini-fix-brief.md`](docs/gemini-fix-brief.md), [`docs/gemini-review-followup.md`](docs/gemini-review-followup.md), and [`docs/verification/`](docs/verification/).*
 
-- [ ] **Add entry prices to package cards** — the package cards (Premium / Exklusiv / Individuell) still say "Auf Anfrage". Reference prices by vehicle size are now in the Angebot & Preise section (2026-05-04), but the package cards themselves could still use entry prices ("Ab X €") for extra clarity.
-- [ ] **Simplify hero CTAs to 1 primary + 1 secondary** — now 3 buttons (Call/WhatsApp/Termin) after dropping Telegram (2026-04-24). Could go further: make WhatsApp the hero button, phone + Termin as secondary.
-- [ ] **Add social proof above the fold** — e.g. "★★★★★ 4.9 aus 47 Google-Bewertungen" near the hero, not buried after the gallery.
+## High impact — conversion & content wins
+
+- [ ] **Add entry prices to package cards** — the package cards (`Premium` / `Exklusiv` / `Individuelles Angebot`) still state *"Preis je nach Fahrzeuggröße und Zustand"* while guide prices by vehicle size are shown in the ledger above them (added 2026-05-04). Per-package or per-service starting prices wait for owner confirmation (`docs/seo.md`, section 5).
+- [ ] **Align vehicle-size terminology between guide prices and enquiry form** — the guide-price categories in `#pricing` (`Kleinwagen`, `Kompaktwagen`, `SUV`, `Transporter`) differ from the enquiry-size choices in `#contactForm` (`Klein (z. B. Polo, Golf)`, `Mittel (Limousine)`, `Groß (SUV, Kombi)`, `Transporter` — e.g. Golf is grouped under *Klein* in the form). Align the terminology once the intended mapping is confirmed with the owner; do not infer a new price classification for vehicle types.
+- [x] **Simplify hero CTAs to 1 primary + 1 secondary** — implemented in the v3 layout: WhatsApp is the primary CTA, with phone and form link as secondary actions.
+- [x] **Add social proof above the fold** — implemented in the trust strip immediately below the hero (`5,0 · 83 Bewertungen auf Google`, `Kleinwagen ab 150 €`, `Nur mit Termin`, and address).
 
 ## Medium impact
 
-- [ ] **Add an FAQ section** (before contact) — how long does it take, where do you work (mobile/shop), rough price for Keramikversiegelung, payment options, etc.
-- [ ] **Service area / location clarity** — small Google Map + "Wir bedienen ganz Hamburg und Umgebung" for trust and local SEO.
-- [ ] **Service cards should have pricing hooks** — each of the 8 service cards could end with "Ab XX €" or a "Jetzt anfragen" link.
-- [ ] **Page speed audit for gallery** — 9 before/after sliders = many images. Verify lazy loading + compression. Run PageSpeed Insights.
+- [x] **Add an FAQ section** (before contact) — implemented in section `06 Häufige Fragen` (`#faq`) with 9 questions and standalone answers (`SEO-04`).
+- [x] **Service area / location clarity** — consent-based Google Map (`#mapConsent`), address in trust strip/about/FAQ/contact/footer, and *"für Kunden aus ganz Hamburg und Umgebung"* in About and FAQ.
+- [x] **Service cards should have pricing/booking hooks** — each of the 8 services in `#services` has an *"Anfragen →"* link that pre-selects the service in `#contactForm`, and guide prices lead `#packages`.
+- [x] **Gallery image optimization (WebP, responsive `srcset`/`sizes`, lazy loading, progressive disclosure)** — all 8 aligned before/after pairs use responsive WebP sources with `loading="lazy"` and `decoding="async"` (see [`docs/gallery.md`](docs/gallery.md)).
+- [ ] **Live PageSpeed Insights & Search Console Core Web Vitals check** — verify field/lab performance on the live domain after deploys (see [`docs/seo.md`](docs/seo.md), section 2 & 5).
 
 ## Polish / nice-to-haves
 
-- [ ] **Gift vouchers (Gutscheine)** — premium detailing is a great gift, easy differentiator
-- [ ] **Owner's personal story** — 2–3 lines of "warum ich das mache" for emotional hook
+- [ ] **Gift vouchers (Gutscheine)** — pending owner questionnaire (`docs/seo.md`, section 5).
+- [ ] **Owner's personal story / experience details** — pending owner questionnaire (`docs/seo.md`, section 5).
 
 ## Operational / pending
 
-- [ ] **Replace logo with client's PNG** — client to provide original with transparent background
-- [ ] **Auto-update Instagram section via GitHub Action** — scheduled action fetches latest @elbcar posts and commits to repo
-- [x] **Tax ID in Impressum** — not needed: Ahmet is a Kleinunternehmer (§ 19 UStG, confirmed by email 2026-10-09); the Impressum carries the Kleinunternehmer note
-- [ ] **More languages** — Polish, Arabic, Russian discussed
+- [ ] **Replace logo with client's original PNG** — if a higher-resolution source file is provided by the client.
+- [ ] **Auto-update Instagram section via GitHub Action** — optional future automation; currently the studio photography band links directly to `@elbcar`.
+- [x] **Tax ID in Impressum** — not needed: Ahmet is a Kleinunternehmer (§ 19 UStG, confirmed by email 2026-10-09); the Impressum carries the Kleinunternehmer note.
+- [ ] **More languages / dedicated `/en/` and `/tr/` URLs** — evaluate against Search Console and customer demand first (`docs/seo.md`, section 6 A).
 
-## Google visibility / SEO
+## Google visibility / SEO (owner & account actions)
 
-**Context:** On-site SEO is already solid (structured data, sitemap, meta, OG, canonical). The "invisible on Google" problem is local visibility — Google Business Profile is ~70% of the lever, website ~20%, backlinks/directories ~10%.
+**Context:** On-site technical SEO, structured data (`AutomotiveBusiness` + `WebSite` `@graph`), canonical URLs, `sitemap.xml`, and `robots.txt` are implemented and verified (see [`docs/seo.md`](docs/seo.md)). The remaining local ranking levers require owner/account access:
 
-### This week — biggest local impact
+### Priority 1 — immediate owner actions (see `docs/seo.md`, section 5)
 
-- [ ] **Fully optimize Google Business Profile** — claim at business.google.com if not already. Set primary category "Autoaufbereitung"/"Fahrzeugaufbereitung" + secondaries (Autowaschanlage, Autopolitur). Write 750-char natural German description with Hamburg + neighborhoods. Add every service to the services list. Upload 30+ photos (before/after, team, shop, specific brands).
-- [ ] **Weekly Google Posts on GBP** — like Instagram for Business Profile. A quick before/after or promo each week.
-- [ ] **Review gathering routine** — target 2–4 new reviews/week. Create short review link, print QR code cards for handover, send friendly WhatsApp 24h after pickup asking for review. Ask customers to name the specific service they got.
-- [ ] **Respond to every review within 24h** — good and bad. Google tracks response rate as a ranking signal.
-- [ ] **Review Search Console data after 2 weeks** (around 2026-05-02) — first real data available. Look at: which queries show impressions, click-through rate, any crawl errors, mobile usability issues.
-- [ ] **Monthly Search Console review** — check queries, impressions, clicks, average position. Spot keywords where we're on page 2 (positions 11–20) and push them into top 10 by tuning title/meta/content. Fix any crawl/indexing errors flagged.
+- [ ] **Remove opening hours from Google Business Profile** — set to appointment-only (no main hours), add *"Besuche nur nach vorheriger Terminvereinbarung"*, and add WhatsApp + `#contact` appointment links at `business.google.com`.
+- [ ] **Update Instagram bio and claim Apple Business Connect** — replace *"10-17 Uhr"* with *"Nur mit Termin"* on Instagram; claim Apple Maps place `I293CB7910510DA0D` and remove its hours.
+- [ ] **Fully optimize Google Business Profile** — list all 8 services and the packages, verify attributes, and upload additional before/after photos.
+- [ ] **Weekly Google Posts on GBP** — post a before/after photo and service highlight every 1–2 weeks.
+- [ ] **Review gathering routine & replies** — use the direct review link / QR code at handover and reply to every review; confirm current review count for the website monthly.
+- [ ] **Search Console review & re-indexing** — export baseline numbers, request indexing after deploys, and review queries/impressions monthly.
 
-### Next 1–3 months — compounds over time
+### Priority 2 — next 1–3 months
 
-- [ ] **Local citations / directory listings** — consistent Name/Address/Phone on Das Örtliche, Gelbe Seiten, 11880, Bing Places, Apple Maps, Yelp DE, Branchenbuch-Deutschland, Cylex.
-- [ ] **Service-specific landing pages** — Google ranks pages, not sites. Build dedicated pages:
-  - `/keramikversiegelung-hamburg`
-  - `/lackkorrektur-hamburg`
-  - `/autoaufbereitung-hamburg-hafen`
-  - `/innenreinigung-auto-hamburg`
-  Each: 400–600 words genuine content, before/after photos, local context, internal link back to packages + contact.
-- [ ] **Neighborhood / area pages** — catch "near me" searches:
-  - `/fahrzeugaufbereitung-altona`
-  - `/autoaufbereitung-harburg`
-  - (add districts as relevant)
-- [ ] **Blog / "Aktuelles" section** — 1 post/month on topics customers actually Google: "Wie oft Keramikversiegelung erneuern?", "Lohnt sich Lackkorrektur beim Gebrauchtwagen?", "Was kostet professionelle Autoaufbereitung in Hamburg?"
+- [ ] **Bing Places & Bing Webmaster Tools** — import from Google Business Profile *after* opening hours are removed; submit `sitemap.xml`.
+- [ ] **Local citations / directory listings** — consistent Name/Address/Phone without opening hours on Das Örtliche, Gelbe Seiten, Das Telefonbuch, hamburg.de, Yelp, Cylex, OpenStreetMap, 11880, and werkenntdenbesten.
+- [ ] **Service-specific landing pages (blocked on owner questionnaire, `docs/seo.md` section 6 B)** — build `/keramikversiegelung-hamburg`, `/lackkorrektur-hamburg`, and `/innenreinigung-hamburg` only once owner facts (durations, process details, pricing scope) are confirmed.
+- [~] ~~**Neighborhood / district landing pages** (`/fahrzeugaufbereitung-altona`, `/autoaufbereitung-harburg`, etc.)~~ — **Superseded / decided against** in [`docs/seo.md`](docs/seo.md) (section 6 B & 6 E): district pages would be doorway pages and go beyond the confirmed *"Hamburg und Umgebung"* framing.
+- [ ] **Quality backlinks & social signals** — local automotive partners, clubs, and regular Instagram/video updates.
 
-### Ongoing — forever
+## Roadmap: Google ranking + Google Ads (added 2026-10-09, updated 2026-10-21)
 
-- [ ] **Quality backlinks** — local Hamburg blogs, car forums, sponsor a local car club event, partner with used-car dealers (they link as detailing partner).
-- [ ] **Social signals** — regular Instagram (already in TODO), consider YouTube shorts for before/after reels.
-- [ ] **Track & adjust** — monthly check of Search Console + GBP insights to see what's actually driving traffic, adjust content accordingly.
-
-### SEO top 3 if time is tight
-
-1. **Fully optimize + post weekly on Google Business Profile**
-2. **Systematic review gathering** (2–4/week, every week)
-3. **Google Search Console + 3 service-specific landing pages**
-
-## Completed
-
-- [x] Reference prices by vehicle size in Angebot & Preise section (2026-05-04) — Kleinwagen ab 150 €, Kompaktwagen ab 200 €, SUV ab 250 €, Transporter ab 300 €. Per Ahmet's request, since many customers have no idea what detailing costs.
-- [x] Google Search Console verified (elbcar-detailing.de, domain property, auto via GoDaddy) + sitemap.xml submitted (2026-04-18) — GSC is a monitoring tool, not a ranking booster. Effect: faster indexing + visibility into which queries drive impressions/clicks so we can tune content. Real data expected in 1–2 weeks.
-- [x] Sticky mobile call button — always-visible tap-to-call on mobile (2026-04-18)
-- [x] Response-time guarantee near contact form — "Antwort innerhalb eines Werktages garantiert" (2026-04-18)
-- [x] Fourth package card "Nichts dabei?" for individual offer (2026-04-18)
-- [x] Drop Basis package, keep Premium / Exklusiv / Individuell (2026-04-18)
-- [x] Review translations EN/TR with "Translated from German" note
-- [x] Google Maps links open business listing directly
-- [x] Google reviews section with 5-star ratings
-- [x] Angebot & Preise section between Über Uns and Kontakt
-- [x] Custom domain elbcar-detailing.de
-- [x] Formspree endpoint switched to client's (elbcar.detailing@gmail.com)
-- [x] Owner photo added and styled
-- [x] Logo restored to original blue/silver with transparent background
-- [x] Hero CTA buttons (mobile + desktop): Call, WhatsApp, Telegram, Termin
-- [x] Brighter Elbe blue palette
-- [x] Mobile hero spacing optimized
-
-## Roadmap: Google ranking + Google Ads (added 2026-10-09)
-
-Goal: rank higher on Google locally (Hamburg) and later run Google Ads. Order: legal, then organic, then site, then ads.
-
-### 1. Legal basics (before anything else)
-- [x] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (Ahmet replied 2026-10-09: "Ich bin Kleinunternehmer und habe keine Umsatzsteuer")
+### 1. Legal basics
+- [x] Get VAT ID (or Kleinunternehmer note) from Ahmet and fix Impressum (Ahmet replied 2026-10-09: *"Ich bin Kleinunternehmer und habe keine Umsatzsteuer"*)
 - [x] Update law references in Impressum (DDG and MStV instead of TMG and RStV)
 - [x] Update Datenschutz for GitHub hosting, Formspree and Google Maps
-  - [ ] Formspree data transfer to the USA (future to-do, noted 2026-10-18): Formspree is NOT on the official EU-US Data Privacy Framework list (searched https://www.dataprivacyframework.gov/list on 2026-10-18), and its privacy policy names no transfer safeguard. Options: (a) ask team@formspree.io for a data processing agreement with EU standard contractual clauses on the current plan (a third-party blog claims DPAs exist only on the Business plan; unverified), or (b) switch to an EU-hosted form service. Afterwards name the chosen basis in datenschutz.html, section 'Datenübermittlung in die USA'.
+  - [ ] Formspree data transfer to the USA (noted 2026-10-18): Formspree is not on the official EU-US Data Privacy Framework list. Options: (a) request a DPA with EU Standard Contractual Clauses from Formspree, or (b) move form handling to a Cloudflare Worker + Email Service when migrating hosting (see [`docs/hosting.md`](docs/hosting.md)).
 
 ### 2. Get found on Google
-- [ ] Fully set up Google Business Profile (categories, services, 30+ photos, appointment only instead of opening hours since 2026-10-17, WhatsApp link)
-- [ ] Weekly reviews (2-4/week) and reply to every review
+- [ ] Fully set up Google Business Profile (remove opening hours, add services, packages, photos, WhatsApp link)
+- [ ] Weekly reviews and reply to every review
 - [ ] Weekly Business Profile posts
-- [ ] Local directory listings with identical name, address, phone
-- [ ] Landing pages: Keramikversiegelung, Lackkorrektur, Innenreinigung (Hamburg context, before/after photos)
-- [ ] District pages (Altona, Harburg, ...)
-- [ ] LocalBusiness structured data, refresh sitemap, use www consistently in sitemap and robots.txt
+- [ ] Local directory listings with identical name, address, phone (no hours)
+- [ ] Service landing pages (`Keramikversiegelung`, `Lackkorrektur`, `Innenreinigung`) once owner questionnaire is answered
+- [~] ~~District pages (Altona, Harburg, ...)~~ — **Superseded**; decided against in [`docs/seo.md`](docs/seo.md)
+- [x] `LocalBusiness` (`AutomotiveBusiness` + `WebSite`) structured data, refreshed `sitemap.xml`, consistent `www` canonicals and `robots.txt` (`SEO-06` to `SEO-08`)
 - [ ] Monthly Search Console review
 
 ### 3. Site improvements
-- [ ] Compress gallery images (WebP, lazy loading), run PageSpeed Insights
-- [ ] FAQ, "ab" prices on package cards, social proof near the top
-- [ ] Optional: Cloudflare in front of GitHub Pages
+- [x] Compress gallery images (WebP, responsive `srcset`, lazy loading) and align before/after pairs (`docs/gallery.md`)
+- [x] FAQ section (`#faq`) and social proof in the trust strip near the top (`ab` prices on individual package cards remain open pending owner input)
+- [ ] Optional: Cloudflare migration (see [`docs/hosting.md`](docs/hosting.md))
 
 ### 4. Google Ads (later)
-- [ ] Cookie consent banner with Consent Mode v2
+- [ ] Cookie consent banner with Consent Mode v2 (required before running ads/conversion tags)
 - [ ] Conversion tracking for form, phone, WhatsApp
 - [ ] Ads account, link Business Profile, check Keyword Planner costs
-- [ ] Test: 10-15 EUR/day for 6-8 weeks, compare cost per enquiry with job value
+- [ ] Test: 10–15 EUR/day for 6–8 weeks, compare cost per enquiry with job value
 
-Questions for Ahmet: average job value, service radius, existing Business Profile and reviews?
+## Completed
+
+- [x] **Implementation brief & review follow-up fixes ([`docs/gemini-fix-brief.md`](docs/gemini-fix-brief.md), [`docs/gemini-review-followup.md`](docs/gemini-review-followup.md), 2026-10-21)** — all 6 brief tasks and 3 review follow-up items implemented and verified locally (see [`docs/verification/`](docs/verification/)):
+  1. **Task 1 (P1) & Follow-up #1 (P2):** Added compact mobile header language disclosure (`#langDropdown` / `#langTrigger` / `#langPicker`) with globe icon, native language names (`Deutsch`, `English`, `Türkçe`), >=44×44px touch targets, keyboard/Escape/outside-click handling, panel coordination with `#navMenu`, and focus transfer across the `1100px` breakpoint (`1099px <-> 1100px`) between mobile and desktop header language controls (`preventScroll`); hid duplicate mobile header WhatsApp CTA below `1100px` while preserving `.mbar`, hero/contact CTAs, and desktop header controls at >=1100px.
+  2. **Task 2 (P2):** Removed premature `<head>` `.js` hiding marker; made `.fade-in` content visible by default in CSS; gated gallery collapsing on `.is-collapsible` installed by `initGalleryMore()`; provided a compact in-flow mobile navigation fallback across `index.html`, `impressum.html`, and `datenschutz.html` when JS is disabled or `js/main.js` fails; isolated initializers with `runInit()` and guarded `IntersectionObserver`.
+  3. **Task 3 (P2) & Follow-up #2 (P3):** Removed unreachable Telegram option from `#contactForm` preferences; gated callback/WhatsApp radio options on conditional validation readiness (`[data-channel-cond]`); conditionally required `#cf-phone` with visible hint (`#cf-phone-hint`) and `.req` label when callback or WhatsApp is selected; separated missing-required (`form_error_phone`), malformed-required (`form_error_phone_invalid`), and malformed-optional (`form_error_phone_optional`) phone error messages across DE/EN/TR and re-evaluated active phone errors on channel change while preserving user input and existing `aria-describedby` IDs.
+  4. **Task 4 (P3):** Made hero image `<link rel="preload">` media queries mutually exclusive (`(aspect-ratio > 1/1) and (min-height: 521px)` vs `(max-aspect-ratio: 1/1), (max-height: 520px)`), eliminating duplicate hero preloads at square viewports (`800×800`).
+  5. **Task 5 (P3):** Removed static empty `<img src="" alt="">` from `#lightbox`; dynamically created and attached the `<img>` with valid `src` and `alt` when opening the lightbox and removed it on close.
+  6. **Task 6 (P3) & Follow-up #3:** Reconciled `TODO.md`, included all 6 before/after screenshots in `docs/screenshots/`, and saved reproducible standalone Node and Chromium CDP verification scripts and raw results in `docs/verification/`.
+- [x] SEO pass, former name *Fahrzeugaufbereitung Parlack*, project docs (`docs/seo.md`, `docs/gallery.md`, `docs/hosting.md`) (2026-10-19)
+- [x] Reference prices by vehicle size in Angebot & Preise section (2026-05-04) — Kleinwagen ab 150 €, Kompaktwagen ab 200 €, SUV ab 250 €, Transporter ab 300 €
+- [x] Google Search Console verified (`elbcar-detailing.de`, domain property, auto via GoDaddy) + `sitemap.xml` submitted (2026-04-18)
+- [x] Sticky mobile call/WhatsApp action bar (2026-04-18)
+- [x] Response-time promise near contact form (2026-04-18)
+- [x] Custom offer option ("Nichts dabei?") and Premium / Exklusiv packages (2026-04-18)
+- [x] Review translations EN/TR with "Translated from German" note
+- [x] Google Maps links open business listing directly + privacy-friendly click-to-load embedded map
+- [x] Google reviews section with 5-star ratings
+- [x] Custom domain `elbcar-detailing.de`
+- [x] Formspree endpoint switched to client's (`elbcar.detailing@gmail.com`)
+- [x] Owner photo added and styled
+- [x] Logo with transparent background and responsive WebP `srcset`

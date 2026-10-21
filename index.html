@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script>document.documentElement.classList.add('js')</script>
   <title data-i18n="meta_title">Autoaufbereitung Hamburg-Finkenwerder | ElbCar Detailing</title>
   <meta name="description" data-i18n-content="meta_description" content="Autoaufbereitung in Hamburg-Finkenwerder: Innenreinigung, Lackkorrektur, Keramikversiegelung. Kleinwagen ab 150 €, nur mit Termin.">
 
@@ -95,7 +94,7 @@
 
   <meta name="theme-color" content="#06121f">
   <!-- Hero photo: from 1000px it covers a box 50vw wide and (100vh - 169px) high, so with object-fit:cover it is drawn up to 1.78 x that height wide -->
-  <link rel="preload" as="image" media="(min-aspect-ratio: 1/1) and (min-height: 521px)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="(min-width: 1000px) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" fetchpriority="high">
+  <link rel="preload" as="image" media="(aspect-ratio > 1/1) and (min-height: 521px)" href="images/v2/hero-1600.webp" imagesrcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" imagesizes="(min-width: 1000px) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" fetchpriority="high">
   <link rel="preload" as="image" media="(max-aspect-ratio: 1/1), (max-height: 520px)" href="images/v3/hero-m-960.webp" imagesrcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" imagesizes="100vw" fetchpriority="high">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -136,6 +135,18 @@
         </div>
       </div>
       <a href="https://wa.me/4915563205346?text=Hallo%20ElbCar%20Detailing%2C%20ich%20m%C3%B6chte%20einen%20Termin%20anfragen.%20Mein%20Fahrzeug%3A%20" target="_blank" rel="noopener" class="nav-cta"><svg class="ico-wa" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span data-i18n="hero_btn_contact">Termin anfragen</span></a>
+      <div class="lang-dropdown" id="langDropdown">
+        <button type="button" class="lang-trigger" id="langTrigger" aria-label="Sprache wählen: Deutsch" data-i18n-aria="aria_lang_current" aria-expanded="false" aria-controls="langPicker">
+          <svg class="ico-globe" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <span class="lang-trigger-code">DE</span>
+          <svg class="ico-chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="lang-picker" id="langPicker" role="group" aria-label="Sprache wählen" data-i18n-aria="aria_lang" hidden>
+          <button type="button" class="lang-option active" data-lang="de" lang="de" aria-pressed="true"><span class="lang-option-name">Deutsch</span><span class="lang-option-code" aria-hidden="true">DE</span></button>
+          <button type="button" class="lang-option" data-lang="en" lang="en" aria-pressed="false"><span class="lang-option-name">English</span><span class="lang-option-code" aria-hidden="true">EN</span></button>
+          <button type="button" class="lang-option" data-lang="tr" lang="tr" aria-pressed="false"><span class="lang-option-name">Türkçe</span><span class="lang-option-code" aria-hidden="true">TR</span></button>
+        </div>
+      </div>
       <button type="button" class="nav-toggle" aria-label="Menü" data-i18n-aria="aria_menu" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
@@ -151,7 +162,7 @@
     <div class="hero-media">
       <picture>
         <source media="(max-aspect-ratio: 1/1), (max-height: 520px)" type="image/webp" srcset="images/v3/hero-m-640.webp 640w, images/v3/hero-m-960.webp 960w" sizes="100vw" width="960" height="720">
-        <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="(min-width: 1000px) and (min-aspect-ratio: 1/1) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" width="1600" height="900" alt="Ferrari 488 Spider in der Halle von ElbCar Detailing in Hamburg-Finkenwerder" data-i18n-alt="alt_hero" fetchpriority="high" decoding="async">
+        <img src="images/v2/hero-1600.webp" srcset="images/v2/hero-960.webp 960w, images/v2/hero-1600.webp 1600w" sizes="(min-width: 1000px) and (aspect-ratio > 1/1) max(50vw, calc((100vh - 169px) * 1.78)), 100vw" width="1600" height="900" alt="Ferrari 488 Spider in der Halle von ElbCar Detailing in Hamburg-Finkenwerder" data-i18n-alt="alt_hero" fetchpriority="high" decoding="async">
       </picture>
       <p class="hero-caption"><span data-i18n="hero_caption_pre">In unserer Halle in</span> <span lang="de" data-i18n="hero_location">Hamburg-Finkenwerder</span><span data-i18n="hero_caption_post"></span></p>
     </div>
@@ -703,6 +714,7 @@
             <div class="form-group">
               <label class="req" for="cf-name" data-i18n="form_name">Ihr Name</label>
               <input type="text" id="cf-name" name="Name" required autocomplete="name">
+              <p class="form-error" id="cf-name-error" hidden></p>
             </div>
             <div class="form-group">
               <label class="req" for="cf-email" data-i18n="form_email">Ihre E-Mail</label>
@@ -710,8 +722,10 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="cf-phone" data-i18n="form_phone">Telefonnummer</label>
+            <label for="cf-phone" id="cf-phone-label" data-i18n="form_phone">Telefonnummer</label>
+            <p class="form-field-hint" id="cf-phone-hint" data-i18n="form_phone_required_hint" hidden>Erforderlich für Rückruf oder WhatsApp.</p>
             <input type="tel" id="cf-phone" name="Telefon" autocomplete="tel">
+            <p class="form-error" id="cf-phone-error" hidden></p>
           </div>
 
           <p class="form-label-hint" data-i18n="form_optional_hint">Optional – hilft uns, schneller ein Angebot zu erstellen</p>
@@ -744,13 +758,12 @@
 
           <details class="form-more">
             <summary data-i18n="form_more">Weitere Angaben (optional)</summary>
-            <fieldset class="form-choice">
+            <fieldset class="form-choice" id="cf-contact-pref">
               <legend class="form-label" data-i18n="form_contact_pref_label">Wie möchten Sie kontaktiert werden?</legend>
               <div class="form-pills">
-                <label class="form-pill"><input type="radio" name="Kontaktart" value="E-Mail"><span data-i18n="form_contact_pref_email">E-Mail</span></label>
-                <label class="form-pill"><input type="radio" name="Kontaktart" value="Rückruf"><span data-i18n="form_contact_pref_callback">Rückruf</span></label>
-                <label class="form-pill"><input type="radio" name="Kontaktart" value="WhatsApp"><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></label>
-                <label class="form-pill"><input type="radio" name="Kontaktart" value="Telegram"><span data-i18n="form_contact_pref_telegram">Telegram</span></label>
+                <label class="form-pill"><input type="radio" name="Kontaktart" value="E-Mail" checked><span data-i18n="form_contact_pref_email">E-Mail</span></label>
+                <label class="form-pill" data-channel-cond hidden><input type="radio" name="Kontaktart" value="Rückruf" disabled><span data-i18n="form_contact_pref_callback">Rückruf</span></label>
+                <label class="form-pill" data-channel-cond hidden><input type="radio" name="Kontaktart" value="WhatsApp" disabled><span data-i18n="form_contact_pref_whatsapp">WhatsApp</span></label>
               </div>
             </fieldset>
 
@@ -879,7 +892,6 @@
   <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Bildansicht" data-i18n-aria="aria_viewer">
     <button type="button" class="lb-close" aria-label="Schließen" data-i18n-aria="aria_close">&times;</button>
     <button type="button" class="lb-nav lb-prev" aria-label="Vorheriges Bild" data-i18n-aria="aria_prev">&#8249;</button>
-    <img src="" alt="">
     <button type="button" class="lb-nav lb-next" aria-label="Nächstes Bild" data-i18n-aria="aria_next">&#8250;</button>
   </div>
 

@@ -20,6 +20,7 @@ const translations = {
     hero_btn_form: "Anfrageformular",
     trust_label: "Auf einen Blick",
     aria_lang: "Sprache wählen",
+    aria_lang_current: "Sprache wählen: Deutsch",
     nav_faq: "FAQ",
     svc_ask: "Anfragen",
     pkg_price_note: "Preis je nach Fahrzeuggröße und Zustand",
@@ -274,9 +275,14 @@ const translations = {
     form_condition_heavy: "Stark verschmutzt",
     form_response_promise: "Antwort in der Regel innerhalb eines Werktages",
     form_btn: "Anfrage senden",
+    form_phone_required_hint: "Erforderlich für Rückruf oder WhatsApp.",
     form_sending: "Wird gesendet…",
     form_success: "Vielen Dank! Ihre Anfrage wurde gesendet. Wir melden uns in der Regel innerhalb eines Werktages.",
     form_error_required: "Bitte füllen Sie alle markierten Pflichtfelder aus.",
+    form_error_name: "Bitte geben Sie Ihren Namen ein.",
+    form_error_phone: "Bitte geben Sie für Rückruf oder WhatsApp Ihre Telefonnummer ein.",
+    form_error_phone_invalid: "Bitte geben Sie eine gültige Telefonnummer für Rückruf oder WhatsApp ein.",
+    form_error_phone_optional: "Bitte geben Sie eine gültige Telefonnummer ein oder lassen Sie das Feld für eine Antwort per E-Mail leer.",
     form_error_send: "Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder rufen Sie uns an.",
     form_privacy_text: "Mit dem Absenden werden Ihre Angaben über den Dienst Formspree an uns übermittelt und zur Bearbeitung Ihrer Anfrage verarbeitet.",
     form_privacy_link: "Mehr in der Datenschutzerklärung",
@@ -320,6 +326,7 @@ const translations = {
     hero_btn_form: "Enquiry form",
     trust_label: "At a glance",
     aria_lang: "Choose language",
+    aria_lang_current: "Choose language: English",
     nav_faq: "FAQ",
     svc_ask: "Enquire",
     pkg_price_note: "Price depends on vehicle size and condition",
@@ -564,9 +571,14 @@ const translations = {
     form_condition_heavy: "Heavy soiling",
     form_response_promise: "We usually reply within one working day",
     form_btn: "Send Request",
+    form_phone_required_hint: "Required for a callback or WhatsApp reply.",
     form_sending: "Sending…",
     form_success: "Thank you! Your request has been sent. We usually reply within one working day.",
     form_error_required: "Please fill in all highlighted required fields.",
+    form_error_name: "Please enter your name.",
+    form_error_phone: "Please enter your phone number for a callback or WhatsApp reply.",
+    form_error_phone_invalid: "Please enter a valid phone number for a callback or WhatsApp reply.",
+    form_error_phone_optional: "Please enter a valid phone number or clear the field for an email reply.",
     form_error_send: "Sending failed. Please try again or give us a call.",
     form_privacy_text: "When you submit this form, your details are sent to us via the Formspree service and processed to handle your enquiry.",
     form_privacy_link: "More in our privacy policy",
@@ -609,6 +621,7 @@ const translations = {
     hero_btn_form: "Talep formu",
     trust_label: "Bir bakışta",
     aria_lang: "Dil seçin",
+    aria_lang_current: "Dil seçin: Türkçe",
     nav_faq: "SSS",
     svc_ask: "Talep et",
     pkg_price_note: "Fiyat, aracın boyutuna ve durumuna göre belirlenir",
@@ -853,9 +866,14 @@ const translations = {
     form_condition_heavy: "Çok kirli",
     form_response_promise: "Genellikle bir iş günü içinde yanıt veriyoruz",
     form_btn: "Talep Gönder",
+    form_phone_required_hint: "Geri arama veya WhatsApp yanıtı için gereklidir.",
     form_sending: "Gönderiliyor…",
     form_success: "Teşekkür ederiz! Talebiniz gönderildi. Genellikle bir iş günü içinde size geri dönüyoruz.",
     form_error_required: "Lütfen işaretlenen tüm zorunlu alanları doldurun.",
+    form_error_name: "Lütfen adınızı girin.",
+    form_error_phone: "Geri arama veya WhatsApp yanıtı için lütfen telefon numaranızı girin.",
+    form_error_phone_invalid: "Geri arama veya WhatsApp yanıtı için lütfen geçerli bir telefon numarası girin.",
+    form_error_phone_optional: "Lütfen geçerli bir telefon numarası girin veya e-posta yanıtı için alanı boş bırakın.",
     form_error_send: "Gönderme başarısız oldu. Lütfen tekrar deneyin veya bizi arayın.",
     form_privacy_text: "Formu gönderdiğinizde bilgileriniz Formspree hizmeti aracılığıyla bize iletilir ve talebinizin işlenmesi amacıyla kullanılır.",
     form_privacy_link: "Ayrıntılar Gizlilik Politikamızda",
@@ -921,25 +939,26 @@ document.addEventListener('pointerdown', () => { lastInputPointer = true; }, tru
 document.addEventListener('keydown', () => { lastInputPointer = false; }, true);
 const viaKeyboard = () => !lastInputPointer;
 
-// --- DOM Ready ---
-document.addEventListener('DOMContentLoaded', () => {
-  // The HTML is already German (it must match translations.de): rewriting all texts with the same words would only
-  // force a second full layout on every German page view. Other languages are applied as before.
-  if (currentLang !== 'de') setLanguage(currentLang, false);
-  initNavbar();
-  initMobileMenu();
-  initBeforeAfterSliders();
-  initLightbox();
-  initScrollAnimations();
-  initScrollToTop();
-  initActionBar();
-  initContactForm();
-  initMapConsent();
-  initBookingLinks();
-  initGalleryMore();
-  initSnapRows();
-  initReviewClamps();
-});
+// Shared panel closers so opening the language picker closes the mobile menu and vice versa
+let closeMobileMenuPanel = () => {};
+let closeLangPickerPanel = () => {};
+
+function syncLanguageUI(lang) {
+  if (!isLang(lang)) return;
+  const t = translations[lang];
+  document.querySelectorAll('.lang-btn, .lang-option').forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+  });
+  const trigger = document.getElementById('langTrigger');
+  if (trigger) {
+    const codeEl = trigger.querySelector('.lang-trigger-code');
+    if (codeEl) codeEl.textContent = lang.toUpperCase();
+    if (t.aria_lang_current) trigger.setAttribute('aria-label', t.aria_lang_current);
+  }
+  document.documentElement.lang = lang;
+}
 
 // --- Language Switching ---
 // persist=false on page load (link, saved choice or browser language): only a click on a language button stores the choice
@@ -981,34 +1000,155 @@ function setLanguage(lang, persist = true) {
     if (msg) a.href = a.getAttribute('href').split('?')[0] + '?text=' + encodeURIComponent(msg);
   });
 
-  // Update active lang button (aria-pressed tells screen readers which one is active)
-  document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
-    btn.setAttribute('aria-pressed', btn.dataset.lang === lang ? 'true' : 'false');
-  });
-
-  // Update HTML lang attribute
-  document.documentElement.lang = lang;
+  // Update mobile trigger, selected option, desktop/footer buttons and document.documentElement.lang together
+  syncLanguageUI(lang);
 
   // Review texts change length with the language: re-check which ones need "Read more"
   updateReviewClamps();
 }
 
-// Global handler for lang buttons
+function selectLanguage(lang) {
+  if (!isLang(lang)) return;
+  setLanguage(lang, true);
+  // A ?lang= link in the address bar would win on reload, so keep it in step with the choice while preserving hash/params
+  try {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('lang')) {
+      url.searchParams.set('lang', lang);
+      history.replaceState(null, '', url);
+    }
+  } catch (err) { /* old browser or file:// page */ }
+}
+
+// Global handler for desktop and footer lang buttons
 document.addEventListener('click', (e) => {
   const btn = e.target.closest('.lang-btn');
   if (btn) {
-    setLanguage(btn.dataset.lang);
-    // A ?lang= link in the address bar would win on reload, so keep it in step with the choice
-    try {
-      const url = new URL(window.location.href);
-      if (url.searchParams.has('lang')) {
-        url.searchParams.set('lang', btn.dataset.lang);
-        history.replaceState(null, '', url);
-      }
-    } catch (err) { /* old browser or file:// page */ }
+    selectLanguage(btn.dataset.lang);
   }
 });
+
+// --- Mobile Language Picker ---
+function initLanguagePicker() {
+  if (document.documentElement.hasAttribute('data-lang-lock') || !document.querySelector('[data-i18n]')) return;
+  document.documentElement.classList.add('lang-ready');
+  const dropdown = document.getElementById('langDropdown');
+  const trigger = document.getElementById('langTrigger');
+  const picker = document.getElementById('langPicker');
+  if (!dropdown || !trigger || !picker) return;
+  const navbar = dropdown.closest('.navbar') || document.body;
+  const options = Array.from(picker.querySelectorAll('.lang-option'));
+  const isOpen = () => !picker.hidden;
+
+  function setOpen(open, returnFocus) {
+    if (open) closeMobileMenuPanel(false);
+    picker.hidden = !open;
+    dropdown.classList.toggle('open', open);
+    navbar.classList.toggle('lang-open', open);
+    trigger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open && viaKeyboard()) {
+      const activeOpt = picker.querySelector('.lang-option.active') || options[0];
+      if (activeOpt) activeOpt.focus({ preventScroll: true, focusVisible: true });
+    } else if (!open && returnFocus) {
+      trigger.focus({ preventScroll: true, focusVisible: viaKeyboard() });
+    }
+  }
+
+  closeLangPickerPanel = setOpen;
+
+  trigger.addEventListener('click', () => setOpen(!isOpen()));
+
+  options.forEach(opt => {
+    opt.addEventListener('click', () => {
+      selectLanguage(opt.dataset.lang);
+      setOpen(false, true);
+    });
+  });
+
+  const headerLangSwitch = navbar.querySelector('.lang-switch');
+  const desktopBtns = headerLangSwitch ? Array.from(headerLangSwitch.querySelectorAll('.lang-btn')) : [];
+  const wide = window.matchMedia ? window.matchMedia('(min-width: 1100px)') : null;
+  let lastBreakpointBlur = null;
+
+  // If the browser blurs a newly hidden header language control during layout right before firing
+  // the matchMedia change event, remember it briefly so onWide can still transfer focus accurately.
+  document.addEventListener('focusout', (e) => {
+    if (!wide || e.relatedTarget) return;
+    if (wide.matches && dropdown.contains(e.target)) {
+      lastBreakpointBlur = e.target;
+    } else if (!wide.matches && headerLangSwitch && headerLangSwitch.contains(e.target)) {
+      lastBreakpointBlur = e.target;
+    }
+  });
+
+  // Dismiss when clicking or tapping outside the picker
+  document.addEventListener('pointerdown', (e) => {
+    lastBreakpointBlur = null;
+    if (isOpen() && !dropdown.contains(e.target)) setOpen(false, false);
+  });
+
+  // Dismiss when keyboard focus moves outside the disclosure
+  document.addEventListener('focusin', (e) => {
+    lastBreakpointBlur = null;
+    if (isOpen() && !dropdown.contains(e.target)) setOpen(false, false);
+  });
+
+  // Escape closes the picker and returns focus to the trigger; arrow keys move between language options
+  document.addEventListener('keydown', (e) => {
+    if (!isOpen()) return;
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      setOpen(false, true);
+      return;
+    }
+    if (!dropdown.contains(document.activeElement)) return;
+    const idx = options.indexOf(document.activeElement);
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      options[(idx + 1) % options.length].focus();
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      options[(idx - 1 + options.length) % options.length].focus();
+    } else if (e.key === 'Home') {
+      e.preventDefault();
+      options[0].focus();
+    } else if (e.key === 'End') {
+      e.preventDefault();
+      options[options.length - 1].focus();
+    }
+  });
+
+  const onWide = (e) => {
+    const active = (document.activeElement && document.activeElement !== document.body && document.activeElement !== document.documentElement)
+      ? document.activeElement
+      : lastBreakpointBlur;
+    lastBreakpointBlur = null;
+    if (e.matches) {
+      const hadMobileFocus = !!(active && dropdown.contains(active));
+      const focusedOpt = hadMobileFocus
+        ? ((typeof active.closest === 'function' && active.closest('.lang-option')) || (options.includes(active) ? active : null))
+        : null;
+      const targetLang = (focusedOpt && focusedOpt.dataset && focusedOpt.dataset.lang) || currentLang;
+      if (isOpen()) setOpen(false, false);
+      if (hadMobileFocus && desktopBtns.length) {
+        const targetBtn = desktopBtns.find(btn => btn.dataset.lang === targetLang) ||
+          desktopBtns.find(btn => btn.classList.contains('active')) ||
+          desktopBtns[0];
+        if (targetBtn && targetBtn.focus) {
+          targetBtn.focus({ preventScroll: true, focusVisible: viaKeyboard() });
+        }
+      }
+    } else {
+      const hadDesktopFocus = !!(active && headerLangSwitch && headerLangSwitch.contains(active));
+      if (isOpen()) setOpen(false, false);
+      if (hadDesktopFocus) {
+        trigger.focus({ preventScroll: true, focusVisible: viaKeyboard() });
+      }
+    }
+  };
+  if (wide && wide.addEventListener) wide.addEventListener('change', onWide);
+  else if (wide && wide.addListener) wide.addListener(onWide);
+}
 
 // --- Navbar Scroll ---
 function initNavbar() {
@@ -1029,11 +1169,12 @@ function initMobileMenu() {
   if (!toggle || !menu) return;
   const navbar = toggle.closest('.navbar') || document.body;
   const isOpen = () => menu.classList.contains('open');
-  // What the keyboard can reach while the open menu covers the page (logo, menu items, WhatsApp, menu button)
+  // What the keyboard can reach while the open menu covers the page (logo, menu items, language trigger, menu button)
   const focusables = () => Array.from(navbar.querySelectorAll('a[href], button:not([disabled])'))
     .filter(el => el.getClientRects().length && getComputedStyle(el).visibility !== 'hidden');
 
   function setOpen(open, returnFocus) {
+    if (open) closeLangPickerPanel(false);
     toggle.classList.toggle('active', open);
     menu.classList.toggle('open', open);
     navbar.classList.toggle('menu-open', open); // the bar stays opaque above the open menu
@@ -1043,9 +1184,11 @@ function initMobileMenu() {
       const first = menu.querySelector('a[href], button');
       if (first) first.focus({ preventScroll: true, focusVisible: viaKeyboard() }); // ring only when opened with the keyboard
     } else if (returnFocus) {
-      toggle.focus();
+      toggle.focus({ preventScroll: true, focusVisible: viaKeyboard() });
     }
   }
+
+  closeMobileMenuPanel = setOpen;
 
   toggle.addEventListener('click', () => setOpen(!isOpen()));
 
@@ -1072,6 +1215,8 @@ function initMobileMenu() {
   const onWide = (e) => { if (e.matches && isOpen()) setOpen(false); };
   if (wide && wide.addEventListener) wide.addEventListener('change', onWide);
   else if (wide && wide.addListener) wide.addListener(onWide);
+
+  document.documentElement.classList.add('nav-ready');
 }
 
 // --- Before/After Sliders ---
@@ -1142,18 +1287,26 @@ function initLightbox() {
   const box = document.getElementById('lightbox');
   if (!box) return;
   const links = Array.from(document.querySelectorAll('[data-lightbox]'));
-  const img = box.querySelector('img');
+  if (!links.length) return;
+  const nextBtn = box.querySelector('.lb-next');
   const buttons = Array.from(box.querySelectorAll('button'));
+  let img = box.querySelector('img');
   let idx = 0, opener = null;
   const show = (i) => {
     idx = (i + links.length) % links.length;
-    img.src = links[idx].getAttribute('href');
-    img.alt = links[idx].querySelector('img').alt;
+    const href = links[idx].getAttribute('href');
+    const thumb = links[idx].querySelector('img');
+    if (!img) img = document.createElement('img');
+    img.src = href;
+    img.alt = thumb ? thumb.alt : '';
+    if (!img.parentNode) box.insertBefore(img, nextBtn);
   };
   // The close button shows its focus ring only when the viewer was opened with the keyboard
   const open = (i) => { opener = document.activeElement; show(i); box.hidden = false; document.body.style.overflow = 'hidden'; box.querySelector('.lb-close').focus({ focusVisible: viaKeyboard() }); };
   const close = () => {
-    box.hidden = true; img.src = ''; document.body.style.overflow = '';
+    box.hidden = true;
+    if (img) { img.remove(); img = null; }
+    document.body.style.overflow = '';
     if (!opener || !opener.focus) return;
     // Keyboard users continue at the photo they opened; it is scrolled into view only if it is no longer on screen
     const r = opener.getBoundingClientRect();
@@ -1188,15 +1341,25 @@ function initLightbox() {
 
 // --- Scroll Animations ---
 function initScrollAnimations() {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  const items = document.querySelectorAll('.fade-in');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window) ||
+      (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    items.forEach(el => el.classList.add('visible'));
+    return;
+  }
+  try {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    items.forEach(el => observer.observe(el));
+  } catch (err) {
+    items.forEach(el => el.classList.add('visible'));
+  }
 }
 
 // --- Phone action bar (WhatsApp + call): shown once the hero buttons have scrolled away,
@@ -1271,6 +1434,7 @@ function initGalleryMore() {
   const wrap = document.querySelector('.gallery-more-wrap');
   if (!grid || !wrap) return;
   const btn = wrap.querySelector('.gallery-more');
+  if (!btn) return;
   const count = wrap.querySelector('.gallery-more-count');
   const hiddenItems = () => Array.from(grid.children).filter(el => getComputedStyle(el).display === 'none');
   const refresh = () => {
@@ -1297,6 +1461,7 @@ function initGalleryMore() {
     }
     requestAnimationFrame(() => { root.style.overflowAnchor = ''; });
   });
+  grid.classList.add('is-collapsible');
   refresh();
   window.addEventListener('resize', refresh);
 }
@@ -1436,10 +1601,74 @@ function initContactForm() {
   status.setAttribute('aria-live', 'polite');
   form.insertBefore(status, form.querySelector('button[type="submit"]'));
 
-  // The choice groups are labelled "Optional" – only Name and E-Mail are required.
-  const requiredRadioGroups = [];
+  const nameInput = form.querySelector('#cf-name');
+  const emailInput = form.querySelector('#cf-email');
+  const phoneInput = form.querySelector('#cf-phone');
+  const phoneLabel = form.querySelector('#cf-phone-label');
+  const phoneHint = form.querySelector('#cf-phone-hint');
+  const nameError = form.querySelector('#cf-name-error');
+  const phoneError = form.querySelector('#cf-phone-error');
+
+  function addDescribedBy(input, id) {
+    if (!input || !id) return;
+    const ids = (input.getAttribute('aria-describedby') || '').trim().split(/\s+/).filter(Boolean);
+    if (!ids.includes(id)) {
+      const errIdx = (phoneError && phoneError.id && id === (phoneHint && phoneHint.id))
+        ? ids.indexOf(phoneError.id)
+        : -1;
+      if (errIdx !== -1) ids.splice(errIdx, 0, id);
+      else ids.push(id);
+    }
+    input.setAttribute('aria-describedby', ids.join(' '));
+  }
+
+  function removeDescribedBy(input, id) {
+    if (!input || !id) return;
+    const ids = (input.getAttribute('aria-describedby') || '').trim().split(/\s+/).filter(Boolean).filter(x => x !== id);
+    if (ids.length) input.setAttribute('aria-describedby', ids.join(' '));
+    else input.removeAttribute('aria-describedby');
+  }
+
+  function showFieldError(input, errorEl, key) {
+    if (!input) return;
+    const t = translations[currentLang] || translations.de;
+    const group = input.closest('.form-group');
+    if (group) group.classList.add('has-error');
+    input.setAttribute('aria-invalid', 'true');
+    if (errorEl) {
+      errorEl.setAttribute('data-i18n', key);
+      errorEl.textContent = t[key] || translations.de[key] || '';
+      errorEl.hidden = false;
+      if (errorEl.id) addDescribedBy(input, errorEl.id);
+    }
+  }
+
+  function clearFieldError(input, errorEl) {
+    if (!input) return;
+    const group = input.closest('.form-group');
+    if (group) group.classList.remove('has-error');
+    input.removeAttribute('aria-invalid');
+    if (errorEl) {
+      errorEl.hidden = true;
+      errorEl.removeAttribute('data-i18n');
+      errorEl.textContent = '';
+      if (errorEl.id) removeDescribedBy(input, errorEl.id);
+    }
+  }
+
+  function clearStatusIfNoFieldErrors() {
+    if (status.classList.contains('form-status-error') &&
+        status.getAttribute('data-i18n') === 'form_error_required' &&
+        !form.querySelector('.form-group.has-error, [aria-invalid="true"]')) {
+      status.className = 'form-status';
+      status.removeAttribute('data-i18n');
+      status.textContent = '';
+    }
+  }
 
   function clearErrors() {
+    clearFieldError(nameInput, nameError);
+    clearFieldError(phoneInput, phoneError);
     form.querySelectorAll('.form-choice.has-error, .form-group.has-error').forEach(el => {
       el.classList.remove('has-error');
     });
@@ -1455,29 +1684,124 @@ function initContactForm() {
     status.textContent = t[key] || translations.de[key] || '';
   }
 
+  function getSelectedChannel() {
+    const checked = form.querySelector('input[name="Kontaktart"]:checked');
+    return checked ? checked.value : 'E-Mail';
+  }
+
+  function isPhoneRequired() {
+    const ch = getSelectedChannel();
+    return ch === 'Rückruf' || ch === 'WhatsApp';
+  }
+
+  function isValidPhone(val) {
+    const v = String(val || '').trim();
+    if (!v) return false;
+    if (!/^[0-9+\-()./\s]+$/.test(v)) return false;
+    const digits = (v.match(/\d/g) || []).length;
+    return digits >= 6 && digits <= 20;
+  }
+
+  function getPhoneErrorKey() {
+    if (!phoneInput) return null;
+    const val = phoneInput.value.trim();
+    if (!val) {
+      return isPhoneRequired() ? 'form_error_phone' : null;
+    }
+    if (!isValidPhone(val)) {
+      return isPhoneRequired() ? 'form_error_phone_invalid' : 'form_error_phone_optional';
+    }
+    return null;
+  }
+
+  function updatePhoneRequirement() {
+    if (!phoneInput) return;
+    const req = isPhoneRequired();
+    phoneInput.required = req;
+    if (req) {
+      phoneInput.setAttribute('aria-required', 'true');
+      if (phoneLabel) phoneLabel.classList.add('req');
+      if (phoneHint) {
+        phoneHint.hidden = false;
+        addDescribedBy(phoneInput, phoneHint.id);
+      }
+    } else {
+      phoneInput.removeAttribute('aria-required');
+      if (phoneLabel) phoneLabel.classList.remove('req');
+      if (phoneHint) {
+        phoneHint.hidden = true;
+        removeDescribedBy(phoneInput, phoneHint.id);
+      }
+    }
+    const hasActivePhoneError = phoneInput.getAttribute('aria-invalid') === 'true' ||
+      (phoneError && !phoneError.hidden);
+    if (hasActivePhoneError) {
+      const errKey = getPhoneErrorKey();
+      if (errKey) {
+        showFieldError(phoneInput, phoneError, errKey);
+      } else {
+        clearFieldError(phoneInput, phoneError);
+        clearStatusIfNoFieldErrors();
+      }
+    }
+  }
+
   function validate() {
     let firstInvalid = null;
 
-    form.querySelectorAll('input[required], textarea[required]').forEach(el => {
-      if (el.type === 'radio') return;
-      const group = el.closest('.form-group');
-      if (!el.value.trim() || (el.type === 'email' && !el.checkValidity())) {
-        if (group) group.classList.add('has-error');
-        if (!firstInvalid) firstInvalid = el;
+    if (nameInput) {
+      if (!nameInput.value.trim()) {
+        showFieldError(nameInput, nameError, 'form_error_name');
+        if (!firstInvalid) firstInvalid = nameInput;
+      } else {
+        clearFieldError(nameInput, nameError);
       }
-    });
+    }
 
-    requiredRadioGroups.forEach(name => {
-      const checked = form.querySelector(`input[name="${name}"]:checked`);
-      if (!checked) {
-        const anyInput = form.querySelector(`input[name="${name}"]`);
-        const choice = anyInput && anyInput.closest('.form-choice');
-        if (choice) choice.classList.add('has-error');
-        if (!firstInvalid) firstInvalid = choice || anyInput;
+    if (emailInput) {
+      const group = emailInput.closest('.form-group');
+      if (!emailInput.value.trim() || !emailInput.checkValidity()) {
+        if (group) group.classList.add('has-error');
+        if (!firstInvalid) firstInvalid = emailInput;
+      } else if (group) {
+        group.classList.remove('has-error');
       }
-    });
+    }
+
+    if (phoneInput) {
+      const phoneErrKey = getPhoneErrorKey();
+      if (phoneErrKey) {
+        showFieldError(phoneInput, phoneError, phoneErrKey);
+        if (!firstInvalid) firstInvalid = phoneInput;
+      } else {
+        clearFieldError(phoneInput, phoneError);
+      }
+    }
 
     return firstInvalid;
+  }
+
+  function reportValidationFailure(firstInvalid) {
+    setStatus('error', 'form_error_required');
+    firstInvalid.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
+    if (firstInvalid.focus) {
+      firstInvalid.focus({ preventScroll: true });
+    }
+  }
+
+  if (phoneInput) {
+    phoneInput.addEventListener('invalid', (e) => {
+      // Preserve native browser validation for ordinary missing name or missing/malformed email;
+      // when name and email pass native checkValidity(), show our accessible custom field error instead.
+      const nameNativeOk = !nameInput || nameInput.checkValidity();
+      const emailNativeOk = !emailInput || emailInput.checkValidity();
+      if (nameNativeOk && emailNativeOk) {
+        e.preventDefault();
+        clearErrors();
+        const firstInvalid = validate();
+        if (firstInvalid) reportValidationFailure(firstInvalid);
+      }
+    });
   }
 
   form.addEventListener('submit', async (e) => {
@@ -1486,8 +1810,7 @@ function initContactForm() {
 
     const firstInvalid = validate();
     if (firstInvalid) {
-      setStatus('error', 'form_error_required');
-      firstInvalid.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
+      reportValidationFailure(firstInvalid);
       return;
     }
 
@@ -1513,6 +1836,9 @@ function initContactForm() {
 
       if (response.ok) {
         form.reset();
+        const emailRadio = form.querySelector('input[name="Kontaktart"][value="E-Mail"]');
+        if (emailRadio) emailRadio.checked = true;
+        updatePhoneRequirement();
         setStatus('success', 'form_success');
         status.scrollIntoView({ behavior: scrollBehavior(), block: 'center' });
       } else {
@@ -1527,12 +1853,111 @@ function initContactForm() {
     }
   });
 
+  form.addEventListener('input', (e) => {
+    if (e.target === nameInput && nameInput.value.trim()) {
+      clearFieldError(nameInput, nameError);
+      clearStatusIfNoFieldErrors();
+    } else if (e.target === phoneInput) {
+      const errKey = getPhoneErrorKey();
+      if (!errKey) {
+        clearFieldError(phoneInput, phoneError);
+        clearStatusIfNoFieldErrors();
+      } else if (phoneInput.getAttribute('aria-invalid') === 'true' || (phoneError && !phoneError.hidden)) {
+        showFieldError(phoneInput, phoneError, errKey);
+      }
+    } else if (e.target === emailInput && emailInput.checkValidity()) {
+      const group = emailInput.closest('.form-group');
+      if (group) group.classList.remove('has-error');
+      clearStatusIfNoFieldErrors();
+    }
+  });
+
   form.addEventListener('change', (e) => {
+    if (e.target.name === 'Kontaktart') {
+      updatePhoneRequirement();
+      return;
+    }
     if (e.target.matches('input, textarea')) {
       const choice = e.target.closest('.form-choice');
       const group = e.target.closest('.form-group');
       if (choice) choice.classList.remove('has-error');
-      if (group) group.classList.remove('has-error');
+      if (e.target === nameInput && nameInput.value.trim()) {
+        clearFieldError(nameInput, nameError);
+      } else if (e.target === phoneInput) {
+        const errKey = getPhoneErrorKey();
+        if (!errKey) {
+          clearFieldError(phoneInput, phoneError);
+        } else if (phoneInput.getAttribute('aria-invalid') === 'true' || (phoneError && !phoneError.hidden)) {
+          showFieldError(phoneInput, phoneError, errKey);
+        }
+      } else if (group && !e.target.hasAttribute('aria-invalid')) {
+        group.classList.remove('has-error');
+      }
+      clearStatusIfNoFieldErrors();
     }
   });
+
+  form.addEventListener('reset', () => {
+    setTimeout(() => {
+      clearFieldError(nameInput, nameError);
+      clearFieldError(phoneInput, phoneError);
+      form.querySelectorAll('.form-choice.has-error, .form-group.has-error').forEach(el => {
+        el.classList.remove('has-error');
+      });
+      if (status.classList.contains('form-status-error')) {
+        status.className = 'form-status';
+        status.removeAttribute('data-i18n');
+        status.textContent = '';
+      }
+      updatePhoneRequirement();
+    }, 0);
+  });
+
+  // Expose callback and WhatsApp preferences only after conditional validation has initialized
+  form.querySelectorAll('[data-channel-cond]').forEach(label => {
+    label.hidden = false;
+    const input = label.querySelector('input');
+    if (input) input.disabled = false;
+  });
+  updatePhoneRequirement();
+}
+
+// --- Boot: isolate each initializer so a failure in any cosmetic enhancement cannot block core controls ---
+function runInit(fn) {
+  try {
+    fn();
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+function boot() {
+  if (boot.done) return;
+  boot.done = true;
+  runInit(() => {
+    // The HTML is already German (it must match translations.de): rewriting all texts with the same words would only
+    // force a second full layout on every German page view. Other languages are applied as before.
+    if (currentLang !== 'de') setLanguage(currentLang, false);
+    else syncLanguageUI('de');
+  });
+  runInit(initLanguagePicker);
+  runInit(initMobileMenu);
+  runInit(initNavbar);
+  runInit(initContactForm);
+  runInit(initBookingLinks);
+  runInit(initMapConsent);
+  runInit(initGalleryMore);
+  runInit(initBeforeAfterSliders);
+  runInit(initLightbox);
+  runInit(initSnapRows);
+  runInit(initReviewClamps);
+  runInit(initScrollToTop);
+  runInit(initActionBar);
+  runInit(initScrollAnimations);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', boot);
+} else {
+  boot();
 }

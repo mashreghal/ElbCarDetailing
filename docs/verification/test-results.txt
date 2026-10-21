@@ -1,0 +1,366 @@
+# ElbCar Detailing Verification Results (2026-10-21)
+
+## 1. Standalone Node Verification (`node docs/verification/verify-followup.mjs`)
+Runs without a browser connection using Node `vm` + static & mocked-DOM runtime checks:
+
+ALL FOLLOW-UP & STATIC CHECKS PASSED (215 assertions):
+  PASS: Static: js/main.js parses without syntax errors
+  PASS: Static: translations object extracted from js/main.js
+  PASS: Static: DE/EN/TR dictionaries have identical key sets (280 keys each)
+  PASS: Static (de): Distinct missing-required, malformed-required, and malformed-optional phone error strings exist
+  PASS: Static (en): Distinct missing-required, malformed-required, and malformed-optional phone error strings exist
+  PASS: Static (tr): Distinct missing-required, malformed-required, and malformed-optional phone error strings exist
+  PASS: Static: All 320 German data-i18n* bindings in index.html match translations.de
+  PASS: Static (index.html): Zero duplicate IDs (77 unique IDs)
+  PASS: Static (index.html): All label/ARIA/fragment references resolve
+  PASS: Static (index.html): Zero empty <img> elements
+  PASS: Static (index.html): Asset exists -> images/v2/hero-1600.webp
+  PASS: Static (index.html): Asset exists -> images/v3/hero-m-960.webp
+  PASS: Static (index.html): Asset exists -> css/style.css
+  PASS: Static (index.html): Asset exists -> favicon.ico
+  PASS: Static (index.html): Asset exists -> favicon-48.png
+  PASS: Static (index.html): Asset exists -> apple-touch-icon.png
+  PASS: Static (index.html): Asset exists -> images/logo-removebg.webp
+  PASS: Static (index.html): Asset exists -> images/v2/hero-1600.webp
+  PASS: Static (index.html): Asset exists -> images/v2/porsche-rear-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-headlight-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-headlight-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/ferrari-light-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/ferrari-light-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-interior-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-interior-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/porsche-light-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/porsche-light-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-tail-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-tail-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/seat-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/seat-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/porsche-rear-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/porsche-rear-480.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-seats-800.webp
+  PASS: Static (index.html): Asset exists -> images/v2/lambo-seats-480.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/engine-before-800.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/engine-after-800.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/volvo-interior-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/volvo-interior-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/vw-front-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/vw-front-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/headlight-before-800.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/headlight-after-800.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/vw-rear-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/vw-rear-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/trunk-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/trunk-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/fuelcap-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/fuelcap-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/steering-before-720.webp
+  PASS: Static (index.html): Asset exists -> images/gallery/steering-after-720.webp
+  PASS: Static (index.html): Asset exists -> images/ahmet-owner-removebg.webp
+  PASS: Static (index.html): Asset exists -> images/logo-320.webp
+  PASS: Static (index.html): Asset exists -> impressum.html
+  PASS: Static (index.html): Asset exists -> datenschutz.html
+  PASS: Static (index.html): Asset exists -> js/main.js
+  PASS: Static (index.html): Srcset asset exists -> images/v2/hero-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/hero-1600.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/hero-m-640.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/hero-m-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/logo-160.webp
+  PASS: Static (index.html): Srcset asset exists -> images/logo-320.webp
+  PASS: Static (index.html): Srcset asset exists -> images/logo-removebg.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/hero-m-640.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/hero-m-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/hero-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/hero-1600.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/porsche-rear-wide-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v3/porsche-rear-wide-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/porsche-rear-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/porsche-rear-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-headlight-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-headlight-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/ferrari-light-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/ferrari-light-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-interior-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-interior-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/porsche-light-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/porsche-light-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-tail-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/v2/lambo-tail-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-before-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-before.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-after-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/engine-after.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/volvo-interior-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/volvo-interior-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/volvo-interior-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/volvo-interior-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-front-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-front-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-front-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-front-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-before-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-before.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-after-800.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/headlight-after.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-rear-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-rear-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-rear-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/vw-rear-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/trunk-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/trunk-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/trunk-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/trunk-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-before-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/fuelcap-after-960.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/steering-before-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/steering-before-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/steering-after-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/gallery/steering-after-720.webp
+  PASS: Static (index.html): Srcset asset exists -> images/ahmet-owner-removebg-480.webp
+  PASS: Static (index.html): Srcset asset exists -> images/ahmet-owner-removebg.webp
+  PASS: Static (index.html): Srcset asset exists -> images/logo-160.webp
+  PASS: Static (index.html): Srcset asset exists -> images/logo-320.webp
+  PASS: Static (impressum.html): Zero duplicate IDs (2 unique IDs)
+  PASS: Static (impressum.html): All label/ARIA/fragment references resolve
+  PASS: Static (impressum.html): Zero empty <img> elements
+  PASS: Static (impressum.html): Asset exists -> css/style.css
+  PASS: Static (impressum.html): Asset exists -> favicon.ico
+  PASS: Static (impressum.html): Asset exists -> favicon-48.png
+  PASS: Static (impressum.html): Asset exists -> apple-touch-icon.png
+  PASS: Static (impressum.html): Asset exists -> ./
+  PASS: Static (impressum.html): Asset exists -> images/logo-removebg.webp
+  PASS: Static (impressum.html): Asset exists -> datenschutz.html
+  PASS: Static (impressum.html): Asset exists -> ./
+  PASS: Static (impressum.html): Asset exists -> ./
+  PASS: Static (impressum.html): Asset exists -> impressum.html
+  PASS: Static (impressum.html): Asset exists -> datenschutz.html
+  PASS: Static (impressum.html): Asset exists -> js/main.js
+  PASS: Static (impressum.html): Srcset asset exists -> images/logo-160.webp
+  PASS: Static (impressum.html): Srcset asset exists -> images/logo-320.webp
+  PASS: Static (impressum.html): Srcset asset exists -> images/logo-removebg.webp
+  PASS: Static (datenschutz.html): Zero duplicate IDs (5 unique IDs)
+  PASS: Static (datenschutz.html): All label/ARIA/fragment references resolve
+  PASS: Static (datenschutz.html): Zero empty <img> elements
+  PASS: Static (datenschutz.html): Asset exists -> css/style.css
+  PASS: Static (datenschutz.html): Asset exists -> favicon.ico
+  PASS: Static (datenschutz.html): Asset exists -> favicon-48.png
+  PASS: Static (datenschutz.html): Asset exists -> apple-touch-icon.png
+  PASS: Static (datenschutz.html): Asset exists -> ./
+  PASS: Static (datenschutz.html): Asset exists -> images/logo-removebg.webp
+  PASS: Static (datenschutz.html): Asset exists -> impressum.html
+  PASS: Static (datenschutz.html): Asset exists -> ./
+  PASS: Static (datenschutz.html): Asset exists -> ./
+  PASS: Static (datenschutz.html): Asset exists -> impressum.html
+  PASS: Static (datenschutz.html): Asset exists -> datenschutz.html
+  PASS: Static (datenschutz.html): Asset exists -> js/main.js
+  PASS: Static (datenschutz.html): Srcset asset exists -> images/logo-160.webp
+  PASS: Static (datenschutz.html): Srcset asset exists -> images/logo-320.webp
+  PASS: Static (datenschutz.html): Srcset asset exists -> images/logo-removebg.webp
+  PASS: Static (404.html): Zero duplicate IDs (0 unique IDs)
+  PASS: Static (404.html): All label/ARIA/fragment references resolve
+  PASS: Static (404.html): Zero empty <img> elements
+  PASS: Static (404.html): Asset exists -> /css/style.css
+  PASS: Static (404.html): Asset exists -> /favicon.ico
+  PASS: Static (404.html): Asset exists -> /favicon-48.png
+  PASS: Static (404.html): Asset exists -> /apple-touch-icon.png
+  PASS: Static (404.html): Asset exists -> /images/logo-removebg.webp
+  PASS: Static (404.html): Asset exists -> /impressum.html
+  PASS: Static (404.html): Asset exists -> /datenschutz.html
+  PASS: Static (404.html): Srcset asset exists -> /images/logo-160.webp
+  PASS: Static (404.html): Srcset asset exists -> /images/logo-320.webp
+  PASS: Static (404.html): Srcset asset exists -> /images/logo-removebg.webp
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-300-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-ext-300-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-400-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-ext-400-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-500-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-ext-500-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-600-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-ext-600-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-700-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/inter-latin-ext-700-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-400-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-ext-400-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-600-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-ext-600-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-700-normal.woff2
+  PASS: Static (css/style.css): Font/asset exists -> ../fonts/playfair-display-latin-ext-700-normal.woff2
+  PASS: Static: All 169 local HTML/CSS asset references resolve
+  PASS: Static: JSON-LD script blocks present in index.html
+  PASS: Static: JSON-LD block parses cleanly
+  PASS: Static: sitemap.xml parses cleanly
+  PASS: Deliverable: docs/screenshots/before-header-320.png exists and is non-empty
+  PASS: Deliverable: docs/screenshots/before-header-390.png exists and is non-empty
+  PASS: Deliverable: docs/screenshots/after-header-320.png exists and is non-empty
+  PASS: Deliverable: docs/screenshots/after-header-390.png exists and is non-empty
+  PASS: Deliverable: docs/screenshots/after-lang-picker-open-390.png exists and is non-empty
+  PASS: Deliverable: docs/screenshots/after-phone-error-390.png exists and is non-empty
+  PASS: Follow-up #1 setup: Picker is open and TR option has focus at 1099px
+  PASS: Follow-up #1 (1099 -> 1100px, option focused): Picker closes, focus moves to corresponding desktop TR button with preventScroll, language stays DE, scroll unlocked
+  PASS: Follow-up #1 (1100 -> 1099px, desktop button focused): Focus returns to mobile #langTrigger with preventScroll, language stays DE, scroll unlocked
+  PASS: Follow-up #1 setup: Closed #langTrigger has focus with currentLang=en
+  PASS: Follow-up #1 (1099 -> 1100px, closed trigger focused): Focus moves to currently selected desktop EN button with preventScroll
+  PASS: Follow-up #1 (1099 -> 1100px, focus elsewhere on #cf-name): Focus stays on #cf-name
+  PASS: Follow-up #1 (1100 -> 1099px, focus on footer language button): Focus stays on footer button and does not jump to header trigger
+  PASS: Follow-up #2 (Default/email without phone): Submission succeeds and preserves unrelated aria-describedby token
+  PASS: Follow-up #2 (Callback without phone): Shows missing-required error (form_error_phone) with hint + error in aria-describedby and focuses #cf-phone
+  PASS: Follow-up #2 (Callback with malformed "123"): Shows format error (form_error_phone_invalid), not missing-number error
+  PASS: Follow-up #2 (Switch Callback -> E-Mail with "123"): Clears requiredness/hint and immediately refreshes error to form_error_phone_optional
+  PASS: Follow-up #2 (Submit E-Mail with malformed "123"): Continues to show form_error_phone_optional explaining user can correct or clear it
+  PASS: Follow-up #2 (Language switch DE -> EN -> TR -> DE): Active phone error explanation translates in place
+  PASS: Follow-up #2 (Switch E-Mail -> WhatsApp with "123"): Restores requiredness/hint and refreshes error back to form_error_phone_invalid
+  PASS: Follow-up #2 (Clear optional phone on E-Mail): Clears phone error, aria-invalid, and form status error while keeping unrelated aria-describedby
+  PASS: Follow-up #2 (Submit after clearing optional phone): Submission succeeds
+  PASS: Follow-up #2 (Mocked HTTP 500): Preserves user values, selected services, and package selection & re-enables submit button
+
+---
+
+## 2. Headless Chromium CDP Verification (`node docs/verification/verify-browser-cdp.mjs`)
+Runs against a local static HTTP server (`127.0.0.1`) in headless Chromium via Chrome DevTools Protocol:
+
+ALL CHROMIUM CDP CHECKS PASSED (138 assertions):
+  PASS: Translation dictionaries have identical key counts: DE=280, EN=280, TR=280
+  PASS: Static German HTML matches translations.de (0 mismatches)
+  PASS: Zero duplicate IDs in index.html
+  PASS: Zero broken label/ARIA/fragment references in index.html
+  PASS: Task 5: Zero <img> elements without src/srcset in static index.html
+  PASS: Task 1 (320px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (320px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (320px, de): No header control overlap
+  PASS: Task 1 (320px, de): No horizontal page overflow
+  PASS: Task 1 (320px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (320px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (320px, en): No header control overlap
+  PASS: Task 1 (320px, en): No horizontal page overflow
+  PASS: Task 1 (320px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (320px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (320px, tr): No header control overlap
+  PASS: Task 1 (320px, tr): No horizontal page overflow
+  PASS: Task 1 (360px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (360px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (360px, de): No header control overlap
+  PASS: Task 1 (360px, de): No horizontal page overflow
+  PASS: Task 1 (360px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (360px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (360px, en): No header control overlap
+  PASS: Task 1 (360px, en): No horizontal page overflow
+  PASS: Task 1 (360px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (360px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (360px, tr): No header control overlap
+  PASS: Task 1 (360px, tr): No horizontal page overflow
+  PASS: Task 1 (390px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (390px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (390px, de): No header control overlap
+  PASS: Task 1 (390px, de): No horizontal page overflow
+  PASS: Task 1 (390px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (390px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (390px, en): No header control overlap
+  PASS: Task 1 (390px, en): No horizontal page overflow
+  PASS: Task 1 (390px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (390px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (390px, tr): No header control overlap
+  PASS: Task 1 (390px, tr): No horizontal page overflow
+  PASS: Task 1 (390px): Open picker shows Deutsch/English/Türkçe with >=44x44px targets ([{"lang":"de","text":"Deutsch","pressed":"true","w":150,"h":44},{"lang":"en","text":"English","pressed":"false","w":150,"h":44},{"lang":"tr","text":"Türkçe","pressed":"false","w":150,"h":44}])
+  PASS: Task 1 (430px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (430px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (430px, de): No header control overlap
+  PASS: Task 1 (430px, de): No horizontal page overflow
+  PASS: Task 1 (430px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (430px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (430px, en): No header control overlap
+  PASS: Task 1 (430px, en): No horizontal page overflow
+  PASS: Task 1 (430px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (430px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (430px, tr): No header control overlap
+  PASS: Task 1 (430px, tr): No horizontal page overflow
+  PASS: Task 1 (768px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (768px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (768px, de): No header control overlap
+  PASS: Task 1 (768px, de): No horizontal page overflow
+  PASS: Task 1 (768px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (768px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (768px, en): No header control overlap
+  PASS: Task 1 (768px, en): No horizontal page overflow
+  PASS: Task 1 (768px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (768px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (768px, tr): No header control overlap
+  PASS: Task 1 (768px, tr): No horizontal page overflow
+  PASS: Task 1 (1024px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (1024px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1024px, de): No header control overlap
+  PASS: Task 1 (1024px, de): No horizontal page overflow
+  PASS: Task 1 (1024px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (1024px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1024px, en): No header control overlap
+  PASS: Task 1 (1024px, en): No horizontal page overflow
+  PASS: Task 1 (1024px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (1024px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1024px, tr): No header control overlap
+  PASS: Task 1 (1024px, tr): No horizontal page overflow
+  PASS: Task 1 (1099px, de): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (1099px, de): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1099px, de): No header control overlap
+  PASS: Task 1 (1099px, de): No horizontal page overflow
+  PASS: Task 1 (1099px, en): Language trigger visible at hero & scrolled (83x44px >= 44x44px)
+  PASS: Task 1 (1099px, en): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1099px, en): No header control overlap
+  PASS: Task 1 (1099px, en): No horizontal page overflow
+  PASS: Task 1 (1099px, tr): Language trigger visible at hero & scrolled (82x44px >= 44x44px)
+  PASS: Task 1 (1099px, tr): Duplicate mobile header WhatsApp icon hidden
+  PASS: Task 1 (1099px, tr): No header control overlap
+  PASS: Task 1 (1099px, tr): No horizontal page overflow
+  PASS: Task 1 (667x375, fontScale=false): Trigger visible and no horizontal overflow
+  PASS: Task 1 (390x844, fontScale=true): Trigger visible and no horizontal overflow
+  PASS: Task 1 (1100px): Desktop selector visible/focusable and mobile control hidden/unfocusable
+  PASS: Task 1 (1440px): Desktop selector visible/focusable and mobile control hidden/unfocusable
+  PASS: Follow-up #1 (Chromium 1099 -> 1100px, option focused): Focus moves to visible desktop TR button, language stays DE, scroll unlocked ({"pickerHidden":true,"matchedFocus":true,"visible":true,"langUnchanged":true,"scrollUnlocked":true})
+  PASS: Follow-up #1 (Chromium 1100 -> 1099px, desktop button focused): Focus returns to visible mobile #langTrigger, language stays DE
+  PASS: Follow-up #1 (Chromium 1099 -> 1100px, closed trigger focused): Focus moves to currently selected desktop EN button
+  PASS: Follow-up #1 (Chromium 1099 <-> 1100px, focus elsewhere): Focus remains on #cf-name across both transitions
+  PASS: Task 1: ?lang=en#contact initializes in English
+  PASS: Task 1: Opening language picker closes mobile menu and removes scroll lock
+  PASS: Task 1: Switching to TR from ?lang=en#contact updates URL to ?lang=tr#contact
+  PASS: Task 1: Selecting language returns focus to #langTrigger
+  PASS: Task 1: Switching language preserves scroll position, form values, service checkbox, package tag & open FAQ
+  PASS: Task 1: Reload retains Turkish choice (tr:TR)
+  PASS: Task 1: Blocked localStorage does not break switching; Escape closes picker and returns focus
+  PASS: Task 2 (JS disabled, motion=no-preference, /): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (JS disabled, motion=no-preference, /impressum.html): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (JS disabled, motion=no-preference, /datenschutz.html): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (JS disabled, motion=reduce, /): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (JS disabled, motion=reduce, /impressum.html): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (JS disabled, motion=reduce, /datenschutz.html): Content/gallery/form visible, fallback nav usable, no overlap
+  PASS: Task 2 (js/main.js blocked while inline head script runs): All fade-in sections visible, all 8 gallery sliders visible, fallback nav usable
+  PASS: Task 2 (IntersectionObserver absent): Content remains visible and contact form initializes
+  PASS: Task 2 (IntersectionObserver throws): Content remains visible and contact form initializes
+  PASS: Task 3: Whitespace-only name is rejected with field-specific error, aria-describedby, aria-invalid & focus
+  PASS: Task 3: WhatsApp without phone is blocked with hint+error in aria-describedby ("cf-phone-hint cf-phone-error"), aria-invalid & focus
+  PASS: Follow-up #2 (Chromium): Callback with "123" shows form_error_phone_invalid and preserves unrelated aria-describedby
+  PASS: Follow-up #2 (Chromium): Switching to E-Mail removes requiredness and refreshes error to form_error_phone_optional
+  PASS: Follow-up #2 (Chromium): Translates optional phone error in EN/TR and clears cleanly when phone is emptied
+  PASS: Task 3: HTTP failure preserves input values, selected services, and package tag & re-enables submit button
+  PASS: Task 3: Successful submission resets values, package tag, and conditional phone requirement
+  PASS: Task 4 (Square 800x800 DPR1): Loaded exactly 1 hero asset (hero-m-960.webp)
+  PASS: Task 4 (Square 800x800 DPR2): Loaded exactly 1 hero asset (hero-m-960.webp)
+  PASS: Task 4 (Portrait 390x844 DPR1): Loaded exactly 1 hero asset (hero-m-640.webp)
+  PASS: Task 4 (Portrait 390x844 DPR2): Loaded exactly 1 hero asset (hero-m-960.webp)
+  PASS: Task 4 (Short Landscape 800x450 DPR1): Loaded exactly 1 hero asset (hero-m-960.webp)
+  PASS: Task 4 (Desktop Landscape 1280x800 DPR1): Loaded exactly 1 hero asset (hero-1600.webp)
+  PASS: Task 4 (Desktop Landscape 1280x800 DPR2): Loaded exactly 1 hero asset (hero-1600.webp)
+  PASS: Task 5: Lightbox creates <img> on open with valid src/alt, navigates prev/next, removes on close, returns focus, and reopens
+  PASS: Secondary checks: All JSON-LD blocks on index.html parse cleanly
+  PASS: Secondary checks (/impressum.html at 390px): No horizontal overflow, H1 visible, navigation functional
+  PASS: Secondary checks (/datenschutz.html at 390px): No horizontal overflow, H1 visible, navigation functional
+  PASS: Secondary checks (/404.html at 390px): No horizontal overflow, H1 visible, navigation functional
+  PASS: Secondary checks: sitemap.xml is intact and valid
+  PASS: Secondary checks (index.html): 0 broken local asset links (checked 46 refs)
+  PASS: Secondary checks (impressum.html): 0 broken local asset links (checked 12 refs)
+  PASS: Secondary checks (datenschutz.html): 0 broken local asset links (checked 12 refs)
+  PASS: Secondary checks (404.html): 0 broken local asset links (checked 7 refs)
