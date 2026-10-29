@@ -97,7 +97,7 @@ try {
     };
   })()`);
 
-  assert(audit.keyCounts.de === 280 && audit.keyCounts.en === 280 && audit.keyCounts.tr === 280,
+  assert(audit.keyCounts.de === 272 && audit.keyCounts.en === 272 && audit.keyCounts.tr === 272,
     `Translation dictionaries have identical key counts: DE=${audit.keyCounts.de}, EN=${audit.keyCounts.en}, TR=${audit.keyCounts.tr}`);
   assert(audit.badSync.length === 0, `Static German HTML matches translations.de (0 mismatches)`);
   assert(audit.dupIds.length === 0, `Zero duplicate IDs in index.html`);
@@ -410,7 +410,7 @@ try {
         const telegramAbsent = !document.querySelector('input[name="Kontaktart"][value="Telegram"]');
         return {
           navOverlapsMain, linksVisible, toggleHidden,
-          contentVisible: fadeInsVisible && galleryItemsVisible === 8 && formVisible && condChannelsHidden && telegramAbsent
+          contentVisible: fadeInsVisible && galleryItemsVisible === 7 && formVisible && condChannelsHidden && telegramAbsent
         };
       })()`);
       assert(!noJs.navOverlapsMain && noJs.linksVisible && noJs.toggleHidden && noJs.contentVisible,
@@ -432,8 +432,8 @@ try {
     const navLinksVisible = Array.from(document.querySelectorAll('.nav-links a')).every(a => a.getBoundingClientRect().height > 0);
     return { hasJsClass, mainJsLoaded, fadeInsVisible, galleryVisibleCount, navLinksVisible };
   })()`);
-  assert(blockedMainCheck.hasJsClass && !blockedMainCheck.mainJsLoaded && blockedMainCheck.fadeInsVisible && blockedMainCheck.galleryVisibleCount === 8 && blockedMainCheck.navLinksVisible,
-    `Task 2 (js/main.js blocked while inline head script runs): All fade-in sections visible, all 8 gallery sliders visible, fallback nav usable`);
+  assert(blockedMainCheck.hasJsClass && !blockedMainCheck.mainJsLoaded && blockedMainCheck.fadeInsVisible && blockedMainCheck.galleryVisibleCount === 7 && blockedMainCheck.navLinksVisible,
+    `Task 2 (js/main.js blocked while inline head script runs): All fade-in sections visible, all 7 gallery sliders visible, fallback nav usable`);
   await cdp.send('Network.setBlockedURLs', { urls: [] });
 
   for (const mode of ['absent', 'throws']) {
